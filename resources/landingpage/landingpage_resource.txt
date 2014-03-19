@@ -1,0 +1,23 @@
+*** Settings ***
+Documentation     A resource file with reusable keywords and variables.
+
+# resource importation/extension
+Resource       ../login/login_resource.txt
+
+
+*********Keywords************
+
+I am a Registered MyBlue Member on the Landing Page
+	I am a MyBlue Member on the Login Page
+	I Enter A Username "username" "thor"
+	I Enter A Password "password" "thor"
+	I Click the "login" Button
+	Sleep		10
+
+I Am Navigated to Member Id Card Page "${pageElement}"
+	Page Should Contain Element		${pageElement}
+
+
+	
+
+

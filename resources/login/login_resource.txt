@@ -1,0 +1,33 @@
+*** Settings ***
+Documentation     A resource file with reusable keywords and variables.
+
+# resource importation/extension
+Resource       ../common_resources.txt
+
+
+*********Keywords************
+
+I am a MyBlue Member on the Login Page
+	Open Browser	${LOGIN_URL}      ${BROWSER}
+	Maximize Browser Window
+	
+I Am Navigated to Landing Page "${pageElement}"
+	Page Should Contain Element		${pageElement}
+
+I Am Not Navigated to Landing Page "${pageElement}"
+	Page Should Not Contain Element		${pageElement}
+
+I Enter A Username "${element}" "${text}"
+	Input Text		${element}		${text}
+		
+I Enter A Password "${element}" "${text}"
+	Input Password		${element}		${text}
+
+I should see the element "${element}" blank
+	Element Text Should Be 		${element}	${EMPTY}		
+
+I enter text in the "${element}" textbox
+	Input Text "thor"		${element}	
+
+	
+	

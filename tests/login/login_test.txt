@@ -1,0 +1,57 @@
+*** Settings ***
+Library           Selenium2Library
+Suite Teardown	  Close All Browsers
+Resource          ../../resources/login/login_resource.txt
+
+*** Test Cases ***
+
+Login Page Hot Links Displayed
+	Given I am a MyBlue Member on the Login Page
+	Then I should see the element "forgotLogin" displayed
+	And I should see the element "signup" displayed
+	
+Login Page Username Textbox Displayed
+	Given I am a MyBlue Member on the Login Page
+	Then I should see the element "username" displayed
+	And I should see the element "username" blank
+
+Login Page Password Textbox Displayed
+	Given I am a MyBlue Member on the Login Page
+	Then I should see the element "password" displayed
+	And I should see the element "password" blank
+
+Valid Login
+	[Tags]		ValidLoginTest
+    Given I am a MyBlue Member on the Login Page
+    When I Enter A Username "username" "thor"
+    And I Enter A Password "password" "thor"
+    And I Click the "login" Button
+    Then I Am Navigated to Landing Page "dash-nav"
+        
+Invalid Login With Invalid Password
+	[Tags]		InvalidPasswordTest
+    Given I am a MyBlue Member on the Login Page
+    When I Enter A Username "username" "thor"
+    And I Enter A Password "password" "testPassword"
+    And I Click the "login" Button
+    Then I Am Not Navigated to Landing Page "dash-nav"
+    And I should see the element "errorMsg" displayed
+
+Invalid Login With Invalid Username
+	[Tags]		InvalidUsernameTest
+    Given I am a MyBlue Member on the Login Page
+    When I Enter A Username "username" "testUserName"
+    And I Enter A Password "password" "thor"
+    And I Click the "login" Button
+    Then I Am Not Navigated to Landing Page "dash-nav"
+    And I should see the element "errorMsg" displayed
+
+Invalid Login Without Values
+	[Tags]		InvalidLoginTestWithoutValues
+    Given I am a MyBlue Member on the Login Page
+    When I Click the "login" Button
+    Then I Am Not Navigated to Landing Page "dash-nav"
+    And I should see the element "errorMsg" displayed
+
+
+    
