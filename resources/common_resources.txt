@@ -21,23 +21,27 @@ I should see the element "${element}" displayed
 	Page Should Contain Element		css=${element}
 
 I should see the link "${text}" displayed			
-	Page Should Contain Link		${text}		
+	Page Should Contain Link		css=${text}		
 
 I should not see the element "${element}" displayed
-	Page Should Not Contain Element		${element}
+	Page Should Not Contain Element		css=${element}
 
 I Click the "${link}" Link
-	Click Link		${link}
+	Click Link		css=${link}
 
 I Click the "${button}" Button
 	Click Button		css=${button}
-	Sleep				10
+	Sleep				5
 
 I should be navigated to "${url}" in a new tab
 	@{windows}=					Get Window Titles		
 	Select Window				@{windows}[1]
 	Sleep						5	
-	Location Should Contain		${url}				
+	Location Should Contain		${url}		
+
+I should be navigated to "${url}"
+	Sleep						5
+	Location Should Contain		${url}		
 
 Teardown Browser
     Close Browser
