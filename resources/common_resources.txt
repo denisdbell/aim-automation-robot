@@ -18,7 +18,10 @@ ${NOVALUE}=		""
 *** Keywords ***
 
 I should see the element "${element}" displayed
-	Page Should Contain Element		${element}
+	Page Should Contain Element		css=${element}
+
+I should see the link "${text}" displayed			
+	Page Should Contain Link		${text}		
 
 I should not see the element "${element}" displayed
 	Page Should Not Contain Element		${element}
@@ -27,7 +30,14 @@ I Click the "${link}" Link
 	Click Link		${link}
 
 I Click the "${button}" Button
-	Click Button		${button}
+	Click Button		css=${button}
+	Sleep				10
+
+I should be navigated to "${url}" in a new tab
+	@{windows}=					Get Window Titles		
+	Select Window				@{windows}[1]
+	Sleep						5	
+	Location Should Contain		${url}				
 
 Teardown Browser
     Close Browser

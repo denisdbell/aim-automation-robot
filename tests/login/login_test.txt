@@ -23,15 +23,15 @@ Login Page Password Textbox Displayed
 Valid Login
 	[Tags]		ValidLoginTest
     Given I am a MyBlue Member on the Login Page
-    When I Enter A Username "username" "thor"
-    And I Enter A Password "password" "thor"
+    When I Enter A Username "username" "marchcontractuat"
+    And I Enter A Password "password" "Bigfun21!"
     And I Click the "login" Button
     Then I Am Navigated to Landing Page "dash-nav"
         
 Invalid Login With Invalid Password
 	[Tags]		InvalidPasswordTest
     Given I am a MyBlue Member on the Login Page
-    When I Enter A Username "username" "thor"
+    When I Enter A Username "username" "marchcontractuat"
     And I Enter A Password "password" "testPassword"
     And I Click the "login" Button
     Then I Am Not Navigated to Landing Page "dash-nav"
@@ -41,7 +41,7 @@ Invalid Login With Invalid Username
 	[Tags]		InvalidUsernameTest
     Given I am a MyBlue Member on the Login Page
     When I Enter A Username "username" "testUserName"
-    And I Enter A Password "password" "thor"
+    And I Enter A Password "password" "marchcontractuat"
     And I Click the "login" Button
     Then I Am Not Navigated to Landing Page "dash-nav"
     And I should see the element "errorMsg" displayed
