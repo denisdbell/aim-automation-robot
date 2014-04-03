@@ -235,6 +235,21 @@ Member Card Id Quick Link Navigates to Symptom Checker Page
 	When I Click the "div.quicknav-memid a#memberIdCard" Link
 	Then I should be navigated to "memberidcard"
 
+#US243 Test Cases for Desktop
+
+Landing Page BHA Step Completed 
+	[Tags]		BhaStepCompleted
+	Given I am a Registered MyBlue Member on the Landing Page
+	
+	Then I should see the element "a#step1" displayed	
+	And I should see the element "ul.bha li.next-step a#step1" displayed
+	And I should see the element "div.get-started a#getStarted " displayed
+	And I should not see the element ul.bha li.next-step a#step2" displayed
+	And I should not see the element ul.bha li.next-step a#step3" displayed
+	And I should not see the element "div.go-back a#goBackToStep" displayed
+	And I should not see the element "ul.bha li.completed div#step1 div.complete" displayed
+
+
 
 
 
