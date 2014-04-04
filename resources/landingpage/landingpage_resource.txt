@@ -16,6 +16,25 @@ I am a Registered MyBlue Member on the Landing Page
 
 I Am Navigated to Member Id Card Page "${pageElement}"
 	Page Should Contain Element		${pageElement}
+	
+The "${step}" step is completed 
+	I should see the element "${step}" displayed
+
+The "${step}" step is not completed 
+	I should see the element "${step}" displayed
+	
+The "${step}" step not highlighted
+	I should not see the element "${step}" displayed
+
+The "${step}" step is highlighted
+	I should see the element "${step}" displayed
+
+The "${step}" step is enabled
+	The "${step}" step is highlighted
+	
+The "${step}" step is not enabled
+	I should not see the element "${step}" displayed
+	
 
 
 

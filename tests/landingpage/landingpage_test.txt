@@ -240,14 +240,42 @@ Member Card Id Quick Link Navigates to Symptom Checker Page
 Landing Page BHA Step Completed 
 	[Tags]		BhaStepCompleted
 	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step1" step is completed 
+	Then I should see the element "div#step1 div.complete" displayed 	
+	And I should see the element "div#step1 div.go-back a#goBackToStep" displayed
+	And I should see the element "div.get-started a#getStarted" displayed
+	And The "ul.bha li.next-step a#step1" step not highlighted
+	And The "ul.bha li.next-step a#step2" step is enabled
+
+Landing Page BHA Step Go Back Button Clicked 
+	[Tags]		BhaStepGoBackClick
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step1" step is completed
+	And I Click the "div#step1 div.go-back a#goBackToStep" Link 
+	Then I should be navigated to "fepblue.org" in a new tab
+
+Landing Page Health Coach Step Not Completed 
+	[Tags]		HealthCoachStepNotCompleted
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.next-step a#step2" step is not completed 
+	Then I should see the element "a#step2" displayed
+	And I should see the element "div.get-started a#getStarted" displayed
+	And The "ul.bha li.next-step a#step2" step is enabled
+	And The "ul.bha li.next-step a#step3" step is not enabled	 	
+	And I should not see the element "div#step2 div.go-back a#goBackToStep" displayed
+	And I should not see the element "div#step2 div.complete" displayed 
+
+Landing Page Health Coach Step Get Started Button Clicked 
+	[Tags]		HealthCoachStepGetStartedClick
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.next-step a#step2" step is not completed 
+	And I Click the "div.get-started a#getStarted" Link 
+	Then I should be navigated to "fepblue.org" in a new tab
+		
 	
-	Then I should see the element "a#step1" displayed	
-	And I should see the element "ul.bha li.next-step a#step1" displayed
-	And I should see the element "div.get-started a#getStarted " displayed
-	And I should not see the element ul.bha li.next-step a#step2" displayed
-	And I should not see the element ul.bha li.next-step a#step3" displayed
-	And I should not see the element "div.go-back a#goBackToStep" displayed
-	And I should not see the element "ul.bha li.completed div#step1 div.complete" displayed
+
+	
+	
 
 
 

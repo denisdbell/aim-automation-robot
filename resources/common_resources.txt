@@ -18,13 +18,13 @@ ${NOVALUE}=		""
 *** Keywords ***
 
 I should see the element "${element}" displayed
-	Page Should Contain Element		css=${element}
+	Element Should Be Visible		css=${element}	
 
 I should see the link "${text}" displayed			
 	Page Should Contain Link		css=${text}		
 
 I should not see the element "${element}" displayed
-	Page Should Not Contain Element		css=${element}
+	Element Should Not Be Visible		css=${element}
 
 I Click the "${link}" Link
 	Click Link		css=${link}
