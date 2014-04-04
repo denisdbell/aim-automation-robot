@@ -23,7 +23,7 @@ The "${step}" step is completed
 The "${step}" step is not completed 
 	I should see the element "${step}" displayed
 	
-The "${step}" step not highlighted
+The "${step}" step is not highlighted
 	I should not see the element "${step}" displayed
 
 The "${step}" step is highlighted

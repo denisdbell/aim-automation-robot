@@ -235,7 +235,7 @@ Member Card Id Quick Link Navigates to Symptom Checker Page
 	When I Click the "div.quicknav-memid a#memberIdCard" Link
 	Then I should be navigated to "memberidcard"
 
-#US243 Test Cases for Desktop
+#US243, US245, and US246 Test Cases for Desktop
 
 Landing Page BHA Step Completed 
 	[Tags]		BhaStepCompleted
@@ -244,7 +244,7 @@ Landing Page BHA Step Completed
 	Then I should see the element "div#step1 div.complete" displayed 	
 	And I should see the element "div#step1 div.go-back a#goBackToStep" displayed
 	And I should see the element "div.get-started a#getStarted" displayed
-	And The "ul.bha li.next-step a#step1" step not highlighted
+	And The "ul.bha li.next-step a#step1" step is not highlighted
 	And The "ul.bha li.next-step a#step2" step is enabled
 
 Landing Page BHA Step Go Back Button Clicked 
@@ -265,12 +265,16 @@ Landing Page Health Coach Step Not Completed
 	And I should not see the element "div#step2 div.go-back a#goBackToStep" displayed
 	And I should not see the element "div#step2 div.complete" displayed 
 
-Landing Page Health Coach Step Get Started Button Clicked 
-	[Tags]		HealthCoachStepGetStartedClick
+Landing Page Healthy Actions Step Not Enabled 
+	[Tags]		HealthyActionStepNotEnabled
 	Given I am a Registered MyBlue Member on the Landing Page
-	When The "ul.bha li.next-step a#step2" step is not completed 
-	And I Click the "div.get-started a#getStarted" Link 
-	Then I should be navigated to "fepblue.org" in a new tab
+	And The "ul.bha li.completed div#step1" step is completed
+	And The "ul.bha li.next-step a#step2" step is not completed
+	When The "ul.bha li.step div#step3" step is not completed 
+	Then The "ul.bha li.next-step a#step3" step is not highlighted
+	And I should see the element "div.get-started a#getStarted" displayed
+	And I should not see the element "div#step3 div.go-back a#goBackToStep" displayed
+	And I should not see the element "div#step3 div.complete" displayed 
 		
 	
 
