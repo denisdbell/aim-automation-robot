@@ -32,8 +32,22 @@ Wellness Links displayed For Other User
 #US738 Test cases
 Change Your Email Address link in user drop down menu
    [Tags]		ChangeEmailAddress
-   Given I am a logged in MyBlue Member on the myBlue site
-   When I click the "li#Username" link
-   I should see the element ".loggedin-menu .col-sm-12 ul li:eq(3)" displayed
+   Given I am logged into the MyBlue Portal
+   When I click the "li#Username" element
+   I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourEmailAddress"]" displayed
+   Teardown Browser
+   
+Change Your Password link in user drop down menu
+   [Tags]		ChangePassword
+   Given I am logged into the MyBlue Portal
+   When I click the "li#Username" element
+   I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourPassword"]" displayed
+   Teardown Browser
+   
+Change Your Username link in user drop down menu
+   [Tags]		ChangeUsername
+   Given I am logged into the MyBlue Portal
+   When I click the "li#Username" element
+   I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourUsername"]" displayed
    Teardown Browser
    
