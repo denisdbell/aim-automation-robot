@@ -10,8 +10,9 @@ Library           Collections
 *** Variables ***
 
 ${BROWSER}=		firefox
-${SERVER}=		http://localhost:8001		
-${LOGIN_URL}=	${SERVER}/login  
+${SERVER}=		http://localhost:8000		
+${LOGIN_URL}=		${SERVER}/login  
+${MYBLUE_LOGIN_URL}=		https://dev.fepblue.org:8443/web/guest
 ${NOVALUE}=		""
 
 
@@ -41,7 +42,10 @@ I should be navigated to "${url}" in a new tab
 
 I should be navigated to "${url}"
 	Sleep						5
-	Location Should Contain		${url}		
+	Location Should Contain		${url}
+
+I view the "${element}" element
+	Page Should Contain Element		css=${element}		
 
 Teardown Browser
     Close Browser

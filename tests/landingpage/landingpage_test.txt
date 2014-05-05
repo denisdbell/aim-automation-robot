@@ -8,7 +8,7 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 Landing Page Health And Wellness Links Displayed
 	[Tags]		DisplayHealthAndWellnessLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
-	Then I should see the element "h4#healthAndWellness" displayed	
+	Then I should see the element "span#healthAndWellness" displayed	
 	And I should see the link "a#healthAndWellnessLink0" displayed
 	And I should see the link "a#healthAndWellnessLink1" displayed
 	And I should see the link "a#healthAndWellnessLink2" displayed
@@ -18,7 +18,7 @@ Landing Page Health And Wellness Links Displayed
 Landing Page Wellness Incentives Links Displayed
 	[Tags]		DisplayWellnessIncentivesLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
-	Then I should see the element "h4#wellnessIncentives" displayed
+	Then I should see the element "span#wellnessIncentives" displayed
 	And I should see the link "a#wellnessIncentivesLink0" displayed
 	And I should see the link "a#wellnessIncentivesLink1" displayed
 	And I should see the link "a#wellnessIncentivesLink2" displayed
@@ -27,7 +27,7 @@ Landing Page Wellness Incentives Links Displayed
 Landing Page Benefits Links Displayed
 	[Tags]		DisplayBenefitsLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
-	Then I should see the element "h4#benefits" displayed
+	Then I should see the element "span#benefits" displayed
 	And I should see the link "a#benefitsLink0" displayed
 	And I should see the link "a#benefitsLink1" displayed
 	And I should see the link "a#benefitsLink2" displayed
@@ -37,7 +37,7 @@ Landing Page Benefits Links Displayed
 Landing Page Pharmacy Links Displayed
 	[Tags]		DisplayPharmacyLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
-	Then I should see the element "h4#pharmacy" displayed
+	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "a#pharmacyLink0" displayed
 	And I should see the link "a#pharmacyLink1" displayed
 	And I should see the link "a#pharmacyLink2" displayed
@@ -162,10 +162,10 @@ Landing Page My Prescription Quick Links Displayed
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-pres a#myPrescriptions" displayed
 
-Landing Page Nurse Line Quick Links Displayed
-	[Tags]		NurseLineLinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page
-	Then I should see the element "div.quicknav-nurse a#nurseLine" displayed
+#Landing Page Nurse Line Quick Links Displayed
+#	[Tags]		NurseLineLinkDisplayed	
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	Then I should see the element "div.quicknav-nurse a#nurseLine" displayed
 
 Landing Page Find a Physician Quick Links Displayed
 	[Tags]		FindPhysicianLinkDisplayed	
@@ -177,10 +177,10 @@ Landing Page Explanation of Benefits Quick Links Displayed
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-benefits a#explanationOfBenefits" displayed
 
-Landing Page Symptom Checker Quick Links Displayed
-	[Tags]		SymptomCheckerLinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page
-	Then I should see the element "div.quicknav-symptom a#symptomChecker" displayed
+#Landing Page Symptom Checker Quick Links Displayed
+#	[Tags]		SymptomCheckerLinkDisplayed	
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	Then I should see the element "div.quicknav-symptom a#symptomChecker" displayed
 
 Landing Page Personal Health Record Quick Links Displayed
 	[Tags]		PersonalHealthRecordLinkDisplayed	
@@ -199,11 +199,11 @@ My Prescriptions Quick Link Navigates to My Prescriptions Page
 	When I Click the "div.quicknav-pres a#myPrescriptions" Link
 	Then I should be navigated to "fepblue.org" in a new tab
 
-Nurse Line Quick Link Navigates to Nurse Line Page
-	[Tags]		ClickNurseLineLink	
-	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-nurse a#nurseLine" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+#Nurse Line Quick Link Navigates to Nurse Line Page
+#	[Tags]		ClickNurseLineLink	
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	When I Click the "div.quicknav-nurse a#nurseLine" Link
+#	Then I should be navigated to "fepblue.org" in a new tab
 
 Find a Physician Quick Link Navigates to Find a Physician Page
 	[Tags]		ClickFindPhysicianLink	
@@ -217,11 +217,11 @@ Explanation of Benefits Quick Link Navigates to Explanation of Benefits Page
 	When I Click the "div.quicknav-benefits a#explanationOfBenefits" Link
 	Then I should be navigated to "fepblue.org" in a new tab
 
-Symptom Checker Quick Link Navigates to Symptom Checker Page
-	[Tags]		ClickSymptomCheckerLink	
-	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-symptom a#symptomChecker" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+#Symptom Checker Quick Link Navigates to Symptom Checker Page
+#	[Tags]		ClickSymptomCheckerLink	
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	When I Click the "div.quicknav-symptom a#symptomChecker" Link
+#	Then I should be navigated to "fepblue.org" in a new tab
 
 Personal Health Record Quick Link Navigates to Symptom Checker Page
 	[Tags]		ClickPersonalHealthRecordLink	
@@ -243,7 +243,7 @@ Landing Page BHA Step Completed
 	When The "ul.bha li.completed div#step1" step is completed 
 	Then I should see the element "div#step1 div.complete" displayed 	
 	And I should see the element "div#step1 div.go-back a#goBackToStep" displayed
-	And I should see the element "div.get-started a#getStarted" displayed
+#	And I should see the element "div.get-started a#getStarted" displayed
 	And The "ul.bha li.next-step a#step1" step is not highlighted
 	And The "ul.bha li.next-step a#step2" step is enabled
 
@@ -259,7 +259,7 @@ Landing Page Health Coach Step Not Completed
 	Given I am a Registered MyBlue Member on the Landing Page
 	When The "ul.bha li.next-step a#step2" step is not completed 
 	Then I should see the element "a#step2" displayed
-	And I should see the element "div.get-started a#getStarted" displayed
+#	And I should see the element "div.get-started a#getStarted" displayed
 	And The "ul.bha li.next-step a#step2" step is enabled
 	And The "ul.bha li.next-step a#step3" step is not enabled	 	
 	And I should not see the element "div#step2 div.go-back a#goBackToStep" displayed
@@ -272,7 +272,7 @@ Landing Page Healthy Actions Step Not Enabled
 	And The "ul.bha li.next-step a#step2" step is not completed
 	When The "ul.bha li.step div#step3" step is not completed 
 	Then The "ul.bha li.next-step a#step3" step is not highlighted
-	And I should see the element "div.get-started a#getStarted" displayed
+#	And I should see the element "div.get-started a#getStarted" displayed
 	And I should not see the element "div#step3 div.go-back a#goBackToStep" displayed
 	And I should not see the element "div#step3 div.complete" displayed 
 		

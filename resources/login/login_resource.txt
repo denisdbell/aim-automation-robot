@@ -10,6 +10,10 @@ Resource       ../common_resources.txt
 I am a MyBlue Member on the Login Page
 	Open Browser	${LOGIN_URL}      ${BROWSER}
 	Maximize Browser Window
+
+I am a MyBlue Member on the classic myBlue Login Page
+	Open Browser	${MYBLUE_LOGIN_URL}      ${BROWSER}
+	Maximize Browser Window
 	
 I Am Navigated to Landing Page "${pageElement}"
 	Page Should Contain Element		${pageElement}
@@ -18,13 +22,13 @@ I Am Not Navigated to Landing Page "${pageElement}"
 	Page Should Not Contain Element		${pageElement}
 
 I Enter A Username "${element}" "${text}"
-	Input Text		${element}		${text}
-		
+	Input Text		css=${element}		${text}
+							
 I Enter A Password "${element}" "${text}"
-	Input Password		${element}		${text}
+	Input Password		css=${element}		${text}
 
 I should see the element "${element}" blank
-	Element Text Should Be 		${element}	${EMPTY}		
+	Element Text Should Be 		css=${element}	${EMPTY}		
 
 I enter text in the "${element}" textbox
 	Input Text "thor"		${element}	

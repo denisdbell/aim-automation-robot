@@ -1,0 +1,33 @@
+*** Settings ***
+Library           Selenium2Library
+Suite Teardown	  Close All Browsers
+Resource          ../../resources/navbar/navbar_resource.txt
+
+*** Test Cases ***
+
+Username displayed on MyBlue App
+	[Tags]		UsernameMyBlueTest
+    Given I am a logged in MyBlue Member on the myBlue site
+    When I view the "div#myBlueNav" element
+    Then I should see the element "span.username" displayed
+
+Username displayed on Partner site
+	[Tags]		UsernamePartnerTest
+    Given I am a logged in MyBlue Member on a Partner site
+    When I view the "div#myBlueNav" element
+    Then I should see the element "span.username" displayed
+   
+Wellness Links Not displayed For Terminated User
+	[Tags]		TerminatedWellnessLinksTest
+    Given I am a logged in MyBlue Member With Plan Type is Terminated
+    Then I should not see the element "a.hearticon" displayed
+   
+Wellness Links displayed For Other User
+	[Tags]		OtherWellnessLinksTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Then I should see the element "a.hearticon" displayed
+
+
+   
+   
+ 

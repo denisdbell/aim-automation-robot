@@ -1,0 +1,37 @@
+*** Settings ***
+Documentation     A resource file with reusable keywords and variables.
+
+# resource importation/extension
+#Resource       ../common_resources.txt
+Resource       ../login/login_resource.txt
+
+*** Variables ***
+${SERVER_NAVBAR}=				http://localhost:9000
+${NAVBAR_SAMPLE_URL}=			${SERVER_NAVBAR}/sample.html
+${NAVBAR_MYBLUE_URL}=			""
+${NAVBAR_PARTNER_URL}=			""
+${TERMINATED_USER}=				marchhipaauat
+${TERMINATED_PWD}=				Bigfun21!
+
+
+*********Keywords************
+I am a logged in MyBlue Member on the myBlue site
+	Open Browser	${NAVBAR_SAMPLE_URL}      ${BROWSER}
+	Maximize Browser Window
+
+I am a logged in MyBlue Member on a Partner site
+	Open Browser	${NAVBAR_SAMPLE_URL}      ${BROWSER}
+	Maximize Browser Window
+
+I am a logged in MyBlue Member With Plan Type is Terminated
+	I am a logged in MyBlue Member on the myBlue site
+
+I am a logged in MyBlue Member With Plan Type is not Terminated
+	I am a logged in MyBlue Member on the myBlue site
+	
+
+
+
+
+
+
