@@ -14,6 +14,7 @@ Landing Page Health And Wellness Links Displayed
 	And I should see the link "a#healthAndWellnessLink2" displayed
 	And I should see the link "a#healthAndWellnessLink3" displayed
 	And I should see the link "a#healthAndWellnessLink4" displayed
+	Teardown Browser
 
 Landing Page Wellness Incentives Links Displayed
 	[Tags]		DisplayWellnessIncentivesLinks	
@@ -23,6 +24,7 @@ Landing Page Wellness Incentives Links Displayed
 	And I should see the link "a#wellnessIncentivesLink1" displayed
 	And I should see the link "a#wellnessIncentivesLink2" displayed
 	And I should see the link "a#wellnessIncentivesLink3" displayed
+	Teardown Browser
 
 Landing Page Benefits Links Displayed
 	[Tags]		DisplayBenefitsLinks	
@@ -33,6 +35,7 @@ Landing Page Benefits Links Displayed
 	And I should see the link "a#benefitsLink2" displayed
 	And I should see the link "a#benefitsLink3" displayed
 	And I should see the link "a#benefitsLink4" displayed
+	Teardown Browser
 	
 Landing Page Pharmacy Links Displayed
 	[Tags]		DisplayPharmacyLinks	
@@ -41,108 +44,126 @@ Landing Page Pharmacy Links Displayed
 	And I should see the link "a#pharmacyLink0" displayed
 	And I should see the link "a#pharmacyLink1" displayed
 	And I should see the link "a#pharmacyLink2" displayed
+	Teardown Browser
 	
 Take charge of your familys health Link Navigates to Family Health Page
 	[Tags]		ClickFamilyHealthLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink0" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 Get Baby Advice and Support Link Navigates to Support Page
 	[Tags]		ClickSupportLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink1" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Treatment Costs Link Navigates to Treatment Costs Page
 	[Tags]		ClickTreatmentCostsLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink2" Link
 	Then I should be navigated to "treatmentestimator.com" in a new tab
+	Teardown Browser
 	
 Walking Works Link Navigates to Treatment Costs Page
 	[Tags]		ClickWalkingWorksLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink3" Link
 	Then I should be navigated to "bcbsafepww.com" in a new tab
+	Teardown Browser
 
 Health Club Membership Link Navigates to Health Club Membership Page
 	[Tags]		ClickClubMembershipLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink4" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Wellness Card Center Link Navigates to Wellness Card Center Page
 	[Tags]		ClickCardCenterLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#wellnessIncentivesLink0" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 View Account Balance Link Navigates to View Account Balance Page
 	[Tags]		ClickAccountBalanceLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#wellnessIncentivesLink1" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Lost Card Link Navigates to Lost Card Page
 	[Tags]		ClickLostCardLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#wellnessIncentivesLink2" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Tobacco Cessation Link Navigates to Tobacco Cessation Page
 	[Tags]		ClickTobaccoCessationLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#wellnessIncentivesLink3" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Explanation of Benefits Link Navigates to Explanation of Benefits Page
 	[Tags]		ClickEobLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#benefitsLink0" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Order New Card Link Navigates to Order New Card Page
 	[Tags]		ClickNewCardLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#benefitsLink1" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Customer Service Questions Link Navigates to Customer Service Questions Page
 	[Tags]		ClickCustomerServiceQuestionsLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#benefitsLink2" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Customer Service Replies Link Navigates to Customer Service Replies Page
 	[Tags]		ClickCustomerServiceRepliesLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#benefitsLink3" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Find a Form Link Navigates to Forms Page
 	[Tags]		ClickFindFormLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#benefitsLink4" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Find a Pharmacy Link Navigates to Forms Page
 	[Tags]		ClickFindPharmacyLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#pharmacyLink0" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Check Drug Cost Link Navigates to Forms Page
 	[Tags]		ClickCheckDrugCostLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#pharmacyLink1" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Review Pharmacy Benefits Link Navigates to Review Pharmacy Benefits Page
 	[Tags]		ClickPharmacyBenefitsLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#pharmacyLink2" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 
 
@@ -151,16 +172,19 @@ Landing Page My Account Info Quick Links Displayed
 	[Tags]		MyAccountInfoLinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-myacc a#myAccountInfo" displayed
+	Teardown Browser
 
 Landing Page Member Id Card Quick Links Displayed
 	[Tags]		MemberIdCardLinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-memid a#memberIdCard" displayed
+	Teardown Browser
 
 Landing Page My Prescription Quick Links Displayed
 	[Tags]		MyPrescriptionLinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-pres a#myPrescriptions" displayed
+	Teardown Browser
 
 #Landing Page Nurse Line Quick Links Displayed
 #	[Tags]		NurseLineLinkDisplayed	
@@ -171,11 +195,13 @@ Landing Page Find a Physician Quick Links Displayed
 	[Tags]		FindPhysicianLinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-physician a#findPhysician" displayed
+	Teardown Browser
 
 Landing Page Explanation of Benefits Quick Links Displayed
 	[Tags]		ExplanationBenefitsLinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-benefits a#explanationOfBenefits" displayed
+	Teardown Browser
 
 #Landing Page Symptom Checker Quick Links Displayed
 #	[Tags]		SymptomCheckerLinkDisplayed	
@@ -186,18 +212,21 @@ Landing Page Personal Health Record Quick Links Displayed
 	[Tags]		PersonalHealthRecordLinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-record a#personalHealthRecord" displayed
+	Teardown Browser
 
 My Account Info Quick Link Navigates to My Account Info Page
 	[Tags]		ClickMyAccountLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-myacc a#myAccountInfo" Link
 	Then I should be navigated to "landingpage" in a new tab
+	Teardown Browser
 
 My Prescriptions Quick Link Navigates to My Prescriptions Page
 	[Tags]		ClickMyPrescriptionsLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-pres a#myPrescriptions" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 #Nurse Line Quick Link Navigates to Nurse Line Page
 #	[Tags]		ClickNurseLineLink	
@@ -210,12 +239,14 @@ Find a Physician Quick Link Navigates to Find a Physician Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-physician a#findPhysician" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Explanation of Benefits Quick Link Navigates to Explanation of Benefits Page
 	[Tags]		ClickExplanationBenefitsLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-benefits a#explanationOfBenefits" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 #Symptom Checker Quick Link Navigates to Symptom Checker Page
 #	[Tags]		ClickSymptomCheckerLink	
@@ -228,12 +259,14 @@ Personal Health Record Quick Link Navigates to Symptom Checker Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-record a#personalHealthRecord" Link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Member Card Id Quick Link Navigates to Symptom Checker Page
 	[Tags]		ClickMemberCardIdLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-memid a#memberIdCard" Link
 	Then I should be navigated to "memberidcard"
+	Teardown Browser
 
 #US243, US245, and US246 Test Cases for Desktop
 
@@ -246,6 +279,7 @@ Landing Page BHA Step Completed
 #	And I should see the element "div.get-started a#getStarted" displayed
 	And The "ul.bha li.next-step a#step1" step is not highlighted
 	And The "ul.bha li.next-step a#step2" step is enabled
+	Teardown Browser
 
 Landing Page BHA Step Go Back Button Clicked 
 	[Tags]		BhaStepGoBackClick
@@ -253,6 +287,7 @@ Landing Page BHA Step Go Back Button Clicked
 	When The "ul.bha li.completed div#step1" step is completed
 	And I Click the "div#step1 div.go-back a#goBackToStep" Link 
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Landing Page Health Coach Step Not Completed 
 	[Tags]		HealthCoachStepNotCompleted
@@ -264,6 +299,7 @@ Landing Page Health Coach Step Not Completed
 	And The "ul.bha li.next-step a#step3" step is not enabled	 	
 	And I should not see the element "div#step2 div.go-back a#goBackToStep" displayed
 	And I should not see the element "div#step2 div.complete" displayed 
+	Teardown Browser
 
 Landing Page Healthy Actions Step Not Enabled 
 	[Tags]		HealthyActionStepNotEnabled
@@ -275,7 +311,7 @@ Landing Page Healthy Actions Step Not Enabled
 #	And I should see the element "div.get-started a#getStarted" displayed
 	And I should not see the element "div#step3 div.go-back a#goBackToStep" displayed
 	And I should not see the element "div#step3 div.complete" displayed 
-		
+	Teardown Browser
 	
 
 	

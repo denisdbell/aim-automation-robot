@@ -14,6 +14,7 @@ ${SERVER}=			https://dev.fepblue.org:7443
 ${LOGIN_URL}=		${SERVER}/login  
 ${MYBLUE_LOGIN_URL}=		https://dev.fepblue.org:8443/web/guest
 ${NOVALUE}=		""
+${MYBLUE_PORTAL_URL}=			https://dev.fepblue.org:7443/
 
 
 *** Keywords ***
@@ -29,6 +30,9 @@ I should not see the element "${element}" displayed
 
 I Click the "${link}" Link
 	Click Link		css=${link}
+	
+I Click the "${element}" element
+	Click Element		css=${element}
 
 I Click the "${button}" Button
 	Click Button		css=${button}

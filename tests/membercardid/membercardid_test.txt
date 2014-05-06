@@ -10,9 +10,11 @@ Member Id Card Plan Type Standard Option displayed
 	Given I am a Registered MyBlue Member on the front of the Member Id Card
 	Then I should see the element "planTypeImage" displayed
 	And I should see the element "div#leftDiv div#overlay" displayed
+	Teardown Browser
 	
 Member Card Link Navigates to Member Id Card Page
 	[Tags]		ClickMemberCardLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "memberCardLink" Link
 	Then I should see the element "leftDiv" displayed
+	Teardown Browser
