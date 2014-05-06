@@ -5,8 +5,14 @@
 	<projects>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>com.nitorcreations.robotframework.eclipseide.rfeBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>com.aptana.projects.webnature</nature>
+		<nature>com.nitorcreations.robotframework.eclipseide.rfeNature</nature>
 	</natures>
 </projectDescription>

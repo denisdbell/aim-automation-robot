@@ -10,7 +10,7 @@ Library           Collections
 *** Variables ***
 
 ${BROWSER}=		firefox
-${SERVER}=		http://localhost:8000		
+${SERVER}=			https://dev.fepblue.org:7443		
 ${LOGIN_URL}=		${SERVER}/login  
 ${MYBLUE_LOGIN_URL}=		https://dev.fepblue.org:8443/web/guest
 ${NOVALUE}=		""

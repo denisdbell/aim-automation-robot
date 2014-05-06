@@ -22,10 +22,89 @@ Wellness Links Not displayed For Terminated User
     Given I am a logged in MyBlue Member With Plan Type is Terminated
     Then I should not see the element "a.hearticon" displayed
    
-Wellness Links displayed For Other User
+Wellness Links displayed For Not Terminated User
 	[Tags]		OtherWellnessLinksTest
     Given I am a logged in MyBlue Member With Plan Type is not Terminated
     Then I should see the element "a.hearticon" displayed
+    
+Wellness Menu Links displayed For Not Terminated User
+	[Tags]		OtherWellnessMenuLinksTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    When I Click the "a.hearticon" Link  
+    Then I should see the element "#wellnessCardBalance" displayed
+    And I should see the element "#newWellnessCard" displayed
+    And I should see the element "#reportStolenCard" displayed
+    And I should see the element "#faqs" displayed
+
+View Wellness Card Balance Link Navigates to View Wellness Card Page
+	[Tags]		ViewWellnessCardLinkTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    And I Click the "a.hearticon" Link
+    Sleep		5
+    When I Click the "#wellnessCardBalance a" Link
+    Sleep		5  
+    Then I should be navigated to "https://fepdemo.mychiprewards.com/Cards/Account"
+    
+New Wellness Card Link Navigates to New Wellness Card Page
+	[Tags]		NewWellnessCardLinkTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    And I Click the "a.hearticon" Link
+    Sleep		5
+    When I Click the "#newWellnessCard a" Link
+    Sleep		5  
+    Then I should be navigated to "https://fepdemo.mychiprewards.com/Home/Contact"
+
+Report Stolen Card Link Navigates to Report Stolen Card Page
+	[Tags]		ReportStolenCardLinkTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    And I Click the "a.hearticon" Link
+    Sleep		5
+    When I Click the "#reportStolenCard a" Link
+    Sleep		5  
+    Then I should be navigated to "https://fepdemo.mychiprewards.com/Home/Contact"
+
+FAQS Link Navigates to FAQS Page
+	[Tags]		FaqsLinkTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    And I Click the "a.hearticon" Link
+    Sleep		5
+    When I Click the "#faqs a" Link
+    Sleep		5  
+    Then I should be navigated to "http://www.fepblue.org/faqs/index.jsp"
+    
+Inbox Menu Links displayed For Not Terminated User
+	[Tags]		InboxMenuLinksTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    When I Click the "a.mailicon" Link  
+    Then I should see the element "#nurseLineInbox" displayed
+    And I should see the element "#customerServiceInbox" displayed
+    
+Customer Service Inbox Link Navigates to Customer Service Inbox Page
+	[Tags]		CustomerServiceInboxLinkTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    And I Click the "a.mailicon" Link
+    Sleep		5
+    When I Click the "#customerServiceInbox a" Link
+    Sleep		5  
+    Then I should be navigated to "http://custservv2.fepblue.org/fepesvc/login.do?loginErrorPage=loginFailed"
+
+Nurse Line Inbox Link Navigates to Nurse Line Inbox Page
+	[Tags]		NurseLineInboxLinkTest
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    And I Click the "a.mailicon" Link
+    Sleep		5
+    When I Click the "#nurseLineInbox a" Link
+    Sleep		5  
+    Then I should be navigated to "https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso"
+
+
+    
+
+
+
+
+    
+
 
 
    
