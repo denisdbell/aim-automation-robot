@@ -49,7 +49,10 @@ I should be navigated to "${url}"
 	Location Should Contain		${url}
 
 I view the "${element}" element
-	Page Should Contain Element		css=${element}		
+	Page Should Contain Element		css=${element}	
+
+I should see "${element}" have the text "${text}" displayed
+	Element Should Contain		css=${element}		${text}	
 
 Teardown Browser
     Close Browser

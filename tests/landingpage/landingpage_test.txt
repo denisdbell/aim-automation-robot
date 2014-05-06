@@ -313,6 +313,60 @@ Landing Page Healthy Actions Step Not Enabled
 	And I should not see the element "div#step3 div.complete" displayed 
 	Teardown Browser
 	
+#US486 Test Cases
+
+Link to Classic Site Displayed
+	[Tags]		DisplayClassicSiteLink	
+	Given I am a Registered MyBlue Member on the Landing Page
+	Then I should see the element "div.backToClassic a" displayed
+	Teardown Browser
+
+Link to Classic Site Navigates to Classic Page
+	[Tags]		ClassicSiteLinkTest	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.backToClassic a" Link
+	Then I should be navigated to "https://dev.fepblue.org:8443/members/myblue/dashboard"
+	Teardown Browser
+
+User content maintained on Classic Page
+	[Tags]		ClassicSiteUserContentTest	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.backToClassic a" Link
+	Sleep		5
+	Then I should see "span.username" have the text "MARCHCONTRACT" displayed
+	Teardown Browser
+
+Link to Mdot Site Displayed on Classic Site
+	[Tags]		DisplayMdotSiteLink	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.backToClassic a" Link
+	Sleep		5 
+	Then I should see the element "div#pilotSiteLink a" displayed
+	Teardown Browser
+
+Link to Mdot Site Navigates to Mdot Landing Page From Classic Site
+	[Tags]		MdotLinkTest	
+	Given I am a Registered MyBlue Member on the Landing Page
+	And I Click the "div.backToClassic a" Link
+	Sleep		5
+	When I Click the "div#pilotSiteLink a" Link
+	Then I should be navigated to "landingpage"
+	Teardown Browser
+
+User content maintained on Mdot Landing Page when navigated from the Classic Site
+	[Tags]		MdotSiteUserContentTest	
+	Given I am a Registered MyBlue Member on the Landing Page
+	And I Click the "div.backToClassic a" Link
+	Sleep		5
+	When I Click the "div#pilotSiteLink a" Link
+	Sleep		5
+	Then I should see "span.username" have the text "MARCHCONTRACT" displayed
+	Teardown Browser
+
+
+
+
+
 
 	
 	
