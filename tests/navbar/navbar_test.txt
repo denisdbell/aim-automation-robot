@@ -1,5 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
+Test Teardown	  Teardown Browser
 Suite Teardown	  Close All Browsers
 Resource          ../../resources/navbar/navbar_resource.txt
 
@@ -10,27 +11,27 @@ Username displayed on MyBlue App
     Given I am a logged in MyBlue Member on the myBlue site
     When I view the "div#myBlueNav" element
     Then I should see the element "span.username" displayed
-    Teardown Browser
+    
 
 Username displayed on Partner site
 	[Tags]		UsernamePartnerTest
     Given I am a logged in MyBlue Member on a Partner site
     When I view the "div#myBlueNav" element
     Then I should see the element "span.username" displayed
-    Teardown Browser
+    
     
 #US536 Test Cases   
 Wellness Links Not displayed For Terminated User
 	[Tags]		TerminatedWellnessLinksTest
     Given I am a logged in MyBlue Member With Plan Type is Terminated
     Then I should not see the element "a.hearticon" displayed
-    Teardown Browser
+    
    
 Wellness Links displayed For Not Terminated User
 	[Tags]		OtherWellnessLinksTest
     Given I am a logged in MyBlue Member With Plan Type is not Terminated
     Then I should see the element "a.hearticon" displayed
-	Teardown Browser
+	
 	    
 Wellness Menu Links displayed For Not Terminated User
 	[Tags]		OtherWellnessMenuLinksTest
@@ -40,7 +41,7 @@ Wellness Menu Links displayed For Not Terminated User
     And I should see the element "#newWellnessCard" displayed
     And I should see the element "#reportStolenCard" displayed
     And I should see the element "#faqs" displayed
-    Teardown Browser
+    
 
 View Wellness Card Balance Link Navigates to View Wellness Card Page
 	[Tags]		ViewWellnessCardLinkTest
@@ -50,7 +51,7 @@ View Wellness Card Balance Link Navigates to View Wellness Card Page
     When I Click the "#wellnessCardBalance a" Link
     Sleep		5  
     Then I should be navigated to "https://fepdemo.mychiprewards.com/Cards/Account"
-    Teardown Browser
+    
     
 New Wellness Card Link Navigates to New Wellness Card Page
 	[Tags]		NewWellnessCardLinkTest
@@ -60,7 +61,7 @@ New Wellness Card Link Navigates to New Wellness Card Page
     When I Click the "#newWellnessCard a" Link
     Sleep		5  
     Then I should be navigated to "https://fepdemo.mychiprewards.com/Home/Contact"
-    Teardown Browser
+    
 
 Report Stolen Card Link Navigates to Report Stolen Card Page
 	[Tags]		ReportStolenCardLinkTest
@@ -70,7 +71,7 @@ Report Stolen Card Link Navigates to Report Stolen Card Page
     When I Click the "#reportStolenCard a" Link
     Sleep		5  
     Then I should be navigated to "https://fepdemo.mychiprewards.com/Home/Contact"
-    Teardown Browser
+    
 
 FAQS Link Navigates to FAQS Page
 	[Tags]		FaqsLinkTest
@@ -80,7 +81,7 @@ FAQS Link Navigates to FAQS Page
     When I Click the "#faqs a" Link
     Sleep		5  
     Then I should be navigated to "http://www.fepblue.org/faqs/index.jsp"
-    Teardown Browser
+    
     
 Inbox Menu Links displayed For Not Terminated User
 	[Tags]		InboxMenuLinksTest
@@ -88,7 +89,7 @@ Inbox Menu Links displayed For Not Terminated User
     When I Click the "a.mailicon" Link  
     Then I should see the element "#nurseLineInbox" displayed
     And I should see the element "#customerServiceInbox" displayed
-    Teardown Browser
+    
     
 Customer Service Inbox Link Navigates to Customer Service Inbox Page
 	[Tags]		CustomerServiceInboxLinkTest
@@ -98,7 +99,7 @@ Customer Service Inbox Link Navigates to Customer Service Inbox Page
     When I Click the "#customerServiceInbox a" Link
     Sleep		5  
     Then I should be navigated to "http://custservv2.fepblue.org/fepesvc/login.do?loginErrorPage=loginFailed"
-    Teardown Browser
+    
 
 Nurse Line Inbox Link Navigates to Nurse Line Inbox Page
 	[Tags]		NurseLineInboxLinkTest
@@ -108,7 +109,7 @@ Nurse Line Inbox Link Navigates to Nurse Line Inbox Page
     When I Click the "#nurseLineInbox a" Link
     Sleep		5  
     Then I should be navigated to "https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso"
-    Teardown Browser
+    
 
 
 #US738 Test cases
@@ -117,19 +118,19 @@ Change Your Email Address link in user drop down menu
    Given I am logged into the MyBlue Portal
    When I click the "li#Username" element
    I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourEmailAddress"]" displayed
-   Teardown Browser
+   
    
 Change Your Password link in user drop down menu
    [Tags]		ChangePassword
    Given I am logged into the MyBlue Portal
    When I click the "li#Username" element
    I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourPassword"]" displayed
-   Teardown Browser
+   
    
 Change Your Username link in user drop down menu
    [Tags]		ChangeUsername
    Given I am logged into the MyBlue Portal
    When I click the "li#Username" element
    I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourUsername"]" displayed
-   Teardown Browser
+   
    
