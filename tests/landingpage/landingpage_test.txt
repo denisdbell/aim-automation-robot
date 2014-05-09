@@ -58,7 +58,7 @@ Get Baby Advice and Support Link Navigates to Support Page
 	[Tags]		ClickSupportLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink1" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 
 Treatment Costs Link Navigates to Treatment Costs Page
@@ -79,7 +79,7 @@ Health Club Membership Link Navigates to Health Club Membership Page
 	[Tags]		ClickClubMembershipLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink4" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "healthways.com" in a new tab
 	
 
 Wellness Card Center Link Navigates to Wellness Card Center Page
@@ -107,7 +107,7 @@ Tobacco Cessation Link Navigates to Tobacco Cessation Page
 	[Tags]		ClickTobaccoCessationLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#wellnessIncentivesLink3" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 
 Explanation of Benefits Link Navigates to Explanation of Benefits Page
@@ -149,14 +149,14 @@ Find a Pharmacy Link Navigates to Forms Page
 	[Tags]		ClickFindPharmacyLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#pharmacyLink0" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "caremark.com" in a new tab
 	
 
 Check Drug Cost Link Navigates to Forms Page
 	[Tags]		ClickCheckDrugCostLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#pharmacyLink1" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "caremark.com" in a new tab
 	
 
 Review Pharmacy Benefits Link Navigates to Review Pharmacy Benefits Page
@@ -226,7 +226,7 @@ My Prescriptions Quick Link Navigates to My Prescriptions Page
 	[Tags]		ClickMyPrescriptionsLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-pres a#myPrescriptions" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "caremark.com" in a new tab
 	
 
 #Nurse Line Quick Link Navigates to Nurse Line Page
@@ -259,7 +259,7 @@ Personal Health Record Quick Link Navigates to Symptom Checker Page
 	[Tags]		ClickPersonalHealthRecordLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-record a#personalHealthRecord" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 
 Member Card Id Quick Link Navigates to Symptom Checker Page
@@ -351,7 +351,7 @@ Link to Mdot Site Navigates to Mdot Landing Page From Classic Site
 	And I Click the "div.backToClassic a" Link
 	Sleep		5
 	When I Click the "div#pilotSiteLink a" Link
-	Then I should be navigated to "landingpage"
+	Then I should be navigated to "dashboard"
 	
 
 User content maintained on Mdot Landing Page when navigated from the Classic Site

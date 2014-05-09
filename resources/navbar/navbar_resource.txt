@@ -48,6 +48,5 @@ I am logged into the MyBlue Portal
 	I Enter A Username "#LoginUsername" "marchcontractuat"
 	I Enter A Password "#LoginPassword" "Bigfun21!"
 	I Click the "div.login form#loginForm button#login" Button
-	Reload Page
 
 

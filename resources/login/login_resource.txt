@@ -16,10 +16,10 @@ I am a MyBlue Member on the classic myBlue Login Page
 	Maximize Browser Window
 	
 I Am Navigated to Landing Page "${pageElement}"
-	Page Should Contain Element		${pageElement}
+	Page Should Contain Element		css=${pageElement}
 
 I Am Not Navigated to Landing Page "${pageElement}"
-	Page Should Not Contain Element		${pageElement}
+	Element Should Not Be Visible		css=${pageElement}
 
 I Enter A Username "${element}" "${text}"
 	Input Text		css=${element}		${text}
