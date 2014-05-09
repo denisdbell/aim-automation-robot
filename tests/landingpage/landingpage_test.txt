@@ -51,7 +51,7 @@ Take charge of your familys health Link Navigates to Family Health Page
 	[Tags]		ClickFamilyHealthLink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "a#healthAndWellnessLink0" Link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 	
 Get Baby Advice and Support Link Navigates to Support Page
@@ -61,11 +61,11 @@ Get Baby Advice and Support Link Navigates to Support Page
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 
-Treatment Costs Link Navigates to Treatment Costs Page
-	[Tags]		ClickTreatmentCostsLink	
-	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#healthAndWellnessLink2" Link
-	Then I should be navigated to "treatmentestimator.com" in a new tab
+#Treatment Costs Link Navigates to Treatment Costs Page
+#	[Tags]		ClickTreatmentCostsLink	
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	When I Click the "a#healthAndWellnessLink2" Link
+#	Then I should be navigated to "treatmentestimator.com" in a new tab
 	
 	
 Walking Works Link Navigates to Treatment Costs Page
@@ -351,7 +351,7 @@ Link to Mdot Site Navigates to Mdot Landing Page From Classic Site
 	And I Click the "div.backToClassic a" Link
 	Sleep		5
 	When I Click the "div#pilotSiteLink a" Link
-	Then I should be navigated to "dashboard"
+	Then I should be navigated to "landingpage"
 	
 
 User content maintained on Mdot Landing Page when navigated from the Classic Site

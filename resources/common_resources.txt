@@ -29,8 +29,8 @@ I should not see the element "${element}" displayed
 	Element Should Not Be Visible		css=${element}
 
 I Click the "${link}" Link
-	Click Link		css=${link}
-	
+	Click Link					css=${link}
+		
 I Click the "${element}" element
 	Click Element		css=${element}
 
