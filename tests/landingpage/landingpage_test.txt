@@ -6,266 +6,266 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 
 *** Test Cases ***
 #US251 Test Cases for Desktop
-Landing Page Health And Wellness Links Displayed
-	[Tags]		DisplayHealthAndWellnessLinks	
+Landing Page Health And Wellness links Displayed
+	[Tags]		DisplayHealthAndWellnesslinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "span#healthAndWellness" displayed	
-	And I should see the link "a#healthAndWellnessLink0" displayed
-	And I should see the link "a#healthAndWellnessLink1" displayed
-	And I should see the link "a#healthAndWellnessLink2" displayed
-	And I should see the link "a#healthAndWellnessLink3" displayed
-	And I should see the link "a#healthAndWellnessLink4" displayed
+	And I should see the link "a#healthAndWellnesslink0" displayed
+	And I should see the link "a#healthAndWellnesslink1" displayed
+	And I should see the link "a#healthAndWellnesslink2" displayed
+	And I should see the link "a#healthAndWellnesslink3" displayed
+	And I should see the link "a#healthAndWellnesslink4" displayed
 	
 
-Landing Page Wellness Incentives Links Displayed
-	[Tags]		DisplayWellnessIncentivesLinks	
+Landing Page Wellness Incentives links Displayed
+	[Tags]		DisplayWellnessIncentiveslinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "span#wellnessIncentives" displayed
-	And I should see the link "a#wellnessIncentivesLink0" displayed
-	And I should see the link "a#wellnessIncentivesLink1" displayed
-	And I should see the link "a#wellnessIncentivesLink2" displayed
-	And I should see the link "a#wellnessIncentivesLink3" displayed
+	And I should see the link "a#wellnessIncentiveslink0" displayed
+	And I should see the link "a#wellnessIncentiveslink1" displayed
+	And I should see the link "a#wellnessIncentiveslink2" displayed
+	And I should see the link "a#wellnessIncentiveslink3" displayed
 	
 
-Landing Page Benefits Links Displayed
-	[Tags]		DisplayBenefitsLinks	
+Landing Page Benefits links Displayed
+	[Tags]		DisplayBenefitslinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "span#benefits" displayed
-	And I should see the link "a#benefitsLink0" displayed
-	And I should see the link "a#benefitsLink1" displayed
-	And I should see the link "a#benefitsLink2" displayed
-	And I should see the link "a#benefitsLink3" displayed
-	And I should see the link "a#benefitsLink4" displayed
+	And I should see the link "a#benefitslink0" displayed
+	And I should see the link "a#benefitslink1" displayed
+	And I should see the link "a#benefitslink2" displayed
+	And I should see the link "a#benefitslink3" displayed
+	And I should see the link "a#benefitslink4" displayed
 	
 	
-Landing Page Pharmacy Links Displayed
-	[Tags]		DisplayPharmacyLinks	
+Landing Page Pharmacy links Displayed
+	[Tags]		DisplayPharmacylinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "span#pharmacy" displayed
-	And I should see the link "a#pharmacyLink0" displayed
-	And I should see the link "a#pharmacyLink1" displayed
-	And I should see the link "a#pharmacyLink2" displayed
+	And I should see the link "a#pharmacylink0" displayed
+	And I should see the link "a#pharmacylink1" displayed
+	And I should see the link "a#pharmacylink2" displayed
 	
 	
-Take charge of your familys health Link Navigates to Family Health Page
-	[Tags]		ClickFamilyHealthLink	
+Take charge of your familys health link Navigates to Family Health Page
+	[Tags]		ClickFamilyHealthlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#healthAndWellnessLink0" Link
+	When I Click the "a#healthAndWellnesslink0" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 	
-Get Baby Advice and Support Link Navigates to Support Page
-	[Tags]		ClickSupportLink	
+Get Baby Advice and Support link Navigates to Support Page
+	[Tags]		ClickSupportlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#healthAndWellnessLink1" Link
+	When I Click the "a#healthAndWellnesslink1" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 
-#Treatment Costs Link Navigates to Treatment Costs Page
-#	[Tags]		ClickTreatmentCostsLink	
+#Treatment Costs link Navigates to Treatment Costs Page
+#	[Tags]		ClickTreatmentCostslink	
 #	Given I am a Registered MyBlue Member on the Landing Page
-#	When I Click the "a#healthAndWellnessLink2" Link
+#	When I Click the "a#healthAndWellnesslink2" link
 #	Then I should be navigated to "treatmentestimator.com" in a new tab
 	
 	
-Walking Works Link Navigates to Treatment Costs Page
-	[Tags]		ClickWalkingWorksLink	
+Walking Works link Navigates to Treatment Costs Page
+	[Tags]		ClickWalkingWorkslink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#healthAndWellnessLink3" Link
+	When I Click the "a#healthAndWellnesslink3" link
 	Then I should be navigated to "bcbsafepww.com" in a new tab
 	
 
-Health Club Membership Link Navigates to Health Club Membership Page
-	[Tags]		ClickClubMembershipLink	
+Health Club Membership link Navigates to Health Club Membership Page
+	[Tags]		ClickClubMembershiplink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#healthAndWellnessLink4" Link
+	When I Click the "a#healthAndWellnesslink4" link
 	Then I should be navigated to "healthways.com" in a new tab
 	
 
-Wellness Card Center Link Navigates to Wellness Card Center Page
-	[Tags]		ClickCardCenterLink	
+Wellness Card Center link Navigates to Wellness Card Center Page
+	[Tags]		ClickCardCenterlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#wellnessIncentivesLink0" Link
+	When I Click the "a#wellnessIncentiveslink0" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-View Account Balance Link Navigates to View Account Balance Page
-	[Tags]		ClickAccountBalanceLink	
+View Account Balance link Navigates to View Account Balance Page
+	[Tags]		ClickAccountBalancelink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#wellnessIncentivesLink1" Link
+	When I Click the "a#wellnessIncentiveslink1" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Lost Card Link Navigates to Lost Card Page
-	[Tags]		ClickLostCardLink	
+Lost Card link Navigates to Lost Card Page
+	[Tags]		ClickLostCardlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#wellnessIncentivesLink2" Link
+	When I Click the "a#wellnessIncentiveslink2" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Tobacco Cessation Link Navigates to Tobacco Cessation Page
-	[Tags]		ClickTobaccoCessationLink	
+Tobacco Cessation link Navigates to Tobacco Cessation Page
+	[Tags]		ClickTobaccoCessationlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#wellnessIncentivesLink3" Link
+	When I Click the "a#wellnessIncentiveslink3" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 
-Explanation of Benefits Link Navigates to Explanation of Benefits Page
-	[Tags]		ClickEobLink	
+Explanation of Benefits link Navigates to Explanation of Benefits Page
+	[Tags]		ClickEoblink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#benefitsLink0" Link
+	When I Click the "a#benefitslink0" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Order New Card Link Navigates to Order New Card Page
-	[Tags]		ClickNewCardLink	
+Order New Card link Navigates to Order New Card Page
+	[Tags]		ClickNewCardlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#benefitsLink1" Link
+	When I Click the "a#benefitslink1" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Customer Service Questions Link Navigates to Customer Service Questions Page
-	[Tags]		ClickCustomerServiceQuestionsLink	
+Customer Service Questions link Navigates to Customer Service Questions Page
+	[Tags]		ClickCustomerServiceQuestionslink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#benefitsLink2" Link
+	When I Click the "a#benefitslink2" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Customer Service Replies Link Navigates to Customer Service Replies Page
-	[Tags]		ClickCustomerServiceRepliesLink	
+Customer Service Replies link Navigates to Customer Service Replies Page
+	[Tags]		ClickCustomerServiceReplieslink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#benefitsLink3" Link
+	When I Click the "a#benefitslink3" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Find a Form Link Navigates to Forms Page
-	[Tags]		ClickFindFormLink	
+Find a Form link Navigates to Forms Page
+	[Tags]		ClickFindFormlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#benefitsLink4" Link
+	When I Click the "a#benefitslink4" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Find a Pharmacy Link Navigates to Forms Page
-	[Tags]		ClickFindPharmacyLink	
+Find a Pharmacy link Navigates to Forms Page
+	[Tags]		ClickFindPharmacylink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#pharmacyLink0" Link
+	When I Click the "a#pharmacylink0" link
 	Then I should be navigated to "caremark.com" in a new tab
 	
 
-Check Drug Cost Link Navigates to Forms Page
-	[Tags]		ClickCheckDrugCostLink	
+Check Drug Cost link Navigates to Forms Page
+	[Tags]		ClickCheckDrugCostlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#pharmacyLink1" Link
+	When I Click the "a#pharmacylink1" link
 	Then I should be navigated to "caremark.com" in a new tab
 	
 
-Review Pharmacy Benefits Link Navigates to Review Pharmacy Benefits Page
-	[Tags]		ClickPharmacyBenefitsLink	
+Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
+	[Tags]		ClickPharmacyBenefitslink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "a#pharmacyLink2" Link
+	When I Click the "a#pharmacylink2" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
 
 
 #US249 Test Cases for Desktop
-Landing Page My Account Info Quick Links Displayed
-	[Tags]		MyAccountInfoLinkDisplayed	
+Landing Page My Account Info Quick links Displayed
+	[Tags]		MyAccountInfolinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-myacc a#myAccountInfo" displayed
 	
 
-Landing Page Member Id Card Quick Links Displayed
-	[Tags]		MemberIdCardLinkDisplayed	
+Landing Page Member Id Card Quick links Displayed
+	[Tags]		MemberIdCardlinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-memid a#memberIdCard" displayed
 	
 
-Landing Page My Prescription Quick Links Displayed
-	[Tags]		MyPrescriptionLinkDisplayed	
+Landing Page My Prescription Quick links Displayed
+	[Tags]		MyPrescriptionlinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-pres a#myPrescriptions" displayed
 	
 
-#Landing Page Nurse Line Quick Links Displayed
-#	[Tags]		NurseLineLinkDisplayed	
+#Landing Page Nurse Line Quick links Displayed
+#	[Tags]		NurseLinelinkDisplayed	
 #	Given I am a Registered MyBlue Member on the Landing Page
 #	Then I should see the element "div.quicknav-nurse a#nurseLine" displayed
 
-Landing Page Find a Physician Quick Links Displayed
-	[Tags]		FindPhysicianLinkDisplayed	
+Landing Page Find a Physician Quick links Displayed
+	[Tags]		FindPhysicianlinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-physician a#findPhysician" displayed
 	
 
-Landing Page Explanation of Benefits Quick Links Displayed
-	[Tags]		ExplanationBenefitsLinkDisplayed	
+Landing Page Explanation of Benefits Quick links Displayed
+	[Tags]		ExplanationBenefitslinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-benefits a#explanationOfBenefits" displayed
 	
 
-#Landing Page Symptom Checker Quick Links Displayed
-#	[Tags]		SymptomCheckerLinkDisplayed	
+#Landing Page Symptom Checker Quick links Displayed
+#	[Tags]		SymptomCheckerlinkDisplayed	
 #	Given I am a Registered MyBlue Member on the Landing Page
 #	Then I should see the element "div.quicknav-symptom a#symptomChecker" displayed
 
-Landing Page Personal Health Record Quick Links Displayed
-	[Tags]		PersonalHealthRecordLinkDisplayed	
+Landing Page Personal Health Record Quick links Displayed
+	[Tags]		PersonalHealthRecordlinkDisplayed	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-record a#personalHealthRecord" displayed
 	
 
-My Account Info Quick Link Navigates to My Account Info Page
-	[Tags]		ClickMyAccountLink	
+My Account Info Quick link Navigates to My Account Info Page
+	[Tags]		ClickMyAccountlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-myacc a#myAccountInfo" Link
+	When I Click the "div.quicknav-myacc a#myAccountInfo" link
 	Then I should be navigated to "landingpage" in a new tab
 	
 
-My Prescriptions Quick Link Navigates to My Prescriptions Page
-	[Tags]		ClickMyPrescriptionsLink	
+My Prescriptions Quick link Navigates to My Prescriptions Page
+	[Tags]		ClickMyPrescriptionslink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-pres a#myPrescriptions" Link
+	When I Click the "div.quicknav-pres a#myPrescriptions" link
 	Then I should be navigated to "caremark.com" in a new tab
 	
 
-#Nurse Line Quick Link Navigates to Nurse Line Page
-#	[Tags]		ClickNurseLineLink	
+#Nurse Line Quick link Navigates to Nurse Line Page
+#	[Tags]		ClickNurseLinelink	
 #	Given I am a Registered MyBlue Member on the Landing Page
-#	When I Click the "div.quicknav-nurse a#nurseLine" Link
+#	When I Click the "div.quicknav-nurse a#nurseLine" link
 #	Then I should be navigated to "fepblue.org" in a new tab
 
-Find a Physician Quick Link Navigates to Find a Physician Page
-	[Tags]		ClickFindPhysicianLink	
+Find a Physician Quick link Navigates to Find a Physician Page
+	[Tags]		ClickFindPhysicianlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-physician a#findPhysician" Link
+	When I Click the "div.quicknav-physician a#findPhysician" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-Explanation of Benefits Quick Link Navigates to Explanation of Benefits Page
-	[Tags]		ClickExplanationBenefitsLink	
+Explanation of Benefits Quick link Navigates to Explanation of Benefits Page
+	[Tags]		ClickExplanationBenefitslink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-benefits a#explanationOfBenefits" Link
+	When I Click the "div.quicknav-benefits a#explanationOfBenefits" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
-#Symptom Checker Quick Link Navigates to Symptom Checker Page
-#	[Tags]		ClickSymptomCheckerLink	
+#Symptom Checker Quick link Navigates to Symptom Checker Page
+#	[Tags]		ClickSymptomCheckerlink	
 #	Given I am a Registered MyBlue Member on the Landing Page
-#	When I Click the "div.quicknav-symptom a#symptomChecker" Link
+#	When I Click the "div.quicknav-symptom a#symptomChecker" link
 #	Then I should be navigated to "fepblue.org" in a new tab
 
-Personal Health Record Quick Link Navigates to Symptom Checker Page
-	[Tags]		ClickPersonalHealthRecordLink	
+Personal Health Record Quick link Navigates to Symptom Checker Page
+	[Tags]		ClickPersonalHealthRecordlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-record a#personalHealthRecord" Link
+	When I Click the "div.quicknav-record a#personalHealthRecord" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	
 
-Member Card Id Quick Link Navigates to Symptom Checker Page
-	[Tags]		ClickMemberCardIdLink	
+Member Card Id Quick link Navigates to Symptom Checker Page
+	[Tags]		ClickMemberCardIdlink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-memid a#memberIdCard" Link
+	When I Click the "div.quicknav-memid a#memberIdCard" link
 	Then I should be navigated to "memberidcard"
 	
 
@@ -286,7 +286,7 @@ Landing Page BHA Step Go Back Button Clicked
 	[Tags]		BhaStepGoBackClick
 	Given I am a Registered MyBlue Member on the Landing Page
 	When The "ul.bha li.completed div#step1" step is completed
-	And I Click the "div#step1 div.go-back a#goBackToStep" Link 
+	And I Click the "div#step1 div.go-back a#goBackToStep" link 
 	Then I should be navigated to "fepblue.org" in a new tab
 	
 
@@ -316,50 +316,50 @@ Landing Page Healthy Actions Step Not Enabled
 	
 #US486 Test Cases
 
-Link to Classic Site Displayed
-	[Tags]		DisplayClassicSiteLink	
+link to Classic Site Displayed
+	[Tags]		DisplayClassicSitelink	
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.backToClassic a" displayed
 	
 
-Link to Classic Site Navigates to Classic Page
-	[Tags]		ClassicSiteLinkTest	
+link to Classic Site Navigates to Classic Page
+	[Tags]		ClassicSitelinkTest	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.backToClassic a" Link
+	When I Click the "div.backToClassic a" link
 	Then I should be navigated to "https://dev.fepblue.org:8443/members/myblue/dashboard"
 	
 
 User content maintained on Classic Page
 	[Tags]		ClassicSiteUserContentTest	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.backToClassic a" Link
+	When I Click the "div.backToClassic a" link
 	Sleep		5
 	Then I should see "span.username" have the text "MARCHCONTRACT" displayed
 	
 
-Link to Mdot Site Displayed on Classic Site
-	[Tags]		DisplayMdotSiteLink	
+link to Mdot Site Displayed on Classic Site
+	[Tags]		DisplayMdotSitelink	
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.backToClassic a" Link
+	When I Click the "div.backToClassic a" link
 	Sleep		5 
-	Then I should see the element "div#pilotSiteLink a" displayed
+	Then I should see the element "div#pilotSitelink a" displayed
 	
 
-Link to Mdot Site Navigates to Mdot Landing Page From Classic Site
-	[Tags]		MdotLinkTest	
+link to Mdot Site Navigates to Mdot Landing Page From Classic Site
+	[Tags]		MdotlinkTest	
 	Given I am a Registered MyBlue Member on the Landing Page
-	And I Click the "div.backToClassic a" Link
+	And I Click the "div.backToClassic a" link
 	Sleep		5
-	When I Click the "div#pilotSiteLink a" Link
+	When I Click the "div#pilotSitelink a" link
 	Then I should be navigated to "landingpage"
 	
 
 User content maintained on Mdot Landing Page when navigated from the Classic Site
 	[Tags]		MdotSiteUserContentTest	
 	Given I am a Registered MyBlue Member on the Landing Page
-	And I Click the "div.backToClassic a" Link
+	And I Click the "div.backToClassic a" link
 	Sleep		5
-	When I Click the "div#pilotSiteLink a" Link
+	When I Click the "div#pilotSitelink a" link
 	Sleep		5
 	Then I should see "span.username" have the text "MARCHCONTRACT" displayed
 	

@@ -6,7 +6,7 @@ Resource          ../../resources/login/login_resource.txt
 
 *** Test Cases ***
 
-Login Page Hot Links Displayed
+Login Page Hot links Displayed
 	Given I am a MyBlue Member on the Login Page
 	Then I should see the element "#forgotLogin" displayed
 	And I should see the element "#signup" displayed
