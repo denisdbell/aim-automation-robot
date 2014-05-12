@@ -9,10 +9,11 @@ Resource	   ../landingpage/landingpage_resource.txt
 
 I am a Registered MyBlue Member on the front of the Member Id Card
 	I am a MyBlue Member on the Login Page
-	I Enter A Username "username" "thor"
-	I Enter A Password "password" "thor"
-	I Click the "login" Button
-	I Click the "memberCardLink" Link
+	I Enter A Username "#LoginUsername" "marchhipaauat"
+    I Enter A Password "#LoginPassword" "Bigfun21!"
+    I Click the "#login" Button
+	I Click the "#memberIdCard" Link
+	Sleep		5
 
 I Am Navigated to Member Id Card Page "${pageElement}"
 	Page Should Contain Element		${pageElement}
