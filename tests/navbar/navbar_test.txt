@@ -1,6 +1,5 @@
 *** Settings ***
 Library           Selenium2Library
-Test Teardown	  Teardown Browser
 Suite Teardown	  Close All Browsers
 Resource          ../../resources/navbar/navbar_resource.txt
 
@@ -11,7 +10,7 @@ Username displayed on MyBlue App
     Given I am logged into the MyBlue Portal
     Reload Page
     Then I should see the element "span.username" displayed
-    
+    Teardown Browser
 
 Username displayed on Partner site
 	[Tags]		UsernamePartnerTest
@@ -21,14 +20,14 @@ Username displayed on Partner site
 	Select Window				@{windows}[1]
 	Sleep						5	
     Then I should see the element "span.username" displayed
-    
+    Teardown Browser
     
 #US536 Test Cases   
 Wellness links Not displayed For Terminated User
 	[Tags]		TerminatedWellnesslinksTest
     Given I am a logged in MyBlue Member With Plan Type is Terminated
     Then I should not see the element "a.hearticon" displayed
-    
+    Teardown Browser
    
 Wellness links displayed For Not Terminated User
 	[Tags]		OtherWellnesslinksTest
@@ -38,7 +37,7 @@ Wellness links displayed For Not Terminated User
 	    
 Wellness Menu links displayed For Not Terminated User
 	[Tags]		OtherWellnessMenulinksTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
     When I Click the "a.hearticon" link  
     Then I should see the element "#wellnessCardBalance" displayed
     And I should see the element "#newWellnessCard" displayed
@@ -48,7 +47,7 @@ Wellness Menu links displayed For Not Terminated User
 
 View Wellness Card Balance link Navigates to View Wellness Card Page
 	[Tags]		ViewWellnessCardlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
     And I Click the "a.hearticon" link
     Sleep		5
     When I Click the "#wellnessCardBalance a" link
@@ -58,7 +57,7 @@ View Wellness Card Balance link Navigates to View Wellness Card Page
     
 New Wellness Card link Navigates to New Wellness Card Page
 	[Tags]		NewWellnessCardlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
     And I Click the "a.hearticon" link
     Sleep		5
     When I Click the "#newWellnessCard a" link
@@ -68,7 +67,7 @@ New Wellness Card link Navigates to New Wellness Card Page
 
 Report Stolen Card link Navigates to Report Stolen Card Page
 	[Tags]		ReportStolenCardlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
     And I Click the "a.hearticon" link
     Sleep		5
     When I Click the "#reportStolenCard a" link
@@ -78,7 +77,7 @@ Report Stolen Card link Navigates to Report Stolen Card Page
 
 FAQS link Navigates to FAQS Page
 	[Tags]		FaqslinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
     And I Click the "a.hearticon" link
     Sleep		5
     When I Click the "#faqs a" link
@@ -88,7 +87,7 @@ FAQS link Navigates to FAQS Page
     
 Inbox Menu links displayed For Not Terminated User
 	[Tags]		InboxMenulinksTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
     When I Click the "a.mailicon" link  
     Then I should see the element "#nurseLineInbox" displayed
     And I should see the element "#customerServiceInbox" displayed
@@ -107,13 +106,13 @@ Inbox Menu links displayed For Not Terminated User
 
 Nurse Line Inbox link Navigates to Nurse Line Inbox Page
 	[Tags]		NurseLineInboxlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
+    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
     And I Click the "a.mailicon" link
     Sleep		5
     When I Click the "#nurseLineInbox a" link
     Sleep		5  
     Then I should be navigated to "https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso"
-    
+    Teardown Browser
 
 
 #US738 Test cases
@@ -122,22 +121,37 @@ Change Your Email Address link in user drop down menu
    Given I am logged into the MyBlue Portal
    Reload Page
    When I click the "li#Username" element
-   I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourEmailAddress"]" displayed
+   Then I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourEmailAddress"]" displayed
    
    
 Change Your Password link in user drop down menu
    [Tags]		TestUsernameDropdown
-   Given I am logged into the MyBlue Portal
-   Reload Page
-   When I click the "li#Username" element
-   I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourPassword"]" displayed
+   Then I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourPassword"]" displayed
    
    
 Change Your Username link in user drop down menu
    [Tags]		TestUsernameDropdown
-   Given I am logged into the MyBlue Portal
-   Reload Page
-   When I click the "li#Username" element
-   I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourUsername"]" displayed
-   
-   
+   Then I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourUsername"]" displayed
+   Teardown Browser
+
+
+#US764 - Post Navigation Test
+M. Post-Navigation Interstitial Legal Message
+	[Tags]		PostNavigationInterstitial
+	Given I am logged into the MyBlue Portal
+	Reload Page
+	When I click the "#health-tools" element
+	And I click the "li[data-url-config="navigation.main.healthTools.nodes.nurseLine"] a" element
+	And I enter the pin "1234"
+	Then I should see the element ".col-xs-10" displayed
+	
+M. Post-Navigation Interstitial Legal Message Text
+	[Tags]		PostNavigationInterstitial
+	Then I should see ".col-xs-10" have the text "You have accessed a third party website. " displayed
+	
+M. Post-Navigation Interstitial Legal Message More Details
+	[Tags]		PostNavigationInterstitial
+	When I click the ".icon.arrow" element
+	Sleep		3
+	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party.The protection of your privacy will be governed by the privacy policy of this site.Please review the site & terms of use and privacy policy for details." displayed
+	Teardown Browser
