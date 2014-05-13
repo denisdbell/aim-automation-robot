@@ -47,12 +47,21 @@ I should be navigated to "${url}" in a new tab
 I should be navigated to "${url}"
 	Sleep						5
 	Location Should Contain		${url}
+	
+I should not be redirected off the page "${url}"
+	Location Should Contain		${url}
 
 I view the "${element}" element
 	Page Should Contain Element		css=${element}	
 
 I should see "${element}" have the text "${text}" displayed
 	Element Should Contain		css=${element}		${text}	
+	
+I should see the element "${element}" disabled
+	Page Should Contain Element		css=${element}
+
+I should not see the element "${element}" disabled
+	Page Should Not Contain Element			css=${element}
 
 Teardown Browser
     Close Browser

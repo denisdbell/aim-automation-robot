@@ -12,6 +12,7 @@ ${NAVBAR_MYBLUE_URL}=			""
 ${NAVBAR_PARTNER_URL}=			""
 ${TERMINATED_USER}=				marchhipaauat
 ${TERMINATED_PWD}=				Bigfun21!
+${MYBLUE_CSR_NAV}=				https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html
 
 
 *********Keywords************
@@ -59,3 +60,9 @@ I enter the pin "${pin}"
 	Input Text			css=#Pin		${pin}
 	Click Element		css=button[type="submit"]
 	Sleep		3
+	
+I am logged in CSR
+	Open Browser	${MYBLUE_CSR_NAV}      ${BROWSER}
+	Maximize Browser Window
+	Sleep		3
+	

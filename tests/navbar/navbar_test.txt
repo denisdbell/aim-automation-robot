@@ -155,3 +155,60 @@ M. Post-Navigation Interstitial Legal Message More Details
 	Sleep		3
 	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party.The protection of your privacy will be governed by the privacy policy of this site.Please review the site & terms of use and privacy policy for details." displayed
 	Teardown Browser
+	
+
+#US767 - CSR Nav
+As a CSR, I should see the wellness icon disabled
+	[Tags]		CSR
+	Given I am logged in CSR
+	Then I should see the element "#Wellness[class=\"disable\"]" disabled
+	
+As a CSR, I should see the FEP Blue link disabled
+	[Tags]		CSR
+	Then I should see the element "#fep-blue[class=\"disable\"]" disabled
+	
+As a CSR, I should see the Pharmacy link disabled
+	[Tags]		CSR
+	Then I should see the element "#pharmacy[class=\"disable\"]" disabled
+	
+As a CSR, I should see the Health Tools link disabled
+	[Tags]		CSR
+	Then I should see the element "#health-tools[class=\"disable\"]" disabled
+	
+As a CSR, I should see the My Blue link disabled
+	[Tags]		CSR
+	Then I should see the element "#my-blue[class=\"disable\"]" disabled
+	
+As a CSR, I should see the My Account link enabled and active
+	[Tags]		CSR
+	Then I should not see the element "#my-account[class=\"disable\"]" disabled
+
+As a CSR, I should not be redirected when I click the wellness icon
+	[Tags]		CSR
+	When I Click the "#Wellness[class=\"disable\"]" element
+	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	
+As a CSR, I should not be redirected when I click the FEP Blue link
+	[Tags]		CSR
+	When I Click the "#fep-blue[class=\"disable\"]" element
+	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	
+As a CSR, I should not be redirected when I click the Pharmacy link
+	[Tags]		CSR
+	When I Click the "#pharmacy[class=\"disable\"]" element
+	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	
+As a CSR, I should not be redirected when I click the Health Tools link
+	[Tags]		CSR
+	When I Click the "#health-tools[class=\"disable\"]" element
+	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	
+As a CSR, I should not be redirected when I click the My Blue link
+	[Tags]		CSR
+	When I Click the "#my-blue[class=\"disable\"]" element
+	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	
+As a CSR, I should see the My Account drop down list
+	[Tags]		CSR
+	When I Click the "#my-account" element
+	Then I should see the element "#my-account .cbp-hrsub" displayed
