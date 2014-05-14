@@ -6,28 +6,13 @@ Resource       ../common_resources.txt
 Resource       ../login/login_resource.txt
 
 
-*** Variables ***
-
-${IS_LANDINGPAGE_LOGIN}=			0
-
-
 *********Keywords************
 
 I am a Registered MyBlue Member on the Landing Page
-	Run Keyword If    ${IS_LANDINGPAGE_LOGIN} == 0		Login user
-	Run Keyword If    ${IS_LANDINGPAGE_LOGIN} == 1		Browse to landing page
-
-Login user
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "junecontractuatstd"
 	I Enter A Password "#LoginPassword" "Bigfun21!"
 	I Click the "div.login form#loginForm button#login" Button
-	Set Suite Variable		${IS_LANDINGPAGE_LOGIN}			1
-	Reload Page
-	
-Browse to landing page
-	Go To 			${SERVER}/landingpage
-	Sleep			1
 
 I Am Navigated to Member Id Card Page "${pageElement}"
 	Page Should Contain Element		${pageElement}
@@ -49,6 +34,10 @@ The "${step}" step is enabled
 	
 The "${step}" step is not enabled
 	I should not see the element "${step}" displayed
+
+I am a Registered MyBlue Member on the Landing Page (Session exists)
+	Go To 			https://dev.fepblue.org:7443/landingpage
+	Sleep			1
 
 
 
