@@ -16,7 +16,6 @@ ${MYBLUE_LOGIN_URL}=		https://dev.fepblue.org:8443/web/guest
 ${NOVALUE}=		""
 ${MYBLUE_PORTAL_URL}=			https://dev.fepblue.org:7443/
 
-
 *** Keywords ***
 
 I should see the element "${element}" displayed
