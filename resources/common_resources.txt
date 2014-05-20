@@ -63,4 +63,4 @@ I should not see the element "${element}" disabled
 	Page Should Not Contain Element			css=${element}
 
 Teardown Browser
-    Close Browser
+    Close All Browsers

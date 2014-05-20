@@ -10,157 +10,176 @@ Landing Page Health And Wellness links Displayed
 	Given I am a Registered MyBlue Member on the Landing Page
 	Reload Page
 	Then I should see the element "span#healthAndWellness" displayed
-	And I should see the link "li#healthAndWellnesslink0 member-link a" displayed
-	And I should see the link "li#healthAndWellnesslink1 member-link a" displayed
-	And I should see the link "li#healthAndWellnesslink2 member-link a" displayed
-	And I should see the link "li#healthAndWellnesslink3 member-link a" displayed
-	And I should see the link "li#healthAndWellnesslink4 member-link a" displayed
+	And I should see the link "li#healthAndWellnesslink0 a" displayed
+	And I should see the link "li#healthAndWellnesslink1 a" displayed
+	And I should see the link "li#healthAndWellnesslink2 a" displayed
+	And I should see the link "li#healthAndWellnesslink3 a" displayed
+	And I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 
 Landing Page Wellness Incentives links Displayed
 	[Tags]		LandingPageLinks
 	Then I should see the element "span#wellnessIncentives" displayed
-	And I should see the link "#wellnessIncentiveslink0 member-link a" displayed
-	And I should see the link "#wellnessIncentiveslink1 member-link a" displayed
-	And I should see the link "#wellnessIncentiveslink2 member-link a" displayed
-	And I should see the link "#wellnessIncentiveslink3 member-link a" displayed
+	And I should see the link "#wellnessIncentiveslink0 a" displayed
+	And I should see the link "#wellnessIncentiveslink1 a" displayed
+	And I should see the link "#wellnessIncentiveslink2 a" displayed
+	And I should see the link "#wellnessIncentiveslink3 a" displayed
 	
 
 Landing Page Benefits links Displayed
 	[Tags]		LandingPageLinks
 	Then I should see the element "span#benefits" displayed
-	And I should see the link "#benefitslink0 member-link a" displayed
-	And I should see the link "#benefitslink1 member-link a" displayed
-	And I should see the link "#benefitslink2 member-link a" displayed
-	And I should see the link "#benefitslink3 member-link a" displayed
-	And I should see the link "#benefitslink4 member-link a" displayed
+	And I should see the link "#benefitslink0 a" displayed
+	And I should see the link "#benefitslink1 a" displayed
+	And I should see the link "#benefitslink2 a" displayed
+	And I should see the link "#benefitslink3 a" displayed
+	And I should see the link "#benefitslink4 a" displayed
 	
 	
 Landing Page Pharmacy links Displayed
 	[Tags]		LandingPageLinks
 	Then I should see the element "span#pharmacy" displayed
-	And I should see the link "#pharmacylink0 member-link a" displayed
-	And I should see the link "#pharmacylink1 member-link a" displayed
-	And I should see the link "#pharmacylink2 member-link a" displayed
+	And I should see the link "#pharmacylink0 a" displayed
+	And I should see the link "#pharmacylink1 a" displayed
+	And I should see the link "#pharmacylink2 a" displayed
 	
 	
 Take charge of your familys health link Navigates to Family Health Page
-	[Tags]		ClickFamilyHealthlink	LandingPageLinks
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#healthAndWellnesslink0 member-link a" link
+	[Tags]		LandingPageLinks
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#healthAndWellnesslink0 a" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
-	
+	Teardown Browser
 	
 Get Baby Advice and Support link Navigates to Support Page
-	[Tags]		ClickSupportlink	LandingPageLinks
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#healthAndWellnesslink1 member-link a" link
+	[Tags]		LandingPageLinks
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#healthAndWellnesslink1 a" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
-	
+	Teardown Browser
 
 #Treatment Costs link Navigates to Treatment Costs Page
-#	[Tags]		ClickTreatmentCostslink	
+#	[Tags]		LandingPageLinks
 #	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	When I Click the "#healthAndWellnesslink2 member-link a" link
+#	When I Click the "#healthAndWellnesslink2 a" link
 #	Then I should be navigated to "treatmentestimator.com" in a new tab
 	
 	
 Walking Works link Navigates to Treatment Costs Page
-	[Tags]		ClickWalkingWorkslink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#healthAndWellnesslink3 member-link a" link
+	[Tags]		LandingPageLinks
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#healthAndWellnesslink3 a" link
 	Then I should be navigated to "bcbsafepww.com" in a new tab
+	Teardown Browser
 	
 
 Health Club Membership link Navigates to Health Club Membership Page
-	[Tags]		ClickClubMembershiplink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#healthAndWellnesslink4 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#healthAndWellnesslink4 a" link
 	Then I should be navigated to "healthways.com" in a new tab
+	Teardown Browser
 	
 
 Wellness Card Center link Navigates to Wellness Card Center Page
-	[Tags]		ClickCardCenterlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#wellnessIncentiveslink0 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#wellnessIncentiveslink0 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 View Account Balance link Navigates to View Account Balance Page
-	[Tags]		ClickAccountBalancelink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#wellnessIncentiveslink1 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#wellnessIncentiveslink1 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Lost Card link Navigates to Lost Card Page
-	[Tags]		ClickLostCardlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#wellnessIncentiveslink2 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#wellnessIncentiveslink2 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Tobacco Cessation link Navigates to Tobacco Cessation Page
-	[Tags]		ClickTobaccoCessationlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#wellnessIncentiveslink3 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#wellnessIncentiveslink3 a" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
+	Teardown Browser
 	
 
 Explanation of Benefits link Navigates to Explanation of Benefits Page
-	[Tags]		ClickEoblink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#benefitslink0 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#benefitslink0 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Order New Card link Navigates to Order New Card Page
-	[Tags]		ClickNewCardlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#benefitslink1 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#benefitslink1 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Customer Service Questions link Navigates to Customer Service Questions Page
-	[Tags]		ClickCustomerServiceQuestionslink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#benefitslink2 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#benefitslink2 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Customer Service Replies link Navigates to Customer Service Replies Page
-	[Tags]		ClickCustomerServiceReplieslink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#benefitslink3 member-link a" link
+	[Tags]		LandingPageLinks
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#benefitslink3 a" link
+	Sleep		3
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Find a Form link Navigates to Forms Page
-	[Tags]		ClickFindFormlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#benefitslink4 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#benefitslink4 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Find a Pharmacy link Navigates to Forms Page
-	[Tags]		ClickFindPharmacylink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#pharmacylink0 member-link a" link
+	[Tags]		LandingPageLinks
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#pharmacylink0 a" link
+	And I Click the "#OK" element
+	Sleep		5
 	Then I should be navigated to "caremark.com" in a new tab
+	Teardown Browser
 	
 
 Check Drug Cost link Navigates to Forms Page
-	[Tags]		ClickCheckDrugCostlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#pharmacylink1 member-link a" link
+	[Tags]		LandingPageLinks
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#pharmacylink1 a" link
+	And I Click the "#OK" element
+	Sleep		5
 	Then I should be navigated to "caremark.com" in a new tab
+	Teardown Browser
 	
 
 Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
-	[Tags]		ClickPharmacyBenefitslink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#pharmacylink2 member-link a" link
+	[Tags]		LandingPageLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#pharmacylink2 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 
@@ -168,7 +187,7 @@ Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
 #US249 Test Cases for Desktop
 Landing Page My Account Info Quick links Displayed
 	[Tags]		MyAccountInfolinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-myacc #myAccountInfo" displayed
 	
 
@@ -375,7 +394,7 @@ Logging out of Mdot should take me to MyBlue login page
 Logging out of a partner site should take me to MyBlue login page
 	[Tags]		SSO
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "li#healthAndWellnesslink0 member-link a" link
+	When I Click the "li#healthAndWellnesslink0 a" link
 	And I Click the ".username" element
 	And I Click the "li.logout a" link
 	Set Suite Variable			${IS_LANDINGPAGE_LOGIN}				0
@@ -409,4 +428,47 @@ Logging out of the classic site should take me to classic login page
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}"
 	Teardown Browser
 
+
+#US765: PreNavigation Intersitital
+When I click Find a Pharmacy I should see the interstitial
+	[Tags]		PreNavInterstitial
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "#pharmacylink0 a" link
+	Sleep		3
+	Then I should see the element ".modal-dialog" displayed
 	
+I should see an OK button
+	[Tags]		PreNavInterstitial
+	Then I should see the element "#OK" displayed
+
+I should see a message on the modal
+	[Tags]		PreNavInterstitial
+	Then I should see the element ".copy" displayed
+
+When I click Check drug cost I should see the interstitial
+	[Tags]		PreNavInterstitial
+	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	When I Click the "#pharmacylink1 a" link
+	Sleep		3
+	Then I should see the element ".modal-dialog" displayed
+	
+When I click Find a Pharmacy in the Nav I should see the interstitial
+	[Tags]		PreNavInterstitial
+	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	When I Click the "li[data-url-config=\"navigation.main.pharmacy\"] a" link 
+	And I Click the "li[data-url-config=\"navigation.main.pharmacy.nodes.findAPharmacy\"] a" link
+	Sleep		3
+	Then I should see the element "div#mybluenav-modal" displayed
+
+I should see a message on the modal
+	[Tags]		PreNavInterstitial
+	Then I should see the element "h3[data-i18n=\"messages.preInterstitial.header\"]" displayed
+	Then I should see the element "div[data-i18n=\"messages.preInterstitial.body\"]" displayed
+	
+When I click Check drug cost in the Nav I should see the interstitial
+	[Tags]		PreNavInterstitial
+	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	When I Click the "li[data-url-config=\"navigation.main.pharmacy\"] a" link  
+	And I Click the "li[data-url-config=\"navigation.main.pharmacy.nodes.checkDrugCost\"] a" link
+	Sleep		3
+	Then I should see the element "div#mybluenav-modal" displayed

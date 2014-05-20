@@ -142,7 +142,6 @@ M. Post-Navigation Interstitial Legal Message
 	Reload Page
 	When I click the "#health-tools" element
 	And I click the "li[data-url-config="navigation.main.healthTools.nodes.nurseLine"] a" element
-	And I enter the pin "1234"
 	Then I should see the element ".col-xs-10" displayed
 	
 M. Post-Navigation Interstitial Legal Message Text
@@ -200,7 +199,7 @@ As a CSR, I should not be redirected when I click the Pharmacy link
 	
 As a CSR, I should not be redirected when I click the Health Tools link
 	[Tags]		CSR
-	When I Click the "#health-tools[class=\"disable\"]" element
+	When I Click the "li#health-tools" element
 	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
 	
 As a CSR, I should not be redirected when I click the My Blue link
