@@ -18,6 +18,12 @@ ${MYBLUE_PORTAL_URL}=			https://dev.fepblue.org:7443/
 
 *** Keywords ***
 
+I am on a mobile device
+	Set Window Size		400		700
+	
+I navigate to "${url}"
+	Go To 		${url}
+
 I should see the element "${element}" displayed
 	Element Should Be Visible		css=${element}	
 

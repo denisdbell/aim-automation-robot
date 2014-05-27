@@ -6,15 +6,13 @@ Resource          ../../resources/navbar/navbar_resource.txt
 *** Test Cases ***
 
 Username displayed on MyBlue App
-	[Tags]		UsernameMyBlueTest
+	[Tags]		UsernameTest
     Given I am logged into the MyBlue Portal
     Reload Page
     Then I should see the element "span.username" displayed
-    Teardown Browser
 
 Username displayed on Partner site
-	[Tags]		UsernamePartnerTest
-    Given I am logged into the MyBlue Portal
+	[Tags]		UsernameTest
     When I Click the "#personalHealthRecord" link
     @{windows}=					Get Window Titles		
 	Select Window				@{windows}[1]
@@ -147,6 +145,11 @@ M. Post-Navigation Interstitial Legal Message
 M. Post-Navigation Interstitial Legal Message Text
 	[Tags]		PostNavigationInterstitial
 	Then I should see ".col-xs-10" have the text "You have accessed a third party website. " displayed
+
+#US757
+M. Post-Navigation Interstitial Legal Message link
+	[Tags]		PostNavigationInterstitial
+	Then I should see ".col-xs-10 p a" have the text "You have accessed a third party website. " displayed
 	
 M. Post-Navigation Interstitial Legal Message More Details
 	[Tags]		PostNavigationInterstitial
@@ -185,29 +188,83 @@ As a CSR, I should see the My Account link enabled and active
 As a CSR, I should not be redirected when I click the wellness icon
 	[Tags]		CSR
 	When I Click the "#Wellness[class=\"disable\"]" element
-	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	Then I should not be redirected off the page "${MYBLUE_CSR_NAV}"
 	
 As a CSR, I should not be redirected when I click the FEP Blue link
 	[Tags]		CSR
 	When I Click the "#fep-blue[class=\"disable\"]" element
-	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	Then I should not be redirected off the page "${MYBLUE_CSR_NAV}"
 	
 As a CSR, I should not be redirected when I click the Pharmacy link
 	[Tags]		CSR
-	When I Click the "#pharmacy[class=\"disable\"]" element
-	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	When I Click the "li[data-url-config=\"navigation.main.pharmacy\"] a" link
+	Then I should not be redirected off the page "${MYBLUE_CSR_NAV}"
 	
 As a CSR, I should not be redirected when I click the Health Tools link
 	[Tags]		CSR
 	When I Click the "li#health-tools" element
-	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	Then I should not be redirected off the page "${MYBLUE_CSR_NAV}"
 	
 As a CSR, I should not be redirected when I click the My Blue link
 	[Tags]		CSR
 	When I Click the "#my-blue[class=\"disable\"]" element
-	Then I should not be redirected off the page "https://dev.fepblue.org:8443/html/js/navlib/v1/ESsample.html"
+	Then I should not be redirected off the page "${MYBLUE_CSR_NAV}"
 	
 As a CSR, I should see the My Account drop down list
 	[Tags]		CSR
 	When I Click the "#my-account" element
 	Then I should see the element "#my-account .cbp-hrsub" displayed
+	Teardown Browser
+	
+	
+#US758 - Update WebMD's Menu Look & Feel on the Navigation Bar
+I should see the WebMd dropdown list
+	[Tags]		WebMDLookAndFeel
+	Given I am logged into the MyBlue Portal
+	Reload Page
+	When I click the "#health-tools" element
+	Then I should see the element "#health-tools div .col-sm-4" displayed
+	
+I should see the link Tobacco Cessation
+	[Tags]		WebMDLookAndFeel
+	Then I should see the element "li[data-url-config=\"navigation.main.healthTools.nodes.tobaccoCessation\"]" displayed
+	
+I should see the link Nurse Line
+	[Tags]		WebMDLookAndFeel
+	Then I should see the element "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"]" displayed
+	Teardown Browser
+	
+	
+#US731 - Tour/Introduction to the new unified navigation
+I should see the Tour/Introduction when I login for the first time
+	[Tags]		Tour
+	Given I am logged into the MyBlue Portal for the first time
+	Then I should see the element ".intronavimg" displayed
+	
+I should see a close button
+	[Tags]		Tour
+	Then I should see the element ".intronavclose" displayed
+
+I should not see the Tour/Introduction
+	[Tags]		Tour
+	When I Click the "a.intronavclose" link
+	Sleep		2
+	Then I should not see the element ".intronav" displayed
+	
+I should see the Tour/Introduction when I login for the first time on Mobile
+	[Tags]		Tour
+	Given I am on a mobile device
+	And I navigate to "${NAVBAR_SAMPLE_URL}?showNavTour=true"
+	Then I should see the element ".intronavimg" displayed
+	
+I should see a close button on Mobile
+	[Tags]		Tour
+	Then I should see the element ".intronavclose" displayed
+
+I should not see the Tour/Introduction on Mobile
+	[Tags]		Tour
+	When I Click the "a.intronavclose" link
+	Sleep		2
+	Then I should not see the element ".intronav" displayed
+	Teardown Browser
+	
