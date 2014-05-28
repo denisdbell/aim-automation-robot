@@ -8,12 +8,6 @@ Resource       ../login/login_resource.txt
 
 *********Keywords************
 
-I am a Registered MyBlue Member on the Landing Page
-	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "marchcontractuat"
-	I Enter A Password "#LoginPassword" "Bigfun21!"
-	I Click the "div.login form#loginForm button#login" Button
-
 I Am Navigated to Member Id Card Page "${pageElement}"
 	Page Should Contain Element		${pageElement}
 	
@@ -36,5 +30,6 @@ The "${step}" step is not enabled
 	I should not see the element "${step}" displayed
 
 I am a Registered MyBlue Member on the Landing Page (Session exists)
-	Go To 			https://dev.fepblue.org:7443/landingpage
+	Go To 			${SERVER}/landingpage
 	Sleep			1
+	

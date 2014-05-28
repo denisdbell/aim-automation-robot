@@ -149,13 +149,13 @@ M. Post-Navigation Interstitial Legal Message Text
 #US757
 M. Post-Navigation Interstitial Legal Message link
 	[Tags]		PostNavigationInterstitial
-	Then I should see ".col-xs-10 p a" have the text "You have accessed a third party website. " displayed
+	Then I should see ".col-xs-10 p a" have the text "View Privacy Policy" displayed
 	
 M. Post-Navigation Interstitial Legal Message More Details
 	[Tags]		PostNavigationInterstitial
 	When I click the ".icon.arrow" element
 	Sleep		3
-	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party.The protection of your privacy will be governed by the privacy policy of this site.Please review the site & terms of use and privacy policy for details." displayed
+	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party.The protection of your privacy will be governed by the privacy policy of this site. Please review the site's terms of use and privacy policy for details." displayed
 	Teardown Browser
 	
 

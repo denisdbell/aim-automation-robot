@@ -6,19 +6,18 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 *** Test Cases ***
 #US251 Test Cases for Desktop
 Landing Page Health And Wellness links Displayed
-	[Tags]		LandingPageLinks
+	[Tags]		LandingPageLinks	FilteredLinks
 	Given I am a Registered MyBlue Member on the Landing Page
-	Reload Page
+	Sleep		1
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
-	And I should see the link "li#healthAndWellnesslink2 a" displayed
 	And I should see the link "li#healthAndWellnesslink3 a" displayed
 	And I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 
 Landing Page Wellness Incentives links Displayed
-	[Tags]		LandingPageLinks
+	[Tags]		LandingPageLinks	FilteredLinks
 	Then I should see the element "span#wellnessIncentives" displayed
 	And I should see the link "#wellnessIncentiveslink0 a" displayed
 	And I should see the link "#wellnessIncentiveslink1 a" displayed
@@ -27,7 +26,7 @@ Landing Page Wellness Incentives links Displayed
 	
 
 Landing Page Benefits links Displayed
-	[Tags]		LandingPageLinks
+	[Tags]		LandingPageLinks	FilteredLinks
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
 	And I should see the link "#benefitslink1 a" displayed
@@ -37,16 +36,118 @@ Landing Page Benefits links Displayed
 	
 	
 Landing Page Pharmacy links Displayed
-	[Tags]		LandingPageLinks
+	[Tags]		LandingPageLinks	FilteredLinks
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	And I should see the link "#pharmacylink1 a" displayed
 	And I should see the link "#pharmacylink2 a" displayed
+	Teardown Browser
+	
+
+#US763 - Links should be filtered by user
+Landing Page Health And Wellness links Displayed for Terminated
+	[Tags]		LandingPageLinks	FilteredLinks
+	Given I am a Terminated Registered MyBlue Member on the Landing Page
+	Sleep		1
+	Then I should see the element "span#healthAndWellness" displayed
+	And I should see the link "li#healthAndWellnesslink0 a" displayed
+	And I should see the link "li#healthAndWellnesslink1 a" displayed
+	And I should see the link "li#healthAndWellnesslink3 a" displayed
+	And I should see the link "li#healthAndWellnesslink4 a" displayed
+	
+
+Landing Page Wellness Incentives links Displayed for Terminated
+	[Tags]		LandingPageLinks	FilteredLinks
+	Then I should see the element "span#wellnessIncentives" displayed
+	And I should see the link "#wellnessIncentiveslink0 a" displayed
+	And I should not see the element "#wellnessIncentiveslink1 a"
+	And I should not see the element "#wellnessIncentiveslink2 a"
+	And I should not see the element "#wellnessIncentiveslink3 a"
+
+Landing Page Benefits links Displayed for Terminated
+	[Tags]		LandingPageLinks	FilteredLinks
+	Then I should see the element "span#benefits" displayed
+	And I should see the link "#benefitslink0 a" displayed
+	And I should not see the element "#benefitslink1 a"
+	And I should not see the element "#benefitslink2 a"
+	And I should not see the element "#benefitslink3 a"
+	And I should see the link "#benefitslink4 a" displayed
 	
 	
+Landing Page Pharmacy links Displayed for Terminated
+	[Tags]		LandingPageLinks	FilteredLinks
+	Then I should see the element "span#pharmacy" displayed
+	And I should see the link "#pharmacylink0 a" displayed
+	And I should see the link "#pharmacylink1 a" displayed
+	And I should not see the element "#pharmacylink2 a"
+	
+	
+Nav Wellness Incentives links Displayed for Terminated
+	[Tags]		FilteredLinks
+	Then I should not see the element "#Wellness a" displayed
+	
+Nav Benefits links Displayed for Terminated
+	[Tags]		FilteredLinks
+	When I Click the "#my-account a" link
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" displayed
+	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" displayed
+	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
+	And I should not see the element "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a"
+	And I should not see the element "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a"
+	Teardown Browser
+	
+Landing Page Health And Wellness links Displayed for Minor
+	[Tags]		LandingPageLinks	FilteredLinks
+	Given I am a Minor Registered MyBlue Member on the Landing Page
+	Sleep		1
+	Then I should see the element "span#healthAndWellness" displayed
+	And I should see the link "li#healthAndWellnesslink0 a" displayed
+	And I should see the link "li#healthAndWellnesslink1 a" displayed
+	And I should see the link "li#healthAndWellnesslink3 a" displayed
+	And I should see the link "li#healthAndWellnesslink4 a" displayed
+	
+
+Landing Page Wellness Incentives links Displayed for Minor
+	[Tags]		LandingPageLinks	FilteredLinks
+	Then I should see the element "span#wellnessIncentives" displayed
+	And I should see the link "#wellnessIncentiveslink0 a" displayed
+	And I should see the link "#wellnessIncentiveslink1 a" displayed
+	And I should see the link "#wellnessIncentiveslink2 a" displayed
+	And I should see the link "#wellnessIncentiveslink3 a" displayed
+	
+
+Landing Page Benefits links Displayed for Minor
+	[Tags]		LandingPageLinks	FilteredLinks
+	Then I should see the element "span#benefits" displayed
+	And I should see the link "#benefitslink0 a" displayed
+	And I should not see the element "#benefitslink1 a"
+	And I should not see the element "#benefitslink2 a"
+	And I should not see the element "#benefitslink3 a"
+	And I should see the link "#benefitslink4 a" displayed	
+	
+Landing Page Pharmacy links Displayed for Minor
+	[Tags]		LandingPageLinks	FilteredLinks
+	Then I should see the element "span#pharmacy" displayed
+	And I should see the link "#pharmacylink0 a" displayed
+	And I should see the link "#pharmacylink1 a" displayed
+	And I should not see the element "#pharmacylink2 a"
+	
+Nav Benefits links Displayed for Minor
+	[Tags]		LandingPageLinks	FilteredLinks
+	When I Click the "#my-account a" link
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" displayed
+	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" displayed
+	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
+	And I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" displayed
+	And I should not see the element "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a"
+	Teardown Browser
+
+
+
 Take charge of your familys health link Navigates to Family Health Page
 	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#healthAndWellnesslink0 a" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	Teardown Browser
@@ -54,20 +155,15 @@ Take charge of your familys health link Navigates to Family Health Page
 Get Baby Advice and Support link Navigates to Support Page
 	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#healthAndWellnesslink1 a" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	Teardown Browser
-
-#Treatment Costs link Navigates to Treatment Costs Page
-#	[Tags]		LandingPageLinks
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	When I Click the "#healthAndWellnesslink2 a" link
-#	Then I should be navigated to "treatmentestimator.com" in a new tab
-	
 	
 Walking Works link Navigates to Treatment Costs Page
 	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#healthAndWellnesslink3 a" link
 	Then I should be navigated to "bcbsafepww.com" in a new tab
 	Teardown Browser
@@ -76,38 +172,43 @@ Walking Works link Navigates to Treatment Costs Page
 Health Club Membership link Navigates to Health Club Membership Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#healthAndWellnesslink4 a" link
 	Then I should be navigated to "healthways.com" in a new tab
 	Teardown Browser
 	
 
 Wellness Card Center link Navigates to Wellness Card Center Page
-	[Tags]		LandingPageLinks	
+	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#wellnessIncentiveslink0 a" link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "fepuat.mychiprewards.com/" in a new tab
 	Teardown Browser
 	
 
 View Account Balance link Navigates to View Account Balance Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#wellnessIncentiveslink1 a" link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "fepuat.mychiprewards.com/Cards/Account" in a new tab
 	Teardown Browser
 	
 
 Lost Card link Navigates to Lost Card Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#wellnessIncentiveslink2 a" link
-	Then I should be navigated to "fepblue.org" in a new tab
+	Then I should be navigated to "fepuat.mychiprewards.com/Home/Contact" in a new tab
 	Teardown Browser
 	
 
 Tobacco Cessation link Navigates to Tobacco Cessation Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#wellnessIncentiveslink3 a" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
 	Teardown Browser
@@ -116,6 +217,7 @@ Tobacco Cessation link Navigates to Tobacco Cessation Page
 Explanation of Benefits link Navigates to Explanation of Benefits Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#benefitslink0 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	Teardown Browser
@@ -124,6 +226,7 @@ Explanation of Benefits link Navigates to Explanation of Benefits Page
 Order New Card link Navigates to Order New Card Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#benefitslink1 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	Teardown Browser
@@ -132,6 +235,7 @@ Order New Card link Navigates to Order New Card Page
 Customer Service Questions link Navigates to Customer Service Questions Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#benefitslink2 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	Teardown Browser
@@ -140,6 +244,7 @@ Customer Service Questions link Navigates to Customer Service Questions Page
 Customer Service Replies link Navigates to Customer Service Replies Page
 	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#benefitslink3 a" link
 	Sleep		3
 	Then I should be navigated to "fepblue.org" in a new tab
@@ -149,6 +254,7 @@ Customer Service Replies link Navigates to Customer Service Replies Page
 Find a Form link Navigates to Forms Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#benefitslink4 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	Teardown Browser
@@ -157,9 +263,9 @@ Find a Form link Navigates to Forms Page
 Find a Pharmacy link Navigates to Forms Page
 	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#pharmacylink0 a" link
-	And I Click the "#OK" element
-	Sleep		5
+	And I Click the "a#OK" link
 	Then I should be navigated to "caremark.com" in a new tab
 	Teardown Browser
 	
@@ -167,9 +273,9 @@ Find a Pharmacy link Navigates to Forms Page
 Check Drug Cost link Navigates to Forms Page
 	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#pharmacylink1 a" link
-	And I Click the "#OK" element
-	Sleep		5
+	And I Click the "a#OK" link
 	Then I should be navigated to "caremark.com" in a new tab
 	Teardown Browser
 	
@@ -177,6 +283,7 @@ Check Drug Cost link Navigates to Forms Page
 Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
 	[Tags]		LandingPageLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
 	When I Click the "#pharmacylink2 a" link
 	Then I should be navigated to "fepblue.org" in a new tab
 	Teardown Browser
@@ -186,120 +293,92 @@ Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
 
 #US249 Test Cases for Desktop
 Landing Page My Account Info Quick links Displayed
-	[Tags]		MyAccountInfolinkDisplayed	
+	[Tags]		QuickLinks
 	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.quicknav-myacc #myAccountInfo" displayed
 	
 
 Landing Page Member Id Card Quick links Displayed
-	[Tags]		MemberIdCardlinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-memid #memberIdCard" displayed
 	
 
 Landing Page My Prescription Quick links Displayed
-	[Tags]		MyPrescriptionlinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-pres #myPrescriptions" displayed
-	
-
-#Landing Page Nurse Line Quick links Displayed
-#	[Tags]		NurseLinelinkDisplayed	
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	Then I should see the element "div.quicknav-nurse #nurseLine" displayed
 
 Landing Page Find a Physician Quick links Displayed
-	[Tags]		FindPhysicianlinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-physician #findPhysician" displayed
 	
 
 Landing Page Explanation of Benefits Quick links Displayed
-	[Tags]		ExplanationBenefitslinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-benefits #explanationOfBenefits" displayed
-	
-
-#Landing Page Symptom Checker Quick links Displayed
-#	[Tags]		SymptomCheckerlinkDisplayed	
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	Then I should see the element "div.quicknav-symptom #symptomChecker" displayed
 
 Landing Page Personal Health Record Quick links Displayed
-	[Tags]		PersonalHealthRecordlinkDisplayed	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-record #personalHealthRecord" displayed
 	
 
 My Account Info Quick link Navigates to My Account Info Page
-	[Tags]		ClickMyAccountlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
 	When I Click the "div.quicknav-myacc #myAccountInfo" link
 	Then I should be navigated to "landingpage" in a new tab
-	
+	Teardown Browser
 
 My Prescriptions Quick link Navigates to My Prescriptions Page
-	[Tags]		ClickMyPrescriptionslink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-pres #myPrescriptions" link
+	And I Click the "a#OK" link
 	Then I should be navigated to "caremark.com" in a new tab
-	
-
-#Nurse Line Quick link Navigates to Nurse Line Page
-#	[Tags]		ClickNurseLinelink	
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	When I Click the "div.quicknav-nurse #nurseLine" link
-#	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Find a Physician Quick link Navigates to Find a Physician Page
-	[Tags]		ClickFindPhysicianlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-physician #findPhysician" link
 	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 	
 
 Explanation of Benefits Quick link Navigates to Explanation of Benefits Page
-	[Tags]		ClickExplanationBenefitslink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-benefits #explanationOfBenefits" link
 	Then I should be navigated to "fepblue.org" in a new tab
-	
-
-#Symptom Checker Quick link Navigates to Symptom Checker Page
-#	[Tags]		ClickSymptomCheckerlink	
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	When I Click the "div.quicknav-symptom #symptomChecker" link
-#	Then I should be navigated to "fepblue.org" in a new tab
+	Teardown Browser
 
 Personal Health Record Quick link Navigates to Symptom Checker Page
-	[Tags]		ClickPersonalHealthRecordlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-record #personalHealthRecord" link
 	Then I should be navigated to "webmdhealth.com" in a new tab
-	
+	Teardown Browser
 
-Member Card Id Quick link Navigates to Symptom Checker Page
-	[Tags]		ClickMemberCardIdlink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+Member Card Id Quick link Navigates to MemberIDCard page
+	[Tags]		QuickLinks		MemberIDCard
+	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-memid #memberIdCard" link
 	Then I should be navigated to "memberidcard"
+	Teardown Browser
 	
 
 #US243, US245, and US246 Test Cases for Desktop
 
 Landing Page BHA Step Completed 
-	[Tags]		BhaStepCompleted
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		BHA
+	Given I am a Registered MyBlue Member on the Landing Page
 	When The "ul.bha li.completed div#step1" step is completed 
 	Then I should see the element "div#step1 div.complete" displayed 	
 	And I should see the element "div#step1 div.go-back #goBackToStep" displayed
-#	And I should see the element "div.get-started #getStarted" displayed
 	And The "ul.bha li.next-step #step1" step is not highlighted
 	And The "ul.bha li.next-step #step2" step is enabled
 	
 
 Landing Page BHA Step Go Back Button Clicked 
-	[Tags]		BhaStepGoBackClick
+	[Tags]		BHA
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	When The "ul.bha li.completed div#step1" step is completed
 	And I Click the "div#step1 div.go-back #goBackToStep" link 
@@ -307,11 +386,10 @@ Landing Page BHA Step Go Back Button Clicked
 	
 
 Landing Page Health Coach Step Not Completed 
-	[Tags]		HealthCoachStepNotCompleted
+	[Tags]		BHA
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	When The "ul.bha li.next-step #step2" step is not completed 
 	Then I should see the element "#step2" displayed
-#	And I should see the element "div.get-started #getStarted" displayed
 	And The "ul.bha li.next-step #step2" step is enabled
 	And The "ul.bha li.next-step #step3" step is not enabled	 	
 	And I should not see the element "div#step2 div.go-back #goBackToStep" displayed
@@ -319,112 +397,88 @@ Landing Page Health Coach Step Not Completed
 	
 
 Landing Page Healthy Actions Step Not Enabled 
-	[Tags]		HealthyActionStepNotEnabled
+	[Tags]		BHA
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	And The "ul.bha li.completed div#step1" step is completed
 	And The "ul.bha li.next-step #step2" step is not completed
 	When The "ul.bha li.step div#step3" step is not completed 
 	Then The "ul.bha li.next-step #step3" step is not highlighted
-#	And I should see the element "div.get-started #getStarted" displayed
 	And I should not see the element "div#step3 div.go-back #goBackToStep" displayed
 	And I should not see the element "div#step3 div.complete" displayed 
+	Teardown Browser
 	
 	
 #US486 Test Cases
-
 link to Classic Site Displayed
-	[Tags]		DisplayClassicSitelink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+	[Tags]		ClassicSitelink	
+	Given I am a Registered MyBlue Member on the Landing Page
 	Then I should see the element "div.backToClassic a" displayed
 	
 
 link to Classic Site Navigates to Classic Page
-	[Tags]		ClassicSitelinkTest	
+	[Tags]		ClassicSitelink	
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	When I Click the "div.backToClassic a" link
 	Then I should be navigated to "https://dev.fepblue.org:8443/members/myblue/dashboard"
 	
 
 User content maintained on Classic Page
-	[Tags]		ClassicSiteUserContentTest	
+	[Tags]		ClassicSitelink	
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	When I Click the "div.backToClassic a" link
 	Sleep		5
-	Then I should see "span.username" have the text "MARCHCONTRACT" displayed
+	Then I should see "span.username" have the text "Marchcontract" displayed
 	
 
 link to Mdot Site Displayed on Classic Site
-	[Tags]		DisplayMdotSitelink	
+	[Tags]		ClassicSitelink	
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	When I Click the "div.backToClassic a" link
 	Sleep		5 
-	Then I should see the element "div#pilotSitelink a" displayed
+	Then I should see the element "#pilotSiteLink a img" displayed
+	Teardown Browser
 	
 
-link to Mdot Site Navigates to Mdot Landing Page From Classic Site
-	[Tags]		MdotlinkTest	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	And I Click the "div.backToClassic a" link
-	Sleep		5
-	When I Click the "div#pilotSitelink a" link
-	Then I should be navigated to "landingpage"
-	
+#US477 - Logout redirect
 
-User content maintained on Mdot Landing Page when navigated from the Classic Site
-	[Tags]		MdotSiteUserContentTest	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	And I Click the "div.backToClassic a" link
-	Sleep		5
-	When I Click the "div#pilotSitelink a" link
-	Sleep		5
-	Then I should see "span.username" have the text "MARCHCONTRACT" displayed
-	Teardown Browser
+##Expected to fail, Load balancer not implemented yet
+#Logging out of Mdot should take me to MyBlue login page
+#	[Tags]		Logout
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	When I Click the ".username" element
+#	And I Click the "li.logout a" link
+#	Then I should be navigated to "${SERVER}/login"
+#	Teardown Browser
 
-#US736 - Single Sign out
-Logging out of Mdot should take me to MyBlue login page
-	[Tags]		SSO
-	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the ".username" element
-	And I Click the "li.logout a" link
-	Set Suite Variable			${IS_LANDINGPAGE_LOGIN}				0
-	Sleep		5
-	Then I should be navigated to "${SERVER}/login"
-	Teardown Browser
-
-Logging out of a partner site should take me to MyBlue login page
-	[Tags]		SSO
-	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "li#healthAndWellnesslink0 a" link
-	And I Click the ".username" element
-	And I Click the "li.logout a" link
-	Set Suite Variable			${IS_LANDINGPAGE_LOGIN}				0
-	Sleep		5
-	Then I should be navigated to "${SERVER}/login"
-	Teardown Browser
+#Logging out of a partner site should take me to MyBlue login page
+#	[Tags]		Logout
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	When I Click the "li#healthAndWellnesslink0 a" link
+#	And I Click the ".username" element
+#	And I Click the "li.logout a" link
+#	Then I should be navigated to "${SERVER}/login"
+#	Teardown Browser
 	
 Logging out of the classic site should take me to classic login page
-	[Tags]		SSO
+	[Tags]		Logout
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.backToClassic a" link
 	Sleep		5
 	And I Click the ".username" element
 	And I Click the "li.logout a" link
-	Set Suite Variable			${IS_LANDINGPAGE_LOGIN}				0
-	Sleep		5
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}"
 	Teardown Browser
 	
-Logging out of the classic site should take me to classic login page
-	[Tags]		SSO
+Logging out of a partner site should take me to classic login page
+	[Tags]		Logout
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.backToClassic a" link
 	Sleep		5
 	And I Click the "#webmdTakeChargeYourFamilyHealthTodayURL" link
+	And I Click the "#popup_ok" element
 	Sleep		5
 	And I Click the ".username" element
 	And I Click the "li.logout a" link
-	Set Suite Variable			${IS_LANDINGPAGE_LOGIN}				0
-	Sleep		5
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}"
 	Teardown Browser
 

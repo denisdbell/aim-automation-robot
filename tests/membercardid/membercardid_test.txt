@@ -5,15 +5,33 @@ Resource          ../../resources/memberidcard/membercardid_resource.txt
 
 *** Test Cases ***
 
+#US733 & US740 - Member ID Card redesign
 Member Id Card Plan Type Standard Option displayed
-	[Tags]		DisplayPlanTypePpo	
-	Given I am a Registered MyBlue Member on the front of the Member Id Card
+	[Tags]		MemberIDCard	
+	Given I am a Registered MyBlue Member on the Member Id Card page
 	Sleep		5
 	Then I should see the element ".spriteicon" displayed
-	And I should see the element "div#rightDiv div#overlay" displayed
 	
 	
 Member Card Link Navigates to Member Id Card Page
-	[Tags]		ClickMemberCardLink	
+	[Tags]		MemberIDCard	
 	And I should see the element "#leftDiv" displayed
+	And I should see the element "div#rightDiv" displayed
+	And I should see the element "div.memberCardButtonHolder" displayed
+	And I should see the link "a.modal-close" displayed
+	
+Modal should close when I click X
+	[Tags]		MemberIDCard	
+	When I Click the "a.modal-close" link
+	Sleep		1
+	Then I should not see the element ".modal-popup" displayed
 	Teardown Browser
+
+##Selenium2 cant handle clicking security warnings. Cant test this	
+#Send me a new card should take me to eServices
+#	[Tags]		MemberIDCard2
+#	Given I am a Registered MyBlue Member on the Member Id Card page
+#	When I Click the "div.memberCardButtonHolder a" link
+#	Sleep		5
+#	Then I should be navigated to "custservv2.fepblue.org/"
+#	Teardown Browser

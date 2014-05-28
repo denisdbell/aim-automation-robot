@@ -7,7 +7,7 @@ Resource	   ../landingpage/landingpage_resource.txt
 
 *********Keywords************
 
-I am a Registered MyBlue Member on the front of the Member Id Card
+I am a Registered MyBlue Member on the Member Id Card page
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "marchhipaauat"
     I Enter A Password "#LoginPassword" "Bigfun21!"
