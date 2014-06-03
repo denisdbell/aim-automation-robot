@@ -15,7 +15,7 @@ ${TERMINATED_PWD}=				Bigfun21!
 ${MYBLUE_CSR_NAV}=				${SERVER_NAVBAR}/ESsample.html
 
 
-*********Keywords************
+*** Keywords ***
 I am a logged in MyBlue Member on the myBlue site
 	Open Browser	${NAVBAR_SAMPLE_URL}      ${BROWSER}
 	Maximize Browser Window
