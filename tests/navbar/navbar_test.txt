@@ -267,4 +267,4 @@ I should not see the Tour/Introduction on Mobile
 	Sleep		2
 	Then I should not see the element ".intronav" displayed
 	Teardown Browser
-	
+		

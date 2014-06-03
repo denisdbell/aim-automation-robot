@@ -1,6 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
-Test Teardown     Teardown Browser
+Test Teardown	  Teardown Browser
 Suite Teardown	  Close All Browsers
 Resource          ../../resources/login/login_resource.txt
 
