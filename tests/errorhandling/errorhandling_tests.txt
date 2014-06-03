@@ -68,3 +68,4 @@ I should see message code on the 404 page when I am logged in
 I should see a messageCode informing me of the error when I am logged in
 	[Tags]		ErrorHandling	500
 	Then I should see ".messageCode" have the text "Error 500: Internal server error" displayed
+	Teardown Browser
