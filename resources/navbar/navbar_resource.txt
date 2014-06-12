@@ -57,6 +57,8 @@ I am logged into the MyBlue Portal
 
 I enter the pin "${pin}"
 	Sleep		2
+	@{windows}=					Get Window Titles		
+	Select Window				@{windows}[1]
 	Input Text			css=#Pin		${pin}
 	Click Element		css=button[type="submit"]
 	Sleep		3
