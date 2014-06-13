@@ -42,6 +42,11 @@ Landing Page Pharmacy links Displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	And I should see the link "#pharmacylink1 a" displayed
 	And I should see the link "#pharmacylink2 a" displayed
+	
+#US1137 - truncation
+Username should NOT be truncated
+	[Tags]		Truncation
+	Then I should see "div.username h4" have the text "MARCHCONTRACT" displayed
 	Teardown Browser
 	
 

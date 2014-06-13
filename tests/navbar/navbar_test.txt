@@ -8,8 +8,13 @@ Resource          ../../resources/navbar/navbar_resource.txt
 Username displayed on MyBlue App
 	[Tags]		UsernameTest
     Given I am logged into the MyBlue Portal
-    Reload Page
+	Sleep						5	
     Then I should see the element "span.username" displayed
+    
+#US1129 - Truncation
+Username should NOT be truncated
+	[Tags]		Truncation
+    Then I should see "span.username" have the text "Marchcontract" displayed
 
 Username displayed on Partner site
 	[Tags]		UsernameTest
