@@ -1,6 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
-Suite Teardown	  Teardown Browser
+#Suite Teardown	  Teardown Browser
 Resource          ../../resources/landingpage/landingpage_resource.txt
 Resource          ../../resources/navbar/navbar_resource.txt
 
@@ -26,26 +26,26 @@ I should see eight quick links tiles on the landing page
 	[Tags]		LandingPageQuickLinks
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
-	Then I should see the element "#myAccountInfo" displayed
-	And I should see the element "#memberIdCard" displayed
-	And I should see the element "#myPrescriptions" displayed
-	And I should see the element "#nurseLine" displayed
-	And I should see the element "#findPhysician" displayed
-	And I should see the element "#explanationOfBenefits" displayed
-	And I should see the element "#symptomChecker" displayed
-	And I should see the element "#personalHealthRecord" displayed
+	Then I should see the link "#myAccountInfo" displayed
+	And I should see the link "#memberIdCard" displayed
+	And I should see the link "#myPrescriptions" displayed
+	And I should see the link "#nurseLine" displayed
+	And I should see the link "#findPhysician" displayed
+	And I should see the link "#explanationOfBenefits" displayed
+	And I should see the link "#symptomChecker" displayed
+	And I should see the link "#personalHealthRecord" displayed
 	
 Quick links tiles should have valid text
 	[Tags]		LandingPageQuickLinks
 	Then I should see "#myAccountInfo" have the text "My Account Info" displayed
 	And I should see "#memberIdCard" have the text "My Member ID Card" displayed
-	And I should see "#myPrescriptions" have the text "Prescriptions" displayed
+	And I should see ".quicknav-pres" have the text "Prescriptions" displayed
 	And I should see "#nurseLine" have the text "Nurse Line" displayed
-	And I should see "#findPhysician" have the text "See a Physician" displayed
+	And I should see ".quicknav-physician" have the text "See a Physician" displayed
 	And I should see "#explanationOfBenefits" have the text "Explanation of Benefits" displayed
-	And I should see "#symptomChecker" have the text "Symptom Checker" displayed
+	And I should see ".quicknav-symptom" have the text "Symptom Checker" displayed
 	And I should see "#personalHealthRecord" have the text "Personal Health Record" displayed
-	Teardown Browser
+
 	
 
 #US251 Test Cases for Desktop
@@ -178,6 +178,11 @@ Nav Health Toold links Displayed for Minor
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" displayed
 	And I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed
 	And I should not see the element "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a"
+	
+I should see two disabled tiles for Minor
+	[Tags]		LandingPageLinks	FilteredLinks
+	Then I should see the link ".disabled#symptomChecker[context=\"desktop\"] a" displayed
+	And I should see the link ".disabled#personalHealthRecord[context=\"desktop\"] a" displayed
 	Teardown Browser
 
 
