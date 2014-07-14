@@ -11,12 +11,12 @@ Library    	      OperatingSystem
 *** Variables ***
 
 ${BROWSER}=		chrome
-${SERVER}=			https://stage.fepblue.org:7443		
+${SERVER}=			https://test.fepblue.org:7443		
 ${LOGIN_URL}=		${SERVER}/login  
-${MYBLUE_LOGIN_URL}=		https://stage.fepblue.org:8443/web/guest
+${MYBLUE_LOGIN_URL}=		https://test.fepblue.org:8443/web/guest
 ${NOVALUE}=		""
-${MYBLUE_PORTAL_URL}=			https://stage.fepblue.org:7443/
-${MDOT_LOGOUT}=			https://stage.fepblue.org:7443/logout
+${MYBLUE_PORTAL_URL}=			https://test.fepblue.org:7443/
+${MDOT_LOGOUT}=			https://test.fepblue.org:7443/logout
 
 *** Keywords ***
 

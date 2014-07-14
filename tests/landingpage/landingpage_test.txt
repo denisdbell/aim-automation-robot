@@ -5,6 +5,22 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 Resource          ../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***
+
+#US1137 - truncation
+Username should NOT be truncated on the Landing Page
+	[Tags]		Truncation
+	Given I am a Registered MyBlue Member on the Landing Page
+	Sleep		1
+	Then I should see "#userNameText" have the text "Marchcontract" displayed
+	
+	
+#US1129 - Truncation
+Username should NOT be truncated in the Navigation Bar
+	[Tags]		Truncation
+    Then I should see "span.username" have the text "Marchcontract" displayed
+	Teardown Browser
+	
+
 #US251 Test Cases for Desktop
 Landing Page Health And Wellness links Displayed
 	[Tags]		LandingPageLinks	FilteredLinks
@@ -13,7 +29,6 @@ Landing Page Health And Wellness links Displayed
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
-	And I should see the link "li#healthAndWellnesslink3 a" displayed
 	And I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 
@@ -42,13 +57,7 @@ Landing Page Pharmacy links Displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	And I should see the link "#pharmacylink1 a" displayed
 	And I should see the link "#pharmacylink2 a" displayed
-	
-#US1137 - truncation
-Username should NOT be truncated
-	[Tags]		Truncation
-	Then I should see "div.username h4" have the text "MARCHCONTRACT" displayed
 	Teardown Browser
-	
 
 #US763 - Links should be filtered by user
 Landing Page Health And Wellness links Displayed for Terminated
@@ -58,24 +67,23 @@ Landing Page Health And Wellness links Displayed for Terminated
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
-	And I should see the link "li#healthAndWellnesslink3 a" displayed
 	And I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 
 Landing Page Wellness Incentives links Displayed for Terminated
 	[Tags]		LandingPageLinks	FilteredLinks
 	Then I should see the element "span#wellnessIncentives" displayed
-	And I should see the link "#wellnessIncentiveslink0 a" displayed
+	And I should not see the element "#wellnessIncentiveslink0 a"
 	And I should not see the element "#wellnessIncentiveslink1 a"
 	And I should not see the element "#wellnessIncentiveslink2 a"
-	And I should not see the element "#wellnessIncentiveslink3 a"
+	And I should see the link "#wellnessIncentiveslink3 a" displayed
 
 Landing Page Benefits links Displayed for Terminated
 	[Tags]		LandingPageLinks	FilteredLinks
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
-	And I should not see the element "#benefitslink1 a"
-	And I should not see the element "#benefitslink2 a"
+	And I should see the link "#benefitslink1 a" displayed
+	And I should see the link "#benefitslink2 a" displayed
 	And I should not see the element "#benefitslink3 a"
 	And I should see the link "#benefitslink4 a" displayed
 	
@@ -85,21 +93,12 @@ Landing Page Pharmacy links Displayed for Terminated
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	And I should see the link "#pharmacylink1 a" displayed
-	And I should not see the element "#pharmacylink2 a"
+	And I should see the link "#pharmacylink2 a" displayed
 	
 	
 Nav Wellness Incentives links Displayed for Terminated
 	[Tags]		FilteredLinks
 	Then I should not see the element "#Wellness a" displayed
-	
-Nav Benefits links Displayed for Terminated
-	[Tags]		FilteredLinks
-	When I Click the "#my-account a" link
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" displayed
-	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" displayed
-	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
-	And I should not see the element "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a"
-	And I should not see the element "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a"
 	Teardown Browser
 	
 Landing Page Health And Wellness links Displayed for Minor
@@ -109,7 +108,6 @@ Landing Page Health And Wellness links Displayed for Minor
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
-	And I should see the link "li#healthAndWellnesslink3 a" displayed
 	And I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 
@@ -126,7 +124,7 @@ Landing Page Benefits links Displayed for Minor
 	[Tags]		LandingPageLinks	FilteredLinks
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
-	And I should not see the element "#benefitslink1 a"
+	And I should see the link "#benefitslink1 a" displayed
 	And I should not see the element "#benefitslink2 a"
 	And I should not see the element "#benefitslink3 a"
 	And I should see the link "#benefitslink4 a" displayed	
@@ -146,6 +144,13 @@ Nav Benefits links Displayed for Minor
 	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
 	And I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" displayed
 	And I should not see the element "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a"
+	
+Nav Health Toold links Displayed for Minor
+	[Tags]		LandingPageLinks	FilteredLinks
+	When I Click the "#my-account a" link
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a" displayed
+	And I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed
+	And I should not see the element "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a"
 	Teardown Browser
 
 
@@ -155,6 +160,7 @@ Take charge of your familys health link Navigates to Family Health Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#healthAndWellnesslink0 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	And I enter the pin "1234"
 	Then I should be navigated to "https://staging.webmdhealth.com/BCBSA/HealthyFamily/?toolid=62000029" in a new tab
@@ -165,6 +171,7 @@ Get Baby Advice and Support link Navigates to Support Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#healthAndWellnesslink1 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	And I enter the pin "1234"
 	Then I should be navigated to "https://staging.webmdhealth.com/PregnancyAssistant/Dashboard.aspx?toolid=777" in a new tab
@@ -175,6 +182,7 @@ Walking Works link Navigates to Treatment Costs Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#healthAndWellnesslink3 a" link
+	And I Click the "a#OK" link
 	Then I should be navigated to "https://www.bcbsafepww.com/Default.asp" in a new tab
 	Teardown Browser
 	
@@ -184,6 +192,7 @@ Health Club Membership link Navigates to Health Club Membership Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#healthAndWellnesslink4 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "healthways.com" in a new tab
 	Teardown Browser

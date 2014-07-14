@@ -41,7 +41,7 @@ I am a Registered MyBlue Member on the Landing Page
 	
 I am a Terminated Registered MyBlue Member on the Landing Page
 	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "marchhipaauat"
+	I Enter A Username "#LoginUsername" "marchtermeduat"
 	I Enter A Password "#LoginPassword" "Bigfun21!"
 	I Click the "div.login form#loginForm button#login" Button
 	

@@ -10,11 +10,6 @@ Username displayed on MyBlue App
     Given I am logged into the MyBlue Portal
 	Sleep						5	
     Then I should see the element "span.username" displayed
-    
-#US1129 - Truncation
-Username should NOT be truncated
-	[Tags]		Truncation
-    Then I should see "span.username" have the text "Marchcontract" displayed
 
 Username displayed on Partner site
 	[Tags]		UsernameTest
