@@ -148,7 +148,7 @@ Nav Benefits links Displayed for Minor
 Nav Health Toold links Displayed for Minor
 	[Tags]		LandingPageLinks	FilteredLinks
 	When I Click the "#my-account a" link
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a" displayed
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" displayed
 	And I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed
 	And I should not see the element "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a"
 	Teardown Browser
@@ -176,15 +176,16 @@ Get Baby Advice and Support link Navigates to Support Page
 	And I enter the pin "1234"
 	Then I should be navigated to "https://staging.webmdhealth.com/PregnancyAssistant/Dashboard.aspx?toolid=777" in a new tab
 	Teardown Browser
-	
-Walking Works link Navigates to Treatment Costs Page
-	[Tags]		LandingPageLinks
-	Given I am a Registered MyBlue Member on the Landing Page
-	Sleep		1
-	When I Click the "#healthAndWellnesslink3 a" link
-	And I Click the "a#OK" link
-	Then I should be navigated to "https://www.bcbsafepww.com/Default.asp" in a new tab
-	Teardown Browser
+
+## Removed for now	
+#Walking Works link Navigates to Treatment Costs Page
+#	[Tags]		LandingPageLinks
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	Sleep		1
+#	When I Click the "#healthAndWellnesslink3 a" link
+#	And I Click the "a#OK" link
+#	Then I should be navigated to "https://www.bcbsafepww.com/Default.asp" in a new tab
+#	Teardown Browser
 	
 
 Health Club Membership link Navigates to Health Club Membership Page
@@ -203,6 +204,7 @@ Wellness Card Center link Navigates to Wellness Card Center Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#wellnessIncentiveslink0 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "http://fepdemo.mychiprewards.com/Account/Authorize" in a new tab
 	Teardown Browser
@@ -213,6 +215,7 @@ View Account Balance link Navigates to View Account Balance Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#wellnessIncentiveslink1 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "http://fepdemo.mychiprewards.com/Account/Authorize" in a new tab
 	Teardown Browser
@@ -223,6 +226,7 @@ Lost Card link Navigates to Lost Card Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#wellnessIncentiveslink2 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "http://fepdemo.mychiprewards.com/Account/Authorize" in a new tab
 	Teardown Browser
@@ -233,6 +237,7 @@ Tobacco Cessation link Navigates to Tobacco Cessation Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#wellnessIncentiveslink3 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "https://staging.webmdhealth.com/bcbsa/digitalhealthassistant/DhaLanding.aspx?slides=TobaccoManage" in a new tab
 	Teardown Browser
@@ -243,6 +248,7 @@ Explanation of Benefits link Navigates to Explanation of Benefits Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#benefitslink0 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "http://custservv2.fepblue.org/fepesvc/home.do?" in a new tab
 	Teardown Browser
@@ -253,6 +259,7 @@ Order New Card link Navigates to Order New Card Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#benefitslink1 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "http://custservv2.fepblue.org/fepesvc/securityChallenge.do" in a new tab
 	Teardown Browser
@@ -263,6 +270,7 @@ Customer Service Questions link Navigates to Customer Service Questions Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#benefitslink2 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "http://custservv2.fepblue.org/fepesvc/initiateInquiry.do?" in a new tab
 	Teardown Browser
@@ -273,6 +281,7 @@ Customer Service Replies link Navigates to Customer Service Replies Page
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	When I Click the "#benefitslink3 a" link
+	And I Click the "a#OK" link
 	Sleep		5
 	Then I should be navigated to "http://custservv2.fepblue.org/fepesvc/inbox.do?" in a new tab
 	Teardown Browser
