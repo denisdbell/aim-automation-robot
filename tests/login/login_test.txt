@@ -14,6 +14,14 @@ Login Page Hot links Displayed
 	And I should see the element "form div:nth-child(5) a:nth-child(3)" displayed
 	And I should see the element "#signup" displayed
 	
+Login Page Hot links have valid text
+	[Tags]		LoginPageElements
+	Given I am a MyBlue Member on the Login Page
+	Then I should see "form div:nth-child(5) a:nth-child(1)" have the text "username" displayed
+	And I should see "form div:nth-child(5) a:nth-child(2)" have the text "password" displayed
+	And I should see "form div:nth-child(5) a:nth-child(3)" have the text "e-mail address" displayed
+	And I should see "#signup" have the text "Sign up for MyBlue" displayed
+	
 	
 Login Page Username Textbox Displayed
 	Given I am a MyBlue Member on the Login Page
