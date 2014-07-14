@@ -1,6 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
-#Suite Teardown	  Teardown Browser
+Suite Teardown	  Teardown Browser
 Resource          ../../resources/landingpage/landingpage_resource.txt
 Resource          ../../resources/navbar/navbar_resource.txt
 
@@ -279,7 +279,7 @@ Tobacco Cessation link Navigates to Tobacco Cessation Page
 	Sleep		5
 	And I enter a pin if necessary
 	Then I should be navigated to "https://staging.webmdhealth.com/bcbsa/digitalhealthassistant/DhaLanding.aspx?slides=TobaccoIntake"
-	#Teardown Browser
+	Teardown Browser
 	
 
 Explanation of Benefits link Navigates to Explanation of Benefits Page
