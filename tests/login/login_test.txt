@@ -7,8 +7,11 @@ Resource          ../../resources/login/login_resource.txt
 *** Test Cases ***
 
 Login Page Hot links Displayed
+	[Tags]		LoginPageElements
 	Given I am a MyBlue Member on the Login Page
-	Then I should see the element "#forgotLogin" displayed
+	Then I should see the element "form div:nth-child(5) a:nth-child(1)" displayed
+	And I should see the element "form div:nth-child(5) a:nth-child(2)" displayed
+	And I should see the element "form div:nth-child(5) a:nth-child(3)" displayed
 	And I should see the element "#signup" displayed
 	
 	
