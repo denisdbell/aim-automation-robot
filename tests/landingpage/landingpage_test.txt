@@ -181,8 +181,8 @@ Nav Health Toold links Displayed for Minor
 	
 I should see two disabled tiles for Minor
 	[Tags]		LandingPageLinks	FilteredLinks
-	Then I should see the link ".disabled#symptomChecker[context=\"desktop\"] a" displayed
-	And I should see the link ".disabled#personalHealthRecord[context=\"desktop\"] a" displayed
+	Then I should see the link ".quicknav-symptom a.disabled" displayed
+	And I should see the link ".quicknav-record a.disabled" displayed
 	Teardown Browser
 
 
