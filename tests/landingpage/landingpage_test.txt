@@ -1,6 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
-#Suite Teardown	  Teardown Browser
+Suite Teardown	  Teardown Browser
 Resource          ../../resources/landingpage/landingpage_resource.txt
 Resource          ../../resources/navbar/navbar_resource.txt
 
@@ -45,7 +45,7 @@ Quick links tiles should have valid text
 	And I should see "#explanationOfBenefits" have the text "Explanation of Benefits" displayed
 	And I should see ".quicknav-symptom" have the text "Symptom Checker" displayed
 	And I should see "#personalHealthRecord" have the text "Personal Health Record" displayed
-
+	Teardown Browser
 	
 
 #US251 Test Cases for Desktop
