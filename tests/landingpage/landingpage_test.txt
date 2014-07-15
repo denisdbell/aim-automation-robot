@@ -208,45 +208,45 @@ Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
 
 #US243, US245, and US246 Test Cases for Desktop
 
-Landing Page BHA Step Completed 
-	[Tags]		BHA
-	Given I am a Registered MyBlue Member on the Landing Page
-	When The "ul.bha li.completed div#step1" step is completed 
-	Then I should see the element "div#step1 div.complete" displayed 	
-	And I should see the element "div#step1 div.go-back #goBackToStep" displayed
-	And The "ul.bha li.next-step #step1" step is not highlighted
-	And The "ul.bha li.next-step #step2" step is enabled
-	
-
-Landing Page BHA Step Go Back Button Clicked 
-	[Tags]		BHA
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When The "ul.bha li.completed div#step1" step is completed
-	And I Click the "div#step1 div.go-back #goBackToStep" link 
-	Then I should be navigated to "fepblue.org" in a new tab
-	
-
-Landing Page Health Coach Step Not Completed 
-	[Tags]		BHA
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When The "ul.bha li.next-step #step2" step is not completed 
-	Then I should see the element "#step2" displayed
-	And The "ul.bha li.next-step #step2" step is enabled
-	And The "ul.bha li.next-step #step3" step is not enabled	 	
-	And I should not see the element "div#step2 div.go-back #goBackToStep" displayed
-	And I should not see the element "div#step2 div.complete" displayed 
-	
-
-Landing Page Healthy Actions Step Not Enabled 
-	[Tags]		BHA
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	And The "ul.bha li.completed div#step1" step is completed
-	And The "ul.bha li.next-step #step2" step is not completed
-	When The "ul.bha li.step div#step3" step is not completed 
-	Then The "ul.bha li.next-step #step3" step is not highlighted
-	And I should not see the element "div#step3 div.go-back #goBackToStep" displayed
-	And I should not see the element "div#step3 div.complete" displayed 
-	Teardown Browser
+#Landing Page BHA Step Completed 
+#	[Tags]		BHA
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	When The "ul.bha li.completed div#step1" step is completed 
+#	Then I should see the element "div#step1 div.complete" displayed 	
+#	And I should see the element "div#step1 div.go-back #goBackToStep" displayed
+#	And The "ul.bha li.next-step #step1" step is not highlighted
+#	And The "ul.bha li.next-step #step2" step is enabled
+#	
+#
+#Landing Page BHA Step Go Back Button Clicked 
+#	[Tags]		BHA
+#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+#	When The "ul.bha li.completed div#step1" step is completed
+#	And I Click the "div#step1 div.go-back #goBackToStep" link 
+#	Then I should be navigated to "fepblue.org" in a new tab
+#	
+#
+#Landing Page Health Coach Step Not Completed 
+#	[Tags]		BHA
+#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+#	When The "ul.bha li.next-step #step2" step is not completed 
+#	Then I should see the element "#step2" displayed
+#	And The "ul.bha li.next-step #step2" step is enabled
+#	And The "ul.bha li.next-step #step3" step is not enabled	 	
+#	And I should not see the element "div#step2 div.go-back #goBackToStep" displayed
+#	And I should not see the element "div#step2 div.complete" displayed 
+#	
+#
+#Landing Page Healthy Actions Step Not Enabled 
+#	[Tags]		BHA
+#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+#	And The "ul.bha li.completed div#step1" step is completed
+#	And The "ul.bha li.next-step #step2" step is not completed
+#	When The "ul.bha li.step div#step3" step is not completed 
+#	Then The "ul.bha li.next-step #step3" step is not highlighted
+#	And I should not see the element "div#step3 div.go-back #goBackToStep" displayed
+#	And I should not see the element "div#step3 div.complete" displayed 
+#	Teardown Browser
 	
 	
 #US486 Test Cases
