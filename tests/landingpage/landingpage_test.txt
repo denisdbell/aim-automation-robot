@@ -20,33 +20,6 @@ Username should NOT be truncated in the Navigation Bar
     Then I should see "span.username" have the text "Marchcontract" displayed
 	Teardown Browser
 	
-	
-#Quick Links
-I should see eight quick links tiles on the landing page
-	[Tags]		LandingPageQuickLinks
-	Given I am a Registered MyBlue Member on the Landing Page
-	Sleep		1
-	Then I should see the link "#myAccountInfo" displayed
-	And I should see the link "#memberIdCard" displayed
-	And I should see the link "#myPrescriptions" displayed
-	And I should see the link "#nurseLine" displayed
-	And I should see the link "#findPhysician" displayed
-	And I should see the link "#explanationOfBenefits" displayed
-	And I should see the link "#symptomChecker" displayed
-	And I should see the link "#personalHealthRecord" displayed
-	
-Quick links tiles should have valid text
-	[Tags]		LandingPageQuickLinks
-	Then I should see "#myAccountInfo" have the text "My Account Info" displayed
-	And I should see "#memberIdCard" have the text "My Member ID Card" displayed
-	And I should see ".quicknav-pres" have the text "Prescriptions" displayed
-	And I should see "#nurseLine" have the text "Nurse Line" displayed
-	And I should see ".quicknav-physician" have the text "See a Physician" displayed
-	And I should see "#explanationOfBenefits" have the text "Explanation of Benefits" displayed
-	And I should see ".quicknav-symptom" have the text "Symptom Checker" displayed
-	And I should see "#personalHealthRecord" have the text "Personal Health Record" displayed
-	Teardown Browser
-	
 
 #US251 Test Cases for Desktop
 Landing Page Health And Wellness links Displayed
@@ -387,6 +360,10 @@ Landing Page Member Id Card Quick links Displayed
 Landing Page My Prescription Quick links Displayed
 	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-pres #myPrescriptions" displayed
+	
+Landing Page Nurse Line links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-nurse #nurseLine" displayed
 
 Landing Page Find a Physician Quick links Displayed
 	[Tags]		QuickLinks	
@@ -396,15 +373,32 @@ Landing Page Find a Physician Quick links Displayed
 Landing Page Explanation of Benefits Quick links Displayed
 	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-benefits #explanationOfBenefits" displayed
+	
+Landing Page Symptom Checker links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-symptom #symptomChecker" displayed
 
 Landing Page Personal Health Record Quick links Displayed
 	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-record #personalHealthRecord" displayed
-	
+
+Quick links tiles should have valid text
+	[Tags]		QuickLinks
+	Then I should see "#myAccountInfo" have the text "My Account Info" displayed
+	And I should see "#memberIdCard" have the text "My Member ID Card" displayed
+	And I should see ".quicknav-pres" have the text "Prescriptions" displayed
+	And I should see "#nurseLine" have the text "Nurse Line" displayed
+	And I should see ".quicknav-physician" have the text "See a Physician" displayed
+	And I should see "#explanationOfBenefits" have the text "Explanation of Benefits" displayed
+	And I should see ".quicknav-symptom" have the text "Symptom Checker" displayed
+	And I should see "#personalHealthRecord" have the text "Personal Health Record" displayed
+	Teardown Browser
+
 
 My Account Info Quick link Navigates to My Account Info Page
 	[Tags]		QuickLinks	
 	When I Click the "div.quicknav-myacc #myAccountInfo" link
+	And I Click the "a#OK" link
 	Then I should be navigated to "landingpage" in a new tab
 	Teardown Browser
 
