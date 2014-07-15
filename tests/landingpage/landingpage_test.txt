@@ -208,6 +208,7 @@ Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
 
 #US243, US245, and US246 Test Cases for Desktop
 
+##BHA section currently hidden
 #Landing Page BHA Step Completed 
 #	[Tags]		BHA
 #	Given I am a Registered MyBlue Member on the Landing Page
@@ -260,7 +261,7 @@ link to Classic Site Navigates to Classic Page
 	[Tags]		ClassicSitelink	
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	When I Click the "div.backToClassic a" link
-	Then I should be navigated to "https://dev.fepblue.org:8443/members/myblue/dashboard"
+	Then I should be navigated to "${MYBLUE}members/myblue/dashboard"
 	
 
 User content maintained on Classic Page
@@ -270,14 +271,14 @@ User content maintained on Classic Page
 	Sleep		5
 	Then I should see "span.username" have the text "Marchcontract" displayed
 	
-
-link to Mdot Site Displayed on Classic Site
-	[Tags]		ClassicSitelink	
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "div.backToClassic a" link
-	Sleep		5 
-	Then I should see the element "#pilotSiteLink a img" displayed
-	Teardown Browser
+## Pilot link currently hidden
+#link to Mdot Site Displayed on Classic Site
+#	[Tags]		ClassicSitelink	
+#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+#	When I Click the "div.backToClassic a" link
+#	Sleep		5 
+#	Then I should see the element "#pilotSiteLink a img" displayed
+#	Teardown Browser
 	
 
 #US477 - Logout redirect

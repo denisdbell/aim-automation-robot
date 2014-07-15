@@ -13,6 +13,7 @@ Library    	      OperatingSystem
 ${BROWSER}=						chrome
 ${SERVER}=						https://test.fepblue.org:7443		
 ${LOGIN_URL}=					${SERVER}/login  
+${MYBLUE}=						https://test.fepblue.org:8443/
 ${MYBLUE_LOGIN_URL}=			https://test.fepblue.org:8443/web/guest
 ${MYBLUE_PORTAL_URL}=			https://test.fepblue.org:7443/
 ${MDOT_LOGOUT}=					https://test.fepblue.org:7443/logout
