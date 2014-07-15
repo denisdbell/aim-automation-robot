@@ -8,10 +8,6 @@ Resource       ../login/login_resource.txt
 *** Variables ***
 ${SERVER_NAVBAR}=				https://dev.fepblue.org:8443/html/js/navlib/v1
 ${NAVBAR_SAMPLE_URL}=			${SERVER_NAVBAR}/sample.html
-${NAVBAR_MYBLUE_URL}=			""
-${NAVBAR_PARTNER_URL}=			""
-${TERMINATED_USER}=				marchhipaauat
-${TERMINATED_PWD}=				Bigfun21!
 ${MYBLUE_CSR_NAV}=				${SERVER_NAVBAR}/ESsample.html
 
 
