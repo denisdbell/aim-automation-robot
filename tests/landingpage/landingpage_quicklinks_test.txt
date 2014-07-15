@@ -1,0 +1,146 @@
+*** Settings ***
+Library           Selenium2Library
+Suite Teardown	  Teardown Browser
+Resource          ../../resources/landingpage/landingpage_resource.txt
+
+*** Test Cases ***
+
+#US249 Test Cases for Desktop
+#Test quick links show on landing page
+Landing Page My Account Info Quick links Displayed
+	[Tags]		QuickLinks
+	Given I am a Registered MyBlue Member on the Landing Page
+	Then I should see the element "div.quicknav-myacc #myAccountInfo" displayed
+	
+
+Landing Page Member Id Card Quick links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-memid #memberIdCard" displayed
+	
+
+Landing Page My Prescription Quick links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-pres #myPrescriptions" displayed
+	
+Landing Page Nurse Line links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-nurse #nurseLine" displayed
+
+Landing Page Find a Physician Quick links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-physician #findPhysician" displayed
+	
+
+Landing Page Explanation of Benefits Quick links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-benefits #explanationOfBenefits" displayed
+	
+Landing Page Symptom Checker links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-symptom #symptomChecker" displayed
+
+Landing Page Personal Health Record Quick links Displayed
+	[Tags]		QuickLinks	
+	Then I should see the element "div.quicknav-record #personalHealthRecord" displayed
+
+
+#Validate quick links text
+I should see the text "My Account Info"
+	[Tags]		QuickLinks
+	Then I should see "#myAccountInfo" have the text "My Account Info" displayed
+
+I should see the text "My Member ID Card"
+	[Tags]		QuickLinks
+	Then I should see "#memberIdCard" have the text "My Member ID Card" displayed
+
+I should see the text "Prescriptions"
+	[Tags]		QuickLinks
+	Then I should see ".quicknav-pres" have the text "Prescriptions" displayed
+
+I should see the text "Nurse Line"
+	[Tags]		QuickLinks
+	Then I should see "#nurseLine" have the text "Nurse Line" displayed
+
+I should see the text "See a Physician"
+	[Tags]		QuickLinks
+	Then I should see ".quicknav-physician" have the text "See a Physician" displayed
+
+I should see the text "Explanation of Benefits"
+	[Tags]		QuickLinks
+	Then I should see "#explanationOfBenefits" have the text "Explanation of Benefits" displayed
+
+I should see the text "Symptom Checker"
+	[Tags]		QuickLinks
+	Then I should see ".quicknav-symptom" have the text "Symptom Checker" displayed
+
+I should see the text "Personal Health Record"
+	[Tags]		QuickLinks
+	Then I should see "#personalHealthRecord" have the text "Personal Health Record" displayed
+	
+	
+#Quick links takes you to the right URL
+My Account Info Quick link Navigates to My Account Info Page
+	[Tags]		QuickLinks	
+	When I Click the "div.quicknav-myacc #myAccountInfo" link
+	And I Click the "a#OK" link
+	Then I should be navigated to "https://custservpt.fepblue.org/fepesvc/home.do?" in a new tab
+	Teardown Browser
+	
+Member Card Id Quick link Navigates to MemberIDCard page
+	[Tags]		QuickLinks		MemberIDCard
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-memid #memberIdCard" link
+	Then I should be navigated to "${SERVER}/memberidcard"
+	Teardown Browser
+
+My Prescriptions Quick link Navigates to My Prescriptions Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-pres #myPrescriptions" link
+	And I Click the "a#OK" link
+	Then I should be navigated to "https://sit1www.caremark.com/wps/portal/REGISTER_ONLINE" in a new tab
+	Teardown Browser
+	
+Nurse Line Quick link Navigates to the Nurse Line Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-nurse #nurseLine" link
+	And I Click the "a#OK" link
+	And I enter a pin if necessary
+	Then I should be navigated to "https://staging.webmdhealth.com/Messaging/NurseLine.aspx/NurseLineLobby?toolid=62000025" in a new tab
+	Teardown Browser
+
+Find a Physician Quick link Navigates to Find a Physician Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-physician #findPhysician" link
+	And I Click the "a#OK" link
+	Then I should be navigated to "http://provider.fepblue.org/" in a new tab
+	Teardown Browser
+	
+
+Explanation of Benefits Quick link Navigates to Explanation of Benefits Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-benefits #explanationOfBenefits" link
+	And I Click the "a#OK" link
+	Then I should be navigated to "https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do?" in a new tab
+	Teardown Browser
+
+Symptom Checker Quick link Navigates to Symptom Checker Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-symptom #symptomChecker" link
+	And I Click the "a#OK" link
+	And I enter a pin if necessary
+	Then I should be navigated to "https://staging.webmdhealth.com/common/content/symptomchecker/default.aspx?toolid=525" in a new tab
+	Teardown Browser
+	
+Personal Health Record Quick link Navigates to Symptom Checker Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-record #personalHealthRecord" link
+	And I Click the "a#OK" link
+	And I enter a pin if necessary
+	Then I should be navigated to "https://staging.webmdhealth.com/phr/healthrecord/default.aspx?toolid=58" in a new tab
+	Teardown Browser
