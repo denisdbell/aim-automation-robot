@@ -14,8 +14,8 @@ Username displayed on MyBlue App
 Username displayed on Partner site
 	[Tags]		UsernameTest
     When I Click the "#personalHealthRecord" link
-    @{windows}=					Get Window Titles		
-	Select Window				@{windows}[1]
+#    @{windows}=					Get Window Titles		
+#	Select Window				@{windows}[1]
 	Sleep						5	
     Then I should see the element "span.username" displayed
     Teardown Browser
@@ -50,7 +50,7 @@ View Wellness Card Balance link Navigates to View Wellness Card Page
     Sleep		5
     When I Click the "#wellnessCardBalance a" link
     Sleep		5  
-    Then I should be navigated to "https://fepdemo.mychiprewards.com/Cards/Account"
+    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
     
     
 New Wellness Card link Navigates to New Wellness Card Page
@@ -60,7 +60,7 @@ New Wellness Card link Navigates to New Wellness Card Page
     Sleep		5
     When I Click the "#newWellnessCard a" link
     Sleep		5  
-    Then I should be navigated to "https://fepdemo.mychiprewards.com/Home/Contact"
+    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
     
 
 Report Stolen Card link Navigates to Report Stolen Card Page
@@ -70,7 +70,7 @@ Report Stolen Card link Navigates to Report Stolen Card Page
     Sleep		5
     When I Click the "#reportStolenCard a" link
     Sleep		5  
-    Then I should be navigated to "https://fepdemo.mychiprewards.com/Home/Contact"
+    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
     
 
 FAQS link Navigates to FAQS Page
@@ -109,7 +109,8 @@ Nurse Line Inbox link Navigates to Nurse Line Inbox Page
     Sleep		5
     When I Click the "#nurseLineInbox a" link
     Sleep		5  
-    Then I should be navigated to "https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso"
+    And I enter a pin if necessary
+    Then I should be navigated to "https://staging.webmdhealth.com/Messaging/MessageCenter.aspx?toolid=86"
     Teardown Browser
 
 
@@ -149,7 +150,7 @@ M. Post-Navigation Interstitial Legal Message Text
 #US757
 M. Post-Navigation Interstitial Legal Message link
 	[Tags]		PostNavigationInterstitial
-	Then I should see ".col-xs-10 p a" have the text "View Privacy Policy" displayed
+	Then I should see ".thirdpartyContent a" have the text "View Details" displayed
 	
 M. Post-Navigation Interstitial Legal Message More Details
 	[Tags]		PostNavigationInterstitial
@@ -255,6 +256,7 @@ I should see the Tour/Introduction when I login for the first time on Mobile
 	[Tags]		Tour
 	Given I am on a mobile device
 	And I navigate to "${NAVBAR_SAMPLE_URL}?showNavTour=true"
+	Sleep		3
 	Then I should see the element ".intronavimg" displayed
 	
 I should see a close button on Mobile

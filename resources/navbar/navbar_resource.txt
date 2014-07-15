@@ -6,7 +6,7 @@ Documentation     A resource file with reusable keywords and variables.
 Resource       ../login/login_resource.txt
 
 *** Variables ***
-${SERVER_NAVBAR}=				https://dev.fepblue.org:8443/html/js/navlib/v1
+${SERVER_NAVBAR}=				https://test.fepblue.org:8443/html/js/navlib/v1
 ${NAVBAR_SAMPLE_URL}=			${SERVER_NAVBAR}/sample.html
 ${MYBLUE_CSR_NAV}=				${SERVER_NAVBAR}/ESsample.html
 
