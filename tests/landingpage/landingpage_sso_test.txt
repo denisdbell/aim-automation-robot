@@ -12,29 +12,49 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 Landing Page My Account Info Quick links has valid SSO link
 	[Tags]		SSO
 	Given I am a Registered MyBlue Member on the Landing Page
-	Then I should see the element "div.quicknav-myacc #myAccountInfo" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/home.do"
+	Then I should see the link "div.quicknav-myacc #myAccountInfo" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/home.do"
 
 Landing Page My Prescription Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the element "div.quicknav-pres #myPrescriptions" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://www.caremark.com/refillRx?newLogin=yes"
+	Then I should see the link "div.quicknav-pres #myPrescriptions" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://www.caremark.com/refillRx?newLogin=yes"
 	
 Landing Page Nurse Line links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the element "div.quicknav-nurse #nurseLine" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
+	Then I should see the link "div.quicknav-nurse #nurseLine" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
 
 Landing Page Find a Physician Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the element "div.quicknav-physician #findPhysician" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=sp-prismisp-bcbsa&TARGET=http://provider.fepblue.org"
+	Then I should see the link "div.quicknav-physician #findPhysician" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=sp-prismisp-bcbsa&TARGET=http://provider.fepblue.org"
 	
 
 Landing Page Explanation of Benefits Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the element "div.quicknav-benefits #explanationOfBenefits" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do"
+	Then I should see the link "div.quicknav-benefits #explanationOfBenefits" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do"
 	
 Landing Page Symptom Checker links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the element "div.quicknav-symptom #symptomChecker" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=525"
+	Then I should see the link "div.quicknav-symptom #symptomChecker" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=525"
 
 Landing Page Personal Health Record Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the element "div.quicknav-record #personalHealthRecord" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=58"
+	Then I should see the link "div.quicknav-record #personalHealthRecord" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=58"
+	
+	
+#Health and Wellness
+Take charge of your family’s health should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "li#healthAndWellnesslink0 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000029"
+	
+Get baby advice and support here should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "li#healthAndWellnesslink1 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=777"
+
+Health club memberships should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "li#healthAndWellnesslink4 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=HWAY-FEP&TARGET=https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2"
+	
+#Wellness Incentives
+
+
+	
+	
