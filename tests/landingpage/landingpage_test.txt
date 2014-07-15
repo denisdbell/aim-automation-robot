@@ -425,20 +425,36 @@ My Account Info Quick link Navigates to My Account Info Page
 	And I Click the "a#OK" link
 	Then I should be navigated to "https://custservpt.fepblue.org/fepesvc/home.do?" in a new tab
 	Teardown Browser
+	
+Member Card Id Quick link Navigates to MemberIDCard page
+	[Tags]		QuickLinks		MemberIDCard
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-memid #memberIdCard" link
+	Then I should be navigated to "${SERVER}/memberidcard"
+	Teardown Browser
 
 My Prescriptions Quick link Navigates to My Prescriptions Page
 	[Tags]		QuickLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-pres #myPrescriptions" link
 	And I Click the "a#OK" link
-	Then I should be navigated to "caremark.com" in a new tab
+	Then I should be navigated to "https://sit1www.caremark.com/wps/portal/REGISTER_ONLINE" in a new tab
+	Teardown Browser
+	
+Nurse Line Quick link Navigates to the Nurse Line Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-nurse #nurseLine" link
+	And I Click the "a#OK" link
+	Then I should be navigated to "https://staging.webmdhealth.com/Messaging/NurseLine.aspx/NurseLineLobby?toolid=62000025" in a new tab
 	Teardown Browser
 
 Find a Physician Quick link Navigates to Find a Physician Page
 	[Tags]		QuickLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-physician #findPhysician" link
-	Then I should be navigated to "fepblue.org" in a new tab
+	And I Click the "a#OK" link
+	Then I should be navigated to "http://provider.fepblue.org/" in a new tab
 	Teardown Browser
 	
 
@@ -446,21 +462,24 @@ Explanation of Benefits Quick link Navigates to Explanation of Benefits Page
 	[Tags]		QuickLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-benefits #explanationOfBenefits" link
-	Then I should be navigated to "fepblue.org" in a new tab
+	And I Click the "a#OK" link
+	Then I should be navigated to "https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do?" in a new tab
 	Teardown Browser
 
+Symptom Checker Quick link Navigates to Symptom Checker Page
+	[Tags]		QuickLinks	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I Click the "div.quicknav-symptom #symptomChecker" link
+	And I Click the "a#OK" link
+	Then I should be navigated to "https://staging.webmdhealth.com/common/content/symptomchecker/default.aspx?toolid=525" in a new tab
+	Teardown Browser
+	
 Personal Health Record Quick link Navigates to Symptom Checker Page
 	[Tags]		QuickLinks	
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-record #personalHealthRecord" link
-	Then I should be navigated to "webmdhealth.com" in a new tab
-	Teardown Browser
-
-Member Card Id Quick link Navigates to MemberIDCard page
-	[Tags]		QuickLinks		MemberIDCard
-	Given I am a Registered MyBlue Member on the Landing Page
-	When I Click the "div.quicknav-memid #memberIdCard" link
-	Then I should be navigated to "memberidcard"
+	And I Click the "a#OK" link
+	Then I should be navigated to "https://staging.webmdhealth.com/phr/healthrecord/default.aspx?toolid=58" in a new tab
 	Teardown Browser
 	
 
