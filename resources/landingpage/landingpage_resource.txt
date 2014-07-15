@@ -50,3 +50,7 @@ I am a Minor Registered MyBlue Member on the Landing Page
 	I Enter A Username "#LoginUsername" "${MINOR}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
+	
+I should see the element "${element}" with SSO link "${link}"
+	${SSO}=	Get Element Attribute	css=${element}@href
+	Should Be Equal	${SSO}	${link}
