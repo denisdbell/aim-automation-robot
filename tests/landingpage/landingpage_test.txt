@@ -317,8 +317,8 @@ Logging out of a partner site should take me to classic login page
 	When I Click the "div.backToClassic a" link
 	Sleep		5
 	And I Click the "#webmdTakeChargeYourFamilyHealthTodayURL" link
-	And I Click the "#popup_ok" element
 	Sleep		5
+	And I enter a pin if necessary
 	And I Click the ".username" element
 	And I Click the "li.logout a" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}"
