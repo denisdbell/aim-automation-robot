@@ -10,13 +10,17 @@ Library    	      OperatingSystem
 
 *** Variables ***
 
-${BROWSER}=		chrome
-${SERVER}=			https://test.fepblue.org:7443		
-${LOGIN_URL}=		${SERVER}/login  
-${MYBLUE_LOGIN_URL}=		https://test.fepblue.org:8443/web/guest
-${NOVALUE}=		""
+${BROWSER}=						chrome
+${SERVER}=						https://test.fepblue.org:7443		
+${LOGIN_URL}=					${SERVER}/login  
+${MYBLUE_LOGIN_URL}=			https://test.fepblue.org:8443/web/guest
 ${MYBLUE_PORTAL_URL}=			https://test.fepblue.org:7443/
-${MDOT_LOGOUT}=			https://test.fepblue.org:7443/logout
+${MDOT_LOGOUT}=					https://test.fepblue.org:7443/logout
+${STANDARD}=					junecontractuatstd
+${BASIC}=						marchcontractuat
+${TERMINATED}=					marchtermeduat
+${MINOR}=						ageless_18
+${PASSWORD}=					Bigfun21!
 
 *** Keywords ***
 
