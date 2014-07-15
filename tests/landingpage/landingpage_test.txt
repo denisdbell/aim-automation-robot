@@ -159,7 +159,7 @@ I should see two disabled tiles for Minor
 	Teardown Browser
 
 
-#Clicking each link
+#Test each link takes the user to the right URL
 Take charge of your familys health link Navigates to Family Health Page
 	[Tags]		LandingPageLinks
 	Given I am a Registered MyBlue Member on the Landing Page
@@ -346,6 +346,7 @@ Review Pharmacy Benefits link Navigates to Review Pharmacy Benefits Page
 
 
 #US249 Test Cases for Desktop
+#Test quick links show on landing page
 Landing Page My Account Info Quick links Displayed
 	[Tags]		QuickLinks
 	Given I am a Registered MyBlue Member on the Landing Page
@@ -382,24 +383,47 @@ Landing Page Personal Health Record Quick links Displayed
 	[Tags]		QuickLinks	
 	Then I should see the element "div.quicknav-record #personalHealthRecord" displayed
 
-Quick links tiles should have valid text
+
+#Validate quick links text
+I should see the text "My Account Info"
 	[Tags]		QuickLinks
 	Then I should see "#myAccountInfo" have the text "My Account Info" displayed
-	And I should see "#memberIdCard" have the text "My Member ID Card" displayed
-	And I should see ".quicknav-pres" have the text "Prescriptions" displayed
-	And I should see "#nurseLine" have the text "Nurse Line" displayed
-	And I should see ".quicknav-physician" have the text "See a Physician" displayed
-	And I should see "#explanationOfBenefits" have the text "Explanation of Benefits" displayed
-	And I should see ".quicknav-symptom" have the text "Symptom Checker" displayed
-	And I should see "#personalHealthRecord" have the text "Personal Health Record" displayed
-	Teardown Browser
 
+I should see the text "My Member ID Card"
+	[Tags]		QuickLinks
+	Then I should see "#memberIdCard" have the text "My Member ID Card" displayed
 
+I should see the text "Prescriptions"
+	[Tags]		QuickLinks
+	Then I should see ".quicknav-pres" have the text "Prescriptions" displayed
+
+I should see the text "Nurse Line"
+	[Tags]		QuickLinks
+	Then I should see "#nurseLine" have the text "Nurse Line" displayed
+
+I should see the text "See a Physician"
+	[Tags]		QuickLinks
+	Then I should see ".quicknav-physician" have the text "See a Physician" displayed
+
+I should see the text "Explanation of Benefits"
+	[Tags]		QuickLinks
+	Then I should see "#explanationOfBenefits" have the text "Explanation of Benefits" displayed
+
+I should see the text "Symptom Checker"
+	[Tags]		QuickLinks
+	Then I should see ".quicknav-symptom" have the text "Symptom Checker" displayed
+
+I should see the text "Personal Health Record"
+	[Tags]		QuickLinks
+	Then I should see "#personalHealthRecord" have the text "Personal Health Record" displayed
+	
+	
+#Quick links takes you to the right URL
 My Account Info Quick link Navigates to My Account Info Page
 	[Tags]		QuickLinks	
 	When I Click the "div.quicknav-myacc #myAccountInfo" link
 	And I Click the "a#OK" link
-	Then I should be navigated to "landingpage" in a new tab
+	Then I should be navigated to "https://custservpt.fepblue.org/fepesvc/home.do?" in a new tab
 	Teardown Browser
 
 My Prescriptions Quick link Navigates to My Prescriptions Page
