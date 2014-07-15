@@ -35,18 +35,18 @@ I am a Registered MyBlue Member on the Landing Page (Session exists)
 	
 I am a Registered MyBlue Member on the Landing Page
 	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "marchcontractuat"
-	I Enter A Password "#LoginPassword" "Bigfun21!"
+	I Enter A Username "#LoginUsername" "${BASIC}"
+	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
 	
 I am a Terminated Registered MyBlue Member on the Landing Page
 	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "marchtermeduat"
-	I Enter A Password "#LoginPassword" "Bigfun21!"
+	I Enter A Username "#LoginUsername" "${TERMINATED}"
+	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
 	
 I am a Minor Registered MyBlue Member on the Landing Page
 	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "ageless_18"
-	I Enter A Password "#LoginPassword" "Bigfun21!"
+	I Enter A Username "#LoginUsername" "${MINOR}"
+	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
