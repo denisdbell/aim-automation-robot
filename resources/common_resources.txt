@@ -80,5 +80,21 @@ I view the "${element}" element
 
 
 
+#WebMD
+I enter a pin if necessary
+	@{windows}=					Get Window Titles		
+	Select Window				@{windows}[1]
+	${URL}=	Get Location
+	Run Keyword If		'${URL}'=='https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso'		I enter the pin "1234"
+	
+I enter the pin "${pin}"
+	Sleep		2
+	@{windows}=					Get Window Titles		
+	Select Window				@{windows}[1]
+	Input Text			css=#Pin		${pin}
+	Click Element		css=button[type="submit"]
+	Sleep		3
+
+
 Teardown Browser
     Close All Browsers

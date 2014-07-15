@@ -4,7 +4,6 @@ Documentation     A resource file with reusable keywords and variables.
 # resource importation/extension
 Resource       ../common_resources.txt
 Resource       ../login/login_resource.txt
-Resource       ../navbar/navbar_resource.txt
 
 
 *********Keywords************
@@ -51,12 +50,3 @@ I am a Minor Registered MyBlue Member on the Landing Page
 	I Enter A Username "#LoginUsername" "ageless_18"
 	I Enter A Password "#LoginPassword" "Bigfun21!"
 	I Click the "div.login form#loginForm button#login" Button
-	
-I enter a pin if necessary
-	@{windows}=					Get Window Titles		
-	Select Window				@{windows}[1]
-	${URL}=	Get Location
-	Run Keyword If		'${URL}'=='https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso'		Enter Pin	
-	
-Enter Pin
-	I enter the pin "1234"
