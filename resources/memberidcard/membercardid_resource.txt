@@ -9,8 +9,8 @@ Resource	   ../landingpage/landingpage_resource.txt
 
 I am a Registered MyBlue Member on the Member Id Card page
 	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "marchhipaauat"
-    I Enter A Password "#LoginPassword" "Bigfun21!"
+	I Enter A Username "#LoginUsername" "${TERMINATED}"
+    I Enter A Password "#LoginPassword" "${PASSWORD}"
     I Click the "#login" Button
 	I Click the "#memberIdCard" Link
 	Sleep		5
