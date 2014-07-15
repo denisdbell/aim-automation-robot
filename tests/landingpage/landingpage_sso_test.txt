@@ -54,7 +54,21 @@ Health club memberships should have a valid SSO link
 	Then I should see the link "li#healthAndWellnesslink4 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=HWAY-FEP&TARGET=https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2"
 	
 #Wellness Incentives
+Visit MyBlue Wellness Card Center should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#wellnessIncentiveslink0 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com"
 
+View account balance should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#wellnessIncentiveslink1 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Cards/Account"
+
+Report a lost MyBlue Wellness Card should have a valid SSO link
+	[Tags]		SSO	
+ 	Then I should see the link "#wellnessIncentiveslink2 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Home/Contact"
+ 
+Quit smoking with our Tobacco Cessation Program should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#wellnessIncentiveslink3 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000039"
 
 	
 	
