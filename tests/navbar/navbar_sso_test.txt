@@ -44,10 +44,24 @@ Account Settings should have a valid SSO link
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/profile.do"
 	
 	
+#Health Tools
+Blue Health Assessment should have a valid SSO link
+	[Tags]		SSO
+	When I Click the "#health-tools" element
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
+
+Online Health Coach should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
+
+Benefits Statements should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.benefitStatement\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=888"
+
+Tobacco Cessation should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.tobaccoCessation\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000039"
 	
-	
-	
-	
-	
-	
-	
+Nurse Line should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
