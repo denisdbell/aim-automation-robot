@@ -50,6 +50,14 @@ I am logged into the MyBlue Portal
 	I Enter A Username "#LoginUsername" "${BASIC}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
+
+I am logged into the MyBlue Portal as a Standard User
+	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
+	Maximize Browser Window
+	Delete All Cookies
+	I Enter A Username "#LoginUsername" "${STANDARD}"
+	I Enter A Password "#LoginPassword" "${PASSWORD}"
+	I Click the "div.login form#loginForm button#login" Button
 	
 I am logged in CSR
 	Open Browser	${MYBLUE_CSR_NAV}      ${BROWSER}
