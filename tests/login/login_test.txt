@@ -76,6 +76,11 @@ Email redirect to Mdot when I click cancel
 	[Tags]		HotLinks
 	When I Click the "#cancel_btn" element
 	Then I should be navigated to "${SERVER}/login"
+	
+Sign up for MyBlue should take me to MyBlue
+	[Tags]		HotLinks
+	When I Click the "#signup" link
+	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?p_p_id=58&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_58_struts_action=%2Flogin%2Fcreate_account"
 	Teardown Browser
 	
 
