@@ -145,7 +145,21 @@ Refill Mail Order Rx should have a valid SSO link
 	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.refillMailOrderPrescriptions\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/refillRx?newLogin=yes"
 
 
+#Username dropdown
+Update Enrollment Information should have a valid SSO link
+	[Tags]		SSO
+	When I Click the "#pharmacy" element
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/home.do"
 
+
+Change Your Address should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/addressChange.do"
+
+
+Sign Out should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.signOut\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSLO.ping?InErrorResource=https://test.fepblue.org:8443/c/portal/logout"
 
 
 
