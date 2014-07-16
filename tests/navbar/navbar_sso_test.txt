@@ -65,3 +65,30 @@ Tobacco Cessation should have a valid SSO link
 Nurse Line should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
+
+Personal Health Record should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.personalHealthRecord\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=58"
+
+Health Trackers should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthTrackers\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=69"
+	
+Document Library should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.documentLibrary\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=8492551"
+
+Online Symptom Checker should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=525"
+
+My Pregnancy Assistant should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=777"
+
+Recipes should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=1309"
+
+	
+	
