@@ -8,3 +8,46 @@ Resource          ../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***
 
+#My Account
+My Benefits should have a valid SSO link
+	[Tags]		SSO
+	Given I am logged into the MyBlue Portal as a Standard User
+	When I Click the "#my-account" element
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/home.do"
+	
+Rx Statements should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/viewSOC.do"
+
+Benefits should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/benefits.do"
+
+
+Medical & Pharmacy Claims should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do"
+
+	
+Order a New ID Card should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/idCardRequest.do"
+	
+	
+Send a Secure Inquiry should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/initiateInquiry.do"
+
+
+Account Settings should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/profile.do"
+	
+	
+	
+	
+	
+	
+	
+	
+	
