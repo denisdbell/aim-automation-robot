@@ -80,7 +80,7 @@ FAQS link Navigates to FAQS Page
     Sleep		5
     When I Click the "#faqs a" link
     Sleep		5  
-    Then I should be navigated to "http://www.fepblue.org/faqs/index.jsp"
+    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
     
     
 Inbox Menu links displayed For Not Terminated User
