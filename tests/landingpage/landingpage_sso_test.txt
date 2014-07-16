@@ -89,12 +89,11 @@ View replies from customer service should have a valid SSO link
 	Then I should see the link "#benefitslink3 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/inbox.do"
 
 
+#Pharmacy
+Find a pharmacy should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#pharmacylink0 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/pharmacySearch.do?newLogin=yes"
 
-
-
-
-
-
-
-
-#
+Check drug cost should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#pharmacylink1 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/drugSearchInit.do?newLogin=yes"
