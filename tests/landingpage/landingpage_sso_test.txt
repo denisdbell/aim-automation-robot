@@ -70,5 +70,31 @@ Quit smoking with our Tobacco Cessation Program should have a valid SSO link
 	[Tags]		SSO	
 	Then I should see the link "#wellnessIncentiveslink3 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000039"
 
-	
-	
+
+#Benefits
+Download explanation of benefits (EOB) should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#benefitslink0 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do"
+
+Order a new member ID card should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#benefitslink1 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/idCardRequest.do"
+
+Send question to customer service should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#benefitslink2 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/initiateInquiry.do"
+
+View replies from customer service should have a valid SSO link
+	[Tags]		SSO	
+	Then I should see the link "#benefitslink3 a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/inbox.do"
+
+
+
+
+
+
+
+
+
+
+#
