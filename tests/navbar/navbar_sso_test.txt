@@ -119,6 +119,36 @@ WebMD Videos should have a valid SSO link
 	
 	
 #Pharmacy
+Pharmacy & Prescriptions should have a valid SSO link
+	[Tags]		SSO
+	When I Click the "#pharmacy" element
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/wps/portal?newLogin=yes"
+
+Find a Pharmacy should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.findAPharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/pharmacySearch.do?newLogin=yes"
+
+Check Drug Cost should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.checkDrugCost\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/drugSearchInit.do?newLogin=yes"
+
+New Mail Order Rx should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.newMailOrderPrescription\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/newPrescriptions?newLogin=yes"
+
+Mail Order Status should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.mailOrderStatus\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/checkOrderStatus?newLogin=yes"
+
+Refill Mail Order Rx should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.refillMailOrderPrescriptions\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/refillRx?newLogin=yes"
+
+
+
+
+
+
 
 
 
