@@ -151,18 +151,24 @@ Update Enrollment Information should have a valid SSO link
 	When I Click the "#pharmacy" element
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/home.do"
 
-
 Change Your Address should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/addressChange.do"
-
 
 Sign Out should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.signOut\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSLO.ping?InErrorResource=https://test.fepblue.org:8443/c/portal/logout"
 
 
+#Mail dropdown
+Health & Wellness Inbox should have a valid SSO link
+	[Tags]		SSO
+	When I Click the "#pharmacy" element
+	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=86"
 
+Customer Service Inbox should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/inbox.do"
 
 
 
