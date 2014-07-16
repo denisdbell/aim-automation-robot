@@ -171,5 +171,24 @@ Customer Service Inbox should have a valid SSO link
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/inbox.do"
 
 
+#Wellness dropdown
+Wellness Card Home should have a valid SSO link
+	[Tags]		SSO
+	When I Click the "#Wellness" element
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com"
 
-	
+View Wellness Card Balance should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Cards/Account"
+
+Order a New Wellness Card should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Home/Contact"
+
+Report Lost or Stolen Card should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Home/Contact"
+
+FAQs should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Home/FAQ"
