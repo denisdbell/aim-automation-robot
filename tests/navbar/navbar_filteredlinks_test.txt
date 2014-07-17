@@ -1,6 +1,5 @@
 *** Settings ***
-Documentation     This file tests that the SSO links in the unified navigation bar
-...				  are valid
+Documentation     This file tests that links should be filtered by user
 
 Library           Selenium2Library
 Suite Teardown	  Close All Browsers
