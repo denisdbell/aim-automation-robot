@@ -82,11 +82,6 @@ Landing Page Pharmacy links Displayed for Terminated
 	And I should see the link "#pharmacylink2 a" displayed
 	
 	
-Nav Wellness Incentives links Displayed for Terminated
-	[Tags]		FilteredLinks
-	Then I should not see the element "#Wellness a" displayed
-	Teardown Browser
-	
 Landing Page Health And Wellness links Displayed for Minor
 	[Tags]		LandingPageLinks	FilteredLinks
 	Given I am a Minor Registered MyBlue Member on the Landing Page
