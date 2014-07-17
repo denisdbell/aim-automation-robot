@@ -6,3 +6,189 @@ Suite Teardown	  Close All Browsers
 Resource          ../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***
+
+#Standard User
+As a standard user, I should see My Benefits
+	[Tags]		FilteredLinks
+	Given I am logged into the MyBlue Portal as a Standard User
+	When I Click the "#my-account" element
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
+
+As a standard user, I should see Rx Statements
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" displayed
+	
+As a standard user, I should see Benefits
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" displayed
+
+As a standard user, I should see Medical & Pharmacy Claims
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
+
+As a standard user, I should see Order a New ID Card
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" displayed
+
+As a standard user, I should see Send a Secure Inquiry
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" displayed
+
+As a standard user, I should see Account Settings
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" displayed
+
+	
+#Health Tools
+As a standard user, I should see Blue Health Assessment
+	[Tags]		FilteredLinks
+	When I Click the "#health-tools" element
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" displayed
+
+As a standard user, I should see Online Health Coach
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" displayed
+
+As a standard user, I should see Benefits Statements
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.benefitStatement\"] a" displayed
+	
+As a standard user, I should see Tobacco Cessation
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.tobaccoCessation\"] a" displayed 
+
+As a standard user, I should see Nurse Line
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" displayed 
+
+As a standard user, I should see Personal Health Record
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.personalHealthRecord\"] a" displayed 
+
+As a standard user, I should see Health Trackers
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthTrackers\"] a" displayed 
+
+As a standard user, I should see Document Library
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.documentLibrary\"] a" displayed 
+
+As a standard user, I should see Online Symptom Checker
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a" displayed 
+
+As a standard user, I should see My Pregnancy Assistant
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed 
+
+As a standard user, I should see Recipes
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" displayed 
+
+As a standard user, I should see All Topics
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.allTopics\"] a" displayed 
+
+As a standard user, I should see Conditions
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
+
+As a standard user, I should see General Health
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
+
+As a standard user, I should see Procedures/Surgeries
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
+
+As a standard user, I should see Medical Encyclopedia
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" displayed 
+
+As a standard user, I should see WebMD Interactives
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" displayed 
+
+As a standard user, I should see Message Board Exchanges
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" displayed 
+
+As a standard user, I should see WebMD Videos
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
+
+	
+#Pharmacy
+As a standard user, I should see Pharmacy & Prescriptions
+	[Tags]		FilteredLinks
+	When I Click the "#pharmacy" element
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" displayed 
+
+As a standard user, I should see Find a Pharmacy
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.findAPharmacy\"] a" displayed 
+
+As a standard user, I should see Check Drug Cost
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.checkDrugCost\"] a" displayed 
+
+As a standard user, I should see New Mail Order Rx
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.newMailOrderPrescription\"] a" displayed 
+
+As a standard user, I should see Mail Order Status
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.mailOrderStatus\"] a" displayed 
+
+As a standard user, I should see Refill Mail Order Rx
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.refillMailOrderPrescriptions\"] a" displayed 
+
+
+#Username dropdown
+As a standard user, I should see Update Enrollment Information
+	[Tags]		FilteredLinks
+	When I Click the "#pharmacy" element
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
+
+As a standard user, I should see Change Your Address
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" displayed 
+
+As a standard user, I should see Sign Out
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.signOut\"] a" displayed 
+
+
+#Mail dropdown
+As a standard user, I should see Health & Wellness Inbox
+	[Tags]		FilteredLinks
+	When I Click the "#pharmacy" element
+	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
+
+As a standard user, I should see Customer Service Inbox
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" displayed 
+
+
+#Wellness dropdown
+As a standard user, I should see Wellness Card Home
+	[Tags]		FilteredLinks
+	When I Click the "#Wellness" element
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" displayed 
+
+As a standard user, I should see View Wellness Card Balance
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" displayed 
+
+As a standard user, I should see Order a New Wellness Card
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" displayed 
+
+As a standard user, I should see Report Lost or Stolen Card
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" displayed 
+
+As a standard user, I should see FAQs
+	[Tags]		FilteredLinks
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" displayed 
