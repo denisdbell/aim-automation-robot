@@ -68,6 +68,15 @@ I am logged into the MyBlue Portal as a Terminated User
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
     Sleep		5
+    
+I am logged into the MyBlue Portal as a Minor User
+	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
+	Maximize Browser Window
+	Delete All Cookies
+	I Enter A Username "#LoginUsername" "${MINOR}"
+	I Enter A Password "#LoginPassword" "${PASSWORD}"
+	I Click the "div.login form#loginForm button#login" Button
+    Sleep		5
 	
 I am logged in CSR
 	Open Browser	${MYBLUE_CSR_NAV}      ${BROWSER}

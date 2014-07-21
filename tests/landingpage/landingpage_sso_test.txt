@@ -16,7 +16,7 @@ Landing Page My Account Info Quick links has valid SSO link
 
 Landing Page My Prescription Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "div.quicknav-pres #myPrescriptions" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://www.caremark.com/refillRx?newLogin=yes"
+	Then I should see the link "div.quicknav-pres #myPrescriptions" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/refillRx?newLogin=yes"
 	
 Landing Page Nurse Line links has valid SSO link
 	[Tags]		SSO	
