@@ -98,7 +98,7 @@ I enter the pin "${pin}"
 	Sleep		2
 	Input Text			css=#Pin		${pin}
 	Click Element		css=button[type="submit"]
-	Sleep		3
+	Sleep		5
 
 
 Teardown Browser
