@@ -7,7 +7,7 @@ Resource	   ../landingpage/landingpage_resource.txt
 
 *********Keywords************
 
-I am a Registered MyBlue Member on the Member Id Card page
+I am a Terminated MyBlue Member on the Member Id Card page
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${TERMINATED}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"

@@ -9,7 +9,7 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 
 #US251 Test Cases for Desktop
 Landing Page Health And Wellness links Displayed
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		1
 	Then I should see the element "span#healthAndWellness" displayed
@@ -19,7 +19,7 @@ Landing Page Health And Wellness links Displayed
 	
 
 Landing Page Wellness Incentives links Displayed
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#wellnessIncentives" displayed
 	And I should see the link "#wellnessIncentiveslink0 a" displayed
 	And I should see the link "#wellnessIncentiveslink1 a" displayed
@@ -28,7 +28,7 @@ Landing Page Wellness Incentives links Displayed
 	
 
 Landing Page Benefits links Displayed
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
 	And I should see the link "#benefitslink1 a" displayed
@@ -38,7 +38,7 @@ Landing Page Benefits links Displayed
 	
 	
 Landing Page Pharmacy links Displayed
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	And I should see the link "#pharmacylink1 a" displayed
@@ -47,7 +47,7 @@ Landing Page Pharmacy links Displayed
 
 #US763 - Links should be filtered by user
 Landing Page Health And Wellness links Displayed for Terminated
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Terminated Registered MyBlue Member on the Landing Page
 	Sleep		1
 	Then I should see the element "span#healthAndWellness" displayed
@@ -57,7 +57,7 @@ Landing Page Health And Wellness links Displayed for Terminated
 	
 
 Landing Page Wellness Incentives links Displayed for Terminated
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#wellnessIncentives" displayed
 	And I should not see the element "#wellnessIncentiveslink0 a"
 	And I should not see the element "#wellnessIncentiveslink1 a"
@@ -65,7 +65,7 @@ Landing Page Wellness Incentives links Displayed for Terminated
 	And I should see the link "#wellnessIncentiveslink3 a" displayed
 
 Landing Page Benefits links Displayed for Terminated
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
 	And I should see the link "#benefitslink1 a" displayed
@@ -75,7 +75,7 @@ Landing Page Benefits links Displayed for Terminated
 	
 	
 Landing Page Pharmacy links Displayed for Terminated
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	And I should see the link "#pharmacylink1 a" displayed
@@ -83,7 +83,7 @@ Landing Page Pharmacy links Displayed for Terminated
 	
 	
 Landing Page Health And Wellness links Displayed for Minor
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Minor Registered MyBlue Member on the Landing Page
 	Sleep		1
 	Then I should see the element "span#healthAndWellness" displayed
@@ -93,7 +93,7 @@ Landing Page Health And Wellness links Displayed for Minor
 	
 
 Landing Page Wellness Incentives links Displayed for Minor
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#wellnessIncentives" displayed
 	And I should see the link "#wellnessIncentiveslink0 a" displayed
 	And I should see the link "#wellnessIncentiveslink1 a" displayed
@@ -102,7 +102,7 @@ Landing Page Wellness Incentives links Displayed for Minor
 	
 
 Landing Page Benefits links Displayed for Minor
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
 	And I should see the link "#benefitslink1 a" displayed
@@ -111,14 +111,14 @@ Landing Page Benefits links Displayed for Minor
 	And I should see the link "#benefitslink4 a" displayed	
 	
 Landing Page Pharmacy links Displayed for Minor
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	And I should see the link "#pharmacylink1 a" displayed
 	And I should not see the element "#pharmacylink2 a"
 	
 Nav Benefits links Displayed for Minor
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	When I Click the "#my-account a" link
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" displayed
 	And I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" displayed
@@ -127,14 +127,14 @@ Nav Benefits links Displayed for Minor
 	And I should not see the element "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a"
 	
 Nav Health Toold links Displayed for Minor
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	When I Click the "#my-account a" link
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" displayed
 	And I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed
 	And I should not see the element "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a"
 	
 I should see two disabled tiles for Minor
-	[Tags]		LandingPageLinks	FilteredLinks
+	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the link ".quicknav-symptom a.disabled" displayed
 	And I should see the link ".quicknav-record a.disabled" displayed
 	Teardown Browser

@@ -5,6 +5,7 @@ Resource			 ../../resources/errorhandling/errorhandling_resources.txt
 
 *** Test Cases ***
 #TODO: Sync with sean on if these tests are necessary
+#AfterSync: Dont test for these
 
 #US749 - Error handling (404 & 500)
 #I should see a 404 when I navigate to an invalid URL

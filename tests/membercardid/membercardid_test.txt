@@ -8,7 +8,7 @@ Resource          ../../resources/memberidcard/membercardid_resource.txt
 #US733 & US740 - Member ID Card redesign
 Member Id Card Plan Type Standard Option displayed
 	[Tags]		MemberIDCard	
-	Given I am a Registered MyBlue Member on the Member Id Card page
+	Given I am a Terminated MyBlue Member on the Member Id Card page
 	Sleep		5
 	Then I should see the element ".spriteicon" displayed
 	
