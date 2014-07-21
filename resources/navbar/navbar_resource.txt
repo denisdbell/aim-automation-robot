@@ -53,6 +53,7 @@ I am logged into the MyBlue Portal
 
 I am logged into the MyBlue Portal as a Standard User
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
+    Sleep		5
 	Maximize Browser Window
 	Delete All Cookies
 	I Enter A Username "#LoginUsername" "${STANDARD}"

@@ -13,182 +13,182 @@ My Benefits should have a valid SSO link
 	[Tags]		SSO
 	Given I am logged into the MyBlue Portal as a Standard User
 	When I Click the "#my-account" element
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
 	
 Rx Statements should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/viewSOC.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/viewSOC.do"
 Benefits should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/benefits.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/benefits.do"
 	
 Medical & Pharmacy Claims should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/memberEligibilityProcess.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/memberEligibilityProcess.do"
 
 Order a New ID Card should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/idCardRequest.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/idCardRequest.do"
 	
 Send a Secure Inquiry should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/initiateInquiry.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/initiateInquiry.do"
 
 Account Settings should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/profile.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/profile.do"
 	
 	
 #Health Tools
 Blue Health Assessment should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#health-tools" element
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
 
 Online Health Coach should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
 
 Benefits Statements should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.benefitStatement\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=888"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.benefitStatement\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=888"
 
 Tobacco Cessation should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.tobaccoCessation\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000039"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.tobaccoCessation\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000039"
 	
 Nurse Line should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
 
 Personal Health Record should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.personalHealthRecord\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=58"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.personalHealthRecord\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=58"
 
 Health Trackers should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthTrackers\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=69"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthTrackers\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=69"
 	
 Document Library should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.documentLibrary\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=8492551"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.documentLibrary\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=8492551"
 
 Online Symptom Checker should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=525"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=525"
 
 My Pregnancy Assistant should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=777"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=777"
 
 Recipes should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=1309"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=1309"
 
 All Topics should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.allTopics\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.allTopics\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
 
 Conditions should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
 
 General Health should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
 
 Procedures/Surgeries should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
 
 Medical Encyclopedia should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=321"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=321"
 
 WebMD Interactives should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=603"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=603"
 
 Message Board Exchanges should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=1028"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=1028"
 
 WebMD Videos should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=711"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=711"
 	
 	
 #Pharmacy
 Pharmacy & Prescriptions should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#pharmacy" element
-	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/wps/portal?newLogin=yes"
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/wps/portal?newLogin=yes"
 
 Find a Pharmacy should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.findAPharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/pharmacySearch.do?newLogin=yes"
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.findAPharmacy\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/pharmacySearch.do?newLogin=yes"
 
 Check Drug Cost should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.checkDrugCost\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/drugSearchInit.do?newLogin=yes"
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.checkDrugCost\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/drugSearchInit.do?newLogin=yes"
 
 New Mail Order Rx should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.newMailOrderPrescription\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/newPrescriptions?newLogin=yes"
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.newMailOrderPrescription\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/newPrescriptions?newLogin=yes"
 
 Mail Order Status should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.mailOrderStatus\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/checkOrderStatus?newLogin=yes"
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.mailOrderStatus\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/checkOrderStatus?newLogin=yes"
 
 Refill Mail Order Rx should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.refillMailOrderPrescriptions\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/refillRx?newLogin=yes"
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.refillMailOrderPrescriptions\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/refillRx?newLogin=yes"
 
 
 #Username dropdown
 Update Enrollment Information should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#pharmacy" element
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
 
 Change Your Address should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/addressChange.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/addressChange.do"
 
 Sign Out should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.signOut\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSLO.ping?InErrorResource=https://test.fepblue.org:8443/c/portal/logout"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.signOut\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSLO.ping?InErrorResource=https://dev.fepblue.org:8443/c/portal/logout"
 
 
 #Mail dropdown
 Health & Wellness Inbox should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#pharmacy" element
-	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=86"
+	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=86"
 
 Customer Service Inbox should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/inbox.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=http://${ESERVICE_SSO}.fepblue.org/fepesvc/inbox.do"
 
 
 #Wellness dropdown
 Wellness Card Home should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#Wellness" element
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com"
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com"
 
 View Wellness Card Balance should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Cards/Account"
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Cards/Account"
 
 Order a New Wellness Card should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Home/Contact"
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Home/Contact"
 
 Report Lost or Stolen Card should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Home/Contact"
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Home/Contact"
 
 FAQs should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=https://feptest.mychiprewards.com&TARGET=https://feptest.mychiprewards.com/Home/FAQ"
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Home/FAQ"
