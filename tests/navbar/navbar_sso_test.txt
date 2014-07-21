@@ -13,30 +13,30 @@ My Benefits should have a valid SSO link
 	[Tags]		SSO
 	Given I am logged into the MyBlue Portal as a Standard User
 	When I Click the "#my-account" element
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/home.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
 	
 Rx Statements should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/viewSOC.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/viewSOC.do"
 Benefits should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/benefits.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/benefits.do"
 	
 Medical & Pharmacy Claims should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/memberEligibilityProcess.do"
 
 Order a New ID Card should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/idCardRequest.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/idCardRequest.do"
 	
 Send a Secure Inquiry should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/initiateInquiry.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/initiateInquiry.do"
 
 Account Settings should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/profile.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/profile.do"
 	
 	
 #Health Tools
@@ -149,11 +149,11 @@ Refill Mail Order Rx should have a valid SSO link
 Update Enrollment Information should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#pharmacy" element
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/home.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
 
 Change Your Address should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/addressChange.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/addressChange.do"
 
 Sign Out should have a valid SSO link
 	[Tags]		SSO
@@ -168,7 +168,7 @@ Health & Wellness Inbox should have a valid SSO link
 
 Customer Service Inbox should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://custservpt.fepblue.org/fepesvc/inbox.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" with SSO link "https://ssotest.fepblue.org:9031/idp/startSSO.ping?PartnerSpId=SBP-ESERVICE-PT&TARGET=https://${ESERVICE_SSO}.fepblue.org/fepesvc/inbox.do"
 
 
 #Wellness dropdown

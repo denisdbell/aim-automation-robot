@@ -10,13 +10,20 @@ Library    	      OperatingSystem
 
 *** Variables ***
 
+#Config
+${SSO}							ssodev2			#Dev = ssodev2 | Test = ssotest
+${ESERVICE_SSO}					custservv2		#Dev = custservv2 | Test = custservpt
+${ENVIRONMENT}					dev				#Dev = dev | Test = test | Stage = stage
+
+#----------------------------------------------------------------------------------------------------
+
 ${BROWSER}=						chrome
-${SERVER}=						https://test.fepblue.org:7443		
+${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
 ${LOGIN_URL}=					${SERVER}/login  
-${MYBLUE}=						https://test.fepblue.org:8443/
-${MYBLUE_LOGIN_URL}=			https://test.fepblue.org:8443/web/guest
-${MYBLUE_PORTAL_URL}=			https://test.fepblue.org:7443/
-${MDOT_LOGOUT}=					https://test.fepblue.org:7443/logout
+${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
+${MYBLUE_LOGIN_URL}=			https://${ENVIRONMENT}.fepblue.org:8443/web/guest
+${MYBLUE_PORTAL_URL}=			https://${ENVIRONMENT}.fepblue.org:7443/
+${MDOT_LOGOUT}=					https://${ENVIRONMENT}.fepblue.org:7443/logout
 ${STANDARD}=					junecontractuatstd
 ${BASIC}=						marchcontractuat
 ${TERMINATED}=					marchtermeduat
