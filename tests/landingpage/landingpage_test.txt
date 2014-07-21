@@ -153,31 +153,3 @@ I should see an OK button
 I should see a message on the modal
 	[Tags]		PreNavInterstitial
 	Then I should see the element ".copy" displayed
-
-When I click Check drug cost I should see the interstitial
-	[Tags]		PreNavInterstitial
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "#pharmacylink1 a" link
-	Sleep		3
-	Then I should see the element ".modal-dialog" displayed
-	
-When I click Find a Pharmacy in the Nav I should see the interstitial
-	[Tags]		PreNavInterstitial
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "li[data-url-config=\"navigation.main.pharmacy\"] a" link 
-	And I Click the "li[data-url-config=\"navigation.main.pharmacy.nodes.findAPharmacy\"] a" link
-	Sleep		3
-	Then I should see the element "div#mybluenav-modal" displayed
-
-I should see a message on the modal
-	[Tags]		PreNavInterstitial
-	Then I should see the element "h3[data-i18n=\"messages.preInterstitial.header\"]" displayed
-	Then I should see the element "div[data-i18n=\"messages.preInterstitial.body\"]" displayed
-	
-When I click Check drug cost in the Nav I should see the interstitial
-	[Tags]		PreNavInterstitial
-	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-	When I Click the "li[data-url-config=\"navigation.main.pharmacy\"] a" link  
-	And I Click the "li[data-url-config=\"navigation.main.pharmacy.nodes.checkDrugCost\"] a" link
-	Sleep		3
-	Then I should see the element "div#mybluenav-modal" displayed
