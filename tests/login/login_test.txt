@@ -30,6 +30,10 @@ Login Page Password Textbox Displayed
 	[Tags]		LoginPageElements
 	Then I should see the element "#LoginPassword" displayed
 	And I should see the element "#LoginPassword" blank
+	
+I should NOT see the unified navigation bar Displayed
+	[Tags]		LoginPageElements
+	Then I should not see the element ".myblue-header-content .thirdparty"
 	Teardown Browser
 	
 	
