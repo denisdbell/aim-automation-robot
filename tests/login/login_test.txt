@@ -33,7 +33,7 @@ Login Page Password Textbox Displayed
 	
 I should NOT see the unified navigation bar Displayed
 	[Tags]		LoginPageElements
-	Then I should not see the element ".myblue-header-content .thirdparty"
+	Then I should not see the element ".myblue-header-content .thirdparty" displayed
 	Teardown Browser
 	
 	
