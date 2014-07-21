@@ -9,6 +9,7 @@ Resource       ../common_resources.txt
 
 I am a MyBlue Member on the Login Page
 	Open Browser	${LOGIN_URL}      ${BROWSER}
+	Sleep		2
 	Maximize Browser Window
 
 I am a MyBlue Member on the classic myBlue Login Page
