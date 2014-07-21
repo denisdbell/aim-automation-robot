@@ -87,6 +87,7 @@ My Account Info Quick link Navigates to My Account Info Page
 	When I Click the "div.quicknav-myacc #myAccountInfo" link
 	Sleep		1
 	And I Click the "a#OK" link
+	Sleep		10
 	Then I should be navigated to "https://custservpt.fepblue.org/fepesvc/home.do?" in a new tab
 	Teardown Browser
 	
@@ -99,20 +100,22 @@ Member Card Id Quick link Navigates to MemberIDCard page
 
 #This URL changes often for some reason, tests for part of the URL
 My Prescriptions Quick link Navigates to My Prescriptions Page
-	[Tags]		QuickLinks	
+	[Tags]		QuickLinks2
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-pres #myPrescriptions" link
 	Sleep		1
 	And I Click the "a#OK" link
+	Sleep		15
 	Then I should be navigated to "https://sit1www.caremark.com/wps/portal/" in a new tab
 	Teardown Browser
 	
 Nurse Line Quick link Navigates to the Nurse Line Page
-	[Tags]		QuickLinks	
+	[Tags]		QuickLinks2
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.quicknav-nurse #nurseLine" link
 	Sleep		1
 	And I Click the "a#OK" link
+	Sleep		15
 	And I enter a pin if necessary
 	Then I should be navigated to "https://staging.webmdhealth.com/Messaging/NurseLine.aspx/NurseLineLobby?toolid=62000025" in a new tab
 	Teardown Browser
@@ -123,6 +126,7 @@ Find a Physician Quick link Navigates to Find a Physician Page
 	When I Click the "div.quicknav-physician #findPhysician" link
 	Sleep		1
 	And I Click the "a#OK" link
+	Sleep		10
 	Then I should be navigated to "http://provider.fepblue.org/" in a new tab
 	Teardown Browser
 	
@@ -133,6 +137,7 @@ Explanation of Benefits Quick link Navigates to Explanation of Benefits Page
 	When I Click the "div.quicknav-benefits #explanationOfBenefits" link
 	Sleep		1
 	And I Click the "a#OK" link
+	Sleep		10
 	Then I should be navigated to "https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do?" in a new tab
 	Teardown Browser
 
@@ -142,6 +147,7 @@ Symptom Checker Quick link Navigates to Symptom Checker Page
 	When I Click the "div.quicknav-symptom #symptomChecker" link
 	Sleep		1
 	And I Click the "a#OK" link
+	Sleep		10
 	And I enter a pin if necessary
 	Then I should be navigated to "https://staging.webmdhealth.com/common/content/symptomchecker/default.aspx?toolid=525" in a new tab
 	Teardown Browser
@@ -152,6 +158,7 @@ Personal Health Record Quick link Navigates to Symptom Checker Page
 	When I Click the "div.quicknav-record #personalHealthRecord" link
 	Sleep		1
 	And I Click the "a#OK" link
+	Sleep		10
 	And I enter a pin if necessary
 	Then I should be navigated to "https://staging.webmdhealth.com/phr/healthrecord/default.aspx?toolid=58" in a new tab
 	Teardown Browser

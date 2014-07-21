@@ -11,7 +11,7 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 Landing Page Health And Wellness links Displayed
 	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Registered MyBlue Member on the Landing Page
-	Sleep		1
+	Sleep		3
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
