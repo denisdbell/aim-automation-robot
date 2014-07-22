@@ -11,13 +11,13 @@ Library    	      OperatingSystem
 *** Variables ***
 
 #Config
-${SSO}							ssodev2					#Dev = ssodev2 				| Test = ssotest
-${ESERVICE_SSO}					http://custservv2		#Dev = http://custservv2 	| Test = https://custservpt
+${SSO}							ssodev2						#Dev = ssodev2 				| Test = ssotest
+${ESERVICE_SSO}					http://custservv2			#Dev = http://custservv2 	| Test = https://custservpt
 ${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin				#Test = SBP-ESERVICE-PT
-${CHIPREWARDS_SSO}				fepdemo					#Dev = fepdemo				| Test = feptest
-${CHIPREWARDS_PID}				fepssouat				#Dev = fepssouat			| Test = fepdemo
-${SSO_PORT}						9032					#Dev = 9032 				| Test = 9031
-${ENVIRONMENT}					dev						#Dev = dev 					| Test = test 			| Stage = stage
+${CHIPREWARDS_SSO}				fepdemo						#Dev = fepdemo				| Test = feptest
+${CHIPREWARDS_PID}				fepssouat					#Dev = fepssouat			| Test = fepdemo
+${SSO_PORT}						9032						#Dev = 9032 				| Test = 9031
+${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 
 #Sleep settings
 ${NAVIGATION}					5
@@ -60,7 +60,7 @@ I Click the "${element}" element
 
 I Click the "${button}" Button
 	Click Button		css=${button}
-	Sleep				5
+	Sleep				${NAVIGATION}
 	
 	
 
@@ -89,11 +89,11 @@ I should not see the element "${element}"
 I should be navigated to "${url}" in a new tab
 	@{windows}=					Get Window Titles		
 	Select Window				@{windows}[1]
-	Sleep						5	
+	Sleep						${NAVIGATION}	
 	Location Should Contain		${url}		
 
 I should be navigated to "${url}"
-	Sleep						5
+	Sleep						${NAVIGATION}
 	Location Should Contain		${url}
 	
 I should not be redirected off the page "${url}"
@@ -114,10 +114,10 @@ I enter a pin if necessary
 	Run Keyword If		'${URL}'=='https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso'		I enter the pin "1234"
 	
 I enter the pin "${pin}"
-	Sleep		2
+	Sleep		${EVENT}
 	Input Text			css=#Pin		${pin}
 	Click Element		css=button[type="submit"]
-	Sleep		5
+	Sleep		${NAVIGATION}
 
 
 Teardown Browser
