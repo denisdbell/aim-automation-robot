@@ -9,7 +9,7 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 Username should NOT be truncated on the Landing Page
 	[Tags]		Truncation
 	Given I am a Registered MyBlue Member on the Landing Page
-	Sleep		1
+	Sleep		${EVENT}
 	Then I should see "#userNameText" have the text "Marchcontract" displayed
 	
 	
@@ -82,7 +82,7 @@ User content maintained on Classic Page
 	[Tags]		ClassicSitelink	
 	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
 	When I Click the "div.backToClassic a" link
-	Sleep		5
+	Sleep		${NAVIGATION}
 	Then I should see "span.username" have the text "Marchcontract" displayed
 	
 ## Pilot link currently hidden
@@ -119,7 +119,7 @@ Logging out of the classic site should take me to classic login page
 	[Tags]		Logout
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.backToClassic a" link
-	Sleep		5
+	Sleep		${NAVIGATION}
 	And I Click the ".username" element
 	And I Click the "li.logout a" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}"
@@ -129,9 +129,9 @@ Logging out of a partner site should take me to classic login page
 	[Tags]		Logout
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.backToClassic a" link
-	Sleep		5
+	Sleep		${NAVIGATION}
 	And I Click the "#viewAccountBalance" link
-	Sleep		5
+	Sleep		${NAVIGATION}
 	And I Click the ".username" element
 	And I Click the "li.logout a" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}"
@@ -143,7 +143,7 @@ When I click Find a Pharmacy I should see the interstitial
 	[Tags]		PreNavInterstitial
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "#pharmacylink0 a" link
-	Sleep		3
+	Sleep		${NAVIGATION}
 	Then I should see the element ".modal-dialog" displayed
 	
 I should see an OK button

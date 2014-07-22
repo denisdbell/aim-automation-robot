@@ -23,51 +23,51 @@ I am logged into the MyBlue Portal
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
-	Sleep		5
+	Sleep		${NAVIGATION}
 	I Enter A Username "#LoginUsername" "${BASIC}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
 
 I am logged into the MyBlue Portal as a Standard User
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
-    Sleep		5
+    Sleep		${NAVIGATION}
 	Maximize Browser Window
 	Delete All Cookies
 	I Enter A Username "#LoginUsername" "${STANDARD}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
-    Sleep		5
+    Sleep		${NAVIGATION}
     
 I am logged into the MyBlue Portal as a Terminated User
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
-	Sleep		5
+	Sleep		${NAVIGATION}
 	I Enter A Username "#LoginUsername" "${TERMINATED}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
-    Sleep		5
+    Sleep		${NAVIGATION}
     
 I am logged into the MyBlue Portal as a Minor User
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
-	Sleep		5
+	Sleep		${NAVIGATION}
 	I Enter A Username "#LoginUsername" "${MINOR}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
-    Sleep		5
+    Sleep		${NAVIGATION}
 	
 I am logged in CSR
 	Open Browser	${MYBLUE_CSR_NAV}      ${BROWSER}
 	Maximize Browser Window
-	Sleep		3
+	Sleep		${NAVIGATION}
 	
 I am logged into the MyBlue Portal for the first time
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${BASIC}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
     I Click the "#login" Button
-    Sleep		5
+    Sleep		${NAVIGATION}
     Go To		${NAVBAR_SAMPLE_URL}?showNavTour=true
-    Sleep		5
+    Sleep		${NAVIGATION}

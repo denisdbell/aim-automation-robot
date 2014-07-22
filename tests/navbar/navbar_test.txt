@@ -8,15 +8,13 @@ Resource          ../../resources/navbar/navbar_resource.txt
 Username displayed on MyBlue App
 	[Tags]		UsernameTest
     Given I am logged into the MyBlue Portal
-	Sleep						5	
+	Sleep						${NAVIGATION}	
     Then I should see the element "span.username" displayed
 
 Username displayed on Partner site
 	[Tags]		UsernameTest
     When I Click the "#wellnessIncentiveslink1 a" link
-#    @{windows}=					Get Window Titles		
-#	Select Window				@{windows}[1]
-	Sleep						5	
+	Sleep						${NAVIGATION}	
     Then I should see the element "span.username" displayed
     Teardown Browser
     
@@ -46,7 +44,7 @@ M. Post-Navigation Interstitial Legal Message
 	Given I am logged into the MyBlue Portal
 	When I click the "#Wellness" element
 	And I click the "#wellnessCardBalance a" element
-	Sleep		5
+	Sleep		${NAVIGATION}
 	Then I should see the element ".col-xs-10" displayed
 	
 M. Post-Navigation Interstitial Legal Message Text
@@ -61,7 +59,7 @@ M. Post-Navigation Interstitial Legal Message link
 M. Post-Navigation Interstitial Legal Message More Details
 	[Tags]		PostNavigationInterstitial
 	When I click the ".icon.arrow" element
-	Sleep		3
+	Sleep		${NAVIGATION}
 	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party.The protection of your privacy will be governed by the privacy policy of this site. Please review the site's terms of use and privacy policy for details." displayed
 	Teardown Browser
 	
@@ -128,9 +126,9 @@ As a CSR, I should see the My Account drop down list
 I should see the WebMd dropdown list
 	[Tags]		WebMDLookAndFeel
 	Given I am logged into the MyBlue Portal
-	Sleep		2
+	Sleep		${NAVIGATION}
 	When I click the "#health-tools" element
-	Sleep		2
+	Sleep		${EVENT}
 	Then I should see the element "#health-tools div .col-sm-4" displayed
 	
 I should see the link Tobacco Cessation
@@ -156,14 +154,14 @@ I should see a close button
 I should not see the Tour/Introduction
 	[Tags]		Tour
 	When I Click the "a.intronavclose" link
-	Sleep		2
+	Sleep		${NAVIGATION}
 	Then I should not see the element ".intronav" displayed
 	
 I should see the Tour/Introduction when I login for the first time on Mobile
 	[Tags]		Tour
 	Given I am on a mobile device
 	And I navigate to "${NAVBAR_SAMPLE_URL}?showNavTour=true"
-	Sleep		3
+	Sleep		${NAVIGATION}
 	Then I should see the element ".intronavimg" displayed
 	
 I should see a close button on Mobile
@@ -173,7 +171,7 @@ I should see a close button on Mobile
 I should not see the Tour/Introduction on Mobile
 	[Tags]		Tour
 	When I Click the "a.intronavclose" link
-	Sleep		2
+	Sleep		${NAVIGATION}
 	Then I should not see the element ".intronav" displayed
 	Teardown Browser
 		

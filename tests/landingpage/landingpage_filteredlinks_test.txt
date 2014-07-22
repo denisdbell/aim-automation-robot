@@ -11,7 +11,7 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 Landing Page Health And Wellness links Displayed
 	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Registered MyBlue Member on the Landing Page
-	Sleep		3
+	Sleep		${NAVIGATION}
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
@@ -49,7 +49,7 @@ Landing Page Pharmacy links Displayed
 Landing Page Health And Wellness links Displayed for Terminated
 	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Terminated Registered MyBlue Member on the Landing Page
-	Sleep		1
+	Sleep		${EVENT}
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
@@ -85,7 +85,7 @@ Landing Page Pharmacy links Displayed for Terminated
 Landing Page Health And Wellness links Displayed for Minor
 	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Minor Registered MyBlue Member on the Landing Page
-	Sleep		1
+	Sleep		${EVENT}
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	And I should see the link "li#healthAndWellnesslink1 a" displayed
