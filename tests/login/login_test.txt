@@ -51,7 +51,7 @@ Username should take me to MyBlue with popup
 Username redirect to Mdot when I click cancel
 	[Tags]		HotLinks
 	When I Click the "img[alt=\"Cancel\"]" element
-	Then I should be navigated to "${SERVER}/login"
+	Then I should be navigated to "${SERVER}/pilot/login"
 
 Password should take me to MyBlue
 	[Tags]		HotLinks
@@ -65,7 +65,7 @@ Password should take me to MyBlue with popup
 Password redirect to Mdot when I click cancel
 	[Tags]		HotLinks
 	When I Click the "img[alt=\"Cancel\"]" element
-	Then I should be navigated to "${SERVER}/login"
+	Then I should be navigated to "${SERVER}/pilot/login"
 	
 Email should take me to MyBlue
 	[Tags]		HotLinks
@@ -79,7 +79,7 @@ Email should take me to MyBlue with popup
 Email redirect to Mdot when I click cancel
 	[Tags]		HotLinks
 	When I Click the "#cancel_btn" element
-	Then I should be navigated to "${SERVER}/login"
+	Then I should be navigated to "${SERVER}/pilot/login"
 	
 Sign up for MyBlue should take me to MyBlue
 	[Tags]		HotLinks

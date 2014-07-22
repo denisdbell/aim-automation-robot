@@ -619,7 +619,7 @@ As a minor user, I should not see Health Trackers
 
 As a minor user, I should not see Document Library
 	[Tags]		BusinessRules
-	Then I should not see the link "li[data-url-config=\"navigation.main.healthTools.nodes.documentLibrary\"] a" 
+	Then I should not see the element "li[data-url-config=\"navigation.main.healthTools.nodes.documentLibrary\"] a" 
 
 As a minor user, I should not see Online Symptom Checker
 	[Tags]		BusinessRules

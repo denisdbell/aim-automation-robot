@@ -23,7 +23,7 @@ Member Card Link Navigates to Member Id Card Page
 Modal should close when I click X
 	[Tags]		MemberIDCard	
 	When I Click the "a.modal-close" link
-	Sleep		1
+	Sleep		3
 	Then I should not see the element ".modal-popup" displayed
 	Teardown Browser
 

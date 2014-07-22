@@ -130,7 +130,7 @@ Logging out of a partner site should take me to classic login page
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "div.backToClassic a" link
 	Sleep		5
-	And I Click the "#webmdTakeChargeYourFamilyHealthTodayURL" link
+	And I Click the "#viewAccountBalance" link
 	Sleep		5
 	And I Click the ".username" element
 	And I Click the "li.logout a" link

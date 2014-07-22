@@ -13,112 +13,18 @@ Username displayed on MyBlue App
 
 Username displayed on Partner site
 	[Tags]		UsernameTest
-    When I Click the "#personalHealthRecord" link
+    When I Click the "#wellnessIncentiveslink1 a" link
 #    @{windows}=					Get Window Titles		
 #	Select Window				@{windows}[1]
 	Sleep						5	
     Then I should see the element "span.username" displayed
     Teardown Browser
     
-#US536 Test Cases   
-Wellness links Not displayed For Terminated User
-	[Tags]		TerminatedWellnesslinksTest
-    Given I am a logged in MyBlue Member With Plan Type is Terminated
-    Then I should not see the element "a.hearticon" displayed
-    Teardown Browser
-   
-Wellness links displayed For Not Terminated User
-	[Tags]		OtherWellnesslinksTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated
-    Then I should see the element "a.hearticon" displayed
-	
-	    
-Wellness Menu links displayed For Not Terminated User
-	[Tags]		OtherWellnessMenulinksTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-    When I Click the "a.hearticon" link  
-    Then I should see the element "#wellnessCardBalance" displayed
-    And I should see the element "#newWellnessCard" displayed
-    And I should see the element "#reportStolenCard" displayed
-    And I should see the element "#faqs" displayed
-    
-
-View Wellness Card Balance link Navigates to View Wellness Card Page
-	[Tags]		ViewWellnessCardlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-    And I Click the "a.hearticon" link
-    Sleep		5
-    When I Click the "#wellnessCardBalance a" link
-    Sleep		5  
-    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
-    
-    
-New Wellness Card link Navigates to New Wellness Card Page
-	[Tags]		NewWellnessCardlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-    And I Click the "a.hearticon" link
-    Sleep		5
-    When I Click the "#newWellnessCard a" link
-    Sleep		5  
-    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
-    
-
-Report Stolen Card link Navigates to Report Stolen Card Page
-	[Tags]		ReportStolenCardlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-    And I Click the "a.hearticon" link
-    Sleep		5
-    When I Click the "#reportStolenCard a" link
-    Sleep		5  
-    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
-    
-
-FAQS link Navigates to FAQS Page
-	[Tags]		FaqslinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-    And I Click the "a.hearticon" link
-    Sleep		5
-    When I Click the "#faqs a" link
-    Sleep		5  
-    Then I should be navigated to "https://feptest.mychiprewards.com/Account/Authorize"
-    
-    
-Inbox Menu links displayed For Not Terminated User
-	[Tags]		InboxMenulinksTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-    When I Click the "a.mailicon" link  
-    Then I should see the element "#nurseLineInbox" displayed
-    And I should see the element "#customerServiceInbox" displayed
-    
-###Clicking accept to a security warning causes this test to fail, 
-###Also fails because of a web driver issue (screenshot related)   
-#Customer Service Inbox link Navigates to Customer Service Inbox Page
-#	[Tags]		CustomerServiceInboxlinkTest
-#    Given I am a logged in MyBlue Member With Plan Type is not Terminated
-#    And I Click the "a.mailicon" link
-#    Sleep		1
-#    When I Click the "#customerServiceInbox a" link
-#    Sleep		10  
-#    Then I should be navigated to "http://custservv2.fepblue.org/"
-    
-
-Nurse Line Inbox link Navigates to Nurse Line Inbox Page
-	[Tags]		NurseLineInboxlinkTest
-    Given I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-    And I Click the "a.mailicon" link
-    Sleep		5
-    When I Click the "#nurseLineInbox a" link
-    Sleep		5  
-    And I enter a pin if necessary
-    Then I should be navigated to "https://staging.webmdhealth.com/Messaging/MessageCenter.aspx?toolid=86"
-    Teardown Browser
-
 
 #US738 Test cases
 Change Your Email Address link in user drop down menu
    [Tags]		TestUsernameDropdown
    Given I am logged into the MyBlue Portal
-   Reload Page
    When I click the "li#Username" element
    Then I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourEmailAddress"]" displayed
    
@@ -138,9 +44,9 @@ Change Your Username link in user drop down menu
 M. Post-Navigation Interstitial Legal Message
 	[Tags]		PostNavigationInterstitial
 	Given I am logged into the MyBlue Portal
-	Reload Page
-	When I click the "#health-tools" element
-	And I click the "li[data-url-config="navigation.main.healthTools.nodes.nurseLine"] a" element
+	When I click the "#Wellness" element
+	And I click the "#wellnessCardBalance a" element
+	Sleep		5
 	Then I should see the element ".col-xs-10" displayed
 	
 M. Post-Navigation Interstitial Legal Message Text
@@ -222,8 +128,9 @@ As a CSR, I should see the My Account drop down list
 I should see the WebMd dropdown list
 	[Tags]		WebMDLookAndFeel
 	Given I am logged into the MyBlue Portal
-	Reload Page
+	Sleep		2
 	When I click the "#health-tools" element
+	Sleep		2
 	Then I should see the element "#health-tools div .col-sm-4" displayed
 	
 I should see the link Tobacco Cessation

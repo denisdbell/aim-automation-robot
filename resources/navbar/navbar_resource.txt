@@ -6,7 +6,6 @@ Documentation     A resource file with reusable keywords and variables.
 Resource       ../login/login_resource.txt
 
 *** Variables ***
-${SERVER_NAVBAR}=				https://test.fepblue.org:8443/html/js/navlib/v1
 ${NAVBAR_SAMPLE_URL}=			${SERVER_NAVBAR}/sample.html
 ${MYBLUE_CSR_NAV}=				${SERVER_NAVBAR}/ESsample.html
 
@@ -15,38 +14,16 @@ ${MYBLUE_CSR_NAV}=				${SERVER_NAVBAR}/ESsample.html
 I am a logged in MyBlue Member on the myBlue site
 	Open Browser	${NAVBAR_SAMPLE_URL}      ${BROWSER}
 	Maximize Browser Window
-	Reload Page
 
 I am a logged in MyBlue Member on a Partner site
 	Open Browser	${NAVBAR_SAMPLE_URL}      ${BROWSER}
 	Maximize Browser Window
-
-I am a logged in MyBlue Member With Plan Type is Terminated
-	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "${TERMINATED}"
-    I Enter A Password "#LoginPassword" "${PASSWORD}"
-    I Click the "#login" Button
-    Sleep		5
-    Go To		${NAVBAR_SAMPLE_URL} 
-    Sleep		5
-    
-I am a logged in MyBlue Member With Plan Type is not Terminated (Session exists)
-	Go To		${NAVBAR_SAMPLE_URL} 
-    Sleep		5
-	
-I am a logged in MyBlue Member With Plan Type is not Terminated
-	I am a MyBlue Member on the Login Page
-	I Enter A Username "#LoginUsername" "${BASIC}"
-    I Enter A Password "#LoginPassword" "${PASSWORD}"
-    I Click the "#login" Button
-    Sleep		5
-    Go To		${NAVBAR_SAMPLE_URL} 
-    Sleep		5
 	
 I am logged into the MyBlue Portal
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
+	Sleep		5
 	I Enter A Username "#LoginUsername" "${BASIC}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
@@ -65,6 +42,7 @@ I am logged into the MyBlue Portal as a Terminated User
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
+	Sleep		5
 	I Enter A Username "#LoginUsername" "${TERMINATED}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
@@ -74,6 +52,7 @@ I am logged into the MyBlue Portal as a Minor User
 	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
+	Sleep		5
 	I Enter A Username "#LoginUsername" "${MINOR}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
