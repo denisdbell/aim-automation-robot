@@ -1,6 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
-Suite Teardown	  Close All Browsers
+Suite Teardown	  Teardown Browser
 Resource          ../../resources/memberidcard/membercardid_resource.txt
 
 *** Test Cases ***
@@ -43,3 +43,127 @@ As a Standard user, I should NOT see the Member ID Card basic blue overlay
 As a Standard user, I should see Send me a new card button
 	[Tags]		MemberIDCard
 	Then I should see the element "#newMemberCard" displayed
+	Teardown Browser
+	
+
+As a Basic user, I should see my Member ID Card
+	[Tags]		MemberIDCard
+	Given I am a Basic MyBlue Member on the MyBlue Landing Page
+	When I Click the "#memberIdCard" Link
+	Sleep		${NAVIGATION}
+	Then I should see the element "#memid-desktop" displayed
+	
+As a Basic user, I should see the Member ID Card sprite icon
+	[Tags]		MemberIDCard
+	Then I should see the element ".spriteicon.memberCardBasic" displayed
+	
+As a Basic user, I should see the Member ID Card details
+	[Tags]		MemberIDCard
+	Then I should see the element ".memid-member" displayed
+
+As a Basic user, I should see the Member Name
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member Name" displayed
+	
+As a Basic user, I should see the Member Name as MARCHCONTRACT J UAT
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "MARCHCONTRACT J UAT" displayed
+	
+As a Basic user, I should see the Member ID
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member ID" displayed
+	
+As a Basic user, I should see the Member ID as R59944571
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "R59944571" displayed
+
+As a Basic user, I should see the Member ID Card basic blue overlay
+	[Tags]		MemberIDCard
+	Then I should see the element "div[class=\"basic-overlay\"]" displayed
+	
+As a Basic user, I should see Send me a new card button
+	[Tags]		MemberIDCard
+	Then I should see the element "#newMemberCard" displayed
+	Teardown Browser
+
+	
+As a Terminated user, I should see my Member ID Card
+	[Tags]		MemberIDCard
+	Given I am a Terminated MyBlue Member on the MyBlue Landing Page
+	When I Click the "#memberIdCard" Link
+	Sleep		${NAVIGATION}
+	Then I should see the element "#memid-desktop" displayed
+	
+As a Terminated user, I should see the Member ID Card sprite icon
+	[Tags]		MemberIDCard
+	Then I should see the element ".spriteicon.memberCardBasic" displayed
+	
+As a Terminated user, I should see the Member ID Card details
+	[Tags]		MemberIDCard
+	Then I should see the element ".memid-member" displayed
+
+As a Terminated user, I should see the Member Name
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member Name" displayed
+	
+As a Terminated user, I should see the Member Name as MARCHTERMED UATTERMED
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "MARCHTERMED UATTERMED" displayed
+	
+As a Terminated user, I should see the Member ID
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member ID" displayed
+	
+As a Terminated user, I should see the Member ID as R59979777
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "R59979777" displayed
+
+As a Terminated user, I should see the Member ID Card basic blue overlay
+	[Tags]		MemberIDCard
+	Then I should see the element "div[class=\"basic-overlay\"]" displayed
+	
+As a Terminated user, I should see Send me a new card button
+	[Tags]		MemberIDCard
+	Then I should see the element "#newMemberCard" displayed
+	Teardown Browser
+
+	
+As a Minor user, I should see my Member ID Card
+	[Tags]		MemberIDCard
+	Given I am a Minor MyBlue Member on the MyBlue Landing Page
+	When I Click the "#memberIdCard" Link
+	Sleep		${NAVIGATION}
+	Then I should see the element "#memid-desktop" displayed
+	
+As a Minor user, I should see the Member ID Card sprite icon
+	[Tags]		MemberIDCard
+	Then I should see the element ".spriteicon" displayed
+	
+As a Minor user, I should see the Member ID Card details
+	[Tags]		MemberIDCard
+	Then I should see the element ".memid-member" displayed
+
+As a Minor user, I should see the Member Name
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member Name" displayed
+	
+As a Minor user, I should see the Member Name as JUNECONTRACT UATSTD
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "JUNECONTRACT UATSTD" displayed
+	
+As a Minor user, I should see the Member ID
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member ID" displayed
+	
+As a Minor user, I should see the Member ID as R59986126
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "R59986126" displayed
+
+As a Minor user, I should NOT see the Member ID Card basic blue overlay
+	[Tags]		MemberIDCard
+	Then I should not see the element "div[class=\"basic-overlay\"]"
+	
+As a Minor user, I should see Send me a new card button
+	[Tags]		MemberIDCard
+	Then I should see the element "#newMemberCard" displayed
+	Teardown Browser
