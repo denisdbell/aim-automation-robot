@@ -20,7 +20,7 @@ I am a logged in MyBlue Member on a Partner site
 	Maximize Browser Window
 	
 I am logged into the MyBlue Portal
-	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
+	Open Browser	${SERVER}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
 	Sleep		${NAVIGATION}
@@ -29,7 +29,7 @@ I am logged into the MyBlue Portal
 	I Click the "div.login form#loginForm button#login" Button
 
 I am logged into the MyBlue Portal as a Standard User
-	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
+	Open Browser	${SERVER}      ${BROWSER}
     Sleep		${NAVIGATION}
 	Maximize Browser Window
 	Delete All Cookies
@@ -39,7 +39,7 @@ I am logged into the MyBlue Portal as a Standard User
     Sleep		${NAVIGATION}
     
 I am logged into the MyBlue Portal as a Terminated User
-	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
+	Open Browser	${SERVER}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
 	Sleep		${NAVIGATION}
@@ -49,7 +49,7 @@ I am logged into the MyBlue Portal as a Terminated User
     Sleep		${NAVIGATION}
     
 I am logged into the MyBlue Portal as a Minor User
-	Open Browser	${MYBLUE_PORTAL_URL}      ${BROWSER}
+	Open Browser	${SERVER}      ${BROWSER}
 	Maximize Browser Window
 	Delete All Cookies
 	Sleep		${NAVIGATION}

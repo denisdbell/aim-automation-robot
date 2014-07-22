@@ -23,16 +23,19 @@ ${ENVIRONMENT}					dev						#Dev = dev 					| Test = test 			| Stage = stage
 ${NAVIGATION}					5
 ${EVENT}						1
 
-#----------------------------------------------------------------------------------------------------
+#_______________________________________________________________________________________________________________________#
 
-${BROWSER}=						chrome
+#Browser
+${BROWSER}=						chrome					#Supported: chrome | firefox | ie
+
+#Routes
 ${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
 ${LOGIN_URL}=					${SERVER}/login  
 ${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
 ${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest
-${MYBLUE_PORTAL_URL}=			https://${ENVIRONMENT}.fepblue.org:7443/
-${MDOT_LOGOUT}=					https://${ENVIRONMENT}.fepblue.org:7443/logout
 ${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
+
+#Users
 ${STANDARD}=					junecontractuatstd
 ${BASIC}=						marchcontractuat
 ${TERMINATED}=					marchtermeduat
