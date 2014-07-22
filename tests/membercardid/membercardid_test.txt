@@ -1,13 +1,45 @@
 *** Settings ***
 Library           Selenium2Library
-#Suite Teardown	  Close All Browsers
+Suite Teardown	  Close All Browsers
 Resource          ../../resources/memberidcard/membercardid_resource.txt
 
 *** Test Cases ***
 
-I should see my Member ID Card
+As a Standard user, I should see my Member ID Card
 	[Tags]		MemberIDCard
 	Given I am a Standard MyBlue Member on the MyBlue Landing Page
 	When I Click the "#memberIdCard" Link
 	Sleep		${NAVIGATION}
 	Then I should see the element "#memid-desktop" displayed
+	
+As a Standard user, I should see the Member ID Card sprite icon
+	[Tags]		MemberIDCard
+	Then I should see the element ".spriteicon" displayed
+	
+As a Standard user, I should see the Member ID Card details
+	[Tags]		MemberIDCard
+	Then I should see the element ".memid-member" displayed
+
+As a Standard user, I should see the Member Name
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member Name" displayed
+	
+As a Standard user, I should see the Member Name as JUNECONTRACT UATSTD
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "JUNECONTRACT UATSTD" displayed
+	
+As a Standard user, I should see the Member ID
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "Member ID" displayed
+	
+As a Standard user, I should see the Member ID as R59986126
+	[Tags]		MemberIDCard
+	Then I should see ".memid-member" have the text "R59986126" displayed
+
+As a Standard user, I should NOT see the Member ID Card basic blue overlay
+	[Tags]		MemberIDCard
+	Then I should not see the element "div[class=\"basic-overlay\"]"
+	
+As a Standard user, I should see Send me a new card button
+	[Tags]		MemberIDCard
+	Then I should see the element "#newMemberCard" displayed
