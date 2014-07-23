@@ -42,8 +42,7 @@ Change Your Username link in user drop down menu
 M. Post-Navigation Interstitial Legal Message
 	[Tags]		PostNavigationInterstitial
 	Given I am logged into the MyBlue Portal
-	When I click the "#Wellness" element
-	And I click the "#wellnessCardBalance a" element
+	When I click the "#wellnessIncentiveslink1 a" link
 	Sleep		${NAVIGATION}
 	Then I should see the element ".col-xs-10" displayed
 	
@@ -60,7 +59,7 @@ M. Post-Navigation Interstitial Legal Message More Details
 	[Tags]		PostNavigationInterstitial
 	When I click the ".icon.arrow" element
 	Sleep		${NAVIGATION}
-	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party.The protection of your privacy will be governed by the privacy policy of this site. Please review the site's terms of use and privacy policy for details." displayed
+	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party. The protection of your privacy will be governed by the privacy policy of this site. Please review the site's terms of use and privacy policy for details." displayed
 	Teardown Browser
 	
 
