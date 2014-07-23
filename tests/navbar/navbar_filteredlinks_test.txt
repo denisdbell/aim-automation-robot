@@ -12,6 +12,7 @@ As a standard user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal as a Standard User
 	When I Click the "#my-account" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
 
 As a standard user, I should see Rx Statements
@@ -43,6 +44,7 @@ As a standard user, I should see Account Settings
 As a standard user, I should see Blue Health Assessment
 	[Tags]		BusinessRules
 	When I Click the "#health-tools" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" displayed
 
 As a standard user, I should see Online Health Coach
@@ -122,6 +124,7 @@ As a standard user, I should see WebMD Videos
 As a standard user, I should see Pharmacy & Prescriptions
 	[Tags]		BusinessRules
 	When I Click the "#pharmacy" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" displayed 
 
 As a standard user, I should see Find a Pharmacy
@@ -149,6 +152,7 @@ As a standard user, I should see Refill Mail Order Rx
 As a standard user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
 	When I Click the "#Username" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a standard user, I should see Change Your Address
@@ -203,6 +207,7 @@ As a basic user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal
 	When I Click the "#my-account" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
 
 As a basic user, I should see Rx Statements
@@ -234,6 +239,7 @@ As a basic user, I should see Account Settings
 As a basic user, I should see Blue Health Assessment
 	[Tags]		BusinessRules
 	When I Click the "#health-tools" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" displayed
 
 As a basic user, I should see Online Health Coach
@@ -313,6 +319,7 @@ As a basic user, I should see WebMD Videos
 As a basic user, I should see Pharmacy & Prescriptions
 	[Tags]		BusinessRules
 	When I Click the "#pharmacy" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" displayed 
 
 As a basic user, I should see Find a Pharmacy
@@ -340,6 +347,7 @@ As a basic user, I should not see Refill Mail Order Rx
 As a basic user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
 	When I Click the "#Username" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a basic user, I should see Change Your Address
@@ -355,6 +363,7 @@ As a basic user, I should see Sign Out
 As a basic user, I should see Health & Wellness Inbox
 	[Tags]		BusinessRules
 	When I Click the "#Mailbox" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
 
 As a basic user, I should see Customer Service Inbox
@@ -366,6 +375,7 @@ As a basic user, I should see Customer Service Inbox
 As a basic user, I should see Wellness Card Home
 	[Tags]		BusinessRules
 	When I Click the "#Wellness" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" displayed 
 
 As a basic user, I should see View Wellness Card Balance
@@ -391,6 +401,7 @@ As a terminated user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal as a Terminated User
 	When I Click the "#my-account" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
 
 As a terminated user, I should see Rx Statements
@@ -422,6 +433,7 @@ As a terminated user, I should see Account Settings
 As a terminated user, I should see Blue Health Assessment
 	[Tags]		BusinessRules
 	When I Click the "#health-tools" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" displayed
 
 As a terminated user, I should see Online Health Coach
@@ -501,6 +513,7 @@ As a terminated user, I should see WebMD Videos
 As a terminated user, I should see Pharmacy & Prescriptions
 	[Tags]		BusinessRules
 	When I Click the "#pharmacy" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" displayed 
 
 As a terminated user, I should see Find a Pharmacy
@@ -528,6 +541,7 @@ As a terminated user, I should not see Refill Mail Order Rx
 As a terminated user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
 	When I Click the "#Username" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a terminated user, I should see Change Your Address
@@ -543,6 +557,7 @@ As a terminated user, I should see Sign Out
 As a terminated user, I should see Health & Wellness Inbox
 	[Tags]		BusinessRules
 	When I Click the "#Mailbox" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
 
 As a terminated user, I should see Customer Service Inbox
@@ -562,6 +577,7 @@ As a minor user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal as a Minor User
 	When I Click the "#my-account" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
 
 As a minor user, I should see Rx Statements
@@ -593,6 +609,7 @@ As a minor user, I should see Account Settings
 As a minor user, I should see Blue Health Assessment
 	[Tags]		BusinessRules
 	When I Click the "#health-tools" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" displayed
 
 As a minor user, I should see Online Health Coach
@@ -672,6 +689,7 @@ As a minor user, I should see WebMD Videos
 As a minor user, I should see Pharmacy & Prescriptions
 	[Tags]		BusinessRules
 	When I Click the "#pharmacy" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" displayed 
 
 As a minor user, I should see Find a Pharmacy
@@ -699,6 +717,7 @@ As a minor user, I should see Refill Mail Order Rx
 As a minor user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
 	When I Click the "#Username" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a minor user, I should see Change Your Address
@@ -714,6 +733,7 @@ As a minor user, I should see Sign Out
 As a minor user, I should see Health & Wellness Inbox
 	[Tags]		BusinessRules
 	When I Click the "#Mailbox" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
 
 As a minor user, I should see Customer Service Inbox
@@ -725,6 +745,7 @@ As a minor user, I should see Customer Service Inbox
 As a minor user, I should see Wellness Card Home
 	[Tags]		BusinessRules
 	When I Click the "#Wellness" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" displayed 
 
 As a minor user, I should see View Wellness Card Balance
