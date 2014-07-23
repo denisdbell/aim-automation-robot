@@ -148,7 +148,7 @@ As a standard user, I should see Refill Mail Order Rx
 #Username dropdown
 As a standard user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Username" element
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a standard user, I should see Change Your Address
@@ -163,7 +163,8 @@ As a standard user, I should see Sign Out
 #Mail dropdown
 As a standard user, I should see Health & Wellness Inbox
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Mailbox" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
 
 As a standard user, I should see Customer Service Inbox
@@ -175,6 +176,7 @@ As a standard user, I should see Customer Service Inbox
 As a standard user, I should see Wellness Card Home
 	[Tags]		BusinessRules
 	When I Click the "#Wellness" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" displayed 
 
 As a standard user, I should see View Wellness Card Balance
@@ -337,7 +339,7 @@ As a basic user, I should not see Refill Mail Order Rx
 #Username dropdown
 As a basic user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Username" element
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a basic user, I should see Change Your Address
@@ -352,7 +354,7 @@ As a basic user, I should see Sign Out
 #Mail dropdown
 As a basic user, I should see Health & Wellness Inbox
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Mailbox" element
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
 
 As a basic user, I should see Customer Service Inbox
@@ -525,7 +527,7 @@ As a terminated user, I should not see Refill Mail Order Rx
 #Username dropdown
 As a terminated user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Username" element
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a terminated user, I should see Change Your Address
@@ -540,7 +542,7 @@ As a terminated user, I should see Sign Out
 #Mail dropdown
 As a terminated user, I should see Health & Wellness Inbox
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Mailbox" element
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
 
 As a terminated user, I should see Customer Service Inbox
@@ -696,7 +698,7 @@ As a minor user, I should see Refill Mail Order Rx
 #Username dropdown
 As a minor user, I should see Update Enrollment Information
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Username" element
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" displayed 
 
 As a minor user, I should see Change Your Address
@@ -711,7 +713,7 @@ As a minor user, I should see Sign Out
 #Mail dropdown
 As a minor user, I should see Health & Wellness Inbox
 	[Tags]		BusinessRules
-	When I Click the "#pharmacy" element
+	When I Click the "#Mailbox" element
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" displayed 
 
 As a minor user, I should see Customer Service Inbox
