@@ -13,7 +13,7 @@ Library    	      OperatingSystem
 #SSO Configuration
 ${SSO}							ssodev2						#Dev = ssodev2 				| Test = ssotest				| Stage = ssodev
 ${ESERVICE_SSO}					http://custservv2			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
-${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin					#Test = SBP-ESERVICE-PT			| Stage = http://custservv2.fepblue.org/fedlogin	
+${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin					#Test = SBP-ESERVICE-PT			| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
 ${CHIPREWARDS_SSO}				fepdemo						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
 ${CHIPREWARDS_PID}				fepssouat					#Dev = fepssouat			| Test = fepdemo				| Stage = fepuat
 ${SSO_PORT}						9032						#Dev = 9032 				| Test = 9031					| Stage = 9031
