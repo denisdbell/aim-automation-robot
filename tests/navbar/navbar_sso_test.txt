@@ -157,7 +157,7 @@ Change Your Address should have a valid SSO link
 
 Sign Out should have a valid SSO link
 	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.signOut\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSLO.ping?InErrorResource=https://dev.fepblue.org:8443/c/portal/logout"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.signOut\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSLO.ping?InErrorResource=https://${ENVIRONMENT}.fepblue.org:8443/c/portal/logout"
 
 
 #Mail dropdown
