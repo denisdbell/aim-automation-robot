@@ -13,6 +13,7 @@ My Benefits should have a valid SSO link
 	[Tags]		SSO
 	Given I am logged into the MyBlue Portal as a Standard User
 	When I Click the "#my-account" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
 	
 Rx Statements should have a valid SSO link
@@ -43,6 +44,7 @@ Account Settings should have a valid SSO link
 Blue Health Assessment should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#health-tools" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
 
 Online Health Coach should have a valid SSO link
@@ -122,6 +124,7 @@ WebMD Videos should have a valid SSO link
 Pharmacy & Prescriptions should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#pharmacy" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.pharmacy\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/wps/portal?newLogin=yes"
 
 Find a Pharmacy should have a valid SSO link
@@ -148,7 +151,8 @@ Refill Mail Order Rx should have a valid SSO link
 #Username dropdown
 Update Enrollment Information should have a valid SSO link
 	[Tags]		SSO
-	When I Click the "#pharmacy" element
+	When I Click the "#Username" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${ESERVICE_PID}&TARGET=${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
 
 Change Your Address should have a valid SSO link
@@ -163,7 +167,8 @@ Sign Out should have a valid SSO link
 #Mail dropdown
 Health & Wellness Inbox should have a valid SSO link
 	[Tags]		SSO
-	When I Click the "#pharmacy" element
+	When I Click the "#Mailbox" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=86"
 
 Customer Service Inbox should have a valid SSO link
@@ -175,6 +180,7 @@ Customer Service Inbox should have a valid SSO link
 Wellness Card Home should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#Wellness" element
+	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com"
 
 View Wellness Card Balance should have a valid SSO link
