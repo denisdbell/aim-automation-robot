@@ -10,14 +10,6 @@ Library    	      OperatingSystem
 
 *** Variables ***
 
-#SSO Configuration
-${SSO}							ssodev2						#Dev = ssodev2 				| Test = ssotest				| Stage = ssodev
-${ESERVICE_SSO}					http://custservv2			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
-${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin					#Test = SBP-ESERVICE-PT			| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
-${CHIPREWARDS_SSO}				fepdemo						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
-${CHIPREWARDS_PID}				fepssouat					#Dev = fepssouat			| Test = feptest				| Stage = fepuat
-${SSO_PORT}						9032						#Dev = 9032 				| Test = 9031					| Stage = 9031
-
 #Environment settings
 ${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 
@@ -45,6 +37,41 @@ ${MINOR}=						ageless_18
 ${PASSWORD}=					Bigfun21!
 
 *** Keywords ***
+
+Environment setup
+	Run Keyword If		'${ENVIRONMENT}'=='dev'			develop
+	Run Keyword If		'${ENVIRONMENT}'=='test'		test
+	Run Keyword If		'${ENVIRONMENT}'=='stage'		stage
+
+develop
+	#SSO Configuration
+	Set global variable		${SSO}							ssodev2	
+	Set global variable		${ESERVICE_SSO}					http://custservv2
+	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin		
+	Set global variable		${CHIPREWARDS_SSO}				fepdemo	
+	Set global variable		${CHIPREWARDS_PID}				fepssouat
+	Set global variable		${SSO_PORT}						9032
+
+
+test
+	#SSO Configuration
+	Set global variable		${SSO}							ssotest						#Dev = ssodev2 				| Test = ssotest				| Stage = ssodev
+	Set global variable		${ESERVICE_SSO}					https://custservpt			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
+	Set global variable		${ESERVICE_PID}					SBP-ESERVICE-PT				#Test = SBP-ESERVICE-PT		| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
+	Set global variable		${CHIPREWARDS_SSO}				feptest						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
+	Set global variable		${CHIPREWARDS_PID}				feptest						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
+	Set global variable		${SSO_PORT}						9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
+
+
+stage
+	#SSO Configuration
+	Set global variable		${SSO}							ssodev						#Dev = ssodev2 				| Test = ssotest				| Stage = ssodev
+	Set global variable		${ESERVICE_SSO}					http://custservv2			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
+	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin					#Test = SBP-ESERVICE-PT			| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
+	Set global variable		${CHIPREWARDS_SSO}				fepuat						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
+	Set global variable		${CHIPREWARDS_PID}				fepuat						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
+	Set global variable		${SSO_PORT}						9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
+
 
 I am on a mobile device
 	Set Window Size		400		700

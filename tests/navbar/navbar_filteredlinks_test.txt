@@ -2,6 +2,7 @@
 Documentation     This file tests that links should be filtered by user
 
 Library           Selenium2Library
+Suite Setup		  Environment setup
 Suite Teardown	  Close All Browsers
 Resource          ../../resources/navbar/navbar_resource.txt
 

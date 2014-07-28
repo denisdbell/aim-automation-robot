@@ -1,5 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
+Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
 Resource          ../../resources/landingpage/landingpage_resource.txt
 

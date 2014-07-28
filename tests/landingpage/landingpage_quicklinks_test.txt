@@ -3,6 +3,7 @@ Documentation     This file tests that the landing page shows all eight
 ...				  quick links tiles with valid text
 
 Library           Selenium2Library
+Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
 Resource          ../../resources/landingpage/landingpage_resource.txt
 

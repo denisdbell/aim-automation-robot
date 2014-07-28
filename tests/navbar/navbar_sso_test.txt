@@ -3,6 +3,7 @@ Documentation     This file tests that the SSO links in the unified navigation b
 ...				  are valid
 
 Library           Selenium2Library
+Suite Setup		  Environment setup
 Suite Teardown	  Close All Browsers
 Resource          ../../resources/navbar/navbar_resource.txt
 
