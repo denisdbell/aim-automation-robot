@@ -14,13 +14,13 @@ Library    	      OperatingSystem
 ${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 
 #Sleep settings
-${NAVIGATION}					30
-${EVENT}						5
+${NAVIGATION}					7
+${EVENT}						2
 
 #_______________________________________________________________________________________________________________________#
 
 #Browser
-${BROWSER}=						firefox					#Supported: chrome | firefox | ie
+${BROWSER}=						chrome					#Supported: chrome | firefox | ie
 
 #Routes
 ${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
