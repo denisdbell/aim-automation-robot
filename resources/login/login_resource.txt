@@ -9,8 +9,7 @@ Resource       ../common_resources.txt
 
 I am a MyBlue Member on the Login Page
 	Open Browser	${LOGIN_URL}      ${BROWSER}
-	#Maximize Browser Window
-	Set Window Size		1280		950
+	Maximize Browser Window
 	Sleep		${NAVIGATION}
 
 I am a MyBlue Member on the classic myBlue Login Page
