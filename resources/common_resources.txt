@@ -89,7 +89,6 @@ I Click the "${element}" element
 
 I Click the "${button}" Button
 	Click Button		css=${button}
-	Sleep				${NAVIGATION}
 	
 	
 
@@ -104,6 +103,9 @@ I should see "${element}" have the text "${text}" displayed
 	
 I should see the element "${element}" disabled
 	Page Should Contain Element		css=${element}
+	
+I should see the loading popup visible
+	Wait Until Element Is Visible		css=.loading		timeout=10.0
 
 I should not see the element "${element}" disabled
 	Page Should Not Contain Element			css=${element}

@@ -5,7 +5,10 @@ Documentation     A resource file with reusable keywords and variables.
 Resource       ../common_resources.txt
 
 
-*********Keywords************
+*** Keywords ****
+
+I am a MyBlue Member navigating to the login page
+	Open Browser	${LOGIN_URL}      ${BROWSER}
 
 I am a MyBlue Member on the Login Page
 	Open Browser	${LOGIN_URL}      ${BROWSER}
@@ -33,6 +36,3 @@ I should see the element "${element}" blank
 
 I enter text in the "${element}" textbox
 	Input Text "thor"		${element}	
-
-	
-	

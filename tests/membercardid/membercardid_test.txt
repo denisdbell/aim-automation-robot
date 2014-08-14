@@ -6,10 +6,14 @@ Resource          ../../resources/memberidcard/membercardid_resource.txt
 
 *** Test Cases ***
 
-As a Standard user, I should see my Member ID Card
-	[Tags]		MemberIDCard
+I should see the loading screen when I click Member ID Card
+	[Tags]		MemberIDCard	Loading
 	Given I am a Standard MyBlue Member on the MyBlue Landing Page
 	When I Click the "#memberIdCard" Link
+	Then I should see the loading popup visible
+
+As a Standard user, I should see my Member ID Card
+	[Tags]		MemberIDCard
 	Sleep		${NAVIGATION}
 	Then I should see the element "#memid-desktop" displayed
 	
@@ -44,6 +48,11 @@ As a Standard user, I should NOT see the Member ID Card basic blue overlay
 As a Standard user, I should see Send me a new card button
 	[Tags]		MemberIDCard
 	Then I should see the element "#newMemberCard" displayed
+	
+I should see the loading popup when I click the close button
+	[Tags]		MemberIDCard	Loading
+	When I Click the ".modal-close" element
+	Then I should see the loading popup visible
 	Teardown Browser
 	
 

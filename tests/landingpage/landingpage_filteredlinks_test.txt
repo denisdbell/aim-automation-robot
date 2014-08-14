@@ -9,7 +9,7 @@ Resource          ../../resources/landingpage/landingpage_resource.txt
 *** Test Cases ***
 
 #US251 Test Cases for Desktop
-Landing Page I should see the link Take charge of your family’s health for Standard
+Landing Page I should see the link Take charge of your family's health for Standard
 	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		${NAVIGATION}
@@ -78,7 +78,7 @@ Landing Page I should see the link Review Basic Option pharmacy benefits for Sta
 	
 
 #US763 - Links should be filtered by user
-Landing Page I should see the link Take charge of your family’s health for Terminated
+Landing Page I should see the link Take charge of your family's health for Terminated
 	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Terminated Registered MyBlue Member on the Landing Page
 	Sleep		${EVENT}
@@ -146,7 +146,7 @@ Landing Page I should see the link Review Basic Option pharmacy benefits for Ter
 	Then I should see the link "#pharmacylink2 a" displayed
 	
 	
-Landing Page I should see the link Take charge of your family’s health for Minor
+Landing Page I should see the link Take charge of your family's health for Minor
 	[Tags]		LandingPageLinks	BusinessRules
 	Given I am a Minor Registered MyBlue Member on the Landing Page
 	Sleep		${EVENT}
