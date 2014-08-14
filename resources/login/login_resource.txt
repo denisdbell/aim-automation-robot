@@ -12,8 +12,8 @@ I am a MyBlue Member navigating to the login page
 
 I am a MyBlue Member on the Login Page
 	Open Browser	${LOGIN_URL}      ${BROWSER}
-	Sleep		5
 	Maximize Browser Window
+	Sleep		${NAVIGATION}
 
 I am a MyBlue Member on the classic myBlue Login Page
 	Open Browser	${MYBLUE_LOGIN_URL}      ${BROWSER}
