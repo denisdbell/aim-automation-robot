@@ -42,6 +42,7 @@ Environment setup
 	Run Keyword If		'${ENVIRONMENT}'=='dev'			develop
 	Run Keyword If		'${ENVIRONMENT}'=='test'		test
 	Run Keyword If		'${ENVIRONMENT}'=='stage'		stage
+	Run Keyword If		'${ENVIRONMENT}'=='local'		local
 
 develop
 	#SSO Configuration
@@ -72,6 +73,22 @@ stage
 	Set global variable		${CHIPREWARDS_PID}				fepuat						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
 	Set global variable		${SSO_PORT}						9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
 
+
+local
+	#SSO Configuration
+	Set global variable		${SSO}							ssodev2	
+	Set global variable		${ESERVICE_SSO}					http://custservv2
+	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin		
+	Set global variable		${CHIPREWARDS_SSO}				fepdemo	
+	Set global variable		${CHIPREWARDS_PID}				fepssouat
+	Set global variable		${SSO_PORT}						9032
+
+	#Routes
+	Set global variable 	${SERVER}						https://192.168.200.113:7443		
+	Set global variable 	${LOGIN_URL}					${SERVER}/login  
+	Set global variable 	${MYBLUE}						https://${ENVIRONMENT}.fepblue.org:8443/
+	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest
+	Set global variable 	${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
 
 I am on a mobile device
 	Set Window Size		400		700
