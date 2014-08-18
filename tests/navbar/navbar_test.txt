@@ -25,6 +25,7 @@ Change Your Email Address link in user drop down menu
    [Tags]		TestUsernameDropdown
    Given I am logged into the MyBlue Portal
    When I click the "li#Username" element
+   Sleep		${EVENT}
    Then I should see the element "li[data-url-config="navigation.main.selfMenu.nodes.changeYourEmailAddress"]" displayed
    
    

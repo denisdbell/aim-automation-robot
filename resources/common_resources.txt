@@ -14,8 +14,8 @@ Library    	      OperatingSystem
 ${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 
 #Sleep settings
-${NAVIGATION}					10
-${EVENT}						4
+${NAVIGATION}					5
+${EVENT}						1
 
 #_______________________________________________________________________________________________________________________#
 

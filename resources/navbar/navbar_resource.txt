@@ -27,6 +27,7 @@ I am logged into the MyBlue Portal
 	I Enter A Username "#LoginUsername" "${BASIC}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
+    Sleep		${NAVIGATION}
 
 I am logged into the MyBlue Portal as a Standard User
 	Open Browser	${SERVER}      ${BROWSER}
