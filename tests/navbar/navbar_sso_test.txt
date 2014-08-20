@@ -20,6 +20,7 @@ My Benefits should have a valid SSO link
 Rx Statements should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" with SSO link "${ESERVICE_SSO}.fepblue.org/fepesvc/viewSOC.do"
+	
 Benefits should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" with SSO link "${ESERVICE_SSO}.fepblue.org/fepesvc/benefits.do"
@@ -27,6 +28,10 @@ Benefits should have a valid SSO link
 Medical & Pharmacy Claims should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" with SSO link "${ESERVICE_SSO}.fepblue.org/fepesvc/memberEligibilityProcess.do"
+
+Treatment Cost Estimator should have a valid link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" with SSO link "https://www.treatmentestimator.com/"
 
 Order a New ID Card should have a valid SSO link
 	[Tags]		SSO

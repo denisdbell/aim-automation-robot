@@ -27,6 +27,10 @@ As a standard user, I should see Benefits
 As a standard user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
+	
+As a standard user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
 
 As a standard user, I should see Order a New ID Card
 	[Tags]		BusinessRules
@@ -222,6 +226,10 @@ As a basic user, I should see Benefits
 As a basic user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
+	
+As a basic user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
 
 As a basic user, I should see Order a New ID Card
 	[Tags]		BusinessRules
@@ -416,6 +424,10 @@ As a terminated user, I should see Benefits
 As a terminated user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
+	
+As a terminated user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
 
 As a terminated user, I should see Order a New ID Card
 	[Tags]		BusinessRules
@@ -592,6 +604,10 @@ As a minor user, I should see Benefits
 As a minor user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
+	
+As a minor user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
 
 As a minor user, I should see Order a New ID Card
 	[Tags]		BusinessRules
