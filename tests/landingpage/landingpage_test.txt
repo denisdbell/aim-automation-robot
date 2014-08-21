@@ -147,6 +147,14 @@ When I click Find a Pharmacy I should see the interstitial
 	Sleep		${NAVIGATION}
 	Then I should see the element ".modal-dialog" displayed
 	
+I should see a message on the interstitial
+	[Tags]		PreNavInterstitial
+	Then I should see the element ".modal-dialog .copy" displayed
+	
+I should see a message on the interstitial with the following text
+	[Tags]		PreNavInterstitial
+	Then I should see ".modal-dialog .copy" have the text "You will be going to a new web site, operated on behalf of the Blue Cross and Blue Shield Service Benefit Plan by a third party. The protection of your privacy will be governed by the privacy policy of that site. Please review the terms of use and privacy policies of the new site you will be visiting." displayed
+	
 I should see an OK button
 	[Tags]		PreNavInterstitial
 	Then I should see the element "#OK" displayed
