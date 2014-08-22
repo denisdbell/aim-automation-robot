@@ -41,6 +41,10 @@ Landing Page I should see the link Quit smoking with our Tobacco Cessation Progr
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the link "#wellnessIncentiveslink3 a" displayed
 	
+Landing Page I should see the link Start Walking Works today for Standard
+	[Tags]		LandingPageLinks	BusinessRules
+	Then I should see the link "#healthAndWellnesslink3 a" displayed
+	
 Landing Page I should see the link Download explanation of benefits (EOB) for Standard
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#benefits" displayed
@@ -111,6 +115,10 @@ Landing Page I should see the link Quit smoking with our Tobacco Cessation Progr
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the link "#wellnessIncentiveslink3 a" displayed
 	
+Landing Page I should see the link Start Walking Works today for Terminated
+	[Tags]		LandingPageLinks	BusinessRules
+	Then I should see the link "#healthAndWellnesslink3 a" displayed
+	
 Landing Page I should see the link Download explanation of benefits (EOB) for Terminated
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the element "span#benefits" displayed
@@ -178,6 +186,9 @@ Landing Page I should see the link Quit smoking with our Tobacco Cessation Progr
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the link "#wellnessIncentiveslink3 a" displayed
 	
+Landing Page I should see the link Start Walking Works today for Minor
+	[Tags]		LandingPageLinks	BusinessRules
+	Then I should see the link "#healthAndWellnesslink3 a" displayed
 	
 Landing Page I should see the link Download explanation of benefits (EOB) for Minor
 	[Tags]		LandingPageLinks	BusinessRules
