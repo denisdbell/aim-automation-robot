@@ -167,6 +167,10 @@ I enter the pin "${pin}"
 	Click Element		css=button[type="submit"]
 	Sleep		${NAVIGATION}
 
+I navigate to the classic site
+	Go To		${MYBLUE}
+	Sleep		${NAVIGATION}
+	
 
 Teardown Browser
     Close All Browsers

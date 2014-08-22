@@ -162,3 +162,18 @@ I should see an OK button
 I should see a message on the modal
 	[Tags]		PreNavInterstitial
 	Then I should see the element ".copy" displayed
+	
+#On classic I should see the pre interstitial when I click Treatment cost
+#	[Tags]		PreNavInterstitial1
+#	Given I am a Registered MyBlue Member on the Landing Page
+#	When I navigate to the classic site
+#	And When I Click the "a:contains(' Check Treatment Costs ')" element
+#	Sleep		${NAVIGATION}
+#	Then I should see the element ".modal-dialog" displayed
+	
+#On classic I should see the pre interstitial when I click Walking works
+#	[Tags]		PreNavInterstitial
+#	When I navigate to the classic site
+#	And When I Click the ".linkAggregatorContent:nth-child(1) li:nth-child(11) a" link
+#	Sleep		${NAVIGATION}
+#	Then I should see the element ".modal-dialog" displayed
