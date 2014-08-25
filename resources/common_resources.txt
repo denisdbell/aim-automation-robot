@@ -171,6 +171,10 @@ I navigate to the classic site
 	Go To		${MYBLUE}
 	Sleep		${NAVIGATION}
 	
+I navigate to MyBlue Pilot
+	Go To		${SERVER}
+	Sleep		${NAVIGATION}
+	
 
 Teardown Browser
     Close All Browsers

@@ -41,7 +41,7 @@ Change Your Username link in user drop down menu
 
 
 #US764 - Post Navigation Test
-M. Post-Navigation Interstitial Legal Message
+M. Post-Navigation Interstitial Legal Message on chip rewards
 	[Tags]		PostNavigationInterstitial
 	Given I am logged into the MyBlue Portal
 	When I click the "#wellnessIncentiveslink1 a" link
@@ -62,6 +62,20 @@ M. Post-Navigation Interstitial Legal Message More Details
 	When I click the ".icon.arrow" element
 	Sleep		${NAVIGATION}
 	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party. The protection of your privacy will be governed by the privacy policy of this site. Please review the site's terms of use and privacy policy for details." displayed
+	
+M. Post-Navigation Interstitial Legal Message on eService
+	[Tags]		PostNavigationInterstitial
+	When I navigate to MyBlue Pilot
+	And I click the "#benefitslink0 a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+	
+M. Post-Navigation Interstitial Legal Message on WebMD
+	[Tags]		PostNavigationInterstitial
+	When I navigate to MyBlue Pilot
+	And I click the "#healthAndWellnesslink0 a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
 	Teardown Browser
 	
 
