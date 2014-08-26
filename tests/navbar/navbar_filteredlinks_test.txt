@@ -537,17 +537,17 @@ As a terminated user, I should see Check Drug Cost
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.checkDrugCost\"] a" displayed 
 
-As a terminated user, I should not see New Mail Order Rx
+As a terminated user, I should see New Mail Order Rx
 	[Tags]		BusinessRules
-	Then I should not see the element "li[data-url-config=\"navigation.main.pharmacy.nodes.newMailOrderPrescription\"] a" 
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.newMailOrderPrescription\"] a" displayed
 
-As a terminated user, I should not see Mail Order Status
+As a terminated user, I should see Mail Order Status
 	[Tags]		BusinessRules
-	Then I should not see the element "li[data-url-config=\"navigation.main.pharmacy.nodes.mailOrderStatus\"] a" 
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.mailOrderStatus\"] a" displayed
 
-As a terminated user, I should not see Refill Mail Order Rx
+As a terminated user, I should see Refill Mail Order Rx
 	[Tags]		BusinessRules
-	Then I should not see the element "li[data-url-config=\"navigation.main.pharmacy.nodes.refillMailOrderPrescriptions\"] a" 
+	Then I should see the link "li[data-url-config=\"navigation.main.pharmacy.nodes.refillMailOrderPrescriptions\"] a" displayed
 
 
 #Username dropdown

@@ -32,7 +32,7 @@ ${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
 #Users
 ${STANDARD}=					junecontractuatstd
 ${BASIC}=						marchcontractuat
-${TERMINATED}=					marchtermeduat
+${TERMINATED}=					test_account3
 ${MINOR}=						ageless_18
 ${PASSWORD}=					Bigfun21!
 
