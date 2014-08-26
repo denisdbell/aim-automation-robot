@@ -73,7 +73,7 @@ Quit smoking with our Tobacco Cessation Program should have a valid SSO link
 	
 Start Walking Works today should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "#healthAndWellnesslink3 a" with SSO link "${SERVER}/pilot/customlinks/startWalking"
+	Then I should see the link "#healthAndWellnesslink3 a" with SSO link "${SERVER}/customlinks/startWalking"
 
 
 
