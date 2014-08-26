@@ -151,7 +151,7 @@ Landing Page I should see the link Check drug cost for Terminated
 	
 Landing Page I should see the link Review Basic Option pharmacy benefits for Terminated
 	[Tags]		LandingPageLinks	BusinessRules
-	Then I should see the link "#pharmacylink2 a" displayed
+	Then I should see the link "#pharmacylink3 a" displayed
 	
 	
 Landing Page I should see the link Take charge of your family's health for Minor
