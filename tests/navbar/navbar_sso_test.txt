@@ -159,7 +159,7 @@ Update Enrollment Information should have a valid SSO link
 	[Tags]		SSO
 	When I Click the "#Username" element
 	Sleep		${EVENT}
-	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "${ESERVICE_SSO}.fepblue.org/fepesvc/home.do"
+	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" with SSO link "${ESERVICE_SSO}.fepblue.org/fepesvc/profile.do"
 
 Change Your Address should have a valid SSO link
 	[Tags]		SSO
