@@ -75,9 +75,9 @@ As a Basic user, I should see the Member Name
 	[Tags]		MemberIDCard
 	Then I should see ".memid-member" have the text "Member Name" displayed
 	
-As a Basic user, I should see the Member Name as MARCHCONTRACT J UAT
+As a Basic user, I should see the Member Name as MARCHCONTRACT M UAT
 	[Tags]		MemberIDCard
-	Then I should see ".memid-member" have the text "MARCHCONTRACT J UAT" displayed
+	Then I should see ".memid-member" have the text "MARCHCONTRACT M UAT" displayed
 	
 As a Basic user, I should see the Member ID
 	[Tags]		MemberIDCard
