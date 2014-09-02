@@ -9,6 +9,7 @@ Resource	   ../landingpage/landingpage_resource.txt
 
 
 I am a Standard MyBlue Member on the MyBlue Landing Page
+	Teardown Browser
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${STANDARD}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
@@ -16,13 +17,23 @@ I am a Standard MyBlue Member on the MyBlue Landing Page
 	Sleep		${NAVIGATION}
 
 I am a Terminated MyBlue Member on the MyBlue Landing Page
+	Teardown Browser
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${TERMINATED}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
     I Click the "#login" Button
 	Sleep		${NAVIGATION}
+
+I am a Terminated MyBlue Member on the MyBlue Landing Page with NO access to member ID card
+	Teardown Browser
+	I am a MyBlue Member on the Login Page
+	I Enter A Username "#LoginUsername" "${TERMINATED_NOID}"
+    I Enter A Password "#LoginPassword" "${PASSWORD}"
+    I Click the "#login" Button
+	Sleep		${NAVIGATION}
 	
 I am a Basic MyBlue Member on the MyBlue Landing Page
+	Teardown Browser
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${BASIC}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
@@ -30,6 +41,7 @@ I am a Basic MyBlue Member on the MyBlue Landing Page
 	Sleep		${NAVIGATION}
 
 I am a Minor MyBlue Member on the MyBlue Landing Page
+	Teardown Browser
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${MINOR}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"

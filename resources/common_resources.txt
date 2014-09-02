@@ -14,7 +14,7 @@ Library    	      OperatingSystem
 ${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 
 #Sleep settings
-${NAVIGATION}					10
+${NAVIGATION}					6
 ${EVENT}						2
 
 #_______________________________________________________________________________________________________________________#
@@ -33,6 +33,7 @@ ${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
 ${STANDARD}=					junecontractuatstd
 ${BASIC}=						marchcontractuat
 ${TERMINATED}=					test_account3
+${TERMINATED_NOID}=				test_account3
 ${MINOR}=						ageless_18
 ${PASSWORD}=					Bigfun21!
 
@@ -154,6 +155,10 @@ I view the "${element}" element
 I should see the link "${element}" with SSO link "${link}"
 	${SSO}=	Get Element Attribute	css=${element}@href
 	Should Be Equal	${SSO}	${link}
+	
+I should see "${element}" have attribute "${attribute}" with the value "${link}"
+	${VALUE}=	Get Element Attribute	css=${element}@${attribute}
+	Should Be Equal	${VALUE}	${link}
 
 
 #WebMD

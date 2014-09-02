@@ -8,14 +8,17 @@ Resource       ../common_resources.txt
 *** Keywords ****
 
 I am a MyBlue Member navigating to the login page
+	Teardown Browser
 	Open Browser	${LOGIN_URL}      ${BROWSER}
 
 I am a MyBlue Member on the Login Page
+	Teardown Browser
 	Open Browser	${LOGIN_URL}      ${BROWSER}
 	Maximize Browser Window
 	Sleep		${NAVIGATION}
 
 I am a MyBlue Member on the classic myBlue Login Page
+	Teardown Browser
 	Open Browser	${MYBLUE_LOGIN_URL}      ${BROWSER}
 	Maximize Browser Window
 	

@@ -34,6 +34,7 @@ I am a Registered MyBlue Member on the Landing Page (Session exists)
 	Sleep			${EVENT}
 	
 I am a Registered MyBlue Member on the Landing Page
+	Teardown Browser
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${BASIC}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
@@ -41,6 +42,7 @@ I am a Registered MyBlue Member on the Landing Page
 	Sleep		${NAVIGATION}
 	
 I am a Terminated Registered MyBlue Member on the Landing Page
+	Teardown Browser
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${TERMINATED}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
@@ -48,6 +50,7 @@ I am a Terminated Registered MyBlue Member on the Landing Page
 	Sleep		${NAVIGATION}
 	
 I am a Minor Registered MyBlue Member on the Landing Page
+	Teardown Browser
 	I am a MyBlue Member on the Login Page
 	I Enter A Username "#LoginUsername" "${MINOR}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
