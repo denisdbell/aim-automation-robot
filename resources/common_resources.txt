@@ -22,6 +22,14 @@ ${EVENT}						2
 #Browser
 ${BROWSER}=						chrome				#Supported: chrome | firefox | ie
 
+#iPhone
+${IPHONE_DESIRED_CAPABILITIES}	device:iPhone Simulator,platformName:iOS,deviceName:iPhone,safari:true,browserName:Safari
+${REMOTE_URL}=					http://127.0.0.1:4723/wd/hub
+${ALIAS}=						ip71
+
+#Sleep
+${DEVICE_LAUNCH}=				20
+
 #Routes
 ${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
 ${LOGIN_URL}=					${SERVER}/login  
@@ -90,6 +98,28 @@ local
 	Set global variable 	${MYBLUE}						https://${ENVIRONMENT}.fepblue.org:8443/
 	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest
 	Set global variable 	${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
+	
+	
+	
+	
+	
+Open new browser session at "${url}"
+	Run Keyword If			'${BROWSER}'=='iphone'			Setup Iphone Emulator "${url}"
+	Run Keyword If			'${BROWSER}'=='chrome'			Setup Desktop Environment "${url}"
+	Run Keyword If			'${BROWSER}'=='firefox'			Setup Desktop Environment "${url}"
+	Run Keyword If			'${BROWSER}'=='safari'			Setup Desktop Environment "${url}"
+	Run Keyword If			'${BROWSER}'=='ie'				Setup Desktop Environment "${url}"
+	
+Setup Desktop Environment "${url}"
+	Open Browser	${url}      ${BROWSER}
+	
+Setup Iphone Emulator "${url}"
+	Open Browser  	url=${url} 		browser=${BROWSER}  	alias=${ALIAS}   	remote_url=${REMOTE_URL}  	desired_capabilities=${IPHONE_DESIRED_CAPABILITIES}
+	Sleep		20
+
+
+
+
 
 I am on a mobile device
 	Set Window Size		400		700
