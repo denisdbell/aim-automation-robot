@@ -1,0 +1,31 @@
+*** Variables ***
+${platform}		chrome
+${cap}		device:iPhone Simulator,platformName:iOS,deviceName:iPhone,safari:true,browserName:Safari
+#app:/Applications/MobileSafari.app
+
+*** Settings ***
+#Suite Setup       Environment Setup
+Suite Teardown    Close All Browsers
+#Library           AnywhereLibrary		run_on_failure=Capture Page Screenshot
+Library           Collections
+Library           Selenium2Library
+
+*** Test Cases ***
+I should be navigated to dev.fepblue.org
+    #Run Keyword If    "${platform}"=="selendroid" or "${platform}"=="iphone"    Go to url
+    Go to url
+    Sleep		10
+    Location Should Contain			google
+
+*** Keywords ***
+Go to url
+	#Open Browser 		http://www.google.tt	desired_capabilities=setJavascriptEnabled:true   	${platform}		
+	#Open Browser  http://www.google.tt  iphone  ${EMPTY}   http://127.0.0.1:4723/wd/hub  device:iPhone Simulator,app:Safari,platformName=iOS,deviceName=Iphone  ${EMPTY}
+	#WORKING 	Open Browser  	url=http://www.google.tt  	browser=iphone  	alias=ip71   	remote_url=http://127.0.0.1:4723/wd/hub  	desired_capabilities=${cap}
+	
+	Open Browser  	url=http://www.google.tt  	browser=iphone  	alias=ip71   	remote_url=http://127.0.0.1:4723/wd/hub  	desired_capabilities=${cap}
+	Go To 		http://www.google.tt
+	
+Environment Setup
+	#Set Library Search Order		AnywhereLibrary
+	Open Browser    ${platform}
