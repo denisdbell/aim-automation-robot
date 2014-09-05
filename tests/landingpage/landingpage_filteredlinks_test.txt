@@ -44,6 +44,10 @@ Landing Page I should see the link Quit smoking with our Tobacco Cessation Progr
 Landing Page I should see the link Start Walking Works today for Standard
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the link "#healthAndWellnesslink3 a" displayed
+
+Landing Page I should see the link Walking Works Step Tracker for Standard
+	[Tags]		LandingPageLinks	BusinessRules
+	Then I should see the link "#healthAndWellnesslink5 a" displayed
 	
 Landing Page I should see the link Download explanation of benefits (EOB) for Standard
 	[Tags]		LandingPageLinks	BusinessRules
@@ -118,6 +122,10 @@ Landing Page I should see the link Quit smoking with our Tobacco Cessation Progr
 Landing Page I should see the link Start Walking Works today for Terminated
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the link "#healthAndWellnesslink3 a" displayed
+
+Landing Page I should see the link Walking Works Step Tracker for Terminated
+	[Tags]		LandingPageLinks	BusinessRules
+	Then I should see the link "#healthAndWellnesslink5 a" displayed
 	
 Landing Page I should see the link Download explanation of benefits (EOB) for Terminated
 	[Tags]		LandingPageLinks	BusinessRules
@@ -189,6 +197,10 @@ Landing Page I should see the link Quit smoking with our Tobacco Cessation Progr
 Landing Page I should see the link Start Walking Works today for Minor
 	[Tags]		LandingPageLinks	BusinessRules
 	Then I should see the link "#healthAndWellnesslink3 a" displayed
+
+Landing Page I should see the link Walking Works Step Tracker for Minor
+	[Tags]		LandingPageLinks	BusinessRules
+	Then I should see the link "#healthAndWellnesslink5 a" displayed
 	
 Landing Page I should see the link Download explanation of benefits (EOB) for Minor
 	[Tags]		LandingPageLinks	BusinessRules
