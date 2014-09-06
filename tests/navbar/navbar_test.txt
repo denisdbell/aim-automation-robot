@@ -78,6 +78,94 @@ M. Post-Navigation Interstitial Legal Message on WebMD
 	Then I should see the element ".col-xs-10" displayed
 	Teardown Browser
 	
+	
+#DE81
+Unified Nav when navigating from landing page MyBlue Classic to RX Statements (on eService) for the first time i should see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	Given I am logged into the MyBlue Portal
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+	Teardown Browser
+	
+Unified Nav when navigating from landing page MyBlue Classic to order a new ID card (on eService) for the first time i should see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	Given I am logged into the MyBlue Portal
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+	
+Unified Nav when navigating from order a new ID card (eService) to RX Statement (eService) i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+	
+Unified Nav when navigating from RX statements (eService) to RX statements (eService) i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from RX Statement (eService) to order a new ID card (eService) i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+	
+Unified Nav when navigating from order a new ID card (eService) to order a new ID card (eService) i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+	
+Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-blue a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+	
+Unified Nav when navigating from MyBlue classic to RX statements (eService) for the second time i should see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from RX statements (eService) to MyBlue classic i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-blue a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from MyBlue classic to order a new ID card (eService) within 15 seconds of comming from eService i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-blue a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from MyBlue classic to order a new ID card (eService) after 15 seconds of comming from eService i should see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	Sleep		15
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+	Teardown Browser
+
 
 #US767 - CSR Nav
 As a CSR, I should see the wellness icon disabled
