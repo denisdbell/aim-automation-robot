@@ -164,8 +164,57 @@ Unified Nav when navigating from MyBlue classic to order a new ID card (eService
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
 	Sleep		${NAVIGATION}
 	Then I should see the element ".col-xs-10" displayed
-	Teardown Browser
 
+#these tests only work on stage if not stage end here and teardown
+Unified Nav when navigating submitting dynamic key i should not see the post privacy message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I Enter "222222" in the "#otppswd" textfield
+	And I Click the "#Submit" Button
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-blue a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from MyBlue classic to order a new ID card (eService) after entering dynamic key i should see the PPM
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+	Teardown Browser
+	
+Unified Nav when navigating from landing page MyBlue Classic to Order new Id Card (on eService) as a spouse user for the first time i should see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	Given I am logged into the MyBlue Portal as a Spouse User
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+
+Unified Nav when entering dynamic key on auth page - Order new Id Card (on eService) and submitting i should not see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I Enter "222222" in the "#otppswd" textfield
+	And I Click the "#Submit" Button
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-blue a" link
+	Sleep		${NAVIGATION}
+	Then I should not see the element ".col-xs-10" displayed
+
+Unified Nav when navigating from landing page MyBlue Classic to Order new Id Card (on eService) [access denied] as a spouse user i should see the post intersitial message
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	When I click the "li#my-account" element
+	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
+	Sleep		${NAVIGATION}
+	Then I should see the element ".col-xs-10" displayed
+	Teardown Browser
 
 #US767 - CSR Nav
 As a CSR, I should see the wellness icon disabled
