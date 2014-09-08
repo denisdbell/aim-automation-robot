@@ -11,7 +11,7 @@ Library    	      OperatingSystem
 *** Variables ***
 
 #Environment settings
-${ENVIRONMENT}					stage							#Dev = dev 					| Test = test 			| Stage = stage
+${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 
 #Sleep settings
 ${NAVIGATION}					6
