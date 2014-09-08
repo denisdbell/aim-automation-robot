@@ -64,6 +64,17 @@ I am logged into the MyBlue Portal as a Minor User
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
     Sleep		${NAVIGATION}
+
+I am logged into the MyBlue Portal as a Spouse User
+	Teardown Browser
+	Open Browser	${SERVER}      ${BROWSER}
+	Maximize Browser Window
+	Delete All Cookies
+	Sleep		${NAVIGATION}
+	I Enter A Username "#LoginUsername" "${SPOUSE}"
+	I Enter A Password "#LoginPassword" "${PASSWORD}"
+	I Click the "div.login form#loginForm button#login" Button
+	Sleep		${NAVIGATION}
 	
 I am logged in CSR
 	Teardown Browser
