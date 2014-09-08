@@ -151,7 +151,7 @@ Unified Nav when navigating from MyBlue classic to order a new ID card (eService
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
-Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
+Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message 2
 	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
 	When I click the "li#my-blue a" link
 	Sleep		${NAVIGATION}
@@ -173,7 +173,7 @@ Unified Nav when navigating submitting dynamic key i should not see the post pri
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
-Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
+Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message 3
 	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
 	When I click the "li#my-blue a" link
 	Sleep		${NAVIGATION}
@@ -202,7 +202,7 @@ Unified Nav when entering dynamic key on auth page - Order new Id Card (on eServ
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
-Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
+Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message 4
 	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
 	When I click the "li#my-blue a" link
 	Sleep		${NAVIGATION}
