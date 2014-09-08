@@ -16,7 +16,7 @@ ${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 #Sleep settings
 ${NAVIGATION}					6
 ${EVENT}						2
-${DEVICE_LAUNCH}=				20
+${DEVICE_LAUNCH}				6
 
 #Browser
 ${BROWSER}=						chrome				#Supported: chrome | firefox | ie | iphone
@@ -117,7 +117,7 @@ Setup Desktop Environment "${url}"
 	
 Setup Iphone Emulator "${url}"
 	Open Browser  	url=${url} 		browser=${BROWSER}  	alias=${ALIAS}   	remote_url=${REMOTE_URL}  	desired_capabilities=${IPHONE_DESIRED_CAPABILITIES}
-	Sleep		20
+	Sleep		${DEVICE_LAUNCH}
 
 
 
