@@ -113,6 +113,7 @@ Open new browser session at "${url}"
 	
 Setup Desktop Environment "${url}"
 	Open Browser	${url}      ${BROWSER}
+	Maximize Browser Window
 	
 Setup Iphone Emulator "${url}"
 	Open Browser  	url=${url} 		browser=${BROWSER}  	alias=${ALIAS}   	remote_url=${REMOTE_URL}  	desired_capabilities=${IPHONE_DESIRED_CAPABILITIES}
