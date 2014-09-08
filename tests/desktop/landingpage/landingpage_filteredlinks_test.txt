@@ -4,240 +4,240 @@ Documentation     This file tests that links should be filtered by user
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
-Resource          ../../resources/landingpage/landingpage_resource.txt
+Resource          ../../../resources/landingpage/landingpage_resource.txt
 
 *** Test Cases ***
 
 #US251 Test Cases for Desktop
 Landing Page I should see the link Take charge of your family's health for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		${NAVIGATION}
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	
 Landing Page I should see the link Get baby advice and support here for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink1 a" displayed
 	
 Landing Page I should see the link Health club memberships for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	And I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 Landing Page I should see the link Visit MyBlue Wellness Card Center for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#wellnessIncentives" displayed
 	And I should see the link "#wellnessIncentiveslink0 a" displayed
 	
 Landing Page I should see the link View account balance for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#wellnessIncentiveslink1 a" displayed
 	
 Landing Page I should see the link Report a lost MyBlue Wellness Card for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#wellnessIncentiveslink2 a" displayed
 	
 Landing Page I should see the link Quit smoking with our Tobacco Cessation Program for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#wellnessIncentiveslink3 a" displayed
 	
 Landing Page I should see the link Start Walking Works today for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#healthAndWellnesslink3 a" displayed
 
 Landing Page I should see the link Walking Works Step Tracker for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#healthAndWellnesslink5 a" displayed
 	
 Landing Page I should see the link Download explanation of benefits (EOB) for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
 	
 Landing Page I should see the link Order a new member ID card for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink1 a" displayed
 	
 Landing Page I should see the link Send question to customer service for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink2 a" displayed
 	
 Landing Page I should see the link View replies from customer service for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink3 a" displayed
 	
 Landing Page I should see the link Find a form for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink4 a" displayed
 	
 Landing Page I should see the link Find a pharmacy for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	
 Landing Page I should see the link Check drug cost for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#pharmacylink1 a" displayed
 	
 Landing Page I should see the link Review Basic Option pharmacy benefits for Standard
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#pharmacylink2 a" displayed
 	Teardown Browser
 	
 
 #US763 - Links should be filtered by user
 Landing Page I should see the link Take charge of your family's health for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Given I am a Terminated Registered MyBlue Member on the Landing Page
 	Sleep		${EVENT}
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	
 Landing Page I should see the link Get baby advice and support here for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink1 a" displayed
 	
 	
 Landing Page I should see the link Health club memberships for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 Landing Page I should not see the link Visit MyBlue Wellness Card Center for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#wellnessIncentives" displayed
 	And I should not see the element "#wellnessIncentiveslink0 a"
 	
 Landing Page I should not see the link View account balance for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should not see the element "#wellnessIncentiveslink1 a"
 	
 Landing Page I should not see the link Report a lost MyBlue Wellness Card for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should not see the element "#wellnessIncentiveslink2 a"
 	
 Landing Page I should see the link Quit smoking with our Tobacco Cessation Program for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#wellnessIncentiveslink3 a" displayed
 	
 Landing Page I should see the link Start Walking Works today for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#healthAndWellnesslink3 a" displayed
 
 Landing Page I should see the link Walking Works Step Tracker for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#healthAndWellnesslink5 a" displayed
 	
 Landing Page I should see the link Download explanation of benefits (EOB) for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
 	
 Landing Page I should see the link Order a new member ID card for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink1 a" displayed
 	
 Landing Page I should see the link Send question to customer service for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink2 a" displayed
 	
 Landing Page I should see the link View replies from customer service for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should not see the element "#benefitslink3 a"
 	
 Landing Page I should see the link Find a form for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink4 a" displayed
 	
 Landing Page I should see the link Find a pharmacy for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	
 Landing Page I should see the link Check drug cost for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#pharmacylink1 a" displayed
 	
 Landing Page I should see the link Review Basic Option pharmacy benefits for Terminated
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#pharmacylink3 a" displayed
 	
 	
 Landing Page I should see the link Take charge of your family's health for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Given I am a Minor Registered MyBlue Member on the Landing Page
 	Sleep		${EVENT}
 	Then I should see the element "span#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	
 Landing Page I should see the link Get baby advice and support here for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink1 a" displayed
 	
 Landing Page I should see the link Health club memberships for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 Landing Page I should see the link Visit MyBlue Wellness Card Center for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#wellnessIncentives" displayed
 	And I should see the link "#wellnessIncentiveslink0 a" displayed
 	
 Landing Page I should see the link View account balance for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#wellnessIncentiveslink1 a" displayed
 	
 Landing Page I should see the link Report a lost MyBlue Wellness Card for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#wellnessIncentiveslink2 a" displayed
 	
 Landing Page I should see the link Quit smoking with our Tobacco Cessation Program for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#wellnessIncentiveslink3 a" displayed
 	
 Landing Page I should see the link Start Walking Works today for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#healthAndWellnesslink3 a" displayed
 
 Landing Page I should see the link Walking Works Step Tracker for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#healthAndWellnesslink5 a" displayed
 	
 Landing Page I should see the link Download explanation of benefits (EOB) for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#benefits" displayed
 	And I should see the link "#benefitslink0 a" displayed
 	
 Landing Page I should see the link Order a new member ID card for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink1 a" displayed
 	
 Landing Page I should not see the link Send question to customer service for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should not see the element "#benefitslink2 a"	
 	
 Landing Page I should not see the link View replies from customer service for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should not see the element "#benefitslink3 a"
 	
 Landing Page I should see the link Find a form for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#benefitslink4 a" displayed
 	
 Landing Page I should see the link Find a pharmacy for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#pharmacy" displayed
 	And I should see the link "#pharmacylink0 a" displayed
 	
 Landing Page I should see the link Check drug cost for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#pharmacylink1 a" displayed
 	
 Landing Page I should not see the link Review Basic Option pharmacy benefits for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should not see the element "#pharmacylink2 a"
 
 I should see two disabled tiles for Minor
-	[Tags]		LandingPageLinks	BusinessRules
+	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link ".quicknav-symptom a.disabled" displayed
 	And I should see the link ".quicknav-record a.disabled" displayed
 	Teardown Browser

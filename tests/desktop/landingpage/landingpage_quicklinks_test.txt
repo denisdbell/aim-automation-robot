@@ -5,7 +5,7 @@ Documentation     This file tests that the landing page shows all eight
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
-Resource          ../../resources/landingpage/landingpage_resource.txt
+Resource          ../../../resources/landingpage/landingpage_resource.txt
 
 *** Test Cases ***
 

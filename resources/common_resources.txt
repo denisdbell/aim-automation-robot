@@ -16,19 +16,19 @@ ${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 #Sleep settings
 ${NAVIGATION}					6
 ${EVENT}						2
-
-#_______________________________________________________________________________________________________________________#
+${DEVICE_LAUNCH}=				20
 
 #Browser
-${BROWSER}=						chrome				#Supported: chrome | firefox | ie
+${BROWSER}=						chrome				#Supported: chrome | firefox | ie | iphone
+
+
+
+#_______________________________________________________________________________________________________________________#
 
 #iPhone
 ${IPHONE_DESIRED_CAPABILITIES}	device:iPhone Simulator,platformName:iOS,deviceName:iPhone,safari:true,browserName:Safari
 ${REMOTE_URL}=					http://127.0.0.1:4723/wd/hub
 ${ALIAS}=						ip71
-
-#Sleep
-${DEVICE_LAUNCH}=				20
 
 #Routes
 ${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		

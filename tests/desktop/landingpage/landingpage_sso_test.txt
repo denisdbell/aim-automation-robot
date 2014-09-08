@@ -5,7 +5,7 @@ Documentation     This file tests that the SSO links on the landing page
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
-Resource          ../../resources/landingpage/landingpage_resource.txt
+Resource          ../../../resources/landingpage/landingpage_resource.txt
 
 *** Test Cases ***
 

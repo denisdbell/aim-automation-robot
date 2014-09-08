@@ -2,12 +2,12 @@
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Close All Browsers
-Resource          ../../resources/login/login_resource.txt
+Resource          ../../../resources/login/login_resource.txt
 
 *** Test Cases ***
 
 Login Page Hot links Displayed
-	[Tags]		LoginPageElements
+	[Tags]		LoginPageElements	Mobile
 	Given I am a MyBlue Member on the Login Page
 	Then I should see the element "form div:nth-child(5) a:nth-child(1)" displayed
 	And I should see the element "form div:nth-child(5) a:nth-child(2)" displayed
@@ -15,82 +15,82 @@ Login Page Hot links Displayed
 	And I should see the element "#signup" displayed
 	
 Login Page Hot links have valid text
-	[Tags]		LoginPageElements
+	[Tags]		LoginPageElements	Mobile
 	Then I should see "form div:nth-child(5) a:nth-child(1)" have the text "username" displayed
 	And I should see "form div:nth-child(5) a:nth-child(2)" have the text "password" displayed
 	And I should see "form div:nth-child(5) a:nth-child(3)" have the text "e-mail address" displayed
 	And I should see "#signup" have the text "Sign up for MyBlue" displayed
 	
 Login Page Username Textbox Displayed
-	[Tags]		LoginPageElements
+	[Tags]		LoginPageElements	Mobile
 	Then I should see the element "#LoginUsername" displayed
 	And I should see the element "#LoginUsername" blank
 	
 
 Login Page Password Textbox Displayed
-	[Tags]		LoginPageElements
+	[Tags]		LoginPageElements	Mobile
 	Then I should see the element "#LoginPassword" displayed
 	And I should see the element "#LoginPassword" blank
 	
 I should NOT see the unified navigation bar Displayed
-	[Tags]		LoginPageElements
+	[Tags]		LoginPageElements	Mobile
 	Then I should not see the element ".myblue-header-content .thirdparty" displayed
 	Teardown Browser
 	
 	
 #Test hot links
 Username should take me to MyBlue
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	Given I am a MyBlue Member on the Login Page
 	When I Click the "form div:nth-child(5) a:nth-child(1)" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?myBluePopUp=forgotUserName&callBackURL=${SERVER}/pilot"
 
 Username should take me to MyBlue with popup
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	Then I should see the element "#_58_usernamePopup" displayed
 	
 Username redirect to Mdot when I click cancel
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	When I Click the "img[alt=\"Cancel\"]" element
 	Then I should be navigated to "${SERVER}/pilot/login"
 
 Password should take me to MyBlue
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	When I Click the "form div:nth-child(5) a:nth-child(2)" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?myBluePopUp=forgotPassword&callBackURL=${SERVER}/pilot"
 
 Password should take me to MyBlue with popup
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	Then I should see the element "#_58_passwordPopup" displayed
 	
 Password redirect to Mdot when I click cancel
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	When I Click the "img[alt=\"Cancel\"]" element
 	Then I should be navigated to "${SERVER}/pilot/login"
 	
 Email should take me to MyBlue
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	When I Click the "form div:nth-child(5) a:nth-child(3)" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?myBluePopUp=forgotEmailAddress&callBackURL=${SERVER}/pilot"
 
 Email should take me to MyBlue with popup
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	Then I should see the element "#_58_forgotEmailAddressPopup" displayed
 	
 Email redirect to Mdot when I click cancel
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	When I Click the "#cancel_btn" element
 	Then I should be navigated to "${SERVER}/pilot/login"
 	
 Sign up for MyBlue should take me to MyBlue
-	[Tags]		HotLinks
+	[Tags]		HotLinks	Mobile
 	When I Click the "#signup" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?p_p_id=58&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_58_struts_action=%2Flogin%2Fcreate_account"
 	Teardown Browser
 
 
 Valid Login
-	[Tags]		ValidLoginTest
+	[Tags]		ValidLoginTest	Mobile
     Given I am a MyBlue Member on the Login Page
     When I Enter A Username "#LoginUsername" "marchcontractuat"
     And I Enter A Password "#LoginPassword" "Bigfun21!"
@@ -101,7 +101,7 @@ Valid Login
         
         
 Invalid Login With Invalid Password
-	[Tags]		InvalidLoginTest
+	[Tags]		InvalidLoginTest	Mobile
     Given I am a MyBlue Member on the Login Page
     When I Enter A Username "#LoginUsername" "marchcontractuat"
     And I Enter A Password "#LoginPassword" "testPassword"
@@ -113,7 +113,7 @@ Invalid Login With Invalid Password
 
 
 Invalid Login With Invalid Username
-	[Tags]		InvalidLoginTest
+	[Tags]		InvalidLoginTest	Mobile
     Given I am a MyBlue Member on the Login Page
     When I Enter A Username "#LoginUsername" "testUserName"
     And I Enter A Password "#LoginPassword" "marchcontractuat"

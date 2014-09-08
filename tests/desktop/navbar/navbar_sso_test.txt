@@ -5,7 +5,7 @@ Documentation     This file tests that the SSO links in the unified navigation b
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Close All Browsers
-Resource          ../../resources/navbar/navbar_resource.txt
+Resource          ../../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***
 

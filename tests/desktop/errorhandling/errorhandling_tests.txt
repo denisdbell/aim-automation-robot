@@ -2,7 +2,7 @@
 Library				Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown		Teardown Browser
-Resource			 ../../resources/errorhandling/errorhandling_resources.txt
+Resource			 ../../../resources/errorhandling/errorhandling_resources.txt
 
 *** Test Cases ***
 #TODO: Sync with sean on if these tests are necessary

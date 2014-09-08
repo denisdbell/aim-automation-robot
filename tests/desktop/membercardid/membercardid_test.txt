@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
-Resource          ../../resources/memberidcard/membercardid_resource.txt
+Resource          ../../../resources/memberidcard/membercardid_resource.txt
 
 *** Test Cases ***
 

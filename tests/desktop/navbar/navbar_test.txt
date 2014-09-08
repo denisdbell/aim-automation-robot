@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Close All Browsers
-Resource          ../../resources/navbar/navbar_resource.txt
+Resource          ../../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***
 
