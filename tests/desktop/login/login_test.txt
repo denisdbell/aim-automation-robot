@@ -122,15 +122,10 @@ Invalid Login With Invalid Username
     Then I Am Not Navigated to Landing Page "header[ng-show=\"page.header.visible\"]"
     And I should see the element "#errorMsg" displayed
     Teardown Browser
-    
-
-I should see the loading popup when I navigate to the login page
-	[Tags]		Loading
-	Given I am a MyBlue Member navigating to the login page
-	Then I should see the loading popup visible
 	
 I should see the loading popup when I click submit to login
-	[Tags]		Loading
+	[Tags]		Loading		Mobile
+	Given I am a MyBlue Member navigating to the login page
     Sleep				${NAVIGATION}
     When I Enter A Username "#LoginUsername" "marchcontractuat"
     And I Enter A Password "#LoginPassword" "Bigfun21!"
