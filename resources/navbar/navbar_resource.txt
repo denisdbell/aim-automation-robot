@@ -65,7 +65,7 @@ I am logged into the MyBlue Portal as a Spouse User
 	
 I am logged in CSR
 	Teardown Browser
-	Open new browser session at "${SERVER}"
+	Open new browser session at "${CSR}"
 	Sleep		${NAVIGATION}
 	
 I am logged into the MyBlue Portal for the first time

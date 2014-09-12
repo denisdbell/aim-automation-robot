@@ -36,6 +36,7 @@ ${LOGIN_URL}=					${SERVER}/login
 ${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
 ${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest
 ${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
+${CSR}=							${SERVER_NAVBAR}/ESsample.html
 
 #Users
 ${STANDARD}=					junecontractuatstd
