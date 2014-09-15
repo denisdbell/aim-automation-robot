@@ -184,25 +184,57 @@ As a standard user, I should see Customer Service Inbox
 #Wellness dropdown
 As a standard user, I should see Wellness Card Home
 	[Tags]		BusinessRules
-	When I Click the "#Wellness" element
+	When I Click the "#wellness" element
 	Sleep		${EVENT}
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" displayed 
+	Then I should see the link "#visitWellnessCardPortal a" displayed 
 
 As a standard user, I should see View Wellness Card Balance
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" displayed 
+	Then I should see the link "#wellnessCardBalance a" displayed 
 
 As a standard user, I should see Order a New Wellness Card
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" displayed 
+	Then I should see the link "#newWellnessCard a" displayed 
 
 As a standard user, I should see Report Lost or Stolen Card
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" displayed 
+	Then I should see the link "#reportStolenCard a" displayed 
 
 As a standard user, I should see FAQs
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" displayed 
+	Then I should see the link "#faqs a" displayed 
+	
+As a standard user, I should see Ways To Earn Rewards
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.waysToEarn\"] a" displayed 
+	
+As a standard user, I should see Rewards Activity
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.rewardActivity\"] a" displayed 
+	
+As a standard user, I should see Debit Card Balance
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.balance\"] a" displayed 
+	
+As a standard user, I should see Debit Card Transactions
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.transactionHistory\"] a" displayed 
+	
+As a standard user, I should see Retrieve Debit Card PIN
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.retrievePin\"] a" displayed 
+	
+As a standard user, I should see Announcements
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.announcements\"] a" displayed 
+	
+As a standard user, I should see Communication History
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationHistory\"] a" displayed 
+	
+As a standard user, I should see Communication Settings
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationSettings\"] a" displayed 
 	Teardown Browser
 	
 	
@@ -383,25 +415,57 @@ As a basic user, I should see Customer Service Inbox
 #Wellness dropdown
 As a basic user, I should see Wellness Card Home
 	[Tags]		BusinessRules
-	When I Click the "#Wellness" element
+	When I Click the "#wellness" element
 	Sleep		${EVENT}
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" displayed 
+	Then I should see the link "#visitWellnessCardPortal a" displayed 
 
 As a basic user, I should see View Wellness Card Balance
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" displayed 
+	Then I should see the link "#wellnessCardBalance a" displayed 
 
 As a basic user, I should see Order a New Wellness Card
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" displayed 
+	Then I should see the link "#newWellnessCard a" displayed 
 
 As a basic user, I should see Report Lost or Stolen Card
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" displayed 
+	Then I should see the link "#reportStolenCard a" displayed 
 
 As a basic user, I should see FAQs
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" displayed 
+	Then I should see the link "#faqs a" displayed 
+	
+As a basic user, I should see Ways To Earn Rewards
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.waysToEarn\"] a" displayed 
+	
+As a basic user, I should see Rewards Activity
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.rewardActivity\"] a" displayed 
+	
+As a basic user, I should see Debit Card Balance
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.balance\"] a" displayed 
+	
+As a basic user, I should see Debit Card Transactions
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.transactionHistory\"] a" displayed 
+	
+As a basic user, I should see Retrieve Debit Card PIN
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.retrievePin\"] a" displayed 
+	
+As a basic user, I should see Announcements
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.announcements\"] a" displayed 
+	
+As a basic user, I should see Communication History
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationHistory\"] a" displayed 
+	
+As a basic user, I should see Communication Settings
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationSettings\"] a" displayed 
 	Teardown Browser
 	
 	
@@ -581,7 +645,7 @@ As a terminated user, I should see Customer Service Inbox
 #Wellness dropdown
 Nav Wellness Incentives links Displayed for Terminated
 	[Tags]		BusinessRules
-	Then I should not see the element "#Wellness a" displayed
+	Then I should not see the element "#wellness" displayed
 	Teardown Browser
 
 
@@ -761,28 +825,55 @@ As a minor user, I should see Customer Service Inbox
 #Wellness dropdown
 As a minor user, I should see Wellness Card Home
 	[Tags]		BusinessRules
-	When I Click the "#Wellness" element
+	When I Click the "#wellness" element
 	Sleep		${EVENT}
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" displayed 
+	Then I should see the link "#visitWellnessCardPortal a" displayed 
 
 As a minor user, I should see View Wellness Card Balance
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" displayed 
+	Then I should see the link "#wellnessCardBalance a" displayed 
 
 As a minor user, I should see Order a New Wellness Card
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" displayed 
+	Then I should see the link "#newWellnessCard a" displayed 
 
 As a minor user, I should see Report Lost or Stolen Card
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" displayed 
+	Then I should see the link "#reportStolenCard a" displayed 
 
 As a minor user, I should see FAQs
 	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" displayed 
+	Then I should see the link "#faqs a" displayed 
+	
+As a minor user, I should see Ways To Earn Rewards
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.waysToEarn\"] a" displayed 
+	
+As a minor user, I should see Rewards Activity
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.rewardActivity\"] a" displayed 
+	
+As a minor user, I should see Debit Card Balance
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.balance\"] a" displayed 
+	
+As a minor user, I should see Debit Card Transactions
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.transactionHistory\"] a" displayed 
+	
+As a minor user, I should see Retrieve Debit Card PIN
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.retrievePin\"] a" displayed 
+	
+As a minor user, I should see Announcements
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.announcements\"] a" displayed 
+	
+As a minor user, I should see Communication History
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationHistory\"] a" displayed 
+	
+As a minor user, I should see Communication Settings
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationSettings\"] a" displayed 
 	Teardown Browser
-
-
-
-
-

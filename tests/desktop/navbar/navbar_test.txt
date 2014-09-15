@@ -220,7 +220,7 @@ Unified Nav when navigating from landing page MyBlue Classic to Order new Id Car
 As a CSR, I should see the wellness icon disabled
 	[Tags]		CSR
 	Given I am logged in CSR
-	Then I should see the element "#Wellness[class=\"disable\"]" disabled
+	Then I should see the element "#wellness[class=\"disable\"]" disabled
 	
 As a CSR, I should see the FEP Blue link disabled
 	[Tags]		CSR
@@ -244,7 +244,7 @@ As a CSR, I should see the My Account link enabled and active
 
 As a CSR, I should not be redirected when I click the wellness icon
 	[Tags]		CSR
-	When I Click the "#Wellness[class=\"disable\"]" element
+	When I Click the "#wellness" element
 	Then I should not be redirected off the page "${MYBLUE_CSR_NAV}"
 	
 As a CSR, I should not be redirected when I click the FEP Blue link
