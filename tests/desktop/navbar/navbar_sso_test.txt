@@ -185,7 +185,7 @@ Customer Service Inbox should have a valid SSO link
 #Wellness dropdown
 Wellness Card Home should have a valid SSO link
 	[Tags]		SSO
-	When I Click the "#Wellness" element
+	When I Click the "#wellness" element
 	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com"
 
@@ -204,3 +204,36 @@ Report Lost or Stolen Card should have a valid SSO link
 FAQs should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Home/FAQ"
+
+Ways To Earn Rewards should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.waysToEarn\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Rewards/Promotions"
+	
+Rewards Activity should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.rewardActivity\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Rewards/Activity"
+	
+Debit Card Balance should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.balance\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Cards/Account"
+	
+Debit Card Transactions should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.transactionHistory\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Cards/Transactions"
+	
+Retrieve Debit Card PIN should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.retrievePin\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Cards/RetrievePin"
+	
+Announcements should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.announcements\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Profile/Announcements"
+	
+Communication History should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationHistory\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Profile/CommHistory"
+	
+Communication Settings should have a valid SSO link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.communicationSettings\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Profile/CommSettings"
+	
