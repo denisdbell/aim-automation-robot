@@ -23,17 +23,59 @@ Username should NOT be truncated in the Navigation Bar
 
 #US243, US245, and US246 Test Cases for Desktop
 
-##BHA section currently hidden
-#Landing Page BHA Step Completed 
-#	[Tags]		BHA
-#	Given I am a Registered MyBlue Member on the Landing Page
-#	When The "ul.bha li.completed div#step1" step is completed 
-#	Then I should see the element "div#step1 div.complete" displayed 	
-#	And I should see the element "div#step1 div.go-back #goBackToStep" displayed
-#	And The "ul.bha li.next-step #step1" step is not highlighted
-#	And The "ul.bha li.next-step #step2" step is enabled
-#	
-#
+LandingPage BHA thermometer
+	[Tags]		BHA
+	Given I am a Registered MyBlue Member on the Landing Page
+	Then I should see the element "div.bha" displayed
+
+Landing Page BHA Steps 
+	[Tags]		BHA
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step1" step is completed 
+	Then I should see the element "div#step1 div.complete" displayed 	
+	And I should see the element "div#step1 div.go-back #goBackToStep" displayed
+
+Landing Page BHA Steps 
+	[Tags]		BHA
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step1" step is completed 
+	Then I should see the element "div#step2 div.incomplete" displayed 	
+	And I should see the element "div#step2 div.go-back #continueWithThisStep" displayed	
+
+Landing Page BHA Steps 
+	[Tags]		BHA
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step3" step is completed 
+	Then I should see the element "div#step3 div.complete" displayed 	
+	And I should see the element "div#step3 div.go-back #goBackToStep" displayed
+
+Landing Page BHA Step Go Back Button Clicked
+	[Tags]		BHA	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step1" step is completed
+	And I Click the "div#step1 div.go-back #goBackToStep" link 
+	
+Landing Page BHA Step Go Back Button Valid SSO link
+	[Tags]		BHA	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step1" step is completed	
+	Then I should see the link "div#step1 div.go-back #goBackToStep a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
+
+Landing Page BHA Step Continue with this step Button Clicked
+	[Tags]		BHA	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li.completed div#step1" step is completed 
+	Then I should see the element "div#step2 div.incomplete" displayed 
+	And I Click the "div#step2 div.go-back #continueWithThisStep" link 
+	
+Landing Page BHA Step Continue with this step Button Valid SSO link
+	[Tags]		BHA	
+	Given I am a Registered MyBlue Member on the Landing Page
+	When The "ul.bha li div#step2" step is not completed	
+	Then I should see the link "div#step2 div.go-back #continueWithThisStep a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
+
+
+
 #Landing Page BHA Step Go Back Button Clicked 
 #	[Tags]		BHA
 #	Given I am a Registered MyBlue Member on the Landing Page (Session exists)

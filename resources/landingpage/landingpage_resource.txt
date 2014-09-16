@@ -40,6 +40,14 @@ I am a Registered MyBlue Member on the Landing Page
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
 	I Click the "div.login form#loginForm button#login" Button
 	Sleep		${NAVIGATION}
+
+I am a Standard Registered MyBlue Member on the Landing Page
+	Teardown Browser
+	I am a MyBlue Member on the Login Page
+	I Enter A Username "#LoginUsername" "${STANDARD}"
+	I Enter A Password "#LoginPassword" "${PASSWORD}"
+	I Click the "div.login form#loginForm button#login" Button
+	Sleep		${NAVIGATION}
 	
 I am a Terminated Registered MyBlue Member on the Landing Page
 	Teardown Browser
