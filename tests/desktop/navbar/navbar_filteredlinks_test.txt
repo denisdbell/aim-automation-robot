@@ -56,6 +56,10 @@ As a standard user, I should see Online Health Coach
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" displayed
 
+As a standard user, I should see Action Plan
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.actionPlan\"] a" displayed
+
 As a standard user, I should see Benefits Statements
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.benefitStatement\"] a" displayed
@@ -87,6 +91,10 @@ As a standard user, I should see Online Symptom Checker
 As a standard user, I should see My Pregnancy Assistant
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed 
+
+As a standard user, I should see Healthy Families
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthyFamilies\"] a" displayed
 
 As a standard user, I should see Recipes
 	[Tags]		BusinessRules
@@ -124,6 +132,17 @@ As a standard user, I should see WebMD Videos
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
 
+As a standard user, I should see Find A Provider
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" displayed
+	
+As a standard user, I should see Find A Blue Distinction Center
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" displayed
+	
+As a standard user, I should see Submit Overseas Claim
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
 	
 #Pharmacy
 As a standard user, I should see Pharmacy & Prescriptions
@@ -287,6 +306,10 @@ As a basic user, I should see Online Health Coach
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" displayed
 
+As a basic user, I should see Action Plan
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.actionPlan\"] a" displayed
+
 As a basic user, I should see Benefits Statements
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.benefitStatement\"] a" displayed
@@ -318,6 +341,10 @@ As a basic user, I should see Online Symptom Checker
 As a basic user, I should see My Pregnancy Assistant
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed 
+
+As a basic user, I should see Healthy Families
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthyFamilies\"] a" displayed
 
 As a basic user, I should see Recipes
 	[Tags]		BusinessRules
@@ -355,6 +382,17 @@ As a basic user, I should see WebMD Videos
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
 
+As a basic user, I should see Find A Provider
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" displayed
+	
+As a basic user, I should see Find A Blue Distinction Center
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" displayed
+	
+As a basic user, I should see Submit Overseas Claim
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
 	
 #Pharmacy
 As a basic user, I should see Pharmacy & Prescriptions
@@ -516,6 +554,10 @@ As a terminated user, I should see Blue Health Assessment
 As a terminated user, I should see Online Health Coach
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" displayed
+	
+As a terminated user, I should see Action Plan
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.actionPlan\"] a" displayed
 
 As a terminated user, I should see Benefits Statements
 	[Tags]		BusinessRules
@@ -548,6 +590,10 @@ As a terminated user, I should see Online Symptom Checker
 As a terminated user, I should see My Pregnancy Assistant
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed 
+
+As a terminated user, I should see Healthy Families
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthyFamilies\"] a" displayed
 
 As a terminated user, I should see Recipes
 	[Tags]		BusinessRules
@@ -585,6 +631,17 @@ As a terminated user, I should see WebMD Videos
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
 
+As a terminated user, I should see Find A Provider
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" displayed
+	
+As a terminated user, I should see Find A Blue Distinction Center
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" displayed
+	
+As a terminated user, I should see Submit Overseas Claim
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
 	
 #Pharmacy
 As a terminated user, I should see Pharmacy & Prescriptions
@@ -696,6 +753,10 @@ As a minor user, I should see Blue Health Assessment
 As a minor user, I should see Online Health Coach
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" displayed
+	
+As a minor user, I should see Action Plan
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.actionPlan\"] a" displayed
 
 As a minor user, I should see Benefits Statements
 	[Tags]		BusinessRules
@@ -728,6 +789,10 @@ As a minor user, I should not see Online Symptom Checker
 As a minor user, I should see My Pregnancy Assistant
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" displayed 
+
+As a minor user, I should see Healthy Families
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.healthyFamilies\"] a" displayed
 
 As a minor user, I should see Recipes
 	[Tags]		BusinessRules
@@ -765,6 +830,17 @@ As a minor user, I should see WebMD Videos
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
 
+As a minor user, I should see Find A Provider
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" displayed
+	
+As a minor user, I should see Find A Blue Distinction Center
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" displayed
+	
+As a minor user, I should see Submit Overseas Claim
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
 	
 #Pharmacy
 As a minor user, I should see Pharmacy & Prescriptions
