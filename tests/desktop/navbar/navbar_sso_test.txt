@@ -229,10 +229,6 @@ Report Lost or Stolen Card should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Home/Contact"
 
-FAQs should have a valid SSO link
-	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.faqs\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Home/FAQ"
-
 Ways To Earn Rewards should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.wellness.nodes.waysToEarn\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Rewards/Promotions"
