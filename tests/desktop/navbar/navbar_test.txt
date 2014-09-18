@@ -327,20 +327,4 @@ I should not see the Tour/Introduction on Mobile
 	Then I should not see the element ".intronav" displayed
 	Teardown Browser
 	
-#US1582 - New links under the Health Tools tab on the unified navBar
-#Health Tools
-Find A Provider should have a valid link
-	[Tags]		US1582
-	When I Click the "#health-tools" element
-	Sleep		${EVENT}
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=sp-prismisp-bcbsa&TARGET=http://provider.fepblue.org"
-		
-Find a Blue Distinction Center should have a valid link
-	[Tags]		US1582
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" with SSO link "http://www.bcbs.com/why-bcbs/blue-distinction/"
-	
-Submit Overseas Claim should have a valid link
-	[Tags]		US1582
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" with SSO link "https://www.fepblue.org/members/myblue/claims-submission"
 
-		

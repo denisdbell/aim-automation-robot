@@ -132,7 +132,27 @@ Message Board Exchanges should have a valid SSO link
 WebMD Videos should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=711"
+
+#US1582 - New links under the Health Tools tab on the unified navBar
+#Health Tools
+Find A Provider should have a valid link
+	[Tags]		US1582
+	When I Click the "#health-tools" element
+	Sleep		${EVENT}
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=sp-prismisp-bcbsa&TARGET=http://provider.fepblue.org"
+		
+Find a Blue Distinction Center should have a valid link
+	[Tags]		US1582
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" with SSO link "http://www.bcbs.com/why-bcbs/blue-distinction/"
 	
+Submit Overseas Claim should have a valid link
+	[Tags]		US1582
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" with SSO link "https://www.fepblue.org/members/myblue/claims-submission"
+
+		
+
+
+
 	
 #Pharmacy
 Pharmacy & Prescriptions should have a valid SSO link
