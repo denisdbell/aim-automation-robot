@@ -64,14 +64,14 @@ M. Post-Navigation Interstitial Legal Message More Details
 	Then I should see ".col-xs-10" have the text "This web site is operated on behalf of FEP by a third party. The protection of your privacy will be governed by the privacy policy of this site. Please review the site's terms of use and privacy policy for details." displayed
 	
 M. Post-Navigation Interstitial Legal Message on eService
-	[Tags]		PostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	UAT	LIT
 	When I navigate to MyBlue Pilot
 	And I click the "#benefitslink0 a" link
 	Sleep		${NAVIGATION}
 	Then I should see the element ".col-xs-10" displayed
 	
 M. Post-Navigation Interstitial Legal Message on WebMD
-	[Tags]		PostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	UAT	LIT
 	When I navigate to MyBlue Pilot
 	And I click the "#healthAndWellnesslink0 a" link
 	Sleep		${NAVIGATION}
@@ -81,7 +81,7 @@ M. Post-Navigation Interstitial Legal Message on WebMD
 	
 #DE81
 Unified Nav when navigating from landing page MyBlue Classic to RX Statements (on eService) for the first time i should see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	Given I am logged into the MyBlue Portal
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
@@ -90,7 +90,7 @@ Unified Nav when navigating from landing page MyBlue Classic to RX Statements (o
 	Teardown Browser
 	
 Unified Nav when navigating from landing page MyBlue Classic to order a new ID card (on eService) for the first time i should see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	Given I am logged into the MyBlue Portal
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
@@ -98,67 +98,67 @@ Unified Nav when navigating from landing page MyBlue Classic to order a new ID c
 	Then I should see the element ".col-xs-10" displayed
 	
 Unified Nav when navigating from order a new ID card (eService) to RX Statement (eService) i should NOT see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 	
 Unified Nav when navigating from RX statements (eService) to RX statements (eService) i should NOT see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from RX Statement (eService) to order a new ID card (eService) i should NOT see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 	
 Unified Nav when navigating from order a new ID card (eService) to order a new ID card (eService) i should NOT see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 	
 Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-blue a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 	
 Unified Nav when navigating from MyBlue classic to RX statements (eService) for the second time i should see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.myAccount.nodes.statements'] a" link
 	Sleep		${NAVIGATION}
 	Then I should see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from RX statements (eService) to MyBlue classic i should NOT see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-blue a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from MyBlue classic to order a new ID card (eService) within 15 seconds of comming from eService i should NOT see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message 2
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-blue a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from MyBlue classic to order a new ID card (eService) after 15 seconds of comming from eService i should see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	Sleep		15
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
@@ -167,20 +167,20 @@ Unified Nav when navigating from MyBlue classic to order a new ID card (eService
 
 #these tests only work on stage if not stage end here and teardown
 Unified Nav when navigating submitting dynamic key i should not see the post privacy message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I Enter "222222" in the "#otppswd" textfield
 	And I Click the "#Submit" Button
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message 3
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-blue a" link
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from MyBlue classic to order a new ID card (eService) after entering dynamic key i should see the PPM
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
 	Sleep		${NAVIGATION}
@@ -188,7 +188,7 @@ Unified Nav when navigating from MyBlue classic to order a new ID card (eService
 	Teardown Browser
 	
 Unified Nav when navigating from landing page MyBlue Classic to Order new Id Card (on eService) as a spouse user for the first time i should see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	Given I am logged into the MyBlue Portal as a Spouse User
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
@@ -196,20 +196,20 @@ Unified Nav when navigating from landing page MyBlue Classic to Order new Id Car
 	Then I should see the element ".col-xs-10" displayed
 
 Unified Nav when entering dynamic key on auth page - Order new Id Card (on eService) and submitting i should not see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I Enter "222222" in the "#otppswd" textfield
 	And I Click the "#Submit" Button
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from order a new ID card (eService) to MyBlue classic i should NOT see the post intersitial message 4
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
-	When I click the "li#my-blue a" link
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
+	When I click the "li#my-blue a" link	
 	Sleep		${NAVIGATION}
 	Then I should not see the element ".col-xs-10" displayed
 
 Unified Nav when navigating from landing page MyBlue Classic to Order new Id Card (on eService) [access denied] as a spouse user i should see the post intersitial message
-	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial
+	[Tags]		PostNavigationInterstitial	EServicePostNavigationInterstitial	UAT	LIT
 	When I click the "li#my-account" element
 	And I click the "[data-url-config='navigation.main.selfMenu.nodes.orderANewIDCard'] a" link
 	Sleep		${NAVIGATION}
