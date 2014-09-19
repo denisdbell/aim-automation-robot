@@ -8,27 +8,9 @@ Library           Selenium2Library
 Library           Collections
 Library    	      OperatingSystem
 
+Resource          environment_setup.txt
+
 *** Variables ***
-
-#Environment settings
-${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
-
-#Sleep settings
-${NAVIGATION}					6
-${EVENT}						2
-${DEVICE_LAUNCH}				6
-
-#Browser
-${BROWSER}=						chrome				#Supported: chrome | firefox | ie | iphone
-
-
-
-#_______________________________________________________________________________________________________________________#
-
-#iPhone
-${IPHONE_DESIRED_CAPABILITIES}	device:iPhone Simulator,platformName:iOS,deviceName:iPhone,safari:true,browserName:Safari
-${REMOTE_URL}=					http://127.0.0.1:4723/wd/hub
-${ALIAS}=						ip71
 
 #Routes
 ${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
@@ -48,81 +30,6 @@ ${SPOUSE}=						marchspouseuat
 ${PASSWORD}=					Bigfun21!
 
 *** Keywords ***
-
-Environment setup
-	Run Keyword If		'${ENVIRONMENT}'=='dev'			develop
-	Run Keyword If		'${ENVIRONMENT}'=='test'		test
-	Run Keyword If		'${ENVIRONMENT}'=='stage'		stage
-	Run Keyword If		'${ENVIRONMENT}'=='local'		local
-
-develop
-	#SSO Configuration
-	Set global variable		${SSO}							ssodev2	
-	Set global variable		${ESERVICE_SSO}					http://custservv2
-	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin		
-	Set global variable		${CHIPREWARDS_SSO}				fepdemo	
-	Set global variable		${CHIPREWARDS_PID}				fepssouat
-	Set global variable		${SSO_PORT}						9032
-
-
-test
-	#SSO Configuration
-	Set global variable		${SSO}							ssotest						#Dev = ssodev2 				| Test = ssotest				| Stage = ssodev
-	Set global variable		${ESERVICE_SSO}					https://custservpt			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
-	Set global variable		${ESERVICE_PID}					SBP-ESERVICE-PT				#Test = SBP-ESERVICE-PT		| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
-	Set global variable		${CHIPREWARDS_SSO}				feptest						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
-	Set global variable		${CHIPREWARDS_PID}				feptest						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
-	Set global variable		${SSO_PORT}						9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
-
-
-stage
-	#SSO Configuration
-	Set global variable		${SSO}							ssodev						#Dev = ssodev2 				| Test = ssotest				| Stage = ssodev
-	Set global variable		${ESERVICE_SSO}					http://custservv2			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
-	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin					#Test = SBP-ESERVICE-PT			| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
-	Set global variable		${CHIPREWARDS_SSO}				fepuat						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
-	Set global variable		${CHIPREWARDS_PID}				fepuat						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
-	Set global variable		${SSO_PORT}						9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
-
-
-local
-	#SSO Configuration
-	Set global variable		${SSO}							ssodev2	
-	Set global variable		${ESERVICE_SSO}					http://custservv2
-	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin		
-	Set global variable		${CHIPREWARDS_SSO}				fepdemo	
-	Set global variable		${CHIPREWARDS_PID}				fepssouat
-	Set global variable		${SSO_PORT}						9032
-
-	#Routes
-	Set global variable 	${SERVER}						https://192.168.200.113:7443		
-	Set global variable 	${LOGIN_URL}					${SERVER}/login  
-	Set global variable 	${MYBLUE}						https://${ENVIRONMENT}.fepblue.org:8443/
-	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest
-	Set global variable 	${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
-	
-	
-	
-	
-	
-Open new browser session at "${url}"
-	Run Keyword If			'${BROWSER}'=='iphone'			Setup Iphone Emulator "${url}"
-	Run Keyword If			'${BROWSER}'=='chrome'			Setup Desktop Environment "${url}"
-	Run Keyword If			'${BROWSER}'=='firefox'			Setup Desktop Environment "${url}"
-	Run Keyword If			'${BROWSER}'=='safari'			Setup Desktop Environment "${url}"
-	Run Keyword If			'${BROWSER}'=='ie'				Setup Desktop Environment "${url}"
-	
-Setup Desktop Environment "${url}"
-	Open Browser	${url}      ${BROWSER}
-	Maximize Browser Window
-	
-Setup Iphone Emulator "${url}"
-	Open Browser  	url=${url} 		browser=${BROWSER}  	alias=${ALIAS}   	remote_url=${REMOTE_URL}  	desired_capabilities=${IPHONE_DESIRED_CAPABILITIES}
-	Sleep		${DEVICE_LAUNCH}
-
-
-
-
 
 I am on a mobile device
 	Set Window Size		400		700
