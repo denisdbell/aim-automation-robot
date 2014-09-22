@@ -1,0 +1,19 @@
+*** Settings ***
+Documentation     This file tests that links should be filtered by user
+
+Library           Selenium2Library
+Suite Setup		  Environment setup
+Suite Teardown	  Close All Browsers
+Resource          ../../../resources/navbar/navbar_resource.txt
+
+*** Test Cases ***
+
+I should see valid local links on ChipRewards
+	[Tags]		LocalLinks
+	Given I am logged into the MyBlue Portal as a Standard User
+	When I Click the "#wellness" element
+	Sleep		${EVENT}
+	And I Click the "#visitWellnessCardPortal a" link
+	Sleep		${NAVIGATION}
+	And I Click the "#wellness" element
+	Then I should see "#visitWellnessCardPortal a" have attribute "href" with the value "${link}"
