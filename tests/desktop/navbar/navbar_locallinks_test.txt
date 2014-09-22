@@ -63,3 +63,108 @@ I should see valid local link for Communication Settings
 	[Tags]		LocalLinks
 	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.communicationSettings\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Profile/CommSettings"  
 	
+
+#Health Tools
+I should see valid local link for Blue Health Assessment
+	[Tags]		LocalLinks
+	When I Click the "#health-tools" element
+	Sleep		${EVENT}
+	And I Click the "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" element
+	Sleep		${NAVIGATION}
+	And I enter a pin if necessary
+	Sleep		${NAVIGATION}
+	And I Click the "#health-tools" element
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" have attribute "href" with the value ""
+
+I should see valid local link for Online Health Coach
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" have attribute "href" with the value ""
+
+I should see valid local link for Action Plan
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.actionPlan\"] a" have attribute "href" with the value ""
+
+I should see valid local link for Benefits Statements
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.benefitStatement\"] a" have attribute "href" with the value ""
+	
+I should see valid local link for Tobacco Cessation
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.tobaccoCessation\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Nurse Line
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Personal Health Record
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.personalHealthRecord\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Health Trackers
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.healthTrackers\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Document Library
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.documentLibrary\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Online Symptom Checker
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.onlineSymptomChecker\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for My Pregnancy Assistant
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Healthy Families
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.healthyFamilies\"] a" have attribute "href" with the value ""
+
+I should see valid local link for Recipes
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for All Topics
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.allTopics\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Conditions
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for General Health
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Procedures/Surgeries
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Medical Encyclopedia
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for WebMD Interactives
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Message Board Exchanges
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for WebMD Videos
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" have attribute "href" with the value "" 
+
+I should see valid local link for Find A Provider
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" have attribute "href" with the value ""
+	
+I should see valid local link for Find A Blue Distinction Center
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" have attribute "href" with the value ""
+	
+I should see valid local link for Submit Overseas Claim
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" have attribute "href" with the value ""
+	
