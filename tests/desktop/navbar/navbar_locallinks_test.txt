@@ -8,7 +8,8 @@ Resource          ../../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***
 
-I should see valid local links on ChipRewards
+#Wellness
+I should see valid local link for Wellness Card Home
 	[Tags]		LocalLinks
 	Given I am logged into the MyBlue Portal as a Standard User
 	When I Click the "#wellness" element
@@ -16,4 +17,49 @@ I should see valid local links on ChipRewards
 	And I Click the "#visitWellnessCardPortal a" link
 	Sleep		${NAVIGATION}
 	And I Click the "#wellness" element
-	Then I should see "#visitWellnessCardPortal a" have attribute "href" with the value "${link}"
+	Then I should see "#visitWellnessCardPortal a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/"
+	
+I should see valid local link for View Wellness Card Balance
+	[Tags]		LocalLinks
+	Then I should see "#wellnessCardBalance a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Cards/Account" 
+
+I should see valid local link for Order a New Wellness Card
+	[Tags]		LocalLinks
+	Then I should see "#newWellnessCard a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Home/Contact"  
+
+I should see valid local link for Report Lost or Stolen Card
+	[Tags]		LocalLinks
+	Then I should see "#reportStolenCard a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Home/Contact"  
+	
+I should see valid local link for Ways To Earn Rewards
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.waysToEarn\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Rewards/Promotions"  
+	
+I should see valid local link for Rewards Activity
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.rewardActivity\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Rewards/Activity"  
+	
+I should see valid local link for Debit Card Balance
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.balance\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Cards/Account"
+	
+I should see valid local link for Debit Card Transactions
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.transactionHistory\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Cards/Transactions"  
+	
+I should see valid local link for Retrieve Debit Card PIN
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.retrievePin\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Cards/RetrievePin"  
+	
+I should see valid local link for Announcements
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.announcements\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Profile/Announcements"  
+	
+I should see valid local link for Communication History
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.communicationHistory\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Profile/CommHistory"  
+	
+I should see valid local link for Communication Settings
+	[Tags]		LocalLinks
+	Then I should see "li[data-url-config=\"navigation.main.wellness.nodes.communicationSettings\"] a" have attribute "href" with the value "https://fepdemo.mychiprewards.com/Profile/CommSettings"  
+	
