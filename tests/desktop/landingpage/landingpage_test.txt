@@ -40,8 +40,8 @@ Landing Page BHA Online Coaching Step for Basic
 
 Landing Page BHA Stick to your plan Step for Basic
 	[Tags]		BHA
-	Then I should not see the element "div#step3 div.complete" displayed 	
-	And I should not see the element "div#step3 div.go-back #goBackToStep" displayed
+	Then I should see the element "div#step3 div.complete" displayed 	
+	And I should see the element "div#step3 div.go-back #goBackToStep" displayed
 	And I should not see the element "div#step3 div.go-back #continueWithThisStep" displayed	
 	
 Landing Page BHA Health Check Step Go Back Button Valid SSO link for Basic
