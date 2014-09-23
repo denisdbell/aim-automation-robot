@@ -118,9 +118,9 @@ I should see valid local link for My Pregnancy Assistant
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.myPregnancyAssistant\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=777" 
 
-#I should see valid local link for Healthy Families
-#	[Tags]		LocalLinks	UAT	LIT
-#	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.healthyFamilies\"] a" have attribute "href" with the value ""
+I should see valid local link for Healthy Families
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.healthyFamilies\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/BCBSA/HealthyFamily/?toolid=62000029"
 
 I should see valid local link for Recipes
 	[Tags]		LocalLinks	UAT	LIT
@@ -158,17 +158,17 @@ I should see valid local link for WebMD Videos
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=711" 
 	
-#I should see valid local link for Find A Provider
-#	[Tags]		LocalLinks	UAT	LIT
-#	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" have attribute "href" with the value ""
+I should see valid local link for Find A Provider
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" have attribute "href" with the value "http://provider.fepblue.org/"
 	
-#I should see valid local link for Find A Blue Distinction Center
-#	[Tags]		LocalLinks	UAT	LIT
-#	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" have attribute "href" with the value ""
+I should see valid local link for Find A Blue Distinction Center
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.findABlueDistinctionCenter\"] a" have attribute "href" with the value "http://www.bcbs.com/why-bcbs/blue-distinction/"
 	
-#I should see valid local link for Submit Overseas Claim
-#	[Tags]		LocalLinks	UAT	LIT
-#	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" have attribute "href" with the value ""
+I should see valid local link for Submit Overseas Claim
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" have attribute "href" with the value "https://dev.fepblue.org:8443/members/myblue/claims-submission"
 	
 
 #eService
