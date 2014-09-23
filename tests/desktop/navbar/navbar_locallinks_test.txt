@@ -3,7 +3,7 @@ Documentation     This file tests that links should be filtered by user
 
 Library           Selenium2Library
 Suite Setup		  Environment setup
-Suite Teardown	  Close All Browsers
+Suite Teardown	  Teardown Browser
 Resource          ../../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***
@@ -67,6 +67,8 @@ I should see valid local link for Communication Settings
 #Health Tools
 I should see valid local link for Blue Health Assessment
 	[Tags]		LocalLinks	UAT	LIT
+	# This is temporary since wellness is not yet deployed to test/stage. The given will be removed in time.
+	Given I am logged into the MyBlue Portal as a Standard User
 	When I Click the "#health-tools" element
 	Sleep		${EVENT}
 	And I Click the "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" element
@@ -81,7 +83,7 @@ I should see valid local link for Online Health Coach
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.onlineHealthCoach\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=714"
 
 #I should see valid local link for Action Plan
-#	[Tags]		LocalLinks
+#	[Tags]		LocalLinks	UAT	LIT
 #	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.actionPlan\"] a" have attribute "href" with the value ""
 
 I should see valid local link for Benefits Statements
@@ -155,7 +157,7 @@ I should see valid local link for Message Board Exchanges
 I should see valid local link for WebMD Videos
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=711" 
-
+	
 #I should see valid local link for Find A Provider
 #	[Tags]		LocalLinks	UAT	LIT
 #	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" have attribute "href" with the value ""
@@ -168,3 +170,44 @@ I should see valid local link for WebMD Videos
 #	[Tags]		LocalLinks	UAT	LIT
 #	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" have attribute "href" with the value ""
 	
+
+#eService
+I should see valid local link for My Benefits
+	[Tags]		LocalLinks	UAT	LIT
+	# This is temporary since wellness is not yet deployed to test/stage. The given will be removed in time.
+	Given I am logged into the MyBlue Portal as a Standard User
+	When I Click the "#my-account" element
+	And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" element
+	Sleep		${NAVIGATION}
+	And I Click the "#my-account" element
+	Sleep		${EVENT}
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/home.do"
+
+I should see valid local link for Rx Statements
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/viewSOC.do"
+	
+I should see valid local link for Benefits
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/benefits.do"
+
+I should see valid local link for Medical & Pharmacy Claims
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do"
+	
+I should see valid local link for Treatment Cost Estimator
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" have attribute "href" with the value "https://www.treatmentestimator.com/"
+
+I should see valid local link for Order a New ID Card
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/idCardRequest.do"
+
+I should see valid local link for Send a Secure Inquiry
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/initiateInquiry.do"
+
+I should see valid local link for Account Settings
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/profile.do"
+	Teardown Browser

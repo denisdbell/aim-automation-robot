@@ -1,7 +1,7 @@
 *** Settings ***
 Library           Selenium2Library
 Suite Setup		  Environment setup
-Suite Teardown	  Close All Browsers
+Suite Teardown	  Teardown Browser
 Resource          ../../../resources/navbar/navbar_resource.txt
 
 *** Test Cases ***

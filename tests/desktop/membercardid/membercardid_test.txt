@@ -63,59 +63,59 @@ As a Standard user, I should see RxGrp as 65006500
 	
 As a Standard user, I should see Customer Service with the number 1-202-484-1650
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(1) a" have the text "1-202-484-1650" displayed	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(1) a" have the text "1-202-484-1650" displayed	
 	
 As a Standard user, I should see Customer Service with the number 1-800-848-9766
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(2) a" have the text "1-800-848-9766" displayed	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(2) a" have the text "1-800-848-9766" displayed	
 	
 As a Standard user, I should see Precertification with the number 1-866-773-2884
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(2) span span:nth-child(1) a" have the text "1-866-773-2884" displayed	
+	Then I should see ".phone-numbers div div:nth-child(2) span div:nth-child(1) a" have the text "1-866-773-2884" displayed	
 	
 As a Standard user, I should see Mental Health /Substance Abuse Precertification with the number 1-800-359-6671
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(3) span span:nth-child(1) a" have the text "1-800-359-6671" displayed	
+	Then I should see ".phone-numbers div div:nth-child(3) span div:nth-child(1) a" have the text "1-800-359-6671" displayed	
 	
 As a Standard user, I should see Retail Pharmacy with the number 1-800-624-5060
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(4) span span:nth-child(1) a" have the text "1-800-624-5060" displayed	
+	Then I should see ".phone-numbers div div:nth-child(4) span div:nth-child(1) a" have the text "1-800-624-5060" displayed	
 	
 As a Standard user, I should see Assistance Overseas (Call Collect) with the number 1-804-673-1678
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(6) span span:nth-child(1) a" have the text "1-804-673-1678" displayed	
+	Then I should see ".phone-numbers div div:nth-child(6) span div:nth-child(1) a" have the text "1-804-673-1678" displayed	
 		
 As a Standard user, I should see Nurse Line/Consumer Tools with the number 1-888-258-3432
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(7) span span:nth-child(1) a" have the text "1-888-258-3432" displayed	
+	Then I should see ".phone-numbers div div:nth-child(7) span div:nth-child(1) a" have the text "1-888-258-3432" displayed	
 	
 As a Standard user, I should see Customer Service with the number tel:1-202-484-1650
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(1) a" have attribute "href" with the value "tel:1-202-484-1650"	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(1) a" have attribute "href" with the value "tel:1-202-484-1650"	
 	
 As a Standard user, I should see Customer Service with the number tel:1-800-848-9766
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(2) a" have attribute "href" with the value "tel:1-800-848-9766"	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(2) a" have attribute "href" with the value "tel:1-800-848-9766"	
 	
 As a Standard user, I should see Precertification with the number tel:1-866-773-2884
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(2) span span:nth-child(1) a" have attribute "href" with the value "tel:1-866-773-2884"	
+	Then I should see ".phone-numbers div div:nth-child(2) span div:nth-child(1) a" have attribute "href" with the value "tel:1-866-773-2884"	
 	
 As a Standard user, I should see Mental Health /Substance Abuse Precertification with the number tel:1-800-359-6671
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(3) span span:nth-child(1) a" have attribute "href" with the value "tel:1-800-359-6671"	
+	Then I should see ".phone-numbers div div:nth-child(3) span div:nth-child(1) a" have attribute "href" with the value "tel:1-800-359-6671"	
 	
 As a Standard user, I should see Retail Pharmacy with the number tel:1-800-624-5060
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(4) span span:nth-child(1) a" have attribute "href" with the value "tel:1-800-624-5060"	
+	Then I should see ".phone-numbers div div:nth-child(4) span div:nth-child(1) a" have attribute "href" with the value "tel:1-800-624-5060"	
 	
 As a Standard user, I should see Assistance Overseas (Call Collect) with the number tel:1-804-673-1678
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(6) span span:nth-child(1) a" have attribute "href" with the value "tel:1-804-673-1678"	
+	Then I should see ".phone-numbers div div:nth-child(6) span div:nth-child(1) a" have attribute "href" with the value "tel:1-804-673-1678"	
 		
 As a Standard user, I should see Nurse Line/Consumer Tools with the number tel:1-888-258-3432
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(7) span span:nth-child(1) a" have attribute "href" with the value "tel:1-888-258-3432"	
+	Then I should see ".phone-numbers div div:nth-child(7) span div:nth-child(1) a" have attribute "href" with the value "tel:1-888-258-3432"	
 
 As a Standard user, I should NOT see the Member ID Card basic blue overlay
 	[Tags]		MemberIDCard
@@ -151,9 +151,9 @@ As a Basic user, I should see the Member Name
 	[Tags]		MemberIDCard
 	Then I should see ".memid-member" have the text "Member Name" displayed
 	
-As a Basic user, I should see the Member Name as MARCHCONTRACT M UAT
+As a Basic user, I should see the Member Name as MARCHCONTRACT J UAT
 	[Tags]		MemberIDCard
-	Then I should see ".memid-member" have the text "MARCHCONTRACT M UAT" displayed
+	Then I should see ".memid-member" have the text "MARCHCONTRACT J UAT" displayed
 	
 As a Basic user, I should see the Member ID
 	[Tags]		MemberIDCard
@@ -167,9 +167,9 @@ As a Basic user, I should see the Enrollment Code as 112
 	[Tags]		MemberIDCard
 	Then I should see ".memid-enroll span:nth-child(2)" have the text "112" displayed	
 	
-As a Basic user, I should see Effective Date as 01/01/2012
+As a Basic user, I should see Effective Date as 01/13/2013
 	[Tags]		MemberIDCard
-	Then I should see ".memid-enroll span:nth-child(4)" have the text "01/01/2012" displayed	
+	Then I should see ".memid-enroll span:nth-child(4)" have the text "01/13/2013" displayed	
 
 As a Basic user, I should see RxIIN as 610239
 	[Tags]		MemberIDCard
@@ -183,61 +183,61 @@ As a Basic user, I should see RxGrp as 65006500
 	[Tags]		MemberIDCard
 	Then I should see ".memid-content-fix span:nth-child(6)" have the text "65006500" displayed	
 	
-As a Basic user, I should see Customer Service with the number 1-540-342-3492
+As a Basic user, I should see Customer Service with the number 1-202-484-1650
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(1) a" have the text "1-540-342-3492" displayed	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(1) a" have the text "1-202-484-1650" displayed	
 	
-As a Basic user, I should see Customer Service with the number 1-800-552-6989
+As a Basic user, I should see Customer Service with the number 1-800-848-9766
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(2) a" have the text "1-800-552-6989" displayed	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(2) a" have the text "1-800-848-9766" displayed	
 	
-As a Basic user, I should see Precertification with the number 1-800-860-2156
+As a Basic user, I should see Precertification with the number 1-866-773-2884
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(2) span span:nth-child(1) a" have the text "1-800-860-2156" displayed	
+	Then I should see ".phone-numbers div div:nth-child(2) span div:nth-child(1) a" have the text "1-866-773-2884" displayed	
 	
-As a Basic user, I should see Mental Health /Substance Abuse Precertification with the number 1-800-991-6045
+As a Basic user, I should see Mental Health /Substance Abuse Precertification with the number 1-800-359-6671
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(3) span span:nth-child(1) a" have the text "1-800-991-6045" displayed	
+	Then I should see ".phone-numbers div div:nth-child(3) span div:nth-child(1) a" have the text "1-800-359-6671" displayed	
 	
 As a Basic user, I should see Retail Pharmacy with the number 1-800-624-5060
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(4) span span:nth-child(1) a" have the text "1-800-624-5060" displayed	
+	Then I should see ".phone-numbers div div:nth-child(4) span div:nth-child(1) a" have the text "1-800-624-5060" displayed	
 	
 As a Basic user, I should see Assistance Overseas (Call Collect) with the number 1-804-673-1678
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(5) span span:nth-child(1) a" have the text "1-804-673-1678" displayed	
+	Then I should see ".phone-numbers div div:nth-child(5) span div:nth-child(1) a" have the text "1-804-673-1678" displayed	
 		
 As a Basic user, I should see Nurse Line/Consumer Tools with the number 1-888-258-3432
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(6) span span:nth-child(1) a" have the text "1-888-258-3432" displayed	
+	Then I should see ".phone-numbers div div:nth-child(6) span div:nth-child(1) a" have the text "1-888-258-3432" displayed	
 	
-As a Basic user, I should see Customer Service with the number tel:1-540-342-3492
+As a Basic user, I should see Customer Service with the number tel:1-202-484-1650
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(1) a" have attribute "href" with the value "tel:1-540-342-3492"	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(1) a" have attribute "href" with the value "tel:1-202-484-1650"	
 	
-As a Basic user, I should see Customer Service with the number tel:1-800-552-6989
+As a Basic user, I should see Customer Service with the number tel:1-800-848-9766
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(2) a" have attribute "href" with the value "tel:1-800-552-6989"	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(2) a" have attribute "href" with the value "tel:1-800-848-9766"	
 	
-As a Basic user, I should see Precertification with the number tel:1-800-860-2156
+As a Basic user, I should see Precertification with the number tel:1-866-773-2884
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(2) span span:nth-child(1) a" have attribute "href" with the value "tel:1-800-860-2156"	
+	Then I should see ".phone-numbers div div:nth-child(2) span div:nth-child(1) a" have attribute "href" with the value "tel:1-866-773-2884"	
 	
-As a Basic user, I should see Mental Health /Substance Abuse Precertification with the number tel:1-800-991-6045
+As a Basic user, I should see Mental Health /Substance Abuse Precertification with the number tel:1-800-359-6671
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(3) span span:nth-child(1) a" have attribute "href" with the value "tel:1-800-991-6045"	
+	Then I should see ".phone-numbers div div:nth-child(3) span div:nth-child(1) a" have attribute "href" with the value "tel:1-800-359-6671"	
 	
 As a Basic user, I should see Retail Pharmacy with the number tel:1-800-624-5060
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(4) span span:nth-child(1) a" have attribute "href" with the value "tel:1-800-624-5060"	
+	Then I should see ".phone-numbers div div:nth-child(4) span div:nth-child(1) a" have attribute "href" with the value "tel:1-800-624-5060"	
 	
 As a Basic user, I should see Assistance Overseas (Call Collect) with the number tel:1-804-673-1678
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(5) span span:nth-child(1) a" have attribute "href" with the value "tel:1-804-673-1678"	
+	Then I should see ".phone-numbers div div:nth-child(5) span div:nth-child(1) a" have attribute "href" with the value "tel:1-804-673-1678"	
 		
 As a Basic user, I should see Nurse Line/Consumer Tools with the number tel:1-888-258-3432
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(6) span span:nth-child(1) a" have attribute "href" with the value "tel:1-888-258-3432"	
+	Then I should see ".phone-numbers div div:nth-child(6) span div:nth-child(1) a" have attribute "href" with the value "tel:1-888-258-3432"	
 
 As a Basic user, I should see the Member ID Card basic blue overlay
 	[Tags]		MemberIDCard
@@ -248,52 +248,54 @@ As a Basic user, I should see Send me a new card button
 	Then I should see the element "#newMemberCard" displayed
 	Teardown Browser
 
+## ALL TERMINATED USERS WITH MEMBERID CARD LOCKED	
+#As a Terminated user, I should see my Member ID Card
+#	[Tags]		MemberIDCard
+#	Given I am a Terminated MyBlue Member on the MyBlue Landing Page
+#	When I Click the "#memberIdCard" Link
+#	Sleep		${NAVIGATION}
+#	Then I should see the element "#memid-desktop" displayed
 	
-As a Terminated user, I should see my Member ID Card
-	[Tags]		MemberIDCard
-	Given I am a Terminated MyBlue Member on the MyBlue Landing Page
-	When I Click the "#memberIdCard" Link
-	Sleep		${NAVIGATION}
-	Then I should see the element "#memid-desktop" displayed
+#As a Terminated user, I should see the Member ID Card sprite icon
+#	[Tags]		MemberIDCard
+#	Then I should see the element ".spriteicon.memberCardBasic" displayed
 	
-As a Terminated user, I should see the Member ID Card sprite icon
-	[Tags]		MemberIDCard
-	Then I should see the element ".spriteicon.memberCardBasic" displayed
-	
-As a Terminated user, I should see the Member ID Card details
-	[Tags]		MemberIDCard
-	Then I should see the element ".memid-member" displayed
+#As a Terminated user, I should see the Member ID Card details
+#	[Tags]		MemberIDCard
+#	Then I should see the element ".memid-member" displayed
 
-As a Terminated user, I should see the Member Name
-	[Tags]		MemberIDCard
-	Then I should see ".memid-member" have the text "Member Name" displayed
+#As a Terminated user, I should see the Member Name
+#	[Tags]		MemberIDCard
+#	Then I should see ".memid-member" have the text "Member Name" displayed
 	
-As a Terminated user, I should see the Member Name as MARCHTERMED UATTERMED
-	[Tags]		MemberIDCard
-	Then I should see ".memid-member" have the text "MARCHTERMED UATTERMED" displayed
+#As a Terminated user, I should see the Member Name as MARCHTERMED UATTERMED
+#	[Tags]		MemberIDCard
+#	Then I should see ".memid-member" have the text "MARCHTERMED UATTERMED" displayed
 	
-As a Terminated user, I should see the Member ID
-	[Tags]		MemberIDCard
-	Then I should see ".memid-member" have the text "Member ID" displayed
+#As a Terminated user, I should see the Member ID
+#	[Tags]		MemberIDCard
+#	Then I should see ".memid-member" have the text "Member ID" displayed
 	
-As a Terminated user, I should see the Member ID as R59979777
-	[Tags]		MemberIDCard
-	Then I should see ".memid-member" have the text "R59979777" displayed
+#As a Terminated user, I should see the Member ID as R59979777
+#	[Tags]		MemberIDCard
+#	Then I should see ".memid-member" have the text "R59979777" displayed
 
-As a Terminated user, I should see the Member ID Card basic blue overlay
-	[Tags]		MemberIDCard
-	Then I should see the element "div[class=\"basic-overlay\"]" displayed
+#As a Terminated user, I should see the Member ID Card basic blue overlay
+#	[Tags]		MemberIDCard
+#	Then I should see the element "div[class=\"basic-overlay\"]" displayed
 	
-As a Terminated user, I should see Send me a new card button
-	[Tags]		MemberIDCard
-	Then I should see the element "#newMemberCard" displayed
-	Teardown Browser
+#As a Terminated user, I should see Send me a new card button
+#	[Tags]		MemberIDCard
+#	Then I should see the element "#newMemberCard" displayed
+#	Teardown Browser
 
 	
 As a Minor user, I should see my Member ID Card
 	[Tags]		MemberIDCard
 	Given I am a Minor MyBlue Member on the MyBlue Landing Page
 	When I Click the "#memberIdCard" Link
+	Sleep		${NAVIGATION}
+	##This call takes long for some reason
 	Sleep		${NAVIGATION}
 	Then I should see the element "#memid-desktop" displayed
 	
@@ -343,59 +345,59 @@ As a Minor user, I should see RxGrp as 65006500
 	
 As a Minor user, I should see Customer Service with the number 1-202-484-1650
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(1) a" have the text "1-202-484-1650" displayed	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(1) a" have the text "1-202-484-1650" displayed	
 	
 As a Minor user, I should see Customer Service with the number 1-800-848-9766
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(2) a" have the text "1-800-848-9766" displayed	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(2) a" have the text "1-800-848-9766" displayed	
 	
 As a Minor user, I should see Precertification with the number 1-866-773-2884
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(2) span span:nth-child(1) a" have the text "1-866-773-2884" displayed	
+	Then I should see ".phone-numbers div div:nth-child(2) span div:nth-child(1) a" have the text "1-866-773-2884" displayed	
 	
 As a Minor user, I should see Mental Health /Substance Abuse Precertification with the number 1-800-359-6671
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(3) span span:nth-child(1) a" have the text "1-800-359-6671" displayed	
+	Then I should see ".phone-numbers div div:nth-child(3) span div:nth-child(1) a" have the text "1-800-359-6671" displayed	
 	
 As a Minor user, I should see Retail Pharmacy with the number 1-800-624-5060
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(4) span span:nth-child(1) a" have the text "1-800-624-5060" displayed	
+	Then I should see ".phone-numbers div div:nth-child(4) span div:nth-child(1) a" have the text "1-800-624-5060" displayed	
 	
 As a Minor user, I should see Assistance Overseas (Call Collect) with the number 1-804-673-1678
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(6) span span:nth-child(1) a" have the text "1-804-673-1678" displayed	
+	Then I should see ".phone-numbers div div:nth-child(6) span div:nth-child(1) a" have the text "1-804-673-1678" displayed	
 		
 As a Minor user, I should see Nurse Line/Consumer Tools with the number 1-888-258-3432
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(7) span span:nth-child(1) a" have the text "1-888-258-3432" displayed	
+	Then I should see ".phone-numbers div div:nth-child(7) span div:nth-child(1) a" have the text "1-888-258-3432" displayed	
 	
 As a Minor user, I should see Customer Service with the number tel:1-202-484-1650
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(1) a" have attribute "href" with the value "tel:1-202-484-1650"	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(1) a" have attribute "href" with the value "tel:1-202-484-1650"	
 	
 As a Minor user, I should see Customer Service with the number tel:1-800-848-9766
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(1) span span:nth-child(2) a" have attribute "href" with the value "tel:1-800-848-9766"	
+	Then I should see ".phone-numbers div div:nth-child(1) span div:nth-child(2) a" have attribute "href" with the value "tel:1-800-848-9766"	
 	
 As a Minor user, I should see Precertification with the number tel:1-866-773-2884
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(2) span span:nth-child(1) a" have attribute "href" with the value "tel:1-866-773-2884"	
+	Then I should see ".phone-numbers div div:nth-child(2) span div:nth-child(1) a" have attribute "href" with the value "tel:1-866-773-2884"	
 	
 As a Minor user, I should see Mental Health /Substance Abuse Precertification with the number tel:1-800-359-6671
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(3) span span:nth-child(1) a" have attribute "href" with the value "tel:1-800-359-6671"	
+	Then I should see ".phone-numbers div div:nth-child(3) span div:nth-child(1) a" have attribute "href" with the value "tel:1-800-359-6671"	
 	
 As a Minor user, I should see Retail Pharmacy with the number tel:1-800-624-5060
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(4) span span:nth-child(1) a" have attribute "href" with the value "tel:1-800-624-5060"	
+	Then I should see ".phone-numbers div div:nth-child(4) span div:nth-child(1) a" have attribute "href" with the value "tel:1-800-624-5060"	
 	
 As a Minor user, I should see Assistance Overseas (Call Collect) with the number tel:1-804-673-1678
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(6) span span:nth-child(1) a" have attribute "href" with the value "tel:1-804-673-1678"	
+	Then I should see ".phone-numbers div div:nth-child(6) span div:nth-child(1) a" have attribute "href" with the value "tel:1-804-673-1678"	
 		
 As a Minor user, I should see Nurse Line/Consumer Tools with the number tel:1-888-258-3432
 	[Tags]		MemberIDCard
-	Then I should see ".phone-numbers div div:nth-child(7) span span:nth-child(1) a" have attribute "href" with the value "tel:1-888-258-3432"	
+	Then I should see ".phone-numbers div div:nth-child(7) span div:nth-child(1) a" have attribute "href" with the value "tel:1-888-258-3432"	
 
 As a Minor user, I should NOT see the Member ID Card basic blue overlay
 	[Tags]		MemberIDCard
