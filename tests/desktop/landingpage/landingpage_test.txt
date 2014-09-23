@@ -22,47 +22,78 @@ Username should NOT be truncated in the Navigation Bar
 	
 
 #US243, US245, and US246 Test Cases for Desktop
+#US1096
+#Basic User
+LandingPage BHA thermometer for Basic
+	[Tags]		BHA
+	Given I am a Registered MyBlue Member on the Landing Page
+	Then I should see the element "div.bha" displayed
 
-##BHA section currently hidden
-#Landing Page BHA Step Completed 
-#	[Tags]		BHA
-#	Given I am a Registered MyBlue Member on the Landing Page
-#	When The "ul.bha li.completed div#step1" step is completed 
-#	Then I should see the element "div#step1 div.complete" displayed 	
-#	And I should see the element "div#step1 div.go-back #goBackToStep" displayed
-#	And The "ul.bha li.next-step #step1" step is not highlighted
-#	And The "ul.bha li.next-step #step2" step is enabled
-#	
-#
-#Landing Page BHA Step Go Back Button Clicked 
-#	[Tags]		BHA
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	When The "ul.bha li.completed div#step1" step is completed
-#	And I Click the "div#step1 div.go-back #goBackToStep" link 
-#	Then I should be navigated to "fepblue.org" in a new tab
-#	
-#
-#Landing Page Health Coach Step Not Completed 
-#	[Tags]		BHA
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	When The "ul.bha li.next-step #step2" step is not completed 
-#	Then I should see the element "#step2" displayed
-#	And The "ul.bha li.next-step #step2" step is enabled
-#	And The "ul.bha li.next-step #step3" step is not enabled	 	
-#	And I should not see the element "div#step2 div.go-back #goBackToStep" displayed
-#	And I should not see the element "div#step2 div.complete" displayed 
-#	
-#
-#Landing Page Healthy Actions Step Not Enabled 
-#	[Tags]		BHA
-#	Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-#	And The "ul.bha li.completed div#step1" step is completed
-#	And The "ul.bha li.next-step #step2" step is not completed
-#	When The "ul.bha li.step div#step3" step is not completed 
-#	Then The "ul.bha li.next-step #step3" step is not highlighted
-#	And I should not see the element "div#step3 div.go-back #goBackToStep" displayed
-#	And I should not see the element "div#step3 div.complete" displayed 
-#	Teardown Browser
+Landing Page BHA Health Check Step for Basic
+	[Tags]		BHA
+	Then The "div#step1 div.complete" step is completed 
+
+Landing Page BHA Online Coaching Step for Basic
+	[Tags]		BHA
+	When The "div#step1 div.complete" step is completed 
+	Then I should see the element "div#step2 div.incomplete" displayed 	
+
+Landing Page BHA Stick to your plan Step for Basic
+	[Tags]		BHA
+	Then I should see the element "div#step3[ng-show=\"!isNextStep\"] .incomplete" displayed 	
+	And I should not see the element "div#step3 div.go-back #goBackToStep" displayed
+	And I should not see the element "div#step3 div.go-back #continueWithThisStep" displayed	
+	
+Landing Page BHA Health Check Step Go Back Button Valid SSO link for Basic
+	[Tags]		BHA
+	Then I should see the link "div#step1 div.go-back #goBackToStep" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
+	
+Landing Page BHA Online Coaching Step Continue with this step Button Valid SSO link for Basic
+	[Tags]		BHA	
+	Then I should see the link "div#step2 div.go-back #continueWithThisStep" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
+	Teardown Browser
+
+#Standard User
+LandingPage BHA thermometer for Standard
+	[Tags]		BHA
+	Given I am a Standard Registered MyBlue Member on the Landing Page
+	Then I should see the element "div.bha" displayed
+
+Landing Page BHA Health Check Step for Standard
+	[Tags]		BHA
+	Then I should see the element "div#step1 div.complete" displayed 	
+	And I should see the element "div#step1 div.go-back #goBackToStep" displayed
+
+Landing Page BHA Online Coaching Step for Standard
+	[Tags]		BHA
+	Then I should see the element "div#step2 div.incomplete" displayed 	
+	And I should not see the element "div#step2 div.go-back #goBackToStep" displayed
+	And I should see the element "div#step2 div.go-back #continueWithThisStep" displayed		
+
+Landing Page BHA Stick to your plan Step for Standard
+	[Tags]		BHA
+	Then I should see the element "div#step3[ng-show=\"!isNextStep\"] .incomplete" displayed 	
+	And I should not see the element "div#step3 div.go-back #continueWithThisStep" displayed	
+
+Landing Page BHA Health Check Step Go Back Button Valid SSO link for Standard
+	[Tags]		BHA	
+	Then I should see the link "div#step1 div.go-back #goBackToStep" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
+
+Landing Page BHA Online Coaching Step Go Back Button Valid SSO link for Standard
+	[Tags]		BHA	
+	Then I should see the link "div#step2 div.go-back #goBackToStep" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
+
+Landing Page BHA Stick to your plan Step Continue with this step Button Valid SSO link for Standard
+	[Tags]		BHA	
+	Then I should see the link "div#step3 div.go-back #continueWithThisStep" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
+	Teardown Browser
+
+#Terminated User
+LandingPage BHA thermometer for Terminated
+	[Tags]		BHA
+	Given I am a Terminated Registered MyBlue Member on the Landing Page
+	Then I should not see the element "div.bha" displayed
+	Teardown Browser
 	
 	
 #US486 Test Cases
