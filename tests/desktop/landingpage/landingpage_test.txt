@@ -40,8 +40,8 @@ Landing Page BHA Online Coaching Step for Basic
 
 Landing Page BHA Stick to your plan Step for Basic
 	[Tags]		BHA
-	Then I should see the element "div#step3 div.complete" displayed 	
-	And I should see the element "div#step3 div.go-back #goBackToStep" displayed
+	Then I should see the element "div#step3[ng-show=\"!isNextStep\"] .incomplete" displayed 	
+	And I should not see the element "div#step3 div.go-back #goBackToStep" displayed
 	And I should not see the element "div#step3 div.go-back #continueWithThisStep" displayed	
 	
 Landing Page BHA Health Check Step Go Back Button Valid SSO link for Basic
@@ -49,7 +49,7 @@ Landing Page BHA Health Check Step Go Back Button Valid SSO link for Basic
 	Then I should see the link "div#step1 div.go-back #goBackToStep" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3563"
 	
 Landing Page BHA Online Coaching Step Continue with this step Button Valid SSO link for Basic
-	[Tags]		BHA		
+	[Tags]		BHA	
 	Then I should see the link "div#step2 div.go-back #continueWithThisStep" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=714"
 	Teardown Browser
 
@@ -66,13 +66,14 @@ Landing Page BHA Health Check Step for Standard
 
 Landing Page BHA Online Coaching Step for Standard
 	[Tags]		BHA
-	Then I should see the element "div#step2 div.complete" displayed 	
-	And I should see the element "div#step2 div.go-back #goBackToStep" displayed	
+	Then I should see the element "div#step2 div.incomplete" displayed 	
+	And I should not see the element "div#step2 div.go-back #goBackToStep" displayed
+	And I should see the element "div#step2 div.go-back #continueWithThisStep" displayed		
 
 Landing Page BHA Stick to your plan Step for Standard
 	[Tags]		BHA
-	Then I should see the element "div#step3 div.incomplete" displayed 	
-	And I should see the element "div#step3 div.go-back #continueWithThisStep" displayed	
+	Then I should see the element "div#step3[ng-show=\"!isNextStep\"] .incomplete" displayed 	
+	And I should not see the element "div#step3 div.go-back #continueWithThisStep" displayed	
 
 Landing Page BHA Health Check Step Go Back Button Valid SSO link for Standard
 	[Tags]		BHA	
