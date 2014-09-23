@@ -147,7 +147,7 @@ Find a Blue Distinction Center should have a valid link
 	
 Submit Overseas Claim should have a valid link
 	[Tags]		US1582
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" with SSO link "https://www.fepblue.org/members/myblue/claims-submission"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" with SSO link "${SERVER}/members/myblue/claims-submission"
 
 		
 
