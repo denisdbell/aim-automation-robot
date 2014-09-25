@@ -94,6 +94,13 @@ LandingPage BHA thermometer for Terminated
 	Given I am a Terminated Registered MyBlue Member on the Landing Page
 	Then I should not see the element "div.bha" displayed
 	Teardown Browser
+
+#Minor User
+LandingPage BHA thermometer for Minor
+	[Tags]		BHA
+	Given I am a Minor Registered MyBlue Member on the Landing Page
+	Then I should not see the element "div.bha" displayed
+	Teardown Browser
 	
 	
 #US486 Test Cases
