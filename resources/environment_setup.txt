@@ -9,15 +9,23 @@ Library    	      OperatingSystem
 *** Variables ***
 
 #Environment settings
-${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
+${ENVIRONMENT}					prod							#Dev = dev 					| Test = test 			| Stage = stage
 
 #Browser
-${BROWSER}=						chrome				#Supported: chrome | firefox | ie | iphone
+${BROWSER}=						firefox				#Supported: chrome | firefox | ie | iphone
 
 #Sleep settings
 ${NAVIGATION}					4
 ${EVENT}						2
 ${DEVICE_LAUNCH}				6
+
+#Routes
+${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
+${LOGIN_URL}=					${SERVER}/login  
+${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
+${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest
+${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
+${CSR}=							${SERVER_NAVBAR}/ESsample.html
 
 #Setup iPhone
 ${IPHONE_DESIRED_CAPABILITIES}	device:iPhone Simulator,platformName:iOS,deviceName:iPhone,safari:true,browserName:Safari
@@ -33,6 +41,7 @@ Environment setup
 	Run Keyword If		'${ENVIRONMENT}'=='test'		test
 	Run Keyword If		'${ENVIRONMENT}'=='stage'		stage
 	Run Keyword If		'${ENVIRONMENT}'=='local'		local
+	Run Keyword If		'${ENVIRONMENT}'=='prod'		prod
 
 develop
 	#SSO Configuration
@@ -40,8 +49,12 @@ develop
 	Set global variable		${ESERVICE_SSO}					http://custservv2
 	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin		
 	Set global variable		${CHIPREWARDS_SSO}				fepdemo	
-	Set global variable		${CHIPREWARDS_PID}				fepssouat
-	Set global variable		${SSO_PORT}						9032
+	Set global variable		${CHIPREWARDS_TARGET}			https://${CHIPREWARDS_SSO}.mychiprewards.com
+	Set global variable		${CHIPREWARDS_PID}				https://fepssouat.mychiprewards.com
+	Set global variable		${HEALTH_CLUB_TARGET}			https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2
+	Set global variable		${CAREMARK_TARGET}				https://sit1www.caremark.com
+	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Dev
+	Set global variable		${SSO_PORT}						:9032
 
 
 test
@@ -50,8 +63,12 @@ test
 	Set global variable		${ESERVICE_SSO}					https://custservpt			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
 	Set global variable		${ESERVICE_PID}					SBP-ESERVICE-PT				#Test = SBP-ESERVICE-PT		| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
 	Set global variable		${CHIPREWARDS_SSO}				feptest						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
-	Set global variable		${CHIPREWARDS_PID}				feptest						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
-	Set global variable		${SSO_PORT}						9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
+	Set global variable		${CHIPREWARDS_TARGET}			https://${CHIPREWARDS_SSO}.mychiprewards.com
+	Set global variable		${CHIPREWARDS_PID}				https://feptest.mychiprewards.com						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
+	Set global variable		${HEALTH_CLUB_TARGET}			https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2 
+	Set global variable		${CAREMARK_TARGET}				https://www.caremark.com
+	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Prod
+	Set global variable		${SSO_PORT}						:9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
 
 
 stage
@@ -60,8 +77,12 @@ stage
 	Set global variable		${ESERVICE_SSO}					http://custservv2			#Dev = http://custservv2 	| Test = https://custservpt		| Stage = http://custservv2
 	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin					#Test = SBP-ESERVICE-PT			| Dev & Stage = http://custservv2.fepblue.org/fedlogin	
 	Set global variable		${CHIPREWARDS_SSO}				fepuat						#Dev = fepdemo				| Test = feptest				| Stage = fepuat
-	Set global variable		${CHIPREWARDS_PID}				fepuat						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
-	Set global variable		${SSO_PORT}						9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
+	Set global variable		${CHIPREWARDS_TARGET}			https://${CHIPREWARDS_SSO}.mychiprewards.com
+	Set global variable		${CHIPREWARDS_PID}				https://fepuat.mychiprewards.com						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
+	Set global variable		${HEALTH_CLUB_TARGET}			https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2 
+	Set global variable		${CAREMARK_TARGET}				https://www.caremark.com
+	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Prod
+	Set global variable		${SSO_PORT}						:9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
 
 
 local
@@ -70,8 +91,12 @@ local
 	Set global variable		${ESERVICE_SSO}					http://custservv2
 	Set global variable		${ESERVICE_PID}					http://custservv2.fepblue.org/fedlogin		
 	Set global variable		${CHIPREWARDS_SSO}				fepdemo	
-	Set global variable		${CHIPREWARDS_PID}				fepssouat
-	Set global variable		${SSO_PORT}						9032
+	Set global variable		${CHIPREWARDS_TARGET}			https://${CHIPREWARDS_SSO}.mychiprewards.com
+	Set global variable		${CHIPREWARDS_PID}				https://fepssouat.mychiprewards.com
+	Set global variable		${HEALTH_CLUB_TARGET}			https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2
+	Set global variable		${CAREMARK_TARGET}				https://sit1www.caremark.com
+	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Prod
+	Set global variable		${SSO_PORT}						:9032
 
 	#Routes
 	Set global variable 	${SERVER}						https://192.168.200.113:7443		
@@ -80,6 +105,25 @@ local
 	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest
 	Set global variable 	${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
 	
+prod
+	#SSO Configuration
+	Set global variable		${SSO}							sso
+	Set global variable		${ESERVICE_SSO}					https://custserv
+	Set global variable		${ESERVICE_PID}					https://custserv.fepblue.org/fedlogin		
+	Set global variable		${CHIPREWARDS_SSO}				fepdemo	
+	Set global variable		${CHIPREWARDS_TARGET}			https://www.mybluewellness.fepblue.org
+	Set global variable		${CHIPREWARDS_PID}				https://www.mybluewellness.fepblue.org
+	Set global variable		${HEALTH_CLUB_TARGET}			https://fitnessyourway-fep-saml.healthways.com/sp/ACS.saml2 
+	Set global variable		${CAREMARK_TARGET}				https://www.caremark.com
+	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Prod
+	Set global variable		${SSO_PORT}						${EMPTY}
+
+	#Routes
+	Set global variable 	${SERVER}						https://www.fepblue.org/pilot
+	Set global variable 	${LOGIN_URL}					${SERVER}/login  
+	Set global variable 	${MYBLUE}						https://www.fepblue.org/
+	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}/web/guest/myblue
+	Set global variable 	${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
 	
 
 	
