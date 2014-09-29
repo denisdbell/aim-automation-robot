@@ -20,10 +20,10 @@ ${EVENT}						2
 ${DEVICE_LAUNCH}				6
 
 #Routes
-${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
+${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443/pilot		
 ${LOGIN_URL}=					${SERVER}/login  
 ${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
-${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest
+${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest/myblue
 ${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
 ${CSR}=							${SERVER_NAVBAR}/ESsample.html
 
@@ -66,8 +66,8 @@ test
 	Set global variable		${CHIPREWARDS_TARGET}			https://${CHIPREWARDS_SSO}.mychiprewards.com
 	Set global variable		${CHIPREWARDS_PID}				https://feptest.mychiprewards.com						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
 	Set global variable		${HEALTH_CLUB_TARGET}			https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2 
-	Set global variable		${CAREMARK_TARGET}				https://www.caremark.com
-	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Prod
+	Set global variable		${CAREMARK_TARGET}				https://sit1www.caremark.com
+	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Dev
 	Set global variable		${SSO_PORT}						:9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
 
 
@@ -80,8 +80,8 @@ stage
 	Set global variable		${CHIPREWARDS_TARGET}			https://${CHIPREWARDS_SSO}.mychiprewards.com
 	Set global variable		${CHIPREWARDS_PID}				https://fepuat.mychiprewards.com						#Dev = fepssouat			| Test = feptest				| Stage = fepuat
 	Set global variable		${HEALTH_CLUB_TARGET}			https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2 
-	Set global variable		${CAREMARK_TARGET}				https://www.caremark.com
-	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Prod
+	Set global variable		${CAREMARK_TARGET}				https://sit1www.caremark.com
+	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Dev
 	Set global variable		${SSO_PORT}						:9031						#Dev = 9032 				| Test = 9031					| Stage = 9031
 
 
@@ -122,7 +122,7 @@ prod
 	Set global variable 	${SERVER}						https://www.fepblue.org/pilot
 	Set global variable 	${LOGIN_URL}					${SERVER}/login  
 	Set global variable 	${MYBLUE}						https://www.fepblue.org/
-	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}/web/guest/myblue
+	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest/myblue
 	Set global variable 	${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
 	
 
