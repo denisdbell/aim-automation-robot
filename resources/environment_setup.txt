@@ -15,7 +15,7 @@ ${ENVIRONMENT}					prod							#Dev = dev 					| Test = test 			| Stage = stage
 ${BROWSER}=						firefox				#Supported: chrome | firefox | ie | iphone
 
 #Sleep settings
-${NAVIGATION}					4
+${NAVIGATION}					6
 ${EVENT}						2
 ${DEVICE_LAUNCH}				6
 
