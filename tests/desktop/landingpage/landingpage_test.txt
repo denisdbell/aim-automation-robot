@@ -72,7 +72,7 @@ Landing Page BHA Online Coaching Step for Standard
 
 Landing Page BHA Stick to your plan Step for Standard
 	[Tags]		BHA
-	Then I should see the element "div#step3[ng-show=\"!isNextStep\"] .incomplete" displayed 	
+	Then I should see the element "div#step3[ng-show=\"isNextStep\"] .incomplete" displayed 	
 	And I should see the element "div#step3 div.go-back #continueWithThisStep" displayed	
 
 Landing Page BHA Health Check Step Go Back Button Valid SSO link for Standard
