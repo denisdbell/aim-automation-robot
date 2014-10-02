@@ -9,7 +9,7 @@ Library    	      OperatingSystem
 *** Variables ***
 
 #Environment settings
-${ENVIRONMENT}					prod							#Dev = dev 					| Test = test 			| Stage = stage
+${ENVIRONMENT}					dev							#Dev = dev 					| Test = test 			| Stage = stage
 
 #Browser
 ${BROWSER}=						firefox				#Supported: chrome | firefox | ie | iphone
