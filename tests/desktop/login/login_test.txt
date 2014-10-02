@@ -43,7 +43,7 @@ Username should take me to MyBlue
 	[Tags]		HotLinks	Mobile
 	Given I am a MyBlue Member on the Login Page
 	When I Click the "form div:nth-child(5) a:nth-child(1)" link
-	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?myBluePopUp=forgotUserName&callBackURL=${SERVER}/pilot"
+	Then I should be navigated to "${MYBLUE_LOGIN_URL}?myBluePopUp=forgotUserName&callBackURL=${SERVER}"
 
 Username should take me to MyBlue with popup
 	[Tags]		HotLinks	Mobile
@@ -52,12 +52,12 @@ Username should take me to MyBlue with popup
 Username redirect to Mdot when I click cancel
 	[Tags]		HotLinks	Mobile
 	When I Click the "img[alt=\"Cancel\"]" element
-	Then I should be navigated to "${SERVER}/pilot/login"
+	Then I should be navigated to "${SERVER}/login"
 
 Password should take me to MyBlue
 	[Tags]		HotLinks	Mobile
 	When I Click the "form div:nth-child(5) a:nth-child(2)" link
-	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?myBluePopUp=forgotPassword&callBackURL=${SERVER}/pilot"
+	Then I should be navigated to "${MYBLUE_LOGIN_URL}?myBluePopUp=forgotPassword&callBackURL=${SERVER}"
 
 Password should take me to MyBlue with popup
 	[Tags]		HotLinks	Mobile
@@ -66,12 +66,12 @@ Password should take me to MyBlue with popup
 Password redirect to Mdot when I click cancel
 	[Tags]		HotLinks	Mobile
 	When I Click the "img[alt=\"Cancel\"]" element
-	Then I should be navigated to "${SERVER}/pilot/login"
+	Then I should be navigated to "${SERVER}/login"
 	
 Email should take me to MyBlue
 	[Tags]		HotLinks	Mobile
 	When I Click the "form div:nth-child(5) a:nth-child(3)" link
-	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?myBluePopUp=forgotEmailAddress&callBackURL=${SERVER}/pilot"
+	Then I should be navigated to "${MYBLUE_LOGIN_URL}?myBluePopUp=forgotEmailAddress&callBackURL=${SERVER}"
 
 Email should take me to MyBlue with popup
 	[Tags]		HotLinks	Mobile
@@ -80,12 +80,12 @@ Email should take me to MyBlue with popup
 Email redirect to Mdot when I click cancel
 	[Tags]		HotLinks	Mobile
 	When I Click the "#cancel_btn" element
-	Then I should be navigated to "${SERVER}/pilot/login"
+	Then I should be navigated to "${SERVER}/login"
 	
 Sign up for MyBlue should take me to MyBlue
 	[Tags]		HotLinks	Mobile
 	When I Click the "#signup" link
-	Then I should be navigated to "${MYBLUE_LOGIN_URL}/myblue?p_p_id=58&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_58_struts_action=%2Flogin%2Fcreate_account"
+	Then I should be navigated to "${MYBLUE_LOGIN_URL}?p_p_id=58&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_58_struts_action=%2Flogin%2Fcreate_account"
 	Teardown Browser
 
 

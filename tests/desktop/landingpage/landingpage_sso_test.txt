@@ -17,15 +17,15 @@ Landing Page My Account Info Quick links has valid SSO link
 
 Landing Page My Prescription Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "div.quicknav-pres #myPrescriptions" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/refillRx?newLogin=yes"
+	Then I should see the link "div.quicknav-pres #myPrescriptions" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${CAREMARK_PID}&TARGET=${CAREMARK_TARGET}/refillRx?newLogin=yes"
 	
 Landing Page Nurse Line links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "div.quicknav-nurse #nurseLine" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
+	Then I should see the link "div.quicknav-nurse #nurseLine" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000025"
 
 Landing Page Find a Physician Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "div.quicknav-physician #findPhysician" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=sp-prismisp-bcbsa&TARGET=http://provider.fepblue.org"
+	Then I should see the link "div.quicknav-physician #findPhysician" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=sp-prismisp-bcbsa&TARGET=http://provider.fepblue.org"
 	
 
 Landing Page Explanation of Benefits Quick links has valid SSO link
@@ -34,46 +34,46 @@ Landing Page Explanation of Benefits Quick links has valid SSO link
 	
 Landing Page Symptom Checker links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "div.quicknav-symptom #symptomChecker" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=525"
+	Then I should see the link "div.quicknav-symptom #symptomChecker" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=525"
 
 Landing Page Personal Health Record Quick links has valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "div.quicknav-record #personalHealthRecord" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=58"
+	Then I should see the link "div.quicknav-record #personalHealthRecord" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=58"
 	
 	
 #Health and Wellness
 Take charge of your family's health should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "li#healthAndWellnesslink0 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000029"
+	Then I should see the link "li#healthAndWellnesslink0 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000029"
 	
 Get baby advice and support here should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "li#healthAndWellnesslink1 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=777"
+	Then I should see the link "li#healthAndWellnesslink1 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=777"
 
 Health club memberships should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "li#healthAndWellnesslink4 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=HWAY-FEP&TARGET=https://fitnessyourway-fep-dev-saml.healthways.com/sp/ACS.saml2"
+	Then I should see the link "li#healthAndWellnesslink4 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=HWAY-FEP&TARGET=${HEALTH_CLUB_TARGET}"
 	
 #Wellness Incentives
 Visit MyBlue Wellness Card Center should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "#wellnessIncentiveslink0 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com"
+	Then I should see the link "#wellnessIncentiveslink0 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${CHIPREWARDS_PID}&TARGET=${CHIPREWARDS_TARGET}"
 
 View account balance should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "#wellnessIncentiveslink1 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Cards/Account"
+	Then I should see the link "#wellnessIncentiveslink1 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${CHIPREWARDS_PID}&TARGET=${CHIPREWARDS_TARGET}/Cards/Account"
 
 Report a lost MyBlue Wellness Card should have a valid SSO link
 	[Tags]		SSO	
- 	Then I should see the link "#wellnessIncentiveslink2 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://${CHIPREWARDS_PID}.mychiprewards.com&TARGET=https://${CHIPREWARDS_SSO}.mychiprewards.com/Home/Contact"
+ 	Then I should see the link "#wellnessIncentiveslink2 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${CHIPREWARDS_PID}&TARGET=${CHIPREWARDS_TARGET}/Home/Contact"
  
 Quit smoking with our Tobacco Cessation Program should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "#wellnessIncentiveslink3 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000039"
+	Then I should see the link "#wellnessIncentiveslink3 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=62000039"
 	
 Start Walking Works today should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "#healthAndWellnesslink3 a" with SSO link "${SERVER}/pilot/customlinks/startWalking"
+	Then I should see the link "#healthAndWellnesslink3 a" with SSO link "${SERVER}/customlinks/startWalking"
 
 Walking Works Step Tracker should have a valid SSO link
 	[Tags]		SSO
@@ -100,8 +100,8 @@ View replies from customer service should have a valid SSO link
 #Pharmacy
 Find a pharmacy should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "#pharmacylink0 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/pharmacySearch.do?newLogin=yes"
+	Then I should see the link "#pharmacylink0 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${CAREMARK_PID}&TARGET=${CAREMARK_TARGET}/pharmacySearch.do?newLogin=yes"
 
 Check drug cost should have a valid SSO link
 	[Tags]		SSO	
-	Then I should see the link "#pharmacylink1 a" with SSO link "https://${SSO}.fepblue.org:${SSO_PORT}/idp/startSSO.ping?PartnerSpId=SP_CVS_FEP_Dev&TARGET=https://sit1www.caremark.com/drugSearchInit.do?newLogin=yes"
+	Then I should see the link "#pharmacylink1 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=${CAREMARK_PID}&TARGET=${CAREMARK_TARGET}/drugSearchInit.do?newLogin=yes"

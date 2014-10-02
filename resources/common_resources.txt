@@ -12,14 +12,6 @@ Resource          environment_setup.txt
 
 *** Variables ***
 
-#Routes
-${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443		
-${LOGIN_URL}=					${SERVER}/login  
-${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
-${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest
-${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
-${CSR}=							${SERVER_NAVBAR}/ESsample.html
-
 #Users
 ${STANDARD}=					junecontractuatstd
 ${BASIC}=						marchcontractuat

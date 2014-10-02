@@ -13,7 +13,7 @@ Landing Page I should see the link Take charge of your family's health for Stand
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Given I am a Registered MyBlue Member on the Landing Page
 	Sleep		${NAVIGATION}
-	Then I should see the element "span#healthAndWellness" displayed
+	Then I should see the element "#healthAndWellness" displayed
 	And I should see the link "li#healthAndWellnesslink0 a" displayed
 	
 Landing Page I should see the link Get baby advice and support here for Standard
@@ -161,7 +161,8 @@ Landing Page I should see the link Review Basic Option pharmacy benefits for Ter
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "#pharmacylink3 a" displayed
 	
-	
+
+#Minor
 Landing Page I should see the link Take charge of your family's health for Minor
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Given I am a Minor Registered MyBlue Member on the Landing Page
