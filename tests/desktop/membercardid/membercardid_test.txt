@@ -413,7 +413,7 @@ As a user without access to member ID card, I should see the error page (500)
 	[Tags]		MemberIDCard
 	Given I am a Terminated MyBlue Member on the MyBlue Landing Page with NO access to member ID card
 	When I Click the "#memberIdCard" Link
-	Then I should be navigated to "${SERVER}/pilot/error/500"
+	Then I should be navigated to "${SERVER}/error/500"
 	
 As a user without access to member ID card, I should see a visible error message
 	[Tags]		MemberIDCard
@@ -434,7 +434,7 @@ As a user without access to member ID card, I should see a link "MyBlue Homepage
 As a user without access to member ID card, I should be navigated to pilot when I click the link "MyBlue Homepage"
 	[Tags]		MemberIDCard
 	When I Click the ".errorHolder div div .message a" Link
-	Then I should be navigated to "${SERVER}/pilot/landingpage"
+	Then I should be navigated to "${SERVER}/landingpage"
 		
 	
 	
