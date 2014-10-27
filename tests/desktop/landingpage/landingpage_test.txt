@@ -222,7 +222,7 @@ I should see a message on the modal
 I should see a Change username modal
 	[Tags]		ChangeUsername
 	Given I am a Registered MyBlue Member on the Landing Page
-	When I navigate to "${SERVER}/account/changeusername"
+	When I navigate to "${SERVER}/account/change-username"
 	Sleep		${NAVIGATION}
 	Then I should see the element "form[name=\"mdotChangeUsernameForm\"]" displayed
 	
