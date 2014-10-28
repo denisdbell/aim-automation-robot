@@ -215,3 +215,54 @@ I should see a message on the modal
 #	And When I Click the ".linkAggregatorContent:nth-child(1) li:nth-child(11) a" link
 #	Sleep		${NAVIGATION}
 #	Then I should see the element ".modal-dialog" displayed
+
+#US1605
+I should see a Change password modal
+	[Tags]		ChangePassword
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I navigate to "${SERVER}/account/change-password"
+	Sleep		${NAVIGATION}
+	Then I should see the element "form[name=\"mdotChangePasswordForm\"]" displayed
+	
+I should see the url contain the landing page
+	[Tags]		ChangePassword
+	Then I should be navigated to "${SERVER}/landingpage"
+	
+I should see a current password text box
+	[Tags]		ChangePassword
+	Then I should see the element "#currentPassword" displayed
+
+I should see a new password text box
+	[Tags]		ChangePassword
+	Then I should see the element "#newPassword" displayed
+	
+I should see a confirm new password text box
+	[Tags]		ChangePassword
+	Then I should see the element "#confirmPassword" displayed
+	
+I should see a cancel link
+	[Tags]		ChangePassword
+	Then I should see the link "#myblue-account-management-modal-cancel" displayed
+	
+I should see a submit link
+	[Tags]		ChangePassword
+	Then I should see the link "#m-dot-change-password-form-submit" displayed
+
+I should see a red X if less than 3 characters
+	[Tags]		ChangePassword
+	When I enter the text "aa" in "#newPassword" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon" displayed
+
+I should see a checkmark if 3 characters or more
+	[Tags]		ChangePassword
+	When I enter the text "aaaaAaa2" in "#newUsername" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon.success" displayed
+	
+When I click cancel I should not see the modal
+	[Tags]		ChangePassword
+	When i click the "#myblue-account-management-modal-cancel" link
+	Sleep		${EVENT}
+	Then I should not see the element "form[name=\"mdotChangePasswordForm\"]" displayed
+	Teardown Browser
