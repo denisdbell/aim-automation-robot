@@ -132,4 +132,34 @@ I should see the loading popup when I click submit to login
     And I Click the "#login" Button	
     I should see the loading popup visible
     Teardown Browser
+    
+    
+#US369 - Forgot Username
+Login Page Hot links Displayed
+	[Tags]		ForgotUsername	Mobile
+	Given I am a MyBlue Member on the Login Page
+	When I click the "#forgotUsername" link
+	Then I navigate to "${SERVER}/forgot/username"
 
+I should see an email textbox
+	[Tags]		ForgotUsername	Mobile
+	Then I should see the element "#emailAddress" displayed
+	
+I should see a submit button
+	[Tags]		ForgotUsername	Mobile
+	Then I should see the element "#retrieveUsername" displayed
+	
+I should see a cancel button
+	[Tags]		ForgotUsername	Mobile
+	Then I should see the element "div.cancel" displayed
+	
+I should not see a disabled submit button when I enter a valid email address
+	[Tags]		ForgotUsername	Mobile
+	When I enter the text "a@a.c" in "#emailAddress" textbox
+	Then I should not see the element "#retrieveUsername[disabled=\"disabled\"]" displayed
+	
+I should not see the modal when I click cancel
+	[Tags]		ForgotUsername	Mobile
+	When I click the "div.cancel a" link
+	Then I navigate to "${SERVER}/login"
+	Teardown Browser
