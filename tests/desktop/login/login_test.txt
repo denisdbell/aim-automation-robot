@@ -144,35 +144,35 @@ I should be navigated to the forgot email page
     
 I should see a member id field
 	[Tags]		ForgotEmailAddress
-    Then I should the element "input[name=\"memberId\"]" displayed
+    Then I should see the element "input[name=\"memberId\"]" displayed
     
 I should see a first name field
 	[Tags]		ForgotEmailAddress
-    Then I should the element "input[name=\"firstName\"]" displayed
+    Then I should see the element "input[name=\"firstName\"]" displayed
     
 I should see a last name field
 	[Tags]		ForgotEmailAddress
-    Then I should the element "input[name=\"lastName\"]" displayed
+    Then I should see the element "input[name=\"lastName\"]" displayed
     
 I should see a middle name field
 	[Tags]		ForgotEmailAddress
-    Then I should the element "input[name=\"mi\"]" displayed    
+    Then I should see the element "input[name=\"mi\"]" displayed    
     
 I should see a dob field
 	[Tags]		ForgotEmailAddress
-    Then I should the element "input[name=\"dob\"]" displayed      
+    Then I should see the element "input[name=\"dob\"]" displayed      
     
 I should see a reset email button
 	[Tags]		ForgotEmailAddress
-    Then I should the element "#resetEmail" displayed      
+    Then I should see the element "#resetEmail" displayed      
     
 I should see a retrieve email button
 	[Tags]		ForgotEmailAddress
-    Then I should the element "#retrieveEmail" displayed   
+    Then I should see the element "#retrieveEmail" displayed   
     
 I should see a cancel button
 	[Tags]		ForgotEmailAddress
-    Then I should the element ".cancel" displayed   
+    Then I should see the element ".cancel" displayed   
     
 When I click cancel I should be taken to the login page
 	[Tags]		ForgotEmailAddress
