@@ -176,7 +176,7 @@ I should see a cancel button
     
 When I click cancel I should be taken to the login page
 	[Tags]		ForgotEmailAddress
-	When I click the ".calcel a" link
+	When I click the ".cancel a" link
     Then I should be navigated to "${SERVER}/login"
     Teardown Browser
     
