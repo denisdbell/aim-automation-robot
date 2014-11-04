@@ -20,7 +20,7 @@ ${EVENT}						2
 ${DEVICE_LAUNCH}				6
 
 #Routes
-${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443/pilot		
+${SERVER}=						https://${ENVIRONMENT}.fepblue.org:6443/pilot		
 ${LOGIN_URL}=					${SERVER}/login  
 ${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
 ${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest/myblue
@@ -57,7 +57,7 @@ develop
 	Set global variable		${SSO_PORT}						:9032
 	
 	#Routes
-	Set global variable		${SERVER}						https://${ENVIRONMENT}.fepblue.org:8443/pilot		
+	Set global variable		${SERVER}						https://${ENVIRONMENT}.fepblue.org:6443/pilot		
 	Set global variable		${LOGIN_URL}					${SERVER}/login  
 	Set global variable		${MYBLUE}						https://${ENVIRONMENT}.fepblue.org:8443/
 	Set global variable		${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest/myblue

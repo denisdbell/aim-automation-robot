@@ -159,3 +159,50 @@ I should not see the modal when I click cancel
 	When I click the "div.cancel a" link
 	Then I navigate to "${SERVER}/login"
 	Teardown Browser
+
+
+#US1638 & US1610 - Forgot email
+I should be navigated to the forgot email page
+	[Tags]		ForgotEmailAddress
+	Given I am a MyBlue Member navigating to the login page
+    Sleep				${NAVIGATION}
+    When I click the "#forgotEmailAddress" link
+    Then I should be navigated to "${SERVER}/forgot/email-address"
+    
+I should see a member id field
+	[Tags]		ForgotEmailAddress
+    Then I should see the element "input[name=\"memberId\"]" displayed
+    
+I should see a first name field
+	[Tags]		ForgotEmailAddress
+    Then I should see the element "input[name=\"firstName\"]" displayed
+    
+I should see a last name field
+	[Tags]		ForgotEmailAddress
+    Then I should see the element "input[name=\"lastName\"]" displayed
+    
+I should see a middle name field
+	[Tags]		ForgotEmailAddress
+    Then I should see the element "input[name=\"mi\"]" displayed    
+    
+I should see a dob field
+	[Tags]		ForgotEmailAddress
+    Then I should see the element "input[name=\"dob\"]" displayed      
+    
+I should see a reset email button
+	[Tags]		ForgotEmailAddress
+    Then I should see the element "#resetEmail" displayed      
+    
+I should see a retrieve email button
+	[Tags]		ForgotEmailAddress
+    Then I should see the element "#retrieveEmail" displayed   
+    
+I should see a cancel button
+	[Tags]		ForgotEmailAddress
+    Then I should see the element ".cancel" displayed   
+    
+When I click cancel I should be taken to the login page
+	[Tags]		ForgotEmailAddress
+	When I click the ".cancel a" link
+    Then I should be navigated to "${SERVER}/login"
+    Teardown Browser
