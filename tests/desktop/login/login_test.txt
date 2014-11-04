@@ -9,23 +9,22 @@ Resource          ../../../resources/login/login_resource.txt
 Login Page Hot links Displayed
 	[Tags]		LoginPageElements	Mobile
 	Given I am a MyBlue Member on the Login Page
-	Then I should see the element "form div:nth-child(5) a:nth-child(1)" displayed
-	And I should see the element "form div:nth-child(5) a:nth-child(2)" displayed
-	And I should see the element "form div:nth-child(5) a:nth-child(3)" displayed
+	Then I should see the element "#forgotUsername" displayed
+	And I should see the element "#forgotPassword" displayed
+	And I should see the element "#forgotEmailAddress" displayed
 	And I should see the element "#signup" displayed
 	
 Login Page Hot links have valid text
 	[Tags]		LoginPageElements	Mobile
-	Then I should see "form div:nth-child(5) a:nth-child(1)" have the text "username" displayed
-	And I should see "form div:nth-child(5) a:nth-child(2)" have the text "password" displayed
-	And I should see "form div:nth-child(5) a:nth-child(3)" have the text "e-mail address" displayed
-	And I should see "#signup" have the text "Sign up for MyBlue" displayed
+	Then I should see "#forgotUsername" have the text "Forgot your username?" displayed
+	And I should see "#forgotPassword" have the text "Forgot your password?" displayed
+	And I should see "#forgotEmailAddress" have the text "Forgot your email address?" displayed
+	And I should see "#signup" have the text "Don't have an account?" displayed
 	
 Login Page Username Textbox Displayed
 	[Tags]		LoginPageElements	Mobile
 	Then I should see the element "#LoginUsername" displayed
 	And I should see the element "#LoginUsername" blank
-	
 
 Login Page Password Textbox Displayed
 	[Tags]		LoginPageElements	Mobile
@@ -35,14 +34,62 @@ Login Page Password Textbox Displayed
 I should NOT see the unified navigation bar Displayed
 	[Tags]		LoginPageElements	Mobile
 	Then I should not see the element ".myblue-header-content .thirdparty" displayed
+	
+I should see Benefits under the login form
+	[Tags]		LoginPageElements
+	Then I should see the element "#benefitsFeatures" displayed
+	
+I should see Resources under the login form
+	[Tags]		LoginPageElements
+	Then I should see the element "#resourcesFeatures" displayed
+	
+I should see Health Assessment under the login form
+	[Tags]		LoginPageElements
+	Then I should see the element "#healthFeatures" displayed
+	
+I should see FAQ under the login form
+	[Tags]		LoginPageElements
+	Then I should see the element "#faqFeatures" displayed
+	
+I should see Benefits have valid text under the login form
+	[Tags]		LoginPageElements
+	Then I should see "#benefitsFeatures h3" have the text "Benefits" displayed
+	And I should see "#benefitsFeatures p" have the text "It's easy and affordable to make healthy choices. Discover the benefits and personalized services available to your family." displayed
+	
+I should see Resources have valid text under the login form
+	[Tags]		LoginPageElements
+	Then I should see "#resourcesFeatures h3" have the text "Resources" displayed
+	Then I should see "#resourcesFeatures p" have the text "Get access to your statements, health records, provider directories, real-time nurse chats and more." displayed
+	
+I should see Health Assessment have valid text under the login form
+	[Tags]		LoginPageElements
+	Then I should see "#healthFeatures h3" have the text "Health Assessment" displayed
+	Then I should see "#healthFeatures p" have the text "What are your health goals? Take the Blue Health Assessment to reach them now." displayed
+	
+I should see FAQ have valid text under the login form
+	[Tags]		LoginPageElements
+	Then I should see "#faqFeatures h3" have the text "FAQs" displayed
+	
+I should see a CVS logo
+	[Tags]		LoginPageElements
+	Then I should see the element "#CVS" displayed
+	
+I should see a WebMD logo
+	[Tags]		LoginPageElements
+	Then I should see the element "#WebMD" displayed
+	
+I should see an eService
+	[Tags]		LoginPageElements
+	Then I should see the element "#MyBlueCS" displayed
 	Teardown Browser
+	
 	
 	
 #Test hot links
 Username should take me to MyBlue
 	[Tags]		HotLinks	Mobile
 	Given I am a MyBlue Member on the Login Page
-	When I Click the "form div:nth-child(5) a:nth-child(1)" link
+	When I Click the "#forgotUsername" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}?myBluePopUp=forgotUserName&callBackURL=${SERVER}"
 
 Username should take me to MyBlue with popup
@@ -56,7 +103,7 @@ Username redirect to Mdot when I click cancel
 
 Password should take me to MyBlue
 	[Tags]		HotLinks	Mobile
-	When I Click the "form div:nth-child(5) a:nth-child(2)" link
+	When I Click the "#forgotPassword" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}?myBluePopUp=forgotPassword&callBackURL=${SERVER}"
 
 Password should take me to MyBlue with popup
@@ -70,7 +117,7 @@ Password redirect to Mdot when I click cancel
 	
 Email should take me to MyBlue
 	[Tags]		HotLinks	Mobile
-	When I Click the "form div:nth-child(5) a:nth-child(3)" link
+	When I Click the "#forgotEmailAddress" link
 	Then I should be navigated to "${MYBLUE_LOGIN_URL}?myBluePopUp=forgotEmailAddress&callBackURL=${SERVER}"
 
 Email should take me to MyBlue with popup
