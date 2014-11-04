@@ -322,3 +322,56 @@ When I click cancel I should not see the modal
 	Sleep		${EVENT}
 	Then I should not see the element "form[name=\"mdotChangeUsernameForm\"]" displayed
 	Teardown Browser
+	
+
+#US371: Email Modal
+I should see a Change email modal
+	[Tags]		ChangeEmail
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I navigate to "${SERVER}/landingpage?accSettings=change-email"
+	Sleep		${NAVIGATION}
+	Then I should see the element "form[name=\"f\"]" displayed
+	
+I should see the url contain the landing page
+	[Tags]		ChangeEmail
+	Then I should be navigated to "${SERVER}/landingpage"
+	
+I should see a current email text box
+	[Tags]		ChangeEmail
+	Then I should see the element "#currentEmailAddress" displayed
+
+I should see a new email text box
+	[Tags]		ChangeEmail
+	Then I should see the element "#newEmailAddress" displayed
+	
+I should see a confirm new email text box
+	[Tags]		ChangeEmail
+	Then I should see the element "#confirmEmailAddress" displayed
+	
+I should see a cancel link
+	[Tags]		ChangeEmail
+	Then I should see the link "#myblue-account-management-modal-cancel" displayed
+
+I should see a red X if invalid email
+	[Tags]		ChangeEmail
+	When I enter the text "aa" in "#newEmailAddress" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon" displayed
+
+I should see a checkmark if valid email
+	[Tags]		ChangeEmail
+	When I enter the text "aaa@aaa.com" in "#newEmailAddress" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon.success" displayed
+	
+I should see a red X if has invalid characters
+	[Tags]		ChangeEmail
+	When I enter the text "@^&#^%^#" in "#newEmailAddress" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon" displayed
+	
+When I click cancel I should not see the modal
+	[Tags]		ChangeEmail
+	When i click the "#myblue-account-management-modal-cancel" link
+	Sleep		${EVENT}
+	Then I should not see the element "form[name=\"f\"]" displayed
