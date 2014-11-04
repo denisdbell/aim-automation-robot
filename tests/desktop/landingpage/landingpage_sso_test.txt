@@ -50,10 +50,6 @@ Get baby advice and support here should have a valid SSO link
 	[Tags]		SSO	
 	Then I should see the link "li#healthAndWellnesslink1 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=777"
 
-Health club memberships should have a valid SSO link
-	[Tags]		SSO	
-	Then I should see the link "li#healthAndWellnesslink4 a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=HWAY-FEP&TARGET=${HEALTH_CLUB_TARGET}"
-	
 #Wellness Incentives
 Visit MyBlue Wellness Card Center should have a valid SSO link
 	[Tags]		SSO	

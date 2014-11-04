@@ -29,10 +29,6 @@ Medical & Pharmacy Claims should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" with SSO link "${ESERVICE_SSO}.fepblue.org/fepesvc/memberEligibilityProcess.do"
 
-Treatment Cost Estimator should have a valid link
-	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" with SSO link "https://www.treatmentestimator.com/"
-
 Order a New ID Card should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" with SSO link "${ESERVICE_SSO}.fepblue.org/fepesvc/idCardRequest.do"
@@ -149,7 +145,10 @@ Submit Overseas Claim should have a valid link
 	[Tags]		US1582
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" with SSO link "${MYBLUE}members/myblue/claims-submission"
 
-		
+Treatment Cost Estimator should have a valid link
+	[Tags]		SSO
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" with SSO link "https://www.treatmentestimator.com/"
+
 
 
 

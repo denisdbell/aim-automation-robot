@@ -183,10 +183,6 @@ When I click Find a Pharmacy I should see the interstitial
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "#pharmacylink0 a" link
 	Sleep		${NAVIGATION}
-	Then I should see the element ".modal-dialog" displayed
-	
-I should see a message on the interstitial
-	[Tags]		PreNavInterstitial
 	Then I should see the element ".modal-dialog .copy" displayed
 	
 I should see a message on the interstitial with the following text
@@ -216,6 +212,7 @@ I should see a message on the modal
 #	Sleep		${NAVIGATION}
 #	Then I should see the element ".modal-dialog" displayed
 
+
 #US1605
 I should see a Change password modal
 	[Tags]		ChangePassword
@@ -243,10 +240,6 @@ I should see a confirm new password text box
 I should see a cancel link
 	[Tags]		ChangePassword
 	Then I should see the link "#myblue-account-management-modal-cancel" displayed
-	
-I should see a submit link
-	[Tags]		ChangePassword
-	Then I should see the link "#m-dot-change-password-form-submit" displayed
 
 I should see a red X if less than 3 characters
 	[Tags]		ChangePassword
@@ -265,4 +258,67 @@ When I click cancel I should not see the modal
 	When i click the "#myblue-account-management-modal-cancel" link
 	Sleep		${EVENT}
 	Then I should not see the element "form[name=\"mdotChangePasswordForm\"]" displayed
+	Teardown Browser
+	
+
+#US1606: Username Modal
+I should see a Change username modal
+	[Tags]		ChangeUsername
+	Given I am a Registered MyBlue Member on the Landing Page
+	When I navigate to "${SERVER}/account/change-username"
+	Sleep		${NAVIGATION}
+	Then I should see the element "form[name=\"mdotChangeUsernameForm\"]" displayed
+	
+I should see the url contain the landing page
+	[Tags]		ChangeUsername
+	Then I should be navigated to "${SERVER}/landingpage"
+	
+I should see a current username text box
+	[Tags]		ChangeUsername
+	Then I should see the element "#currentUsername" displayed
+
+I should see a new username text box
+	[Tags]		ChangeUsername
+	Then I should see the element "#newUsername" displayed
+	
+I should see a confirm new username text box
+	[Tags]		ChangeUsername
+	Then I should see the element "#confirmNewUsername" displayed
+	
+I should see a cancel link
+	[Tags]		ChangeUsername
+	Then I should see the link "#myblue-account-management-modal-cancel" displayed
+
+I should see a red X if less than 3 characters
+	[Tags]		ChangeUsername
+	When I enter the text "aa" in "#newUsername" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon" displayed
+
+I should see a checkmark if 3 characters or more
+	[Tags]		ChangeUsername
+	When I enter the text "aaa" in "#newUsername" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon.success" displayed
+	
+I should see a red X if has invalid characters
+	[Tags]		ChangeUsername
+	When I enter the text "@^&#^%^#" in "#newUsername" textbox
+	Sleep		${EVENT}
+	Then I should see the element ".validation-icon" displayed
+
+## CANT TEST: Event doesnt get triggered by robot
+#I should see an enabled submit button
+#	[Tags]		ChangeUsername
+#	When I enter the text "marchcontract" in "#currentUsername" textbox
+#	And I enter the text "marchcontract" in "#newUsername" textbox
+#	And I enter the text "marchcontract" in "#confirmNewUsername" textbox
+#	Sleep		${EVENT}
+#	Then I should see the link ".myblue-btn.btn-secondary" displayed
+	
+When I click cancel I should not see the modal
+	[Tags]		ChangeUsername
+	When i click the "#myblue-account-management-modal-cancel" link
+	Sleep		${EVENT}
+	Then I should not see the element "form[name=\"mdotChangeUsernameForm\"]" displayed
 	Teardown Browser

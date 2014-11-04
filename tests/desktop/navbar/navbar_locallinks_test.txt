@@ -170,6 +170,11 @@ I should see valid local link for Submit Overseas Claim
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" have attribute "href" with the value "https://dev.fepblue.org:8443/members/myblue/claims-submission"
 	
+I should see valid local link for Treatment Cost Estimator
+	[Tags]		LocalLinks	UAT	LIT
+	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" have attribute "href" with the value "https://www.treatmentestimator.com/"
+
+	
 
 #eService
 I should see valid local link for My Benefits
@@ -195,10 +200,6 @@ I should see valid local link for Medical & Pharmacy Claims
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/memberEligibilityProcess.do"
 	
-I should see valid local link for Treatment Cost Estimator
-	[Tags]		LocalLinks	UAT	LIT
-	Then I should see "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" have attribute "href" with the value "https://www.treatmentestimator.com/"
-
 I should see valid local link for Order a New ID Card
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" have attribute "href" with the value "https://custservpt.fepblue.org/fepesvc/idCardRequest.do"

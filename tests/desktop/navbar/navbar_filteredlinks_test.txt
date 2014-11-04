@@ -28,10 +28,6 @@ As a standard user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
 	
-As a standard user, I should see Treatment Cost Estimator
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
-
 As a standard user, I should see Order a New ID Card
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" displayed
@@ -100,7 +96,7 @@ As a standard user, I should see Recipes
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.recipes\"] a" displayed 
 
-As a standard user, I should see All Topics
+As a standard user, I should see Health Topics
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.allTopics\"] a" displayed 
 
@@ -115,18 +111,6 @@ As a standard user, I should see General Health
 As a standard user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
-
-As a standard user, I should see Medical Encyclopedia
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" displayed 
-
-As a standard user, I should see WebMD Interactives
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" displayed 
-
-As a standard user, I should see Message Board Exchanges
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" displayed 
 
 As a standard user, I should see WebMD Videos
 	[Tags]		BusinessRules
@@ -143,6 +127,11 @@ As a standard user, I should see Find A Blue Distinction Center
 As a standard user, I should see Submit Overseas Claim
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
+	
+As a standard user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
+
 	
 #Pharmacy
 As a standard user, I should see Pharmacy & Prescriptions
@@ -273,10 +262,6 @@ As a basic user, I should see Benefits
 As a basic user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
-	
-As a basic user, I should see Treatment Cost Estimator
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
 
 As a basic user, I should see Order a New ID Card
 	[Tags]		BusinessRules
@@ -362,18 +347,6 @@ As a basic user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
 
-As a basic user, I should see Medical Encyclopedia
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" displayed 
-
-As a basic user, I should see WebMD Interactives
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" displayed 
-
-As a basic user, I should see Message Board Exchanges
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" displayed 
-
 As a basic user, I should see WebMD Videos
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
@@ -389,6 +362,10 @@ As a basic user, I should see Find A Blue Distinction Center
 As a basic user, I should see Submit Overseas Claim
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
+	
+As a basic user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
 	
 #Pharmacy
 As a basic user, I should see Pharmacy & Prescriptions
@@ -518,10 +495,6 @@ As a terminated user, I should see Benefits
 As a terminated user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
-	
-As a terminated user, I should see Treatment Cost Estimator
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
 
 As a terminated user, I should see Order a New ID Card
 	[Tags]		BusinessRules
@@ -607,18 +580,6 @@ As a terminated user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
 
-As a terminated user, I should see Medical Encyclopedia
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" displayed 
-
-As a terminated user, I should see WebMD Interactives
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" displayed 
-
-As a terminated user, I should see Message Board Exchanges
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" displayed 
-
 As a terminated user, I should see WebMD Videos
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
@@ -634,6 +595,11 @@ As a terminated user, I should see Find A Blue Distinction Center
 As a terminated user, I should see Submit Overseas Claim
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
+
+As a terminated user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
+	
 	
 #Pharmacy
 As a terminated user, I should see Pharmacy & Prescriptions
@@ -718,10 +684,6 @@ As a minor user, I should see Medical & Pharmacy Claims
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" displayed
 	
-As a minor user, I should see Treatment Cost Estimator
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
-
 As a minor user, I should see Order a New ID Card
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" displayed
@@ -806,18 +768,6 @@ As a minor user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
 
-As a minor user, I should see Medical Encyclopedia
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" displayed 
-
-As a minor user, I should see WebMD Interactives
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" displayed 
-
-As a minor user, I should see Message Board Exchanges
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" displayed 
-
 As a minor user, I should see WebMD Videos
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" displayed 
@@ -833,6 +783,11 @@ As a minor user, I should see Find A Blue Distinction Center
 As a minor user, I should see Submit Overseas Claim
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.submitOverseasClaim\"] a" displayed
+	
+As a minor user, I should see Treatment Cost Estimator
+	[Tags]		BusinessRules
+	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.costEstimator\"] a" displayed
+
 	
 #Pharmacy
 As a minor user, I should see Pharmacy & Prescriptions

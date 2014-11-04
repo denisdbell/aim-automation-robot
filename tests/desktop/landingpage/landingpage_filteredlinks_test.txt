@@ -20,10 +20,6 @@ Landing Page I should see the link Get baby advice and support here for Standard
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink1 a" displayed
 	
-Landing Page I should see the link Health club memberships for Standard
-	[Tags]		LandingPageLinks	BusinessRules	Mobile
-	And I should see the link "li#healthAndWellnesslink4 a" displayed
-	
 Landing Page I should see the link Visit MyBlue Wellness Card Center for Standard
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#wellnessIncentives" displayed
@@ -98,10 +94,6 @@ Landing Page I should see the link Get baby advice and support here for Terminat
 	Then I should see the link "li#healthAndWellnesslink1 a" displayed
 	
 	
-Landing Page I should see the link Health club memberships for Terminated
-	[Tags]		LandingPageLinks	BusinessRules	Mobile
-	Then I should see the link "li#healthAndWellnesslink4 a" displayed
-	
 Landing Page I should not see the link Visit MyBlue Wellness Card Center for Terminated
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#wellnessIncentives" displayed
@@ -173,10 +165,6 @@ Landing Page I should see the link Take charge of your family's health for Minor
 Landing Page I should see the link Get baby advice and support here for Minor
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink1 a" displayed
-	
-Landing Page I should see the link Health club memberships for Minor
-	[Tags]		LandingPageLinks	BusinessRules	Mobile
-	Then I should see the link "li#healthAndWellnesslink4 a" displayed
 	
 Landing Page I should see the link Visit MyBlue Wellness Card Center for Minor
 	[Tags]		LandingPageLinks	BusinessRules	Mobile

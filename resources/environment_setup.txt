@@ -20,7 +20,7 @@ ${EVENT}						2
 ${DEVICE_LAUNCH}				6
 
 #Routes
-${SERVER}=						https://${ENVIRONMENT}.fepblue.org:7443/pilot		
+${SERVER}=						https://${ENVIRONMENT}.fepblue.org:6443/pilot		
 ${LOGIN_URL}=					${SERVER}/login  
 ${MYBLUE}=						https://${ENVIRONMENT}.fepblue.org:8443/
 ${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest/myblue
@@ -55,6 +55,14 @@ develop
 	Set global variable		${CAREMARK_TARGET}				https://sit1www.caremark.com
 	Set global variable		${CAREMARK_PID}					SP_CVS_FEP_Dev
 	Set global variable		${SSO_PORT}						:9032
+	
+	#Routes
+	Set global variable		${SERVER}						https://${ENVIRONMENT}.fepblue.org:6443/pilot		
+	Set global variable		${LOGIN_URL}					${SERVER}/login  
+	Set global variable		${MYBLUE}						https://${ENVIRONMENT}.fepblue.org:8443/
+	Set global variable		${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest/myblue
+	Set global variable		${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
+	Set global variable		${CSR}							${SERVER_NAVBAR}/ESsample.html
 
 
 test
@@ -101,7 +109,7 @@ local
 	#Routes
 	Set global variable 	${SERVER}						https://192.168.200.113:7443		
 	Set global variable 	${LOGIN_URL}					${SERVER}/login  
-	Set global variable 	${MYBLUE}						https://${ENVIRONMENT}.fepblue.org:8443/
+	Set global variable 	${MYBLUE}						https://dev.fepblue.org:8443/
 	Set global variable 	${MYBLUE_LOGIN_URL}				${MYBLUE}web/guest
 	Set global variable 	${SERVER_NAVBAR}				${MYBLUE}html/js/navlib/v1
 	

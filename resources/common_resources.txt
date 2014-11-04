@@ -28,10 +28,10 @@ I am on a mobile device
 	
 I navigate to "${url}"
 	Go To 		${url}
+
 	
 I enter the text "${text}" in "${element}" textbox
 	Input Text		css=${element}		${text}
-	
 	
 	
 I Click the "${link}" link
