@@ -183,10 +183,6 @@ When I click Find a Pharmacy I should see the interstitial
 	Given I am a Registered MyBlue Member on the Landing Page
 	When I Click the "#pharmacylink0 a" link
 	Sleep		${NAVIGATION}
-	Then I should see the element ".modal-dialog" displayed
-	
-I should see a message on the interstitial
-	[Tags]		PreNavInterstitial
 	Then I should see the element ".modal-dialog .copy" displayed
 	
 I should see a message on the interstitial with the following text
@@ -245,10 +241,6 @@ I should see a confirm new username text box
 I should see a cancel link
 	[Tags]		ChangeUsername
 	Then I should see the link "#myblue-account-management-modal-cancel" displayed
-	
-I should see a submit link
-	[Tags]		ChangeUsername
-	Then I should see the link "#m-dot-change-username-form-submit" displayed
 
 I should see a red X if less than 3 characters
 	[Tags]		ChangeUsername
@@ -282,3 +274,4 @@ When I click cancel I should not see the modal
 	When i click the "#myblue-account-management-modal-cancel" link
 	Sleep		${EVENT}
 	Then I should not see the element "form[name=\"mdotChangeUsernameForm\"]" displayed
+	Teardown Browser
