@@ -354,13 +354,17 @@ I should see a cancel link
 
 I should see a red X if invalid email
 	[Tags]		ChangeEmail
-	When I enter the text "aa" in "#newEmailAddress" textbox
+	When I enter the text "aa" in "#currentEmailAddress" textbox
+	And I enter the text "aa" in "#newEmailAddress" textbox
+	And I enter the text "aa" in "#confirmEmailAddress" textbox
 	Sleep		${EVENT}
 	Then I should see the element ".validation-icon" displayed
 
 I should see a checkmark if valid email
 	[Tags]		ChangeEmail
-	When I enter the text "aaa@aaa.com" in "#newEmailAddress" textbox
+	When I enter the text "aaa@aaa.com" in "#currentEmailAddress" textbox
+	And I enter the text "aaa@aaa.com" in "#newEmailAddress" textbox
+	And I enter the text "aaa@aaa.com" in "#confirmEmailAddress" textbox
 	Sleep		${EVENT}
 	Then I should see the element ".validation-icon.success" displayed
 	
