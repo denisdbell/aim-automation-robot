@@ -249,7 +249,7 @@ I should see a red X if less than 3 characters
 
 I should see a checkmark if 3 characters or more
 	[Tags]		ChangePassword
-	When I enter the text "aaaaAaa2" in "#newUsername" textbox
+	When I enter the text "aaaaAaa2" in "#newPassword" textbox
 	Sleep		${EVENT}
 	Then I should see the element ".validation-icon.success" displayed
 	
