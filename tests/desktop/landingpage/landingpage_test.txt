@@ -370,7 +370,9 @@ I should see a checkmark if valid email
 	
 I should see a red X if has invalid characters
 	[Tags]		ChangeEmail
-	When I enter the text "@^&#^%^#" in "#newEmailAddress" textbox
+	When I enter the text "@^&#^%^#" in "#currentEmailAddress" textbox
+	And I enter the text "@^&#^%^#" in "#newEmailAddress" textbox
+	And I enter the text "@^&#^%^#" in "#confirmEmailAddress" textbox
 	Sleep		${EVENT}
 	Then I should see the element ".validation-icon" displayed
 	
