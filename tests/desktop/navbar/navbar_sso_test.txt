@@ -105,10 +105,6 @@ Conditions should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
 
-General Health should have a valid SSO link
-	[Tags]		SSO
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
-
 Procedures/Surgeries should have a valid SSO link
 	[Tags]		SSO
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" with SSO link "https://${SSO}.fepblue.org${SSO_PORT}/idp/startSSO.ping?PartnerSpId=https://www.webmdhealth.com/sp&TargetResource=https://startid.fepblue.org?value=3165"
