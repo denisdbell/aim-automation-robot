@@ -104,10 +104,6 @@ As a standard user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
 
-As a standard user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
-
 As a standard user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
@@ -339,10 +335,6 @@ As a basic user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
 
-As a basic user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
-
 As a basic user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
@@ -572,10 +564,6 @@ As a terminated user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
 
-As a terminated user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
-
 As a terminated user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" displayed 
@@ -759,10 +747,6 @@ As a minor user, I should see All Topics
 As a minor user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
-
-As a minor user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
 
 As a minor user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
