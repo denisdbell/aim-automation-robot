@@ -12,6 +12,7 @@ Resource          ../../../resources/navbar/navbar_resource.txt
 I should see valid local link for Wellness Card Home
 	[Tags]		LocalLinks
 	Given I am logged into the MyBlue Portal as a Standard User
+	Sleep		${NAVIGATION}
 	When I Click the "#wellness" element
 	Sleep		${EVENT}
 	And I Click the "#visitWellnessCardPortal a" link
@@ -69,6 +70,7 @@ I should see valid local link for Blue Health Assessment
 	[Tags]		LocalLinks	UAT	LIT
 	# This is temporary since wellness is not yet deployed to test/stage. The given will be removed in time.
 	Given I am logged into the MyBlue Portal as a Standard User
+	Sleep		${NAVIGATION}
 	When I Click the "#health-tools" element
 	Sleep		${EVENT}
 	And I Click the "li[data-url-config=\"navigation.main.healthTools.nodes.nurseLine\"] a" element
@@ -138,18 +140,6 @@ I should see valid local link for Procedures/Surgeries
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/healthtopics/listingbytype.aspx?type=ProceduresSurgeries" 
 
-I should see valid local link for Medical Encyclopedia
-	[Tags]		LocalLinks	UAT	LIT
-	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.medicalEncyclopedia\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=321" 
-
-I should see valid local link for WebMD Interactives
-	[Tags]		LocalLinks	UAT	LIT
-	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.webMDInteractives\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=603" 
-
-I should see valid local link for Message Board Exchanges
-	[Tags]		LocalLinks	UAT	LIT
-	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.messageBoardExchanges\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=1028" 
-
 I should see valid local link for WebMD Videos
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.webMDVideo\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/start.aspx?toolid=711" 
@@ -177,6 +167,7 @@ I should see valid local link for My Benefits
 	[Tags]		LocalLinks	UAT	LIT
 	# This is temporary since wellness is not yet deployed to test/stage. The given will be removed in time.
 	Given I am logged into the MyBlue Portal as a Standard User
+	Sleep		${NAVIGATION}
 	When I Click the "#my-account" element
 	And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" element
 	Sleep		${NAVIGATION}
