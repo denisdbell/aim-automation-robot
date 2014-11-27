@@ -119,7 +119,7 @@ Find A Provider should have a valid link
 	[Tags]		US1582
 	When I Click the "#health-tools" element
 	Sleep		${EVENT}
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" with SSO link "https://www.fepblue.org/en/find-a-doctor"
+	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.findAProvider\"] a" with SSO link "http://www.fepblue.org/en/find-a-doctor"
 	
 Find a Blue Distinction Center should have a valid link
 	[Tags]		US1582
