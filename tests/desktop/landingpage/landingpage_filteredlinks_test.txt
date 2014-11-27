@@ -93,7 +93,6 @@ Landing Page I should see the link Get baby advice and support here for Terminat
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the link "li#healthAndWellnesslink1 a" displayed
 	
-	
 Landing Page I should not see the link Visit MyBlue Wellness Card Center for Terminated
 	[Tags]		LandingPageLinks	BusinessRules	Mobile
 	Then I should see the element "span#wellnessIncentives" displayed

@@ -12,6 +12,7 @@ Resource          ../../../resources/navbar/navbar_resource.txt
 As a standard user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal as a Standard User
+	Sleep		${NAVIGATION}
 	When I Click the "#my-account" element
 	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
@@ -103,10 +104,6 @@ As a standard user, I should see Health Topics
 As a standard user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
-
-As a standard user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
 
 As a standard user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
@@ -247,6 +244,7 @@ As a standard user, I should see Communication Settings
 As a basic user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal
+	Sleep		${NAVIGATION}
 	When I Click the "#my-account" element
 	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
@@ -338,10 +336,6 @@ As a basic user, I should see All Topics
 As a basic user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
-
-As a basic user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
 
 As a basic user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
@@ -480,6 +474,7 @@ As a basic user, I should see Communication Settings
 As a terminated user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal as a Terminated User
+	Sleep		${NAVIGATION}
 	When I Click the "#my-account" element
 	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
@@ -571,10 +566,6 @@ As a terminated user, I should see All Topics
 As a terminated user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
-
-As a terminated user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
 
 As a terminated user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
@@ -668,6 +659,7 @@ Nav Wellness Incentives links Displayed for Terminated
 As a minor user, I should see My Benefits
 	[Tags]		BusinessRules
 	Given I am logged into the MyBlue Portal as a Minor User
+	Sleep		${NAVIGATION}
 	When I Click the "#my-account" element
 	Sleep		${EVENT}
 	Then I should see the link "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" displayed
@@ -759,10 +751,6 @@ As a minor user, I should see All Topics
 As a minor user, I should see Conditions
 	[Tags]		BusinessRules
 	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" displayed 
-
-As a minor user, I should see General Health
-	[Tags]		BusinessRules
-	Then I should see the link "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" displayed 
 
 As a minor user, I should see Procedures/Surgeries
 	[Tags]		BusinessRules
