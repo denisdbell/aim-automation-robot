@@ -134,10 +134,6 @@ I should see valid local link for Conditions
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.conditions\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/healthtopics/listingbytype.aspx?type=Condition" 
 
-I should see valid local link for General Health
-	[Tags]		LocalLinks	UAT	LIT
-	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.generalHealth\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/healthtopics/listingbytype.aspx?type=GeneralHealth" 
-
 I should see valid local link for Procedures/Surgeries
 	[Tags]		LocalLinks	UAT	LIT
 	Then I should see "li[data-url-config=\"navigation.main.healthTools.nodes.proceduresSurgeries\"] a" have attribute "href" with the value "https://staging.webmdhealth.com/healthtopics/listingbytype.aspx?type=ProceduresSurgeries" 
