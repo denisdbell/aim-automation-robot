@@ -25,38 +25,39 @@ ${PASSWORD}=					Bigfun21!
 
 I am on a mobile device
 	Set Window Size		400		700
-	
+
 I navigate to "${url}"
 	Go To 		${url}
+	Execute Javascript    document.cookie="robot_user=true;"
 
-	
+
 I enter the text "${text}" in "${element}" textbox
 	Input Text		css=${element}		${text}
-	
-	
+
+
 I Click the "${link}" link
 	Click Link					css=${link}
-		
+
 I Click the "${element}" element
 	Click Element		css=${element}
 
 I Click the "${button}" Button
 	Click Button		css=${button}
-	
-	
+
+
 
 I should see the element "${element}" displayed
-	Element Should Be Visible		css=${element}	
+	Element Should Be Visible		css=${element}
 
-I should see the link "${text}" displayed			
-	Page Should Contain Link		css=${text}		
-	
+I should see the link "${text}" displayed
+	Page Should Contain Link		css=${text}
+
 I should see "${element}" have the text "${text}" displayed
-	Element Should Contain		css=${element}		${text}	
-	
+	Element Should Contain		css=${element}		${text}
+
 I should see the element "${element}" disabled
 	Page Should Contain Element		css=${element}
-	
+
 I should see the loading popup visible
 	Wait Until Element Is Visible		css=.loading		timeout=10.0
 
@@ -65,36 +66,36 @@ I should not see the element "${element}" disabled
 
 I should not see the element "${element}" displayed
 	Element Should Not Be Visible		css=${element}
-	
+
 I should not see the element "${element}"
 	Page Should Not Contain Element			css=${element}
 
 
 I should be navigated to "${url}" in a new tab
-	@{windows}=					Get Window Titles		
+	@{windows}=					Get Window Titles
 	Select Window				@{windows}[1]
-	Sleep						${NAVIGATION}	
-	Location Should Contain		${url}		
+	Sleep						${NAVIGATION}
+	Location Should Contain		${url}
 
 I should be navigated to "${url}"
 	Sleep						${NAVIGATION}
 	Location Should Contain		${url}
-	
+
 I should not be redirected off the page "${url}"
 	Location Should Contain		${url}
 
 I view the "${element}" element
-	Page Should Contain Element		css=${element}	
+	Page Should Contain Element		css=${element}
 
 
 I should see the link "${element}" with SSO link "${link}"
 	${SSO}=	Get Element Attribute	css=${element}@href
 	Should Be Equal	${SSO}	${link}
-	
+
 I should see "${element}" have attribute "${attribute}" with the value "${link}"
 	${VALUE}=	Get Element Attribute	css=${element}@${attribute}
 	Should Be Equal	${VALUE}	${link}
-	
+
 I Enter "${text}" in the "${element}" textfield
 	Input Text		css=${element}		${text}
 
@@ -102,7 +103,7 @@ I Enter "${text}" in the "${element}" textfield
 I enter a pin if necessary
 	${URL}=	Get Location
 	Run Keyword If		'${URL}'=='https://staging.webmdhealth.com/Registration/SecondFactorAuthentication.aspx/Sso'		I enter the pin "1234"
-	
+
 I enter the pin "${pin}"
 	Sleep		${EVENT}
 	Input Text			css=#Pin		${pin}
@@ -112,11 +113,13 @@ I enter the pin "${pin}"
 I navigate to the classic site
 	Go To		${MYBLUE}
 	Sleep		${NAVIGATION}
-	
+	Execute Javascript    document.cookie="robot_user=true;"
+
 I navigate to MyBlue Pilot
 	Go To		${SERVER}
 	Sleep		${NAVIGATION}
-	
+	Execute Javascript    document.cookie="robot_user=true;"
+
 
 Teardown Browser
     Close All Browsers
