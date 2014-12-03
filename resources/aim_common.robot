@@ -25,6 +25,7 @@ ${GA_OAUTH_GRANT_TYPE}  authorization_code
 
 ${GA_OAUTH_LOGIN}          ${GA_OAUTH_URL}/o/oauth2/auth?redirect_uri=${GA_OAUTH_REDIRECT}&scope=${GA_OAUTH_SCOPE}&response_type=code&client_id=${GA_OAUTH_CLIENT}
 
+
 *** Keywords ***
 The ${arg0} should be same as ${arg1}
     Should Be Equal    ${${arg0}}    ${${arg1}}
@@ -78,5 +79,5 @@ Initialize Google Bearer Token
     
 
 Page View ${path} is sent to Google Analytics
-	
+	The next should be more than first
 
