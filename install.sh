@@ -10,3 +10,11 @@ echo “\n\n————— Installing ‘robotframework’ via pip...”
 pip install robotframework
 echo “\n\n————— Installing ‘robotframework-selenium2library’ via pip...”
 pip install robotframework-selenium2library 
+echo “\n\n————— Installing ‘requests’ via pip...”
+pip install requests
+echo “\n\n————— Installing ‘robotframework-requests’ via pip...”
+pip install robotframework-requests
+echo “\n\n————— Installing ‘selenium’ via pip...”
+pip install selenium
+echo “\n\n————— Installing ‘vcrpy’ via pip...”
+pip install vcrpy
