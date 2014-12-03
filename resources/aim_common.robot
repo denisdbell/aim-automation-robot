@@ -75,5 +75,8 @@ Initialize Google Bearer Token
     Log Dictionary    ${jsondata}
     Set Global Variable    ${GA_BEARER_TOKEN}    Bearer ${jsondata['access_token']}
     [Return]    ${jsondata}
+    
 
+Page View ${path} is sent to Google Analytics
+	
 

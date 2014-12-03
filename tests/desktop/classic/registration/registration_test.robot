@@ -12,6 +12,6 @@ Login Page
 	
 Registration Page View
 	[Tags]		RegistrationPageView
-	When I click the 
+	When I Click the "a#signUpMyBlueID" tracked link
 	Then a page view “/registration/start” should be sent to Google Analytics
 	
