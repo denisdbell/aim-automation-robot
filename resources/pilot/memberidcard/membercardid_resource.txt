@@ -2,7 +2,7 @@
 Documentation     A resource file with reusable keywords and variables.
 
 # resource importation/extension
-Resource	   ../landingpage/landingpage_resource.txt
+Resource	   ../pilot/landingpage/landingpage_resource.txt
 
 
 *********Keywords************

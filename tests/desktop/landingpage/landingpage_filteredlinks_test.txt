@@ -4,7 +4,7 @@ Documentation     This file tests that links should be filtered by user
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
-Resource          ../../../resources/landingpage/landingpage_resource.txt
+Resource          ../../../resources/pilot/landingpage/landingpage_resource.txt
 
 *** Test Cases ***
 
