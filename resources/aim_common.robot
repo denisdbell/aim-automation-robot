@@ -83,6 +83,7 @@ I Click "${link}" tracked link
     Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
     Wait Until Element Is Visible    css=${link}
     Click Link    css=${link}
+    Sleep               ${NAVIGATION}
     Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
 
 I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
@@ -92,6 +93,7 @@ I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${labe
     Get analytics event first total for ${filter}
     Wait Until Element Is Visible    css=${link}
     Click Link    css=${link}
+    Sleep               ${NAVIGATION}
     Get analytics event second total for ${filter}
 
 I should see ${hitType} for "${hitDescription}" logged
