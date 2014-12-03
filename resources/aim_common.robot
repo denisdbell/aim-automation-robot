@@ -62,9 +62,8 @@ Initialize Google Bearer Token
     Input Text    Passwd    ${GA_PASSWORD}
     Click Button    signIn
     Wait Until Element Is Visible    css=#submit_approve_access
-    Sleep    1s
     Click Button    submit_approve_access
-    Sleep    1s
+    Wait Until Element Is Visible    css=#code
     ${code}    Get Value    css=#code
     #Log    ${code}
     Create Session    google_oauth    ${GA_OAUTH_URL}
@@ -82,7 +81,7 @@ I Click "${link}" tracked link
     ${linkhref}=    Get Element Attribute   css=${link}@href
     Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
     Wait Until Element Is Visible    css=${link}
-    Click Link    css=${link}
+    Click Element    css=${link}
     Sleep               ${NAVIGATION}
     Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
 
@@ -92,7 +91,7 @@ I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${labe
     Run Keyword If    '${label}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventLabel==${label.replace(':','')}
     Get analytics event first total for ${filter}
     Wait Until Element Is Visible    css=${link}
-    Click Link    css=${link}
+    Click Element    css=${link}
     Sleep               ${NAVIGATION}
     Get analytics event second total for ${filter}
 
