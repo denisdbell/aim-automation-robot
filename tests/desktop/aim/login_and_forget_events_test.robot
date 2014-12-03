@@ -6,57 +6,44 @@ Resource          ../../../resources/login/login_resource.txt
 
 *** Test Cases ***
 
-Login Page Hot links Displayed
-	[Tags]		LoginPageElements	Mobile    AIM1
-	Given I am a MyBlue Member on the Login Page
-
-#US369 - Forgot Username
-Login Page forgot username Hot links Displayed
-	[Tags]		ForgotUsername	Mobile    AIM1
+Login Pilot login page forgot username event logged
+    [Tags]      LoginPageElements   Mobile    AIM1
+    Given I am a MyBlue Member on the Login Page
 	Sleep		${EVENT}
-	When I click the "#forgotUsername" tracked for event "authentication:forgotusername:(not set)"
-	Then I should be navigated to "${SERVER}/forgot/username"
+	When I click "#forgotusername" tracked for event "authentication:forgotusername"
+	Then I should see event for "authentication:forgotusername" logged
 
-I should not see the modal when I click cancel
-	[Tags]		ForgotUsername	Mobile
-	When I click the "div.cancel a" link
-	Then I navigate to "${SERVER}/login"
+I should see no event when cancelling forgot username
+	[Tags]		ForgotUsername	Mobile    AIM1
+	When I click the "img[alt=Cancel]" link
+    Then I should not see event for "authentication:forgotusername" logged
 
 
 #US1638 & US1610 - Forgot email
-I should be navigated to the forgot email page
-	[Tags]		ForgotEmailAddress
+Pilot login page forgot email event logged
+	[Tags]		ForgotEmailAddress    AIM1
 	Sleep		${EVENT}
-    When I click the "#forgotEmailAddress" link
-    Then I should be navigated to "${SERVER}/forgot/email-address"
+    When I click the "#forgotemail" tracked for event "authentication:forgotemail"
+    Then I should not see event for "authentication:forgotemail" logged
 
-I should see a cancel button
-	[Tags]		ForgotEmailAddress
-    Then I should see the element ".cancel" displayed
-
-When I click cancel I should be taken to the login page
-	[Tags]		ForgotEmailAddress
-	When I click the ".cancel a" link
-    Then I should be navigated to "${SERVER}/login"
+I should see no event when cancelling forgot email
+	[Tags]		ForgotEmailAddress    AIM1
+    When I click the "img[alt=Cancel]" link
+    Then I should not see event for "authentication:forgotemail" logged
 
 
 #US1609 - Forgot Password
-Login Page forgot password Hot links Displayed
-	[Tags]		ForgotPassword	Mobile
-	Sleep		${EVENT}
-	When I click the "#forgotPassword" link
-	Then I should be navigated to "${SERVER}/forgot/password"
+Pilot login page forgot password event logged
+    [Tags]      ForgotPassword    AIM1
+    Sleep       ${EVENT}
+    When I click the "#forgotpassword" tracked for event "authentication:forgotpassword"
+    Then I should not see event for "authentication:forgotpassword" logged
 
-I should see a cancel button
-	[Tags]		ForgotPassword	Mobile
-	Then I should see the element "div.cancel" displayed
-
-I should be directed to login when I click cancel
-	[Tags]		ForgotPassword	Mobile
-	When I click the "div.cancel a" link
-	Then I navigate to "${SERVER}/login"
+I should see no event when cancelling forgot email
+    [Tags]      ForgotPassword    AIM1
+    When I click the "img[alt=Cancel]" link
+    Then I should not see event for "authentication:forgotpassword" logged
 	Teardown Browser
-
 
 
 Valid Login

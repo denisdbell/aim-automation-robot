@@ -32,8 +32,13 @@ The ${arg0} should be same as ${arg1}
 The ${arg0} should be more than ${arg1}
     Should Be True    ${${arg0}} > ${${arg1}}
 
+Get analytics event ${varName} total for ${criteria}
+    ${counts}=    Get Google Analytics Page Hit ga-page-count ${GA_KEY} ${GA_PROFILE_ID} rt:totalEvents rt:eventCategory ${criteria}
+    Set Test Variable    ${${varName}}    ${counts['rt:totalEvents']}
+    [Return]    ${counts['rt:totalEvents']}
+
 Get GA ${varName} ${metric} total for ${field} ${criteria}
-    ${counts}=    Get Google Analytics Page Hit ga-page-count ${GA_KEY} ${GA_PROFILE_ID} ${GA_METRIC} ${field} ${field}${criteria}
+    ${counts}=    Get Google Analytics Page Hit ga-page-count ${GA_KEY} ${GA_PROFILE_ID} ${metric} ${field} ${field}${criteria}
     Set Test Variable    ${${varName}}    ${counts['${metric}']}
     [Return]    ${counts['${metric}']}
 
@@ -43,17 +48,12 @@ Check Analytics Hit ${ref} ${path} ${criteria}
 
 Get Google Analytics Page Hit ${ga} ${gaKey} ${profileId} ${metrics} ${dims} ${filter}
     Run Keyword    Create Session    ${ga}    ${GA_REAL_TIME_DATA_ENDPOINT}
-    #URL Parameters to be passed to GA Real Time Endpoint
-    ${params}=    Create Dictionary    ids=${profileId}    #key=${gaKey}
-    Set To Dictionary    ${params}    metrics=${metrics}    dimensions=${dims}    filters=${filter}
-    ${xparams}=    Set Variable    ids=${profileId}&metrics=${metrics}&dimensions=${dims}&filters=${filter}
-    #Headers to be passed to GA Real Time Endpoint
-    ${headers}=    Create Dictionary    Authorization=${GA_BEARER_TOKEN}    #referer=${GA_REALTIME_CONSOLE}
-    #Response recieved from ga realtime end point
-    Log Dictionary    ${headers}
-    ${resp}=    Run Keyword    Get    ${ga}    /analytics/v3/data/realtime?${xparams}    headers=${headers}
+    ${params}=    Set Variable    ids=${profileId}&metrics=${metrics}&dimensions=${dims}&filters=${filter}
+    ${headers}=    Create Dictionary    Authorization=${GA_BEARER_TOKEN}
+    #Log Dictionary    ${headers}
+    ${resp}=    Run Keyword    Get    ${ga}    /analytics/v3/data/realtime?${params}    headers=${headers}
     ${jsondata}=    To Json    ${resp.content}
-    Log Dictionary    ${jsondata}
+    #Log Dictionary    ${jsondata}
     [Return]    ${jsondata['totalsForAllResults']}
 
 Initialize Google Bearer Token
@@ -62,18 +62,43 @@ Initialize Google Bearer Token
     Input Text    Passwd    ${GA_PASSWORD}
     Click Button    signIn
     Wait Until Element Is Visible    css=#submit_approve_access
-    Sleep    3s
+    Sleep    1s
     Click Button    submit_approve_access
+    Sleep    1s
     ${code}    Get Value    css=#code
-    Log    ${code}
+    #Log    ${code}
     Create Session    google_oauth    ${GA_OAUTH_URL}
     ${params}=    Create Dictionary    code=${code}    grant_type=${GA_OAUTH_GRANT_TYPE}    redirect_uri=${GA_OAUTH_REDIRECT}
     Set To Dictionary    ${params}    client_secret=${GA_OAUTH_SECRET}    client_id=${GA_OAUTH_CLIENT}
     ${headers}=    Create Dictionary    Content-Type=application/x-www-form-urlencoded
     ${resp}=    Post    google_oauth    /o/oauth2/token    data=${params}    headers=${headers}
     ${jsondata}    To Json    ${resp.content}
-    Log Dictionary    ${jsondata}
+    #Log Dictionary    ${jsondata}
     Set Global Variable    ${GA_BEARER_TOKEN}    Bearer ${jsondata['access_token']}
     [Return]    ${jsondata}
+
+
+I Click "${link}" tracked link
+    ${linkhref}=    Get Element Attribute   css=${link}@href
+    Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
+    Wait Until Element Is Visible    css=${link}
+    Click Link    css=${link}
+    Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
+
+I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
+    ${filter}=    Set Variable    rt:eventCategory==${category}
+    Run Keyword If    '${action}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventAction==${action.replace(':','')}
+    Run Keyword If    '${label}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventLabel==${label.replace(':','')}
+    Get analytics event first total for ${filter}
+    Wait Until Element Is Visible    css=${link}
+    Click Link    css=${link}
+    Get analytics event second total for ${filter}
+
+I should see ${hitType} for "${hitDescription}" logged
+    The second should be more than first
+
+
+I should not see ${hitType} for "${hitDescription}" logged
+    The second should be same as first
 
 
