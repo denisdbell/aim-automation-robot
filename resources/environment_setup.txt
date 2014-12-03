@@ -29,6 +29,9 @@ ${MYBLUE_LOGIN_URL}=			${MYBLUE}web/guest/myblue
 ${SERVER_NAVBAR}=				${MYBLUE}html/js/navlib/v1
 ${CSR}=							${SERVER_NAVBAR}/ESsample.html
 
+#Classic Routes 
+${REGISTRATION_URL}=			${SERVER}/login
+
 #Setup iPhone
 ${IPHONE_DESIRED_CAPABILITIES}	device:iPhone Simulator,platformName:iOS,deviceName:iPhone,safari:true,browserName:Safari
 ${REMOTE_URL}=					http://127.0.0.1:4723/wd/hub
