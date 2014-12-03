@@ -7,14 +7,14 @@ Resource          ../../../resources/login/login_resource.txt
 *** Test Cases ***
 
 Login Page Hot links Displayed
-	[Tags]		LoginPageElements	Mobile
+	[Tags]		LoginPageElements	Mobile    AIM1
 	Given I am a MyBlue Member on the Login Page
 
 #US369 - Forgot Username
 Login Page forgot username Hot links Displayed
-	[Tags]		ForgotUsername	Mobile
+	[Tags]		ForgotUsername	Mobile    AIM1
 	Sleep		${EVENT}
-	When I click the "#forgotUsername" link
+	When I click the "#forgotUsername" tracked for event "authentication:forgotusername:(not set)"
 	Then I should be navigated to "${SERVER}/forgot/username"
 
 I should not see the modal when I click cancel
