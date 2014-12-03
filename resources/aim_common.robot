@@ -9,7 +9,7 @@ ${GA_PASSWORD}                  !Medullan5
 ${GA_KEY}                       AIzaSyCFj15TpkchL4OUhLD1Q2zgxQnMb7v3XaM
 ${GA_DIMENSION}                 rt:pagePath
 ${GA_METRIC}                    rt:pageViews
-${GA_PROFILE_ID}                ga:92930649
+${GA_PROFILE_ID}                ga:92826706    #92930649
 ${GA_BEARER_TOKEN}              Bearer ya29.zABUvOPcIbadhwL2XiBdatTF7LXfIrp3Gd6Xd67QQUaPcb_t2JvUVy4WVZJj8ws9pkPamoJC400fBA
 ${GA_REAL_TIME_DATA_ENDPOINT}   https://content.googleapis.com
 ${GA_REALTIME_CONSOLE}          https://developers.google.com/analytics/devguides/reporting/realtime/v3/reference/data/realtime/get
@@ -44,12 +44,14 @@ Check Analytics Hit ${ref} ${path} ${criteria}
 Get Google Analytics Page Hit ${ga} ${gaKey} ${profileId} ${metrics} ${dims} ${filter}
     Run Keyword    Create Session    ${ga}    ${GA_REAL_TIME_DATA_ENDPOINT}
     #URL Parameters to be passed to GA Real Time Endpoint
-    ${params}=    Create Dictionary    ids=${profileId}    key=${gaKey}
+    ${params}=    Create Dictionary    ids=${profileId}    #key=${gaKey}
     Set To Dictionary    ${params}    metrics=${metrics}    dimensions=${dims}    filters=${filter}
+    ${xparams}=    Set Variable    ids=${profileId}&metrics=${metrics}&dimensions=${dims}&filters=${filter}
     #Headers to be passed to GA Real Time Endpoint
-    ${headers}=    Create Dictionary    authorization=${GA_BEARER_TOKEN}    referer=${GA_REALTIME_CONSOLE}
+    ${headers}=    Create Dictionary    Authorization=${GA_BEARER_TOKEN}    #referer=${GA_REALTIME_CONSOLE}
     #Response recieved from ga realtime end point
-    ${resp}=    Run Keyword    Get    ${ga}    /analytics/v3/data/realtime    params=${params}    headers=${headers}
+    Log Dictionary    ${headers}
+    ${resp}=    Run Keyword    Get    ${ga}    /analytics/v3/data/realtime?${xparams}    headers=${headers}
     ${jsondata}=    To Json    ${resp.content}
     Log Dictionary    ${jsondata}
     [Return]    ${jsondata['totalsForAllResults']}
@@ -71,7 +73,7 @@ Initialize Google Bearer Token
     ${resp}=    Post    google_oauth    /o/oauth2/token    data=${params}    headers=${headers}
     ${jsondata}    To Json    ${resp.content}
     Log Dictionary    ${jsondata}
-    Set Global Variable    ${GA_BEARER_TOKEN}              Bearer ${jsondata['access_token']}
+    Set Global Variable    ${GA_BEARER_TOKEN}    Bearer ${jsondata['access_token']}
     [Return]    ${jsondata}
 
 

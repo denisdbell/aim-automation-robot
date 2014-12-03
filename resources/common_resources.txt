@@ -38,6 +38,19 @@ I enter the text "${text}" in "${element}" textbox
 I Click the "${link}" link
 	Click Link					css=${link}
 
+I Click the "${link}" tracked link
+	${linkhref}=	Get Element Attribute	css=${link}@href
+	Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
+	Click Link					css=${link}
+	Get GA next rt:pageViews total for rt:pagePath ==${linkhref}
+	The next should be more than first
+
+I Click the "${link}" tracked for event "${category}${action:\:.*}${label:\:.*}"
+	Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
+	Click Link					css=${link}
+	Get GA next rt:pageViews total for rt:pagePath ==${linkhref}
+	The next should be more than first
+
 I Click the "${element}" element
 	Click Element		css=${element}
 
