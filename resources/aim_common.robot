@@ -65,12 +65,13 @@ Initialize Google Bearer Token
     ${code}    Get Value    css=#code
     Log    ${code}
     Create Session    google_oauth    ${GA_OAUTH_URL}
-    ${params}=    Create Dictionary    code=${code}    redirect_uri=${GA_OAUTH_REDIRECT}    grant_type=${GA_OAUTH_GRANT_TYPE}
+    ${params}=    Create Dictionary    code=${code}    grant_type=${GA_OAUTH_GRANT_TYPE}    redirect_uri=${GA_OAUTH_REDIRECT}
     Set To Dictionary    ${params}    client_secret=${GA_OAUTH_SECRET}    client_id=${GA_OAUTH_CLIENT}
     ${headers}=    Create Dictionary    Content-Type=application/x-www-form-urlencoded
-    ${resp}=    Post    google_oauth    /o/oauth2/token    params=${params}    headers=${headers}
+    ${resp}=    Post    google_oauth    /o/oauth2/token    data=${params}    headers=${headers}
     ${jsondata}    To Json    ${resp.content}
     Log Dictionary    ${jsondata}
+    Set Global Variable    ${GA_BEARER_TOKEN}              Bearer ${jsondata['access_token']}
     [Return]    ${jsondata}
 
 
