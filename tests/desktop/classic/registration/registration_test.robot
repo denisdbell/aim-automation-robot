@@ -12,8 +12,8 @@ Login Page
 	
 Registration Page View
 	[Tags]		RegistrationPageView	AIM1
-	#When I Click the "a#signUpMyBlueID" link tracked for virtual page view “/web/guest/myblue”
-	When I Click the "a#signUpMyBlueID" tracked link
-	#Then Page View “/web/guest/myblue” is sent to Google Analytics
+	When I Click the "a#signUpMyBlueID" link tracked for virtual page view “/registration/start”
+	#When I Click the "a#signUpMyBlueID" tracked link
+	Then Page View “/web/guest/myblue” is sent to Google Analytics
 	
 	
