@@ -40,6 +40,7 @@ Get analytics event ${varName} total for ${criteria}
 
 Get GA ${varName} ${metric} total for ${field} ${criteria}
     ${counts}=    Get Google Analytics Page Hit ga-page-count ${GA_KEY} ${GA_PROFILE_ID} ${metric} ${field} ${field}${criteria}
+    #Log To Console		${counts}
     Set Test Variable    ${${varName}}    ${counts['${metric}']}
     [Return]    ${counts['${metric}']}
 
@@ -54,6 +55,7 @@ Get Google Analytics Page Hit ${ga} ${gaKey} ${profileId} ${metrics} ${dims} ${f
     #Log Dictionary    ${headers}
     ${resp}=    Run Keyword    Get    ${ga}    /analytics/v3/data/realtime?${params}    headers=${headers}
     ${jsondata}=    To Json    ${resp.content}
+    Log To Console 		${jsondata}
     #Log Dictionary    ${jsondata}
     [Return]    ${jsondata['totalsForAllResults']}
 
