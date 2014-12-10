@@ -46,12 +46,6 @@ I Click the "${link}" tracked link
 	Get GA next rt:pageViews total for rt:pagePath ==${linkhref}
 	Sleep	5
 	The next should be more than first
-
-I Click the "${link}" link tracked for virtual page view ${path} 
-	Get GA first rt:pageViews total for rt:pagePath ==${path}
-	Click Element					css=${link}
-	Sleep	5
-	Get GA second rt:pageViews total for rt:pagePath ==${path}
 	
 I Click the "${link}" tracked for event "${category}${action:\:.*}${label:\:.*}"
 	Get GA first rt:pageViews total for rt:pagePath ==${linkhref}

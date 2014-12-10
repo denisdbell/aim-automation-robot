@@ -55,7 +55,7 @@ Get Google Analytics Page Hit ${ga} ${gaKey} ${profileId} ${metrics} ${dims} ${f
     #Log Dictionary    ${headers}
     ${resp}=    Run Keyword    Get    ${ga}    /analytics/v3/data/realtime?${params}    headers=${headers}
     ${jsondata}=    To Json    ${resp.content}
-    Log To Console 		${jsondata}
+    #Log To Console 		${jsondata}
     #Log Dictionary    ${jsondata}
     [Return]    ${jsondata['totalsForAllResults']}
 
@@ -82,9 +82,6 @@ Initialize Google Bearer Token
     [Return]    ${jsondata}
     
 
-Page View ${path} is sent to Google Analytics
-	The second should be more than first
-
 I Click "${link}" tracked link
     ${linkhref}=    Get Element Attribute   css=${link}@href
     Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
@@ -92,6 +89,12 @@ I Click "${link}" tracked link
     Click Element    css=${link}
     Sleep               ${NAVIGATION}
     Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
+
+I Click the "${link}" link tracked for page view ${path} 
+	Get GA first rt:pageViews total for rt:pagePath ==${path}
+	Click Element					css=${link}
+	Sleep	${NAVIGATION}
+	Get GA second rt:pageViews total for rt:pagePath ==${path}
 
 I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
     ${filter}=    Set Variable    rt:eventCategory==${category}
@@ -103,11 +106,24 @@ I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${labe
     Sleep               ${NAVIGATION}
     Get analytics event second total for ${filter}
 
-I should see ${hitType} for "${hitDescription}" logged
+I enter the text "${text}" in "${element}" textbox tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
+	${filter}=    Set Variable    rt:eventCategory==${category}
+	Run Keyword If    '${action}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventAction==${action.replace(':','')}
+    Run Keyword If    '${label}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventLabel==${label.replace(':','')}
+    Get analytics event first total for ${filter}
+    Wait Until Element Is Visible		css=${element}
+	Input Text		css=${element}		${text}
+	
+I Click the next element "${element}"
+	Click Element		css=${element}
+	Sleep               ${NAVIGATION}
+	Get analytics event second total for ${filter}
+
+I should see ${hitType} for "${hitDescription}" logged in Google Analytics
     The second should be more than first
 
 
-I should not see ${hitType} for "${hitDescription}" logged
+I should not see ${hitType} for "${hitDescription}" logged in Google Analytics
     The second should be same as first
 
 
