@@ -2,8 +2,8 @@
 Documentation     A resource file with reusable keywords and variables.
 
 # resource importation/extension
-Resource       ../../common_resources.txt
-Resource       ../login/login_resource.txt
+Resource       ../../common_resources.robot
+Resource       ../login/login_resource.robot
 
 
 *********Keywords************

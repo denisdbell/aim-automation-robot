@@ -9,7 +9,7 @@ ${GA_PASSWORD}                  !Medullan5
 ${GA_KEY}                       AIzaSyCFj15TpkchL4OUhLD1Q2zgxQnMb7v3XaM
 ${GA_DIMENSION}                 rt:pagePath
 ${GA_METRIC}                    rt:pageViews
-${GA_PROFILE_ID}                ga:92826706    #92930649
+${GA_PROFILE_ID}                ga:81808767    #92930649
 ${GA_BEARER_TOKEN}              Bearer ya29.zABUvOPcIbadhwL2XiBdatTF7LXfIrp3Gd6Xd67QQUaPcb_t2JvUVy4WVZJj8ws9pkPamoJC400fBA
 ${GA_REAL_TIME_DATA_ENDPOINT}   https://content.googleapis.com
 ${GA_REALTIME_CONSOLE}          https://developers.google.com/analytics/devguides/reporting/realtime/v3/reference/data/realtime/get
@@ -64,10 +64,10 @@ Initialize Google Bearer Token
     Input Text    Email     ${GA_USER}
     Input Text    Passwd    ${GA_PASSWORD}
     Click Button    signIn
-    Wait Until Element Is Visible    css=#submit_approve_access
-    Sleep	1s
+    Wait Until Element Is Visible    css=#submit_approve_access	30s
+    Sleep	2s
     Click Button    submit_approve_access
-    Sleep	1s
+    Sleep	2s
     Wait Until Element Is Visible    css=#code
     ${code}    Get Value    css=#code
     #Log    ${code}
@@ -85,7 +85,7 @@ Initialize Google Bearer Token
 I Click "${link}" tracked link
     ${linkhref}=    Get Element Attribute   css=${link}@href
     Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
-    Wait Until Element Is Visible    css=${link}
+    Wait Until Element Is Visible    css=${link}	30s
     Click Element    css=${link}
     Sleep               ${NAVIGATION}
     Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
@@ -93,7 +93,7 @@ I Click "${link}" tracked link
 I Click the "${link}" link tracked for page view ${path} 
 	Get GA first rt:pageViews total for rt:pagePath ==${path}
 	Click Element					css=${link}
-	Sleep	${NAVIGATION}
+	Sleep							10
 	Get GA second rt:pageViews total for rt:pagePath ==${path}
 
 I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
@@ -101,7 +101,7 @@ I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${labe
     Run Keyword If    '${action}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventAction==${action.replace(':','')}
     Run Keyword If    '${label}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventLabel==${label.replace(':','')}
     Get analytics event first total for ${filter}
-    Wait Until Element Is Visible    css=${link}
+    Wait Until Element Is Visible    css=${link}	30s
     Click Element    css=${link}
     Sleep               ${NAVIGATION}
     Get analytics event second total for ${filter}
@@ -111,12 +111,12 @@ I enter the text "${text}" in "${element}" textbox tracked for event "${category
 	Run Keyword If    '${action}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventAction==${action.replace(':','')}
     Run Keyword If    '${label}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventLabel==${label.replace(':','')}
     Get analytics event first total for ${filter}
-    Wait Until Element Is Visible		css=${element}
+    Wait Until Element Is Visible		css=${element}	30s
 	Input Text		css=${element}		${text}
 	
 I Click the next element "${element}"
 	Click Element		css=${element}
-	Sleep               ${NAVIGATION}
+	Sleep               10
 	Get analytics event second total for ${filter}
 
 I should see ${hitType} for "${hitDescription}" logged in Google Analytics
@@ -125,5 +125,6 @@ I should see ${hitType} for "${hitDescription}" logged in Google Analytics
 
 I should not see ${hitType} for "${hitDescription}" logged in Google Analytics
     The second should be same as first
+
 
 

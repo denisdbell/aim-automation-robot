@@ -2,7 +2,7 @@
 Library           Selenium2Library
 Suite Setup		  Environment setup
 Suite Teardown	  Teardown Browser
-Resource          ../../../resources/login/login_resource.txt
+Resource          ../../../resources/login/login_resource.robot
 
 *** Test Cases ***
 
