@@ -151,15 +151,14 @@ Email Valid Data
 Password No Data
 	[Tags] 		PasswordNoData		AIM1
 	When I enter the text "" in "#password1" textbox tracked for event "Registration:validate password - failure"
-	And I enter the text "" in "#password2" textbox tracked for event "Registration:validate verify password - failure"
+	And I enter the text "" in "#password2" textbox
 	And I Click the next element "#emailAddress2"
 	Then I should see event for "Registration:validate password - failure" logged in Google Analytics
-	#And I should see event for "Registration:validate verify password - failure" logged in Google Analytics
 
 Password Invalid Data
 	[Tags] 		PasswordInvalidData		AIM1
 	When I enter the text "bigfun21" in "#password1" textbox tracked for event "Registration:validate password - failure"
-	And I enter the text "bigfun21" in "#password2" textbox tracked for event "Registration:validate verify password - failure"
+	And I enter the text "bigfun21" in "#password2" textbox
 	And I Click the next element "#emailAddress2"
 	Then I should see event for "Registration:validate password - failure" logged in Google Analytics
 
@@ -176,7 +175,7 @@ Password Valid Data
 	And I enter the text "Bigfun21!" in "#password2" textbox tracked for event "Registration:validate verify password - success"
 	And I Click the next element "#emailAddress2"
 	Then I should see event for "Registration:validate password - success" logged in Google Analytics
-	#And I should see event for "Registration:validate verify password - success" logged in Google Analytics
+	And I should see event for "Registration:validate verify password - success" logged in Google Analytics
 
 Certification Page View
 	[Tags]		CertificationPageView	AIM1
@@ -193,7 +192,6 @@ Certification Cancel
 	When I Click the "#cert_btn" link tracked for page view /registration/certification
 	And I Click "#conditionsDialog #condition_popup .button #cancel" tracked for event "Registration:certification - cancel"
 	Then I should see event for "Registration:certification - cancel" logged in Google Analytics
-
 	
 Terms Of Service Page View
 	[Tags]		TermsOfServicePageView	AIM1
@@ -261,6 +259,39 @@ SSN Invalid Data
 
 SSN Valid Data
 	[Tags]		SsnValidData	AIM1
-	When I enter the text "3339" in "#pinLast4SSN" textbox tracked for event "Registration:validate ssn - success"
+	When I am a MyBlue Member on the classic myBlue Login Page
+	And I Click the "a#signUpMyBlueID" link tracked for page view /registration/start
+	And I enter the text "R99900999" in "#contractNumber" textbox tracked for event "Registration:validate memberid - success"
+	And I enter the text "UNIVERSAL" in "#firstName" textbox tracked for event "Registration:validate firstname lastname - success"
+	And I enter the text "TESTMEMBER" in "#lastName" textbox tracked for event "Registration:validate firstname lastname - success"
+	And I enter the text "03/03/1972" in "#birthday" textbox tracked for event "Registration:validate dob - success"
+	And I enter the text "testmember112814_3" in "#screenName" textbox tracked for event "Registration:validate username - success"
+	And I enter the text "valid@email.com" in "#emailAddress" textbox tracked for event "Registration:validate email - success"
+	And I enter the text "valid@email.com" in "#emailAddress2" textbox tracked for event "Registration:validate verify email - success"
+	And I enter the text "Bigfun21!" in "#password1" textbox tracked for event "Registration:validate password - failure"
+	And I enter the text "Bigfun21!" in "#password2" textbox tracked for event "Registration:validate verify password - failure"
+	And I Click the "#cert_btn" link tracked for page view /registration/certification
+	And I Click "#i_agree_CE" tracked for event "Registration:certification - agree"
+	And I Click the "#tos_btn" link tracked for page view /registration/terms-of-service
+	And I Click "#i_agree_TOS" tracked for event "Registration:terms of service - agree"
+	And I Click the "#pp_btn" link tracked for page view /registration/policy
+	And I Click "#i_agree_PP" tracked for event "Registration:policy - agree"
+	And I Click the "#submit_btn" link tracked for page view /registration/validate_ssn
+	And I enter the text "3339" in "#pinLast4SSN" textbox tracked for event "Registration:validate ssn - success"
 	And I Click "#pin_submit_btn" tracked for event "Registration:validate ssn - success"
 	Then I should see event for "Registration:validate ssn - success" logged in Google Analytics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

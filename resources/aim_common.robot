@@ -103,7 +103,7 @@ I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${labe
     Get analytics event first total for ${filter}
     Wait Until Element Is Visible    css=${link}	30s
     Click Element    css=${link}
-    Sleep               ${NAVIGATION}
+    Sleep				${NAVIGATION}
     Get analytics event second total for ${filter}
 
 I enter the text "${text}" in "${element}" textbox tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
@@ -116,7 +116,7 @@ I enter the text "${text}" in "${element}" textbox tracked for event "${category
 	
 I Click the next element "${element}"
 	Click Element		css=${element}
-	Sleep               10
+	Sleep               ${NAVIGATION}
 	Get analytics event second total for ${filter}
 
 I should see ${hitType} for "${hitDescription}" logged in Google Analytics
