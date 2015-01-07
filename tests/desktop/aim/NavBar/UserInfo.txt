@@ -1,0 +1,56 @@
+*** Settings ***
+Suite Setup       Environment setup
+Suite Teardown    Teardown Browser
+Library           Selenium2Library
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Update Enrollement Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    When I Click the "#Username" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.selfMenu.nodes.updateEnrollmentInformation\"] a" link tracked for page view /fepesvc/profile.do
+    Then I should see pageview for "/fepesvc/profile.do" logged in Google Analytics
+
+Change Your Address Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    When I Click the "#Username" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourAddress\"] a" link tracked for page view /FIM/sps/xauth
+    Then I should see pageview for "/FIM/sps/xauth" logged in Google Analytics
+
+Change Your Email Address Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    When I Click the "#Username" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourEmailAddress\"] a" link tracked for page view /members/myblue/dashboard
+    Then I should see pageview for "/members/myblue/dashboard" logged in Google Analytics
+
+Change Your Password Address Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    When I Click the "#Username" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourPassword\"] a" link tracked for page view /members/myblue/dashboard
+    Then I should see pageview for "/members/myblue/dashboard" logged in Google Analytics
+
+Change Your Password Address Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    When I Click the "#Username" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourPassword\"] a" link tracked for page view /members/myblue/dashboard
+    Then I should see pageview for "/members/myblue/dashboard" logged in Google Analytics
+
+Change Your Username Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    When I Click the "#Username" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.selfMenu.nodes.changeYourUsername\"] a" link tracked for page view /web/guest
+    Then I should see pageview for "/web/guest" logged in Google Analytics

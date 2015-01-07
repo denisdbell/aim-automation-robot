@@ -1,0 +1,45 @@
+*** Settings ***
+Suite Setup       Environment setup
+Suite Teardown    Teardown Browser
+Library           Selenium2Library
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Initialize
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    And I have Entered Second Factor Authentication
+    And I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I have Entered Security Question
+
+Account Info Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    QUICKLINKS    AIM1
+    I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "div.quicknav-myacc #myAccountInfo" link tracked for page view /fepesvc/home.do
+    Then I should see pageview for "/fepesvc/home.do" logged in Google Analytics
+
+Nurse Line Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    QUICKLINKS    AIM1
+    I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "div.quicknav-nurse #nurseLine" link tracked for page view /Messaging/NurseLine.aspx/NurseLineLobby
+    Then I should see pageview for "/Messaging/NurseLine.aspx/NurseLineLobby" logged in Google Analytics
+
+Explanantion Of Benefits Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    QUICKLINKS    AIM1
+    I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "div.quicknav-benefits #explanationOfBenefits" link tracked for page view /fepesvc/memberEligibilityProcess.do
+    Then I should see pageview for "/fepesvc/memberEligibilityProcess.do" logged in Google Analytics
+
+Symptom Checker Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    QUICKLINKS    AIM1
+    I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "div.quicknav-symptom #symptomChecker" link tracked for page view /!symptomchecker
+    Then I should see pageview for "/!symptomchecker" logged in Google Analytics
+
+Personal Health Record Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    QUICKLINKS    AIM1
+    I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "div.quicknav-record #personalHealthRecord" link tracked for page view /phr/healthrecord/default.aspx
+    Then I should see pageview for "/phr/healthrecord/default.aspx" logged in Google Analytics

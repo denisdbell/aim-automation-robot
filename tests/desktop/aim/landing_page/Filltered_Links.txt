@@ -1,0 +1,69 @@
+*** Settings ***
+Suite Setup       Environment setup
+Suite Teardown    Teardown Browser
+Library           Selenium2Library
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Initialize
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    And I have Entered Second Factor Authentication
+    And I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I have Entered Security Question
+
+Take charge of your family's health for Standard Link Should Be Tracked In Google Analytics
+    [Tags]    LandingPageLinks    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "li#healthAndWellnesslink0 a" link tracked for page view /BCBSA/HealthyFamily/
+    Then I should see pageview for "/BCBSA/HealthyFamily/" logged in Google Analytics
+
+Get baby advice and support here Link Should Be Tracked In Google Analytics
+    [Tags]    LandingPageLinks    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "li#healthAndWellnesslink1 a" link tracked for page view /PregnancyAssistant/Dashboard.aspx
+    Then I should see pageview for "/PregnancyAssistant/Dashboard.aspx" logged in Google Analytics
+
+Visit MyBlue Wellness Card Center Link Should Be Tracked In Google Analytics
+    [Tags]    LandingPageLinks    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "#wellnessIncentiveslink0 a" link tracked for page view /feptest.mychiprewards.com/
+    Then I should see pageview for "/feptest.mychiprewards.com/" logged in Google Analytics
+
+View account balance Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "#wellnessIncentiveslink1 a" link tracked for page view /Cards/Account
+    Then I should see pageview for "/Cards/Account" logged in Google Analytics
+
+Report a lost MyBlue Wellness Card Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "#wellnessIncentiveslink2 a" link tracked for page view /Home/Contact
+    Then I should see pageview for "/Home/Contact" logged in Google Analytics
+
+Quit smoking with our Tobacco Cessation Program Link Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "#wellnessIncentiveslink3 a" link tracked for page view /!dha/checkin
+    Then I should see pageview for "/!dha/checkin" logged in Google Analytics
+
+Download explanation of benefits (EOB) Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "#benefitslink0 a" link tracked for page view /fepesvc/memberEligibilityProcess.do
+    Then I should see pageview for "/fepesvc/memberEligibilityProcess.do" logged in Google Analytics
+
+Order a new member ID Card Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "#benefitslink1 a" link tracked for page view /fepesvc/idCardRequest.do
+    Then I should see pageview for "/fepesvc/idCardRequest.do" logged in Google Analytics
+
+Customer Service Should Be Tracked In Google Analytics
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I Click the "#benefitslink3 a" link tracked for page view /fepesvc/inbox.do
+    Then I should see pageview for "/fepesvc/inbox.do" logged in Google Analytics

@@ -1,0 +1,71 @@
+*** Settings ***
+Suite Setup       Environment setup
+Suite Teardown    Teardown Browser
+Library           Selenium2Library
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Initialize
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    And I have Entered Second Factor Authentication
+    And I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I have Entered Security Question
+
+My Benefits Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" link tracked for page view /fepesvc/home.do
+    Then I should see pageview for "/fepesvc/home.do" logged in Google Analytics
+
+RX Statements Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.statements\"] a" link tracked for page view /fepesvc/viewSOC.do
+    Then I should see pageview for "/fepesvc/viewSOC.do" logged in Google Analytics
+
+Benefits Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" link tracked for page view /fepesvc/benefits.do
+    Then I should see pageview for "/fepesvc/benefits.do" logged in Google Analytics
+
+Medical And Pharmacy Claims Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.medicalAndPharmacy\"] a" link tracked for page view /fepesvc/memberEligibilityProcess.do
+    Then I should see pageview for "/fepesvc/memberEligibilityProcess.do" logged in Google Analytics
+
+Order A New ID Card Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.selfMenu.nodes.orderANewIDCard\"] a" link tracked for page view /fepesvc/idCardRequest.do
+    Then I should see pageview for "/fepesvc/idCardRequest.do" logged in Google Analytics
+
+Send A Secure A New ID Card Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.sendInquiry\"] a" link tracked for page view /fepesvc/initiateInquiry.do
+    Then I should see pageview for "/fepesvc/initiateInquiry.do" logged in Google Analytics
+
+Account Settings Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    MY_ACCOUNT    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.settings\"] a" link tracked for page view /fepesvc/profile.do
+    Then I should see pageview for "/fepesvc/profile.do" logged in Google Analytics

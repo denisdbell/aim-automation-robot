@@ -1,0 +1,31 @@
+*** Settings ***
+Suite Setup       Environment setup
+Suite Teardown    Teardown Browser
+Library           Selenium2Library
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Initialize
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    And I have Entered Second Factor Authentication
+    And I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I have Entered Security Question
+
+Health And Wellness Inbox Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    When I Click the "#Mailbox" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.inbox.nodes.nurseLineInbox\"] a" link tracked for page view /Messaging/MessageCenter.aspx
+    Then I should see pageview for "/Messaging/MessageCenter.aspx" logged in Google Analytics
+
+Customer Service Inbox Link Should Be Tracked In Google Analytics
+    [Tags]    RegistrationPageView    AIM1
+    I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#Mailbox" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.inbox.nodes.customerServiceInbox\"] a" link tracked for page view /fepesvc/inbox.do
+    Then I should see pageview for "/fepesvc/inbox.do" logged in Google Analytics

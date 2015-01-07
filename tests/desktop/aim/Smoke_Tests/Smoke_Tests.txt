@@ -1,0 +1,38 @@
+*** Settings ***
+Suite Setup       Environment setup
+Suite Teardown    Teardown Browser
+Library           Selenium2Library
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Initialize
+    [Tags]    NAVBAR    SMOKE    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    And I have Entered Second Factor Authentication
+    And I am a Registered MyBlue Member on the Landing Page (Session exists)
+    And I have Entered Security Question
+
+Blue Health Assessment Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    SMOKE    AIM1    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#health-tools" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" link tracked for page view /hra/lobby.aspx?toolid=3563
+    Then I should see pageview for "/hra/lobby.aspx?toolid=3563" logged in Google Analytics
+
+My Benefits Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    SMOKE    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.myBenefits\"] a" link tracked for page view /fepesvc/home.do
+    Then I should see pageview for "/fepesvc/home.do" logged in Google Analytics
+
+Benefits Link Should Be Tracked In Google Analytics
+    [Tags]    NAVBAR    SMOKE    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#my-account" element
+    Sleep    ${NAVIGATION}
+    And I Click the "li[data-url-config=\"navigation.main.myAccount.nodes.benefits\"] a" link tracked for page view /fepesvc/benefits.do
+    Then I should see pageview for "/fepesvc/benefits.do" logged in Google Analytics
