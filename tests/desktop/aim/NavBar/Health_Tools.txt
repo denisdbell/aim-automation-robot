@@ -8,14 +8,14 @@ Resource          ../../../../resources/aim_common.robot
 
 *** Test Cases ***
 Initialize
-    [Tags]    NAVBAR HEALTH_TOOLS    AIM1
+    [Tags]    NAVBAR    HEALTH_TOOLS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page
     And I have Entered Second Factor Authentication
     And I am a Registered MyBlue Member on the Landing Page (Session exists)
     And I have Entered Security Question
 
 Blue Health Assessment Link Should Be Tracked In Google Analytics
-    [Tags]    NAVBAR HEALTH_TOOLS    AIM1
+    [Tags]    NAVBAR    HEALTH_TOOLS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#health-tools" element
     Sleep    ${NAVIGATION}
@@ -23,7 +23,7 @@ Blue Health Assessment Link Should Be Tracked In Google Analytics
     Then I should see pageview for "/hra/lobby.aspx?toolid=3563" logged in Google Analytics
 
 Online Health Coach Link Should Be Tracked In Google Analytics
-    [Tags]    NAVBAR HEALTH_TOOLS    AIM1
+    [Tags]    NAVBAR    HEALTH_TOOLS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#health-tools" element
     Sleep    ${NAVIGATION}
@@ -31,7 +31,7 @@ Online Health Coach Link Should Be Tracked In Google Analytics
     Then I should see pageview for "/!dha/checkin" logged in Google Analytics
 
 Action Plan Link Should Be Tracked In Google Analytics
-    [Tags]    NAVBAR HEALTH_TOOLS    AIM1
+    [Tags]    NAVBAR    HEALTH_TOOLS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#health-tools" element
     Sleep    ${NAVIGATION}
@@ -39,7 +39,7 @@ Action Plan Link Should Be Tracked In Google Analytics
     Then I should see pageview for "/hra/lobby.aspx?toolid=3563" logged in Google Analytics
 
 Benefits Statements Link Should Be Tracked In Google Analytics
-    [Tags]    NAVBAR HEALTH_TOOLS    AIM1
+    [Tags]    NAVBAR    HEALTH_TOOLS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#health-tools" element
     Sleep    ${NAVIGATION}

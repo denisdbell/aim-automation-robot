@@ -56,6 +56,13 @@ I am a Registered MyBlue Member on the Landing Page (Session exists)
     Go To    ${SERVER}/landingpage
     Sleep    ${EVENT}
 
+I am on the MyBlue Public Site
+    Teardown Browser
+    Open new browser session at "${PUBLIC_SITE}"
+
+I am on the MyBlue Public Site (Session exists)
+    Go To    ${PUBLIC_SITE}
+
 I am a Registered MyBlue Member on the Landing Page
     Teardown Browser
     I am a MyBlue Member on the Login Page

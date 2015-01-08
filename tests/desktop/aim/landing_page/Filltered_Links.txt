@@ -8,26 +8,26 @@ Resource          ../../../../resources/aim_common.robot
 
 *** Test Cases ***
 Initialize
-    [Tags]    RegistrationPageView    AIM1
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page
     And I have Entered Second Factor Authentication
     And I am a Registered MyBlue Member on the Landing Page (Session exists)
     And I have Entered Security Question
 
 Take charge of your family's health for Standard Link Should Be Tracked In Google Analytics
-    [Tags]    LandingPageLinks    AIM1
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     And I Click the "li#healthAndWellnesslink0 a" link tracked for page view /BCBSA/HealthyFamily/
     Then I should see pageview for "/BCBSA/HealthyFamily/" logged in Google Analytics
 
 Get baby advice and support here Link Should Be Tracked In Google Analytics
-    [Tags]    LandingPageLinks    AIM1
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     And I Click the "li#healthAndWellnesslink1 a" link tracked for page view /PregnancyAssistant/Dashboard.aspx
     Then I should see pageview for "/PregnancyAssistant/Dashboard.aspx" logged in Google Analytics
 
 Visit MyBlue Wellness Card Center Link Should Be Tracked In Google Analytics
-    [Tags]    LandingPageLinks    AIM1
+    [Tags]    LANDING_PAGE    FILTERED_LINKS    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     And I Click the "#wellnessIncentiveslink0 a" link tracked for page view /feptest.mychiprewards.com/
     Then I should see pageview for "/feptest.mychiprewards.com/" logged in Google Analytics
