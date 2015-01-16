@@ -1,0 +1,16 @@
+*** Settings ***
+Suite Setup       Environment setup
+Library           Selenium2Library    #Suite Teardown    Teardown Browser
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Initialize
+    [Tags]    GOALS    BHA Goal    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page
+    And I have Entered Second Factor Authentication
+
+Blue Health Assessment Goal Should Be Tracked In Google Analytics
+    [Tags]    GOALS    BHA Goal    AIM1
+    Given I Have Completed The BHA Goal

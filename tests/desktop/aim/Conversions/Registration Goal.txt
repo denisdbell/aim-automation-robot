@@ -1,0 +1,53 @@
+*** Settings ***
+Suite Setup       Environment setup
+Suite Teardown    Teardown Browser
+Library           Selenium2Library
+Resource          ../../../../resources/pilot/login/login_resource.robot
+Resource          ../../../../resources/classic/login/login_resource.robot
+Resource          ../../../../resources/aim_common.robot
+
+*** Test Cases ***
+Initialize
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    I am on the MyBlue Registration Page
+    Sleep    10s
+
+Enter FEP Member Id
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#contractNumber    R99900999
+
+Enter First Name
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#firstName    Universal
+
+Enter Last Name
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#lastName    Testmember
+
+Enter Middle Initial
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#middleName    " "
+
+Enter Birthday
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#birthday    03/03/1972
+
+Enter Screen Name
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#screenName    myBlueUserName
+
+Enter Email Address
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#emailAddress    email@medullan.com
+
+Enter Verify Email Address
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#emailAddress2    email@medullan.com
+
+Enter Password
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#password1    Password1.medullan
+
+Enter Verify Password
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Input Text    css=#password2    Password1.medullan
