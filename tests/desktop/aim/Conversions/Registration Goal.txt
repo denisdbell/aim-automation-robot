@@ -63,6 +63,7 @@ Enter Certificatation of Input Prt 2
 
 Enter Terms of Service Prt 1
     [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#tos_btn
     Click Button    css=#tos_btn
 
 Enter Terms of Sertvice Prt 2
@@ -72,6 +73,7 @@ Enter Terms of Sertvice Prt 2
 
 Enter Privacy Policy Prt 1
     [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#pp_btn
     Click Button    css=#pp_btn
 
 Enter Privacy Policy Prt 2
@@ -79,7 +81,22 @@ Enter Privacy Policy Prt 2
     Selenium2Library.Wait Until Element Is Visible    css=#i_agree_PP
     Click Button    css=#i_agree_PP
 
-ENTER SUBMIT FORM
+Submit Registration Form
     [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
     Selenium2Library.Wait Until Element Is Visible    css=#submit_btn
     Click Button    css=#submit_btn
+
+Enter Social Security Number
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#pinLast4SSN
+    Input Text    css=#pinLast4SSN    3339
+
+Submit Social Security Number
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#pin_submit_btn
+    Click Button    css=#pin_submit_btn
+
+Click Login
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=td.login-cell input
+    Click Button    css=td.login-cell input
