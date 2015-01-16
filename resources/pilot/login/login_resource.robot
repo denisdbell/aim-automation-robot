@@ -109,3 +109,20 @@ I have Entered Security Question
     Wait Until Element Is Visible    css=#answer
     Input Text    css=#answer    cheese
     Click Button    Submit
+
+I am on the MyBlue Registration Page
+    Given I am a MyBlue Member on the classic myBlue Login Page
+    And I Click the "#signUpMyBlueID" element
+
+I Have Completed The BHA Goal
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    When I Click the "#health-tools" element
+    Sleep    ${NAVIGATION}
+    And Click Link    Blue Health Assessment
+    And Click Link    Update Score
+    And Click Element    css=.finish
+    And Wait Until Element Is Visible    css=.save
+    And Click Element    css=.save
+    And Wait Until Element Is Visible    css=.ok
+    Sleep    5s
+    And Click Element    css=.ok
