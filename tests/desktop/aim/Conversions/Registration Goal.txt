@@ -51,3 +51,35 @@ Enter Password
 Enter Verify Password
     [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
     Input Text    css=#password2    Password1.medullan
+
+Enter Certificatation of Input Prt 1
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Click Button    css=#cert_btn
+
+Enter Certificatation of Input Prt 2
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#i_agree_CE
+    Click Button    css=#i_agree_CE
+
+Enter Terms of Service Prt 1
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Click Button    css=#tos_btn
+
+Enter Terms of Sertvice Prt 2
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#i_agree_TOS
+    Click Button    css=#i_agree_TOS
+
+Enter Privacy Policy Prt 1
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Click Button    css=#pp_btn
+
+Enter Privacy Policy Prt 2
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#i_agree_PP
+    Click Button    css=#i_agree_PP
+
+ENTER SUBMIT FORM
+    [Tags]    GOALS    REGISTRATION_FUNNEL    AIM1
+    Selenium2Library.Wait Until Element Is Visible    css=#submit_btn
+    Click Button    css=#submit_btn
