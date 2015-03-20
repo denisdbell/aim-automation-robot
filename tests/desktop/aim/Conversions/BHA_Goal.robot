@@ -12,6 +12,14 @@ Initialize
     And I have Entered Second Factor Authentication
 
 Blue Health Assessment Goal Should Be Tracked In Google Analytics
-    [Tags]    GOALS    BHA Goal    AIM1
-    Given I Have Completed The BHA Goal
-    Then I Should see goal "4" tracked in google analytics
+    [Tags]    GOALS    BHA Goal    AIM1    AIM
+    Given I Expect goal "11" to convert
+    When I Have Completed The BHA Goal
+    Then I Should see goal "11" tracked in google analytics
+
+Test a thing
+    [Tags]    Testating
+    ${vall} =    Evaluate    urllib.quote('something new', '')  urllib
+    Log    ${vall}
+    Log    ${vall.encode('utf-8')}
+    Log    ${vall.encode()}

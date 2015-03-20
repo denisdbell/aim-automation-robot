@@ -12,12 +12,13 @@ Initialize
     Given I am a Registered MyBlue Member on the Landing Page
     And I have Entered Second Factor Authentication
     And I am a Registered MyBlue Member on the Landing Page (Session exists)
-    And I have Entered Security Question
+    #And I have Entered Security Question
 
 Blue Health Assessment Link Should Be Tracked In Google Analytics
-    [Tags]    NAVBAR    SMOKE    AIM1    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
+    [Tags]    NAVBAR    SMOKE    AIM1
+    Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#health-tools" element
-    Sleep    ${NAVIGATION}
+    #Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.healthTools.nodes.bha\"] a" link tracked for page view /hra/lobby.aspx?toolid=3563
     Then I should see pageview for "/hra/lobby.aspx?toolid=3563" logged in Google Analytics
 

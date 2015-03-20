@@ -4,8 +4,8 @@ Library           RequestsLibrary
 Library           Selenium2Library
 
 *** Variables ***
-${GA_USER}        medullan.beach@gmail.com
-${GA_PASSWORD}    !Medullan5
+${GA_USER}        generic@medullan.com
+${GA_PASSWORD}    somethingprivate
 ${GA_KEY}         AIzaSyCFj15TpkchL4OUhLD1Q2zgxQnMb7v3XaM
 ${GA_DIMENSION}    rt:pagePath
 ${GA_METRIC}      rt:pageViews
@@ -34,6 +34,11 @@ Get analytics event ${varName} total for ${criteria}
     ${counts}=    Get Google Analytics Page Hit ga-page-count ${GA_KEY} ${GA_PROFILE_ID} rt:totalEvents rt:eventCategory ${criteria}
     Set Test Variable    ${${varName}}    ${counts['rt:totalEvents']}
     [Return]    ${counts['rt:totalEvents']}
+
+Get analytics ${varName} conversions for ${goal:\d+}
+    ${counts}=    Get Google Analytics Page Hit ga-goal-count ${GA_KEY} ${GA_PROFILE_ID} rt:goalCompletionsAll rt:goalId rt:goalId==${goal}
+    Set Test Variable    ${${varName}}    ${counts['rt:goalCompletionsAll']}
+    [Return]    ${counts['rt:goalCompletionsAll']}
 
 Get GA ${varName} ${metric} total for ${field} ${criteria}
     ${counts}=    Get Google Analytics Page Hit ga-page-count ${GA_KEY} ${GA_PROFILE_ID} ${metric} ${field} ${field}${criteria}
@@ -81,19 +86,30 @@ Initialize Google Bearer Token
 I Click "${link}" tracked link
     ${linkhref}=    Get Element Attribute    css=${link}@href
     Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
-    Wait Until Element Is Visible    css=${link}    30s
+    Wait Until Element Is Visible    css=${link}    10s
     Click Element    css=${link}
     Sleep    ${NAVIGATION}
     Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
 
 I Click the "${link}" link tracked for page view ${path}
     Get GA first rt:pageViews total for rt:pagePath ==${path}
+    Wait Until Element Is Visible    css=${link}    10s
     Click Element    css=${link}
-    Sleep    10
-    Execute Javascript    document.cookie="robot_user=true;"
-    Reload Page
-    Sleep    10
+    #Sleep    10
+    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
+    #Wait Until Element Is Visible    sizzle=img[src*='page.gif'][src*='${path}']    20s
+    Execute Javascript    (function(d,c,r){if(d[c].indexOf(r))return; d[c]=r; location.reload() })(document,"cookie","robot_user=true")
+    #Reload Page
+    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
+    #Wait Until Element Is Visible    sizzle=img[src*='page.gif'][src*='${path}']    20s
     Get GA second rt:pageViews total for rt:pagePath ==${path}
+
+I Expect goal "${goalNumber}" to convert
+    Get analytics first${goalNumber} conversions for ${goalNumber}
+
+I Should see goal "${goalNumber}" tracked in google analytics
+    Get analytics second${goalNumber} conversions for ${goalNumber}
+    The second${goalNumber} should be more than first${goalNumber}
 
 I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
     ${filter}=    Set Variable    rt:eventCategory==${category}
@@ -113,13 +129,42 @@ I enter the text "${text}" in "${element}" textbox tracked for event "${category
     Wait Until Element Is Visible    css=${element}    30s
     Input Text    css=${element}    ${text}
 
+I Input Text ${element} ${text}
+    Wait Until Element Is Visible    css=${element}    30s
+    Input Text    css=${element}    ${text}
+
 I Click the next element "${element}"
+    Wait Until Element Is Visible    css=${element}    30s
     Click Element    css=${element}
     Sleep    ${NAVIGATION}
     Get analytics event second total for ${filter}
+
+I Click on link "${element}"
+    Wait Until Page Contains    ${element}    30s
+    Click Link    ${element}
+    Sleep    1s
+    #Wait Until Element Is Visible    sizzle=img[src*='page.gif']    20s
+    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
+
+I Click on element "${element}"
+    Wait Until Element Is Visible    css=${element}    30s
+    Click Element    css=${element}
+    Sleep    1s
+    #Wait Until Element Is Visible    sizzle=img[src*='page.gif']    20s
+    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
 
 I should see ${hitType} for "${hitDescription}" logged in Google Analytics
     The second should be more than first
 
 I should not see ${hitType} for "${hitDescription}" logged in Google Analytics
     The second should be same as first
+
+Find Image by "${component}"
+    ${encodedComponent} =    Evaluate    urllib.quote('${component}', '')  urllib
+    ${image} =    Execute Javascript    for(var i=document.images.length-1; i >= 0; i--) if(document.images[i].src.indexOf('${encodedComponent}') >= 0){ return true; } return false;
+    [Return]    ${image}
+
+Find ${tracking} Image by "${component}"
+    ${encodedComponent} =    Evaluate    urllib.quote('${component}', '')  urllib
+    ${image} =    Execute Javascript    for(var i=document.images.length-1; i >= 0; i--) if(document.images[i].src.indexOf('${tracking}') && document.images[i].src.indexOf('${encodedComponent}') >= 0){ return true; } return false;
+    [Return]    ${image}

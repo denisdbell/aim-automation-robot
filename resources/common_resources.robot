@@ -37,7 +37,7 @@ I enter the text "${text}" in "${element}" textbox
 
 
 I Click the "${link}" link
-	Click Link					css=${link}
+	Click Element					css=${link}
 
 I Click the "${link}" tracked link
 	${linkhref}=	Get Element Attribute	css=${link}@href

@@ -11,12 +11,12 @@ Resource          ../../../../resources/classic/registration/registration_resour
 Login Page
 	[Tags]		LoginPage	AIM1
 	Given I am a MyBlue Member on the classic myBlue Login Page
-	
+
 Registration Page View
 	[Tags]		RegistrationPageView	AIM1
 	When I Click the "a#signUpMyBlueID" link tracked for page view /registration/start
 	Then I should see pageview for "/registration/start" logged in Google Analytics
-	
+
 Member ID No Data
 	[Tags] 		 MemberIdNoData		AIM1
 	When I enter the text "" in "#contractNumber" textbox tracked for event "Registration:validate memberid - failure:Required information is missing"
@@ -110,7 +110,7 @@ Username Valid Data
 	When I enter the text "testmember112814" in "#screenName" textbox tracked for event "Registration:validate username - success"
 	And I Click the next element "#emailAddress"
 	Then I should see event for "Registration:validate username - success" logged in Google Analytics
-	
+
 Email No Data
 	[Tags] 		EmailNoData		AIM1
 	When I enter the text "" in "#emailAddress" textbox tracked for event "Registration:validate email - failure"
@@ -125,21 +125,21 @@ Email Invalid Data
 	And I enter the text "invalid@email" in "#emailAddress2" textbox tracked for event "Registration:validate verify email - failure"
 	And I Click the next element "#password1"
 	Then I should see event for "Registration:validate email - failure" logged in Google Analytics
-	
+
 Email Exists
 	[Tags] 		EmailExists		AIM1
 	When I enter the text "mybluepvtest108@fepblue.org" in "#emailAddress" textbox tracked for event "Registration:validate email - failure"
 	And I enter the text "mybluepvtest108@fepblue.org" in "#emailAddress2" textbox tracked for event "Registration:validate verify email - failure"
 	And I Click the next element "#password1"
 	Then I should see event for "Registration:validate email - failure" logged in Google Analytics
-	
-Email Verify Invalid 
+
+Email Verify Invalid
 	[Tags] 		EmailVerifyInvalid		AIM1
 	When I enter the text "valid@email.com" in "#emailAddress" textbox tracked for event "Registration:validate email - success"
 	And I enter the text "invalid@email.com" in "#emailAddress2" textbox tracked for event "Registration:validate verify email - failure"
 	And I Click the next element "#password1"
 	Then I should see event for "Registration:validate verify email - failure" logged in Google Analytics
-	
+
 Email Valid Data
 	[Tags] 		EmailValidData		AIM1
 	When I enter the text "valid@email.com" in "#emailAddress" textbox tracked for event "Registration:validate email - success"
@@ -168,7 +168,7 @@ Password Verify Invalid Data
 	And I enter the text "Bigfun21" in "#password2" textbox tracked for event "Registration:validate verify password - failure"
 	And I Click the next element "#emailAddress2"
 	Then I should see event for "Registration:validate verify password - failure" logged in Google Analytics
-	
+
 Password Valid Data
 	[Tags] 		PasswordValidData		AIM1
 	When I enter the text "Bigfun21!" in "#password1" textbox tracked for event "Registration:validate password - success"
@@ -188,18 +188,18 @@ Certification Agree
 	Then I should see event for "Registration:certification - agree" logged in Google Analytics
 
 Certification Cancel
-	[Tags]		CertificationCancel	AIM1
+	[Tags]		CertificationCancel    AIM1
 	When I Click the "#cert_btn" link tracked for page view /registration/certification
 	And I Click "#conditionsDialog #condition_popup .button #cancel" tracked for event "Registration:certification - cancel"
 	Then I should see event for "Registration:certification - cancel" logged in Google Analytics
-	
+
 Terms Of Service Page View
 	[Tags]		TermsOfServicePageView	AIM1
 	When I Click the "#tos_btn" link tracked for page view /registration/terms-of-service
 	Then I should see pageview for "/registration/terms-of-service" logged in Google Analytics
 
 Terms Of Service Agree
-	[Tags]		TermsOfServiceAgree	AIM1
+	[Tags]		TermsOfServiceAgree    AIM1
 	When I Click "#i_agree_TOS" tracked for event "Registration:terms of service - agree"
 	Then I should see event for "Registration:terms of service - agree" logged in Google Analytics
 
@@ -215,18 +215,18 @@ Privacy Policy Page View
 	Then I should see pageview for "/registration/policy" logged in Google Analytics
 
 Privacy Policy Agree
-	[Tags]		PrivacyPolicyAgree	AIM1
+	[Tags]		PrivacyPolicyAgree    AIM1
 	When I Click "#i_agree_PP" tracked for event "Registration:policy - agree"
 	Then I should see event for "Registration:policy - agree" logged in Google Analytics
 
 Privacy Policy Cancel
-	[Tags]		PrivacyPolicyCancel	AIM1
+	[Tags]		PrivacyPolicyCancel    AIM1
 	When I Click the "#pp_btn" link tracked for page view /registration/policy
 	And I Click "#policyDialog #condition_popup .button #cancel" tracked for event "Registration:policy - cancel"
 	Then I should see event for "Registration:policy - cancel" logged in Google Analytics
-	
+
 SSN Page View
-	[Tags]		SsnPageView	AIM1
+	[Tags]		SsnPageView    AIM1
 	When I enter the text "R99900999" in "#contractNumber" textbox tracked for event "Registration:validate memberid - success"
 	And I enter the text "UNIVERSAL" in "#firstName" textbox tracked for event "Registration:validate firstname lastname - success"
 	And I enter the text "TESTMEMBER" in "#lastName" textbox tracked for event "Registration:validate firstname lastname - success"
@@ -244,7 +244,7 @@ SSN Page View
 	And I Click "#i_agree_PP" tracked for event "Registration:policy - agree"
 	And I Click the "#submit_btn" link tracked for page view /registration/validate_ssn
 	Then I should see pageview for "/registration/validate_ssn" logged in Google Analytics
-	
+
 SSN No Data
 	[Tags]		SsnNoData	AIM1
 	When I enter the text "" in "#pinLast4SSN" textbox tracked for event "Registration:validate ssn - failure"

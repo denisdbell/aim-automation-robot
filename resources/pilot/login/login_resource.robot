@@ -20,9 +20,11 @@ I Am Not Navigated to Landing Page "${pageElement}"
     Element Should Not Be Visible    css=${pageElement}
 
 I Enter A Username "${element}" "${text}"
+    Wait Until Element Is Visible    css=${element}
     Input Text    css=${element}    ${text}
 
 I Enter A Password "${element}" "${text}"
+    Wait Until Element Is Visible    css=${element}
     Input Password    css=${element}    ${text}
 
 I should see the element "${element}" blank
@@ -97,8 +99,10 @@ I am a Minor Registered MyBlue Member on the Landing Page
 
 I have Entered Second Factor Authentication
     Sleep    ${NAVIGATION}
-    #Wait Until Page Contains    css=div.quicknav-symptom #symptomChecker
-    I Click the "div.quicknav-symptom #symptomChecker" link
+    #Wait Until Element Is Visible    css=div.quicknav-symptom #symptomChecker
+    #I Click the "div.quicknav-symptom #symptomChecker" link
+    And I Click on element "div.quicknav-symptom #symptomChecker"
+    Wait Until Element Is Visible    css=#Pin
     Input Text    css=#Pin    1234
     Click Element    css=.finish
 
@@ -116,13 +120,9 @@ I am on the MyBlue Registration Page
 
 I Have Completed The BHA Goal
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
-    When I Click the "#health-tools" element
-    Sleep    ${NAVIGATION}
-    And Click Link    Blue Health Assessment
-    And Click Link    Update Score
-    And Click Element    css=.finish
-    And Wait Until Element Is Visible    css=.save
-    And Click Element    css=.save
-    And Wait Until Element Is Visible    css=.ok
-    Sleep    5s
-    And Click Element    css=.ok
+    When I Click on element "#health-tools"
+    And I Click on link "Blue Health Assessment"
+    And I Click on link "Update Score"
+    And I Click on element ".finish"
+    And I Click on element ".save"
+    And I Click on element ".ok"
