@@ -183,13 +183,10 @@ Open new browser session at "${url}"
     Run Keyword If    '${TEAM}'=='AIM'    Execute Javascript    document.cookie="robot_user=true;"
 
 Setup Desktop Environment "${url}"
-    Run Keyword If  '${SAUCE_URL}' != ''    Open Browser    ${url}
-    ...   remote_url=${SAUCE_URL}
-    ...   desired_capabilities=${SAUCE_CAPABILITIES}
-    Run Keyword If  '${SAUCE_URL}' == ''
-    ...   Open Browser    ${url}   browser=${BROWSER}
-    Run Keyword If  '${SELENIUM_DEVICE}' == ''
-    ... Maximize Browser Window
+    Log  Sauce Caps ${SAUCE_CAPABILITIES}
+    Run Keyword If  '${SAUCE_URL}' != ''  Open Browser  ${url}  remote_url=${SAUCE_URL}  desired_capabilities=${SAUCE_CAPABILITIES}
+    Run Keyword If  '${SAUCE_URL}' == ''  Open Browser  ${url}  browser=${BROWSER}
+    Run Keyword If  '${SELENIUM_DEVICE}'==''    Maximize Browser Window
 
 Setup Iphone Emulator "${url}"
     Open Browser    url=${url}    browser=${BROWSER}    alias=${ALIAS}    remote_url=${REMOTE_URL}    desired_capabilities=${IPHONE_DESIRED_CAPABILITIES}
