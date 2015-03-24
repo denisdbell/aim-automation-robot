@@ -173,12 +173,13 @@ Find ${tracking} Image by "${component}"
     #________________ Setup open browser keyword action based on selected device _________________#
 
 Open new browser session at "${url}"
-    Run Keyword If    '${BROWSER}'=='iphone'    Setup Iphone Emulator "${url}"
-    Run Keyword If    '${BROWSER}'=='chrome'    Setup Desktop Environment "${url}"
-    Run Keyword If    '${BROWSER}'=='firefox'    Setup Desktop Environment "${url}"
-    Run Keyword If    '${BROWSER}'=='safari'    Setup Desktop Environment "${url}"
-    Run Keyword If    '${BROWSER}'=='ie'    Setup Desktop Environment "${url}"
+    #Run Keyword If    '${BROWSER}'=='iphone'    Setup Iphone Emulator "${url}"
+    #Run Keyword If    '${BROWSER}'=='chrome'    Setup Desktop Environment "${url}"
+    #Run Keyword If    '${BROWSER}'=='firefox'    Setup Desktop Environment "${url}"
+    #Run Keyword If    '${BROWSER}'=='safari'    Setup Desktop Environment "${url}"
+    #Run Keyword If    '${BROWSER}'=='ie'    Setup Desktop Environment "${url}"
     Run Keyword If    '${BROWSER}'=='phantomjs'    Setup Desktop Environment "${url}"
+    Run Keyword If    '${BROWSER}'!='phantomjs'    Setup Desktop Environment "${url}"
     Run Keyword If    '${TEAM}'=='AIM'    Execute Javascript    document.cookie="robot_user=true;"
 
 Setup Desktop Environment "${url}"
