@@ -62,7 +62,8 @@ Get Google Analytics Page Hit ${ga} ${gaKey} ${profileId} ${metrics} ${dims} ${f
     [Return]    ${jsondata['totalsForAllResults']}
 
 Initialize Google Bearer Token
-    Open Browser    ${GA_OAUTH_LOGIN}    ${BROWSER}
+    #Open Browser    ${GA_OAUTH_LOGIN}    ${BROWSER}
+    Open new browser session at ${GA_OAUTH_LOGIN}
     Input Text    Email    ${GA_USER}
     Input Text    Passwd    ${GA_PASSWORD}
     Click Button    signIn
