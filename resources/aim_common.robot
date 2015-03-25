@@ -4,7 +4,7 @@ Library           RequestsLibrary
 Library           Selenium2Library
 
 *** Variables ***
-${GA_USER}        generic@medullan.com
+${GA_USER}        x@medullan.com
 ${GA_PASSWORD}    somethingprivate
 ${GA_KEY}         AIzaSyCFj15TpkchL4OUhLD1Q2zgxQnMb7v3XaM
 ${GA_DIMENSION}    rt:pagePath
@@ -63,9 +63,12 @@ Get Google Analytics Page Hit ${ga} ${gaKey} ${profileId} ${metrics} ${dims} ${f
 
 Initialize Google Bearer Token
     #Open Browser    ${GA_OAUTH_LOGIN}    ${BROWSER}
+    # assign google analytics username and password from environment variables if not already set
+    Run Keyword If  '${GA_USER}'=='x@medullan.com'  Set Global Variable  \${GA_PASSWORD}  %{GA_PASSWORD}
+    Run Keyword If  '${GA_USER}'=='x@medullan.com'  Set Global Variable  \${GA_USER}  %{GA_USER}
     Open new browser session at "${GA_OAUTH_LOGIN}"
     Input Text    Email    ${GA_USER}
-    Input Text    Passwd    ${GA_PASSWORD}
+    Input Password    Passwd    ${GA_PASSWORD}
     Click Button    signIn
     Wait Until Element Is Visible    css=#submit_approve_access    30s
     Sleep    2s
