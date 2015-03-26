@@ -5,7 +5,7 @@ Documentation     A resource file with reusable keywords and variables.
 Resource       ../../common_resources.robot
 
 
-*** Keywords ****
+*** Keywords ***
 
 I am a MyBlue Member on the classic myBlue Login Page
 	Teardown Browser

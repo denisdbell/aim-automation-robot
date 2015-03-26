@@ -58,6 +58,13 @@ I Click the "${element}" element
 I Click the "${button}" Button
 	Click Button		css=${button}
 
+I Click the "${button}" Navigation Button
+	Click Button		sizzle=${button}
+    Wait until keyword succeeds  180s  0.5s  Element Should Not Be Visible   sizzle=${button}
+
+I Click the "${button}" Navigation Element
+	Click Element		sizzle=${button}
+    Wait until keyword succeeds  180s  0.5s  Element Should Not Be Visible   sizzle=${button}
 
 
 I should see the element "${element}" displayed
@@ -88,11 +95,13 @@ I should not see the element "${element}"
 I should be navigated to "${url}" in a new tab
 	@{windows}=					Get Window Titles
 	Select Window				@{windows}[1]
-	Sleep						${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	Location Should Contain		${url}
 
 I should be navigated to "${url}"
-	Sleep						${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	Location Should Contain		${url}
 
 I should not be redirected off the page "${url}"
@@ -122,16 +131,19 @@ I enter the pin "${pin}"
 	Sleep		${EVENT}
 	Input Text			css=#Pin		${pin}
 	Click Element		css=button[type="submit"]
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 
 I navigate to the classic site
 	Go To		${MYBLUE}
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	Execute Javascript    document.cookie="robot_user=true;"
 
 I navigate to MyBlue Pilot
 	Go To		${SERVER}
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	Execute Javascript    document.cookie="robot_user=true;"
 
 

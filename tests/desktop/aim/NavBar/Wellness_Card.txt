@@ -18,15 +18,13 @@ Wellness Card Home Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
-    And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" link tracked for page view feptest.mychiprewards.com
-    Then I should see pageview for "feptest.mychiprewards.com" logged in Google Analytics
+    And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.visitWellnessCardPortal\"] a" link tracked for page view mychiprewards.com/
+    Then I should see pageview for "mychiprewards.com/" logged in Google Analytics
 
 View Wellness Card Balance Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.wellnessCardBalance\"] a" link tracked for page view /Cards/Account
     Then I should see pageview for "/Cards/Account" logged in Google Analytics
 
@@ -34,7 +32,6 @@ Transaction History Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.transactionHistory\"] a" link tracked for page view /Cards/Transactions
     Then I should see pageview for "/Cards/Transactions" logged in Google Analytics
 
@@ -42,7 +39,6 @@ Rewards Activity Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.rewardActivity\"] a" link tracked for page view /Rewards/Activity
     Then I should see pageview for "/Rewards/Activity" logged in Google Analytics
 
@@ -50,7 +46,6 @@ Ways To Learn Rewards Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.waysToEarn\"] a" link tracked for page view /Rewards/Promotions
     Then I should see pageview for "/Rewards/Promotions" logged in Google Analytics
 
@@ -58,7 +53,6 @@ Announcements Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.announcements\"] a" link tracked for page view /Profile/Announcements
     Then I should see pageview for "/Profile/Announcements" logged in Google Analytics
 
@@ -66,7 +60,6 @@ Retrive Pin Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.retrievePin\"] a" link tracked for page view /Cards/RetrievePin
     Then I should see pageview for "/Cards/RetrievePin" logged in Google Analytics
 
@@ -74,7 +67,6 @@ Report Stolen Card Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.reportStolenCard\"] a" link tracked for page view /Home/Contact
     Then I should see pageview for "/Home/Contact" logged in Google Analytics
 
@@ -82,7 +74,6 @@ New Wellness Card Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.newWellnessCard\"] a" link tracked for page view /Home/Contact
     Then I should see pageview for "/Home/Contact" logged in Google Analytics
 
@@ -90,7 +81,6 @@ Communications History Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.communicationHistory\"] a" link tracked for page view /Profile/CommHistory
     Then I should see pageview for "/Profile/CommHistory" logged in Google Analytics
 
@@ -98,6 +88,5 @@ Communications Settings Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_CARD    AIM1
     Given I am a Registered MyBlue Member on the Landing Page (Session exists)
     When I Click the "#wellness" element
-    Sleep    ${NAVIGATION}
     And I Click the "li[data-url-config=\"navigation.main.wellness.nodes.communicationSettings\"] a" link tracked for page view /Profile/CommSettings
     Then I should see pageview for "/Profile/CommSettings" logged in Google Analytics

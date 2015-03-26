@@ -22,60 +22,73 @@ I am a logged in MyBlue Member on a Partner site
 I am logged into the MyBlue Portal
 	Teardown Browser
 	Open new browser session at "${SERVER}"
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	I Enter A Username "#LoginUsername" "${BASIC}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
-	I Click the "div.login form#loginForm button#login" Button
-    Sleep		${NAVIGATION}
+	I Click the "div.login form#loginForm button#login" Navigation Button
+    Sleep    1s
+    Wait for meda
 
 I am logged into the MyBlue Portal as a Standard User
 	Teardown Browser
 	Open new browser session at "${SERVER}"
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	I Enter A Username "#LoginUsername" "${STANDARD}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
-	I Click the "div.login form#loginForm button#login" Button
-    Sleep		${NAVIGATION}
+	I Click the "div.login form#loginForm button#login" Navigation Button
+    Sleep    1s
+    Wait for meda
     
 I am logged into the MyBlue Portal as a Terminated User
 	Teardown Browser
 	Open new browser session at "${SERVER}"
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	I Enter A Username "#LoginUsername" "${TERMINATED}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
-	I Click the "div.login form#loginForm button#login" Button
-    Sleep		${NAVIGATION}
+	I Click the "div.login form#loginForm button#login" Navigation Button
+    Sleep    1s
+    Wait for meda
     
 I am logged into the MyBlue Portal as a Minor User
 	Teardown Browser
 	Open new browser session at "${SERVER}"
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	I Enter A Username "#LoginUsername" "${MINOR}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
-	I Click the "div.login form#loginForm button#login" Button
-    Sleep		${NAVIGATION}
+	I Click the "div.login form#loginForm button#login" Navigation Button
+    Sleep    1s
+    Wait for meda
 
 I am logged into the MyBlue Portal as a Spouse User
 	Teardown Browser
 	Open new browser session at "${SERVER}"
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	I Enter A Username "#LoginUsername" "${SPOUSE}"
 	I Enter A Password "#LoginPassword" "${PASSWORD}"
-	I Click the "div.login form#loginForm button#login" Button
-	Sleep		${NAVIGATION}
+	I Click the "div.login form#loginForm button#login" Navigation Button
+    Sleep    1s
+    Wait for meda
 	
 I am logged in CSR
 	Teardown Browser
 	Open new browser session at "${CSR}"
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	
 I am logged into the MyBlue Portal for the first time
 	Teardown Browser
 	I am a MyBlue Member on the Login Page
-	Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda
 	I Enter A Username "#LoginUsername" "${BASIC}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
     I Click the "#login" Button
     Sleep		${NAVIGATION}
     Go To		${NAVBAR_SAMPLE_URL}?showNavTour=true
-    Sleep		${NAVIGATION}
+    Sleep    1s
+    Wait for meda

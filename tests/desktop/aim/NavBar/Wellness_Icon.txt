@@ -18,6 +18,5 @@ Wellness Card Home Link Should Be Tracked In Google Analytics
     [Tags]    NAVBAR    WELLNESS_ICON    AIM1
     Given I am a Registered MyBlue Member on the Landing Page
     When I Click the "#Wellness" element
-    Sleep    ${NAVIGATION}
-    And I Click the "li[data-url-config=\"navigation.main.wellnessIcon.nodes.visitWellnessCardPortal\"] a" link tracked for page view feptest.mychiprewards.com
-    Then I should see pageview for "feptest.mychiprewards.com" logged in Google Analytics
+    And I Click the "li[data-url-config=\"navigation.main.wellnessIcon.nodes.visitWellnessCardPortal\"] a" link tracked for page view /feptest.mychiprewards.com/
+    Then I should see pageview for "/feptest.mychiprewards.com/" logged in Google Analytics

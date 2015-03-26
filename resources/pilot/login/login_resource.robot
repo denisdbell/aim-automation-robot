@@ -7,11 +7,13 @@ Resource          ../../classic/login/login_resource.robot
 I am a MyBlue Member navigating to the login page
     Teardown Browser
     Open new browser session at "${LOGIN_URL}"
+    I close the tour popup
 
 I am a MyBlue Member on the Login Page
     Teardown Browser
     Open new browser session at "${LOGIN_URL}"
-    Sleep    ${NAVIGATION}
+    Wait for meda    180s
+    I close the tour popup
 
 I Am Navigated to Landing Page "${pageElement}"
     Page Should Contain Element    css=${pageElement}
@@ -36,6 +38,10 @@ I enter text in the "${element}" textbox
 I Am Navigated to Member Id Card Page "${pageElement}"
     Page Should Contain Element    ${pageElement}
 
+I Navigate by Clicking "${pageElement}"
+    I Click the "div.login form#loginForm button#login" Button
+    Wait until keyword succeeds  10s  1s  Element Should Not Be Visible
+
 The "${step}" step is completed
     I should see the element "${step}" displayed
 
@@ -56,7 +62,11 @@ The "${step}" step is not enabled
 
 I am a Registered MyBlue Member on the Landing Page (Session exists)
     Go To    ${SERVER}/landingpage
-    Sleep    ${EVENT}
+    Wait for meda    180s
+
+I close the tour popup
+    Run Keyword and Ignore Error  Click Element  sizzle=.modal-open .close
+    Run Keyword and Ignore Error  Click Element  sizzle=.modal-dialog .close
 
 I am on the MyBlue Public Site
     Teardown Browser
@@ -64,42 +74,42 @@ I am on the MyBlue Public Site
 
 I am on the MyBlue Public Site (Session exists)
     Go To    ${PUBLIC_SITE}
+    I close the tour popup
 
 I am a Registered MyBlue Member on the Landing Page
     Teardown Browser
     I am a MyBlue Member on the Login Page
     I Enter A Username "#LoginUsername" "${BASIC}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
-    I Click the "div.login form#loginForm button#login" Button
-    Sleep    ${NAVIGATION}
+    I Click the "div.login form#loginForm button#login" Navigation Button
+    I close the tour popup
 
 I am a Standard Registered MyBlue Member on the Landing Page
     Teardown Browser
     I am a MyBlue Member on the Login Page
     I Enter A Username "#LoginUsername" "${STANDARD}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
-    I Click the "div.login form#loginForm button#login" Button
-    Sleep    ${NAVIGATION}
+    I Click the "div.login form#loginForm button#login" Navigation Button
+    I close the tour popup
 
 I am a Terminated Registered MyBlue Member on the Landing Page
     Teardown Browser
     I am a MyBlue Member on the Login Page
     I Enter A Username "#LoginUsername" "${TERMINATED}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
-    I Click the "div.login form#loginForm button#login" Button
-    Sleep    ${NAVIGATION}
+    I Click the "div.login form#loginForm button#login" Navigation Button
+    I close the tour popup
 
 I am a Minor Registered MyBlue Member on the Landing Page
     Teardown Browser
     I am a MyBlue Member on the Login Page
     I Enter A Username "#LoginUsername" "${MINOR}"
     I Enter A Password "#LoginPassword" "${PASSWORD}"
-    I Click the "div.login form#loginForm button#login" Button
-    Sleep    ${NAVIGATION}
+    I Click the "div.login form#loginForm button#login" Navigation Button
+    I close the tour popup
 
 I have Entered Second Factor Authentication
     Sleep    ${NAVIGATION}
-    #Wait Until Element Is Visible    css=div.quicknav-symptom #symptomChecker
     #I Click the "div.quicknav-symptom #symptomChecker" link
     And I Click on element "div.quicknav-symptom #symptomChecker"
     Wait Until Element Is Visible    css=#Pin

@@ -6,7 +6,7 @@ Resource       ../../common_resources.robot
 Resource	   ../../aim_common.robot
 
 
-*** Keywords ****
+*** Keywords ***
 
 
 

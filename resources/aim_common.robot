@@ -92,27 +92,34 @@ I Click "${link}" tracked link
     Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
     Wait Until Element Is Visible    css=${link}    10s
     Click Element    css=${link}
-    Sleep    ${NAVIGATION}
+    Sleep  0.5s
+    Wait for meda
     Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
 
 I Click the "${link}" link tracked for page view ${path}
     Get GA first rt:pageViews total for rt:pagePath ==${path}
     Wait Until Element Is Visible    css=${link}    10s
     Click Element    css=${link}
-    #Sleep    10
-    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
-    #Wait Until Element Is Visible    sizzle=img[src*='page.gif'][src*='${path}']    20s
+    Wait for meda
     Execute Javascript    (function(d,c,r){if(d[c].indexOf(r))return; d[c]=r; location.reload() })(document,"cookie","robot_user=true")
     #Reload Page
-    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
-    #Wait Until Element Is Visible    sizzle=img[src*='page.gif'][src*='${path}']    20s
+    Sleep  0.5s
+    Wait for meda
     Get GA second rt:pageViews total for rt:pagePath ==${path}
+    Run Keyword If  '${first}'=='${second}'  Sleep  1s
+    Run Keyword If  '${first}'=='${second}'  Get GA second rt:pageViews total for rt:pagePath ==${path}
+    Run Keyword If  '${first}'=='${second}'  Sleep  2s
+    Run Keyword If  '${first}'=='${second}'  Get GA second rt:pageViews total for rt:pagePath ==${path}
+    Run Keyword If  '${first}'=='${second}'  Sleep  1s
+    Run Keyword If  '${first}'=='${second}'  Get GA second rt:pageViews total for rt:pagePath ==${path}
 
 I Expect goal "${goalNumber}" to convert
     Get analytics first${goalNumber} conversions for ${goalNumber}
 
-I Should see goal "${goalNumber}" tracked in google analytics
-    Get analytics second${goalNumber} conversions for ${goalNumber}
+I Should see goal "${goalNum}" tracked in google analytics
+    Get analytics second${goalNum} conversions for ${goalNum}
+    Run Keyword If  '${first${goalNum}}'=='${second${goalNum}}'  Sleep  1s
+    Run Keyword If  '${first${goalNum}}'=='${second${goalNum}}'  Get analytics second${goalNum} conversions for ${goalNum}
     The second${goalNumber} should be more than first${goalNumber}
 
 I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
@@ -122,8 +129,24 @@ I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${labe
     Get analytics event first total for ${filter}
     Wait Until Element Is Visible    css=${link}    30s
     Click Element    css=${link}
-    Sleep    ${NAVIGATION}
+    Sleep    1s
+    Wait for meda
     Get analytics event second total for ${filter}
+    Run Keyword If  '${first}'=='${second}'  Sleep  2s
+    Run Keyword If  '${first}'=='${second}'  Get analytics event second total for ${filter}
+
+I Click "${link}" link tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
+    ${filter}=    Set Variable    rt:eventCategory==${category}
+    Run Keyword If    '${action}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventAction==${action.replace(':','')}
+    Run Keyword If    '${label}'!=''    Set Test Variable    ${filter}    ${filter};rt:eventLabel==${label.replace(':','')}
+    Get analytics event first total for ${filter}
+    Wait Until Page Contains    ${link}    30s
+    Click Link    ${link}
+    Sleep    1s
+    Wait for meda
+    Get analytics event second total for ${filter}
+    Run Keyword If  '${first}'=='${second}'  Sleep  2s
+    Run Keyword If  '${first}'=='${second}'  Get analytics event second total for ${filter}
 
 I enter the text "${text}" in "${element}" textbox tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
     ${filter}=    Set Variable    rt:eventCategory==${category}
@@ -140,35 +163,40 @@ I Input Text ${element} ${text}
 I Click the next element "${element}"
     Wait Until Element Is Visible    css=${element}    30s
     Click Element    css=${element}
-    Sleep    ${NAVIGATION}
+    Sleep    1s
+    Wait for meda
     Get analytics event second total for ${filter}
 
 I Click on link "${element}"
+    I close the tour popup
     Wait Until Page Contains    ${element}    30s
     Click Link    ${element}
     Sleep    1s
-    #Wait Until Element Is Visible    sizzle=img[src*='page.gif']    20s
-    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
+    Wait for meda
 
 I Click on element "${element}"
+    I close the tour popup
     Wait Until Element Is Visible    css=${element}    30s
     Click Element    css=${element}
     Sleep    1s
-    #Wait Until Element Is Visible    sizzle=img[src*='page.gif']    20s
-    Wait Until Keyword Succeeds    30s    0.5s    Find Image by "page"
+    Wait for meda
 
 I should see ${hitType} for "${hitDescription}" logged in Google Analytics
+    ${currentLocation}=  Get Location
+    Log  Browser URL :: ${currentLocation}
     The second should be more than first
 
 I should not see ${hitType} for "${hitDescription}" logged in Google Analytics
     The second should be same as first
 
 Find Image by "${component}"
+    Sleep  0.5s
     ${encodedComponent} =    Evaluate    urllib.quote('${component}', '')  urllib
     ${image} =    Execute Javascript    for(var i=document.images.length-1; i >= 0; i--) if(document.images[i].src.indexOf('${encodedComponent}') >= 0){ return true; } return false;
     [Return]    ${image}
 
 Find ${tracking} Image by "${component}"
+    Sleep  0.5s
     ${encodedComponent} =    Evaluate    urllib.quote('${component}', '')  urllib
     ${image} =    Execute Javascript    for(var i=document.images.length-1; i >= 0; i--) if(document.images[i].src.indexOf('${tracking}') && document.images[i].src.indexOf('${encodedComponent}') >= 0){ return true; } return false;
     [Return]    ${image}
@@ -194,3 +222,7 @@ Setup Desktop Environment "${url}"
 Setup Iphone Emulator "${url}"
     Open Browser    url=${url}    browser=${BROWSER}    alias=${ALIAS}    remote_url=${REMOTE_URL}    desired_capabilities=${IPHONE_DESIRED_CAPABILITIES}
     Sleep    ${DEVICE_LAUNCH}
+
+Wait for meda
+    [Arguments]  ${waittime}=30s
+    Wait Until Keyword Succeeds    ${waittime}    0.5s    Find Image by "page"

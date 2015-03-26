@@ -13,6 +13,8 @@ ${ENVIRONMENT}    dev    #Dev = dev    | Test = test    | Stage = stage
 ${TEAM}           NOT_AIM
 #Browser
 ${BROWSER}        firefox    #Supported: chrome | firefox | ie | iphone
+${SAUCE_CAPABILITIES}
+${SAUCE_URL}
 #Sleep settings
 ${NAVIGATION}     6
 ${EVENT}          2
