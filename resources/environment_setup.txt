@@ -11,6 +11,7 @@ Resource          aim_common.robot
 #Environment settings
 ${ENVIRONMENT}    dev    #Dev = dev    | Test = test    | Stage = stage
 ${TEAM}           NOT_AIM
+${ROBOT_USER}     true
 #Browser
 ${BROWSER}        firefox    #Supported: chrome | firefox | ie | iphone
 ${SAUCE_CAPABILITIES}

@@ -29,7 +29,7 @@ I am on a mobile device
 
 I navigate to "${url}"
 	Go To 		${url}
-	Execute Javascript    document.cookie="robot_user=true;"
+	Execute Javascript    document.cookie="robot_user=${ROBOT_USER};"
 
 
 I enter the text "${text}" in "${element}" textbox
@@ -95,12 +95,12 @@ I should not see the element "${element}"
 I should be navigated to "${url}" in a new tab
 	@{windows}=					Get Window Titles
 	Select Window				@{windows}[1]
-    Sleep    1s
+    Sleep    2s
     Wait for meda
 	Location Should Contain		${url}
 
 I should be navigated to "${url}"
-    Sleep    1s
+    Sleep    2s
     Wait for meda
 	Location Should Contain		${url}
 
@@ -131,21 +131,35 @@ I enter the pin "${pin}"
 	Sleep		${EVENT}
 	Input Text			css=#Pin		${pin}
 	Click Element		css=button[type="submit"]
-    Sleep    1s
+    Sleep    2s
     Wait for meda
 
 I navigate to the classic site
 	Go To		${MYBLUE}
-    Sleep    1s
+    Sleep    2s
     Wait for meda
-	Execute Javascript    document.cookie="robot_user=true;"
+	Execute Javascript    document.cookie="robot_user=${ROBOT_USER};"
 
 I navigate to MyBlue Pilot
 	Go To		${SERVER}
-    Sleep    1s
+    Sleep    2s
     Wait for meda
-	Execute Javascript    document.cookie="robot_user=true;"
+	Execute Javascript    document.cookie="robot_user=${ROBOT_USER};"
 
 
 Teardown Browser
     Close All Browsers
+
+I ${command} and wait for meda
+    ${myLocalURL} =  Get Location
+    Run Keyword  I ${command}
+    ${myLocalURL} =  Get Location
+    Wait For Keyword To Succeed  Page Changes from ${myLocalURL}
+    Wait for meda
+
+Page Changes from ${oldLocalURL}
+    Page Changes from ${myLocalURL}
+    ${myLocalURL} =  Get Location
+    ${result} =  Set Variable  false
+    Run Keyword If  '${myLocalURL}'=='${oldLocalURL}'  Set Variable  \${result}  true
+    [Return]  ${result}

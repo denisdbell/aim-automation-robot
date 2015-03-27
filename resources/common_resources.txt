@@ -28,7 +28,7 @@ I am on a mobile device
 
 I navigate to "${url}"
 	Go To 		${url}
-	Execute Javascript    document.cookie="robot_user=true;"
+	Execute Javascript    document.cookie="robot_user=${ROBOT_USER};"
 
 
 I enter the text "${text}" in "${element}" textbox
@@ -111,12 +111,12 @@ I enter the pin "${pin}"
 I navigate to the classic site
 	Go To		${MYBLUE}
 	Sleep		${NAVIGATION}
-	Execute Javascript    document.cookie="robot_user=true;"
+	Execute Javascript    document.cookie="robot_user=${ROBOT_USER};"
 
 I navigate to MyBlue Pilot
 	Go To		${SERVER}
 	Sleep		${NAVIGATION}
-	Execute Javascript    document.cookie="robot_user=true;"
+	Execute Javascript    document.cookie="robot_user=${ROBOT_USER};"
 
 
 Teardown Browser

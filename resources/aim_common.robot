@@ -92,7 +92,7 @@ I Click "${link}" tracked link
     Get GA first rt:pageViews total for rt:pagePath ==${linkhref}
     Wait Until Element Is Visible    css=${link}    10s
     Click Element    css=${link}
-    Sleep  0.5s
+    Sleep  2s
     Wait for meda
     Get GA second rt:pageViews total for rt:pagePath ==${linkhref}
 
@@ -101,14 +101,14 @@ I Click the "${link}" link tracked for page view ${path}
     Wait Until Element Is Visible    css=${link}    10s
     Click Element    css=${link}
     Wait for meda
-    Execute Javascript    (function(d,c,r){if(d[c].indexOf(r))return; d[c]=r; location.reload() })(document,"cookie","robot_user=true")
+    Execute Javascript    (function(d,c,r){if(d[c].indexOf(r))return; d[c]=r; location.reload() })(document,"cookie","robot_user=${ROBOT_USER}")
     #Reload Page
-    Sleep  0.5s
+    Sleep  1s
     Wait for meda
     Get GA second rt:pageViews total for rt:pagePath ==${path}
     Run Keyword If  '${first}'=='${second}'  Sleep  1s
     Run Keyword If  '${first}'=='${second}'  Get GA second rt:pageViews total for rt:pagePath ==${path}
-    Run Keyword If  '${first}'=='${second}'  Sleep  2s
+    Run Keyword If  '${first}'=='${second}'  Sleep  3s
     Run Keyword If  '${first}'=='${second}'  Get GA second rt:pageViews total for rt:pagePath ==${path}
     Run Keyword If  '${first}'=='${second}'  Sleep  1s
     Run Keyword If  '${first}'=='${second}'  Get GA second rt:pageViews total for rt:pagePath ==${path}
@@ -118,9 +118,9 @@ I Expect goal "${goalNumber}" to convert
 
 I Should see goal "${goalNum}" tracked in google analytics
     Get analytics second${goalNum} conversions for ${goalNum}
-    Run Keyword If  '${first${goalNum}}'=='${second${goalNum}}'  Sleep  1s
+    Run Keyword If  '${first${goalNum}}'=='${second${goalNum}}'  Sleep  2s
     Run Keyword If  '${first${goalNum}}'=='${second${goalNum}}'  Get analytics second${goalNum} conversions for ${goalNum}
-    The second${goalNumber} should be more than first${goalNumber}
+    The second${goalNum} should be more than first${goalNum}
 
 I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${label:(\:|).*}"
     ${filter}=    Set Variable    rt:eventCategory==${category}
@@ -129,7 +129,7 @@ I Click "${link}" tracked for event "${category:[^:]*}${action:(\:|)[^:]*}${labe
     Get analytics event first total for ${filter}
     Wait Until Element Is Visible    css=${link}    30s
     Click Element    css=${link}
-    Sleep    1s
+    Sleep    2s
     Wait for meda
     Get analytics event second total for ${filter}
     Run Keyword If  '${first}'=='${second}'  Sleep  2s
@@ -142,7 +142,7 @@ I Click "${link}" link tracked for event "${category:[^:]*}${action:(\:|)[^:]*}$
     Get analytics event first total for ${filter}
     Wait Until Page Contains    ${link}    30s
     Click Link    ${link}
-    Sleep    1s
+    Sleep    2s
     Wait for meda
     Get analytics event second total for ${filter}
     Run Keyword If  '${first}'=='${second}'  Sleep  2s
@@ -163,7 +163,7 @@ I Input Text ${element} ${text}
 I Click the next element "${element}"
     Wait Until Element Is Visible    css=${element}    30s
     Click Element    css=${element}
-    Sleep    1s
+    Sleep    2s
     Wait for meda
     Get analytics event second total for ${filter}
 
@@ -171,14 +171,14 @@ I Click on link "${element}"
     I close the tour popup
     Wait Until Page Contains    ${element}    30s
     Click Link    ${element}
-    Sleep    1s
+    Sleep    2s
     Wait for meda
 
 I Click on element "${element}"
     I close the tour popup
     Wait Until Element Is Visible    css=${element}    30s
     Click Element    css=${element}
-    Sleep    1s
+    Sleep    2s
     Wait for meda
 
 I should see ${hitType} for "${hitDescription}" logged in Google Analytics
@@ -190,13 +190,13 @@ I should not see ${hitType} for "${hitDescription}" logged in Google Analytics
     The second should be same as first
 
 Find Image by "${component}"
-    Sleep  0.5s
+    Sleep  1s
     ${encodedComponent} =    Evaluate    urllib.quote('${component}', '')  urllib
     ${image} =    Execute Javascript    for(var i=document.images.length-1; i >= 0; i--) if(document.images[i].src.indexOf('${encodedComponent}') >= 0){ return true; } return false;
     [Return]    ${image}
 
 Find ${tracking} Image by "${component}"
-    Sleep  0.5s
+    Sleep  1s
     ${encodedComponent} =    Evaluate    urllib.quote('${component}', '')  urllib
     ${image} =    Execute Javascript    for(var i=document.images.length-1; i >= 0; i--) if(document.images[i].src.indexOf('${tracking}') && document.images[i].src.indexOf('${encodedComponent}') >= 0){ return true; } return false;
     [Return]    ${image}
@@ -211,7 +211,7 @@ Open new browser session at "${url}"
     #Run Keyword If    '${BROWSER}'=='ie'    Setup Desktop Environment "${url}"
     Run Keyword If    '${BROWSER}'=='phantomjs'    Setup Desktop Environment "${url}"
     Run Keyword If    '${BROWSER}'!='phantomjs'    Setup Desktop Environment "${url}"
-    Run Keyword If    '${TEAM}'=='AIM'    Execute Javascript    document.cookie="robot_user=true;"
+    Run Keyword If    '${TEAM}'=='AIM'    Execute Javascript    document.cookie="robot_user=${ROBOT_USER};"
 
 Setup Desktop Environment "${url}"
     Log  Sauce Caps ${SAUCE_CAPABILITIES}
