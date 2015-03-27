@@ -130,3 +130,4 @@ prod
     Set global variable    ${MYBLUE}    https://www.fepblue.org/
     Set global variable    ${MYBLUE_LOGIN_URL}    ${MYBLUE}web/guest/myblue
     Set global variable    ${SERVER_NAVBAR}    ${MYBLUE}html/js/navlib/v1
+    Set global variable    ${PUBLIC_SITE}    https://www.fepblue.org
